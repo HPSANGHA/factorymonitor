@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="REF_ROLE">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="RoleID"
+        IsReadOnly="True"
+        PropertyType=":Int16">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Description"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="400" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedBy"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="RESOURCEs"
+        Association="FK_RESOURCE_REF_ROLE"
+        FromEnd="REF_ROLE"
+        ToEnd="RESOURCE" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_RESOURCE_REF_ROLE">
+    <AssociationEnd
+      Name="REF_ROLE"
+      EntityType="REF_ROLE">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="RESOURCE"
+      Multiplicity="Many"
+      EntityType="RESOURCE" />
+  </Association>
+  <EntityContainer
+    Name="FMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="REF_ROLEs"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="REF_ROLE" />
+    <AssociationSet
+      Name="FK_RESOURCE_REF_ROLE"
+      Association="FK_RESOURCE_REF_ROLE">
+      <AssociationSetEnd
+        Name="REF_ROLE"
+        EntitySet="REF_ROLEs" />
+      <AssociationSetEnd
+        Name="RESOURCE"
+        EntitySet="RESOURCEs" />
+    </AssociationSet>
+    <QueryOperation
+      Name="REF_ROLEs_Single"
+      ReturnType="REF_ROLE">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="RoleID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="RoleID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="REF_ROLEs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="RoleID"
+        ParameterType="Microsoft.LightSwitch:Int16?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'RoleID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="REF_ROLEs_SingleOrDefault"
+      ReturnType="REF_ROLE">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="RoleID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="RoleID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="REF_ROLEs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="RoleID"
+        ParameterType="Microsoft.LightSwitch:Int16?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'RoleID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="FMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="REF_ROLEs">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="REF_ROLE" />
+        <SsdlProperty
+          Name="RoleID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="smallint"
+          Property="REF_ROLE/Properties[RoleID]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Name"
+          Nullable="False"
+          Type="varchar"
+          Property="REF_ROLE/Properties[Name]" />
+        <SsdlProperty
+          MaxLength="400"
+          Name="Description"
+          Nullable="True"
+          Type="varchar"
+          Property="REF_ROLE/Properties[Description]" />
+        <SsdlProperty
+          Name="CreatedDate"
+          Nullable="True"
+          Type="datetime"
+          Property="REF_ROLE/Properties[CreatedDate]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="CreatedBy"
+          Nullable="True"
+          Type="varchar"
+          Property="REF_ROLE/Properties[CreatedBy]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ModifiedBy"
+          Nullable="True"
+          Type="varchar"
+          Property="REF_ROLE/Properties[ModifiedBy]" />
+        <SsdlProperty
+          Name="ModifiedDate"
+          Nullable="True"
+          Type="datetime"
+          Property="REF_ROLE/Properties[ModifiedDate]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_RESOURCE_REF_ROLE">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_RESOURCE_REF_ROLE" />
+        <SsdlAssociationSetEnd
+          End="FMData/Members[FK_RESOURCE_REF_ROLE]/Members[REF_ROLE]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="RoleID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="FMData/Members[FK_RESOURCE_REF_ROLE]/Members[RESOURCE]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="RoleID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

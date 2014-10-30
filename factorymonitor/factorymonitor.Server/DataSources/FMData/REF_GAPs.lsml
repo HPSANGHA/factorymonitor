@@ -1,0 +1,329 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="REF_GAP">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="GapID"
+        PropertyType=":Int16">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="100" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Description"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="150" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedBy"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="TPs"
+        Association="FK_TP_REF_GAP"
+        FromEnd="REF_GAP"
+        ToEnd="TP" />
+      <NavigationProperty
+        Name="TPs1"
+        Association="FK_TP_REF_GAP1"
+        FromEnd="REF_GAP"
+        ToEnd="TP" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_TP_REF_GAP">
+    <AssociationEnd
+      Name="REF_GAP"
+      EntityType="REF_GAP">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="TP"
+      Multiplicity="Many"
+      EntityType="TP" />
+  </Association>
+  <Association
+    Name="FK_TP_REF_GAP1">
+    <AssociationEnd
+      Name="REF_GAP"
+      EntityType="REF_GAP">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="TP"
+      Multiplicity="Many"
+      EntityType="TP" />
+  </Association>
+  <EntityContainer
+    Name="FMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="REF_GAPs"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="REF_GAP" />
+    <AssociationSet
+      Name="FK_TP_REF_GAP"
+      Association="FK_TP_REF_GAP">
+      <AssociationSetEnd
+        Name="REF_GAP"
+        EntitySet="REF_GAPs" />
+      <AssociationSetEnd
+        Name="TP"
+        EntitySet="TPs" />
+    </AssociationSet>
+    <AssociationSet
+      Name="FK_TP_REF_GAP1"
+      Association="FK_TP_REF_GAP1">
+      <AssociationSetEnd
+        Name="REF_GAP"
+        EntitySet="REF_GAPs" />
+      <AssociationSetEnd
+        Name="TP"
+        EntitySet="TPs" />
+    </AssociationSet>
+    <QueryOperation
+      Name="REF_GAPs_Single"
+      ReturnType="REF_GAP">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="GapID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="GapID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="REF_GAPs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="GapID"
+        ParameterType="Microsoft.LightSwitch:Int16?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'GapID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="REF_GAPs_SingleOrDefault"
+      ReturnType="REF_GAP">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="GapID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="GapID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="REF_GAPs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="GapID"
+        ParameterType="Microsoft.LightSwitch:Int16?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'GapID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="FMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="REF_GAPs">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="REF_GAP" />
+        <SsdlProperty
+          Name="GapID"
+          Nullable="False"
+          Type="smallint"
+          Property="REF_GAP/Properties[GapID]" />
+        <SsdlProperty
+          MaxLength="100"
+          Name="Name"
+          Nullable="True"
+          Type="varchar"
+          Property="REF_GAP/Properties[Name]" />
+        <SsdlProperty
+          MaxLength="150"
+          Name="Description"
+          Nullable="True"
+          Type="varchar"
+          Property="REF_GAP/Properties[Description]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="CreatedBy"
+          Nullable="True"
+          Type="varchar"
+          Property="REF_GAP/Properties[CreatedBy]" />
+        <SsdlProperty
+          Name="CreatedDate"
+          Nullable="True"
+          Type="datetime"
+          Property="REF_GAP/Properties[CreatedDate]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ModifiedBy"
+          Nullable="True"
+          Type="varchar"
+          Property="REF_GAP/Properties[ModifiedBy]" />
+        <SsdlProperty
+          Name="ModifiedDate"
+          Nullable="True"
+          Type="datetime"
+          Property="REF_GAP/Properties[ModifiedDate]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_TP_REF_GAP">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_TP_REF_GAP" />
+        <SsdlAssociationSetEnd
+          End="FMData/Members[FK_TP_REF_GAP]/Members[REF_GAP]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="GapID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="FMData/Members[FK_TP_REF_GAP]/Members[TP]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="TechnologyGapID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_TP_REF_GAP1">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_TP_REF_GAP1" />
+        <SsdlAssociationSetEnd
+          End="FMData/Members[FK_TP_REF_GAP1]/Members[REF_GAP]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="GapID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="FMData/Members[FK_TP_REF_GAP1]/Members[TP]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="FunctionalGapID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

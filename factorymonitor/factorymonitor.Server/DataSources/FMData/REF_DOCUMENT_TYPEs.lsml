@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="REF_DOCUMENT_TYPE">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="DocumentTypeID"
+        IsReadOnly="True"
+        PropertyType=":Int16">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Description"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="150" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedBy"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="TP_DOCUMENT_LINKs"
+        Association="FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE"
+        FromEnd="REF_DOCUMENT_TYPE"
+        ToEnd="TP_DOCUMENT_LINK" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE">
+    <AssociationEnd
+      Name="REF_DOCUMENT_TYPE"
+      Multiplicity="One"
+      EntityType="REF_DOCUMENT_TYPE">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="TP_DOCUMENT_LINK"
+      Multiplicity="Many"
+      EntityType="TP_DOCUMENT_LINK" />
+  </Association>
+  <EntityContainer
+    Name="FMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="REF_DOCUMENT_TYPEs"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="REF_DOCUMENT_TYPE" />
+    <AssociationSet
+      Name="FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE"
+      Association="FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE">
+      <AssociationSetEnd
+        Name="REF_DOCUMENT_TYPE"
+        EntitySet="REF_DOCUMENT_TYPEs" />
+      <AssociationSetEnd
+        Name="TP_DOCUMENT_LINK"
+        EntitySet="TP_DOCUMENT_LINKs" />
+    </AssociationSet>
+    <QueryOperation
+      Name="REF_DOCUMENT_TYPEs_Single"
+      ReturnType="REF_DOCUMENT_TYPE">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="DocumentTypeID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="DocumentTypeID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="REF_DOCUMENT_TYPEs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="DocumentTypeID"
+        ParameterType="Microsoft.LightSwitch:Int16?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'DocumentTypeID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="REF_DOCUMENT_TYPEs_SingleOrDefault"
+      ReturnType="REF_DOCUMENT_TYPE">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="DocumentTypeID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="DocumentTypeID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="REF_DOCUMENT_TYPEs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="DocumentTypeID"
+        ParameterType="Microsoft.LightSwitch:Int16?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'DocumentTypeID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="FMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="REF_DOCUMENT_TYPEs">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="REF_DOCUMENT_TYPE" />
+        <SsdlProperty
+          Name="DocumentTypeID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="smallint"
+          Property="REF_DOCUMENT_TYPE/Properties[DocumentTypeID]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Name"
+          Nullable="True"
+          Type="varchar"
+          Property="REF_DOCUMENT_TYPE/Properties[Name]" />
+        <SsdlProperty
+          MaxLength="150"
+          Name="Description"
+          Nullable="True"
+          Type="varchar"
+          Property="REF_DOCUMENT_TYPE/Properties[Description]" />
+        <SsdlProperty
+          Name="CreatedDate"
+          Nullable="True"
+          Type="datetime"
+          Property="REF_DOCUMENT_TYPE/Properties[CreatedDate]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="CreatedBy"
+          Nullable="True"
+          Type="varchar"
+          Property="REF_DOCUMENT_TYPE/Properties[CreatedBy]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ModifiedBy"
+          Nullable="True"
+          Type="varchar"
+          Property="REF_DOCUMENT_TYPE/Properties[ModifiedBy]" />
+        <SsdlProperty
+          Name="ModifiedDate"
+          Nullable="True"
+          Type="datetime"
+          Property="REF_DOCUMENT_TYPE/Properties[ModifiedDate]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE" />
+        <SsdlAssociationSetEnd
+          End="FMData/Members[FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE]/Members[REF_DOCUMENT_TYPE]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="DocumentTypeID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="FMData/Members[FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE]/Members[TP_DOCUMENT_LINK]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="DocumentTypeID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

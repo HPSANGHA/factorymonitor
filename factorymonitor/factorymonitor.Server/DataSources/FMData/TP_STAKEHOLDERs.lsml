@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="TP_STAKEHOLDER">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="TpStakeholderID"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="CreatedBy"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="REF_STAKEHOLDER"
+        Association="FK_TP_STAKEHOLDER_REF_STAKEHOLDER"
+        FromEnd="TP_STAKEHOLDER"
+        ToEnd="REF_STAKEHOLDER" />
+      <NavigationProperty
+        Name="TP"
+        Association="FK_TP_STAKEHOLDER_TP"
+        FromEnd="TP_STAKEHOLDER"
+        ToEnd="TP" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="FMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="TP_STAKEHOLDERs"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="TP_STAKEHOLDER" />
+    <QueryOperation
+      Name="TP_STAKEHOLDERs_Single"
+      ReturnType="TP_STAKEHOLDER">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="TpStakeholderID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="TpStakeholderID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="TP_STAKEHOLDERs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="TpStakeholderID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'TpStakeholderID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="TP_STAKEHOLDERs_SingleOrDefault"
+      ReturnType="TP_STAKEHOLDER">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="TpStakeholderID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="TpStakeholderID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="TP_STAKEHOLDERs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="TpStakeholderID"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'TpStakeholderID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="FMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="TP_STAKEHOLDERs">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="TP_STAKEHOLDER" />
+        <SsdlProperty
+          Name="TpStakeholderID"
+          Nullable="False"
+          Type="int"
+          Property="TP_STAKEHOLDER/Properties[TpStakeholderID]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="CreatedBy"
+          Nullable="True"
+          Type="varchar"
+          Property="TP_STAKEHOLDER/Properties[CreatedBy]" />
+        <SsdlProperty
+          Name="CreatedDate"
+          Nullable="True"
+          Type="datetime"
+          Property="TP_STAKEHOLDER/Properties[CreatedDate]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ModifiedBy"
+          Nullable="True"
+          Type="varchar"
+          Property="TP_STAKEHOLDER/Properties[ModifiedBy]" />
+        <SsdlProperty
+          Name="ModifiedDate"
+          Nullable="True"
+          Type="datetime"
+          Property="TP_STAKEHOLDER/Properties[ModifiedDate]" />
+        <SsdlForeignKeyProperty
+          Name="StakeholderID"
+          Nullable="True"
+          Type="smallint"
+          PropertyName="StakeholderID" />
+        <SsdlForeignKeyProperty
+          Name="TpID"
+          Nullable="True"
+          Type="int"
+          PropertyName="TpID" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+</ServiceApplication>

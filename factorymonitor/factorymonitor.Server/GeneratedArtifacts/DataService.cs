@@ -11,5 +11,2393 @@ namespace LightSwitchApplication
 {
     #region Data Services
     
+    /// <summary>
+    /// Provides members to query and update data in the FMData datasource.
+    /// </summary>
+    public sealed partial class FMDataService
+        : global::LightSwitchApplication.FMData
+    {
+        #region Constructors
+    
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public FMDataService() : base()
+        {
+        }
+    
+        #endregion
+    
+        #region Private Properties
+        
+        /// <summary>
+        /// Gets the Application object for this application.  The Application object provides access to active screens, methods to open screens and access to the current user.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.Application Application
+        {
+            get
+            {
+                return global::LightSwitchApplication.Application.Current;
+            }
+        }
+        
+        /// <summary>
+        /// Gets the containing data workspace.  The data workspace provides access to all data sources in the application.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        private global::LightSwitchApplication.DataWorkspace DataWorkspace
+        {
+            get
+            {
+                return (global::LightSwitchApplication.DataWorkspace)this.Details.DataWorkspace;
+            }
+        }
+        
+        #endregion
+    
+        #region Server Interceptions Points
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void APPLICATIONs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void APPLICATIONs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void APPLICATIONs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void APPLICATIONs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void APPLICATIONs_Inserting(global::LightSwitchApplication.APP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void APPLICATIONs_Inserted(global::LightSwitchApplication.APP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void APPLICATIONs_Updating(global::LightSwitchApplication.APP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void APPLICATIONs_Updated(global::LightSwitchApplication.APP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void APPLICATIONs_Deleting(global::LightSwitchApplication.APP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void APPLICATIONs_Deleted(global::LightSwitchApplication.APP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void APPLICATIONs_Validate(global::LightSwitchApplication.APP entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void APPLICATIONs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.APP, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_APPLICATION_TYPEs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_APPLICATION_TYPEs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_APPLICATION_TYPEs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_APPLICATION_TYPEs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_APPLICATION_TYPEs_Inserting(global::LightSwitchApplication.REF_APPLICATION_TYPE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_APPLICATION_TYPEs_Inserted(global::LightSwitchApplication.REF_APPLICATION_TYPE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_APPLICATION_TYPEs_Updating(global::LightSwitchApplication.REF_APPLICATION_TYPE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_APPLICATION_TYPEs_Updated(global::LightSwitchApplication.REF_APPLICATION_TYPE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_APPLICATION_TYPEs_Deleting(global::LightSwitchApplication.REF_APPLICATION_TYPE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_APPLICATION_TYPEs_Deleted(global::LightSwitchApplication.REF_APPLICATION_TYPE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_APPLICATION_TYPEs_Validate(global::LightSwitchApplication.REF_APPLICATION_TYPE entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_APPLICATION_TYPEs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_APPLICATION_TYPE, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_COMPLEXITies_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_COMPLEXITies_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_COMPLEXITies_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_COMPLEXITies_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_COMPLEXITies_Inserting(global::LightSwitchApplication.REF_COMPLEXITY entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_COMPLEXITies_Inserted(global::LightSwitchApplication.REF_COMPLEXITY entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_COMPLEXITies_Updating(global::LightSwitchApplication.REF_COMPLEXITY entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_COMPLEXITies_Updated(global::LightSwitchApplication.REF_COMPLEXITY entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_COMPLEXITies_Deleting(global::LightSwitchApplication.REF_COMPLEXITY entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_COMPLEXITies_Deleted(global::LightSwitchApplication.REF_COMPLEXITY entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_COMPLEXITies_Validate(global::LightSwitchApplication.REF_COMPLEXITY entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_COMPLEXITies_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_COMPLEXITY, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_DOCUMENT_TYPEs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_DOCUMENT_TYPEs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_DOCUMENT_TYPEs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_DOCUMENT_TYPEs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_DOCUMENT_TYPEs_Inserting(global::LightSwitchApplication.REF_DOCUMENT_TYPE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_DOCUMENT_TYPEs_Inserted(global::LightSwitchApplication.REF_DOCUMENT_TYPE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_DOCUMENT_TYPEs_Updating(global::LightSwitchApplication.REF_DOCUMENT_TYPE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_DOCUMENT_TYPEs_Updated(global::LightSwitchApplication.REF_DOCUMENT_TYPE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_DOCUMENT_TYPEs_Deleting(global::LightSwitchApplication.REF_DOCUMENT_TYPE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_DOCUMENT_TYPEs_Deleted(global::LightSwitchApplication.REF_DOCUMENT_TYPE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_DOCUMENT_TYPEs_Validate(global::LightSwitchApplication.REF_DOCUMENT_TYPE entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_DOCUMENT_TYPEs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_DOCUMENT_TYPE, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_GAPs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_GAPs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_GAPs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_GAPs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_GAPs_Inserting(global::LightSwitchApplication.REF_GAP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_GAPs_Inserted(global::LightSwitchApplication.REF_GAP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_GAPs_Updating(global::LightSwitchApplication.REF_GAP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_GAPs_Updated(global::LightSwitchApplication.REF_GAP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_GAPs_Deleting(global::LightSwitchApplication.REF_GAP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_GAPs_Deleted(global::LightSwitchApplication.REF_GAP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_GAPs_Validate(global::LightSwitchApplication.REF_GAP entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_GAPs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_GAP, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_PHASEs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_PHASEs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_PHASEs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_PHASEs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_PHASEs_Inserting(global::LightSwitchApplication.REF_PHASE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_PHASEs_Inserted(global::LightSwitchApplication.REF_PHASE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_PHASEs_Updating(global::LightSwitchApplication.REF_PHASE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_PHASEs_Updated(global::LightSwitchApplication.REF_PHASE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_PHASEs_Deleting(global::LightSwitchApplication.REF_PHASE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_PHASEs_Deleted(global::LightSwitchApplication.REF_PHASE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_PHASEs_Validate(global::LightSwitchApplication.REF_PHASE entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_PHASEs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_PHASE, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_ROLEs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_ROLEs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_ROLEs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_ROLEs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_ROLEs_Inserting(global::LightSwitchApplication.REF_ROLE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_ROLEs_Inserted(global::LightSwitchApplication.REF_ROLE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_ROLEs_Updating(global::LightSwitchApplication.REF_ROLE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_ROLEs_Updated(global::LightSwitchApplication.REF_ROLE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_ROLEs_Deleting(global::LightSwitchApplication.REF_ROLE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_ROLEs_Deleted(global::LightSwitchApplication.REF_ROLE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_ROLEs_Validate(global::LightSwitchApplication.REF_ROLE entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_ROLEs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_ROLE, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STAKEHOLDERs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STAKEHOLDERs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STAKEHOLDERs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STAKEHOLDERs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STAKEHOLDERs_Inserting(global::LightSwitchApplication.REF_STAKEHOLDER entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STAKEHOLDERs_Inserted(global::LightSwitchApplication.REF_STAKEHOLDER entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STAKEHOLDERs_Updating(global::LightSwitchApplication.REF_STAKEHOLDER entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STAKEHOLDERs_Updated(global::LightSwitchApplication.REF_STAKEHOLDER entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STAKEHOLDERs_Deleting(global::LightSwitchApplication.REF_STAKEHOLDER entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STAKEHOLDERs_Deleted(global::LightSwitchApplication.REF_STAKEHOLDER entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STAKEHOLDERs_Validate(global::LightSwitchApplication.REF_STAKEHOLDER entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STAKEHOLDERs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_STAKEHOLDER, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STATUS_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STATUS_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STATUS_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STATUS_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STATUS_Inserting(global::LightSwitchApplication.REF_STATUS entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STATUS_Inserted(global::LightSwitchApplication.REF_STATUS entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STATUS_Updating(global::LightSwitchApplication.REF_STATUS entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STATUS_Updated(global::LightSwitchApplication.REF_STATUS entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STATUS_Deleting(global::LightSwitchApplication.REF_STATUS entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STATUS_Deleted(global::LightSwitchApplication.REF_STATUS entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STATUS_Validate(global::LightSwitchApplication.REF_STATUS entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_STATUS_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_STATUS, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGies_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGies_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGies_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGies_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGies_Inserting(global::LightSwitchApplication.REF_TECHNOLOGY entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGies_Inserted(global::LightSwitchApplication.REF_TECHNOLOGY entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGies_Updating(global::LightSwitchApplication.REF_TECHNOLOGY entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGies_Updated(global::LightSwitchApplication.REF_TECHNOLOGY entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGies_Deleting(global::LightSwitchApplication.REF_TECHNOLOGY entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGies_Deleted(global::LightSwitchApplication.REF_TECHNOLOGY entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGies_Validate(global::LightSwitchApplication.REF_TECHNOLOGY entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGies_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_TECHNOLOGY, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGY_STACKs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGY_STACKs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGY_STACKs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGY_STACKs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGY_STACKs_Inserting(global::LightSwitchApplication.REF_TECHNOLOGY_STACK entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGY_STACKs_Inserted(global::LightSwitchApplication.REF_TECHNOLOGY_STACK entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGY_STACKs_Updating(global::LightSwitchApplication.REF_TECHNOLOGY_STACK entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGY_STACKs_Updated(global::LightSwitchApplication.REF_TECHNOLOGY_STACK entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGY_STACKs_Deleting(global::LightSwitchApplication.REF_TECHNOLOGY_STACK entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGY_STACKs_Deleted(global::LightSwitchApplication.REF_TECHNOLOGY_STACK entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGY_STACKs_Validate(global::LightSwitchApplication.REF_TECHNOLOGY_STACK entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_TECHNOLOGY_STACKs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_TECHNOLOGY_STACK, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_VENDORs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_VENDORs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_VENDORs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_VENDORs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_VENDORs_Inserting(global::LightSwitchApplication.REF_VENDOR entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_VENDORs_Inserted(global::LightSwitchApplication.REF_VENDOR entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_VENDORs_Updating(global::LightSwitchApplication.REF_VENDOR entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_VENDORs_Updated(global::LightSwitchApplication.REF_VENDOR entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_VENDORs_Deleting(global::LightSwitchApplication.REF_VENDOR entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_VENDORs_Deleted(global::LightSwitchApplication.REF_VENDOR entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_VENDORs_Validate(global::LightSwitchApplication.REF_VENDOR entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void REF_VENDORs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_VENDOR, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RESOURCEs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RESOURCEs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RESOURCEs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RESOURCEs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RESOURCEs_Inserting(global::LightSwitchApplication.RESOURCE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RESOURCEs_Inserted(global::LightSwitchApplication.RESOURCE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RESOURCEs_Updating(global::LightSwitchApplication.RESOURCE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RESOURCEs_Updated(global::LightSwitchApplication.RESOURCE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RESOURCEs_Deleting(global::LightSwitchApplication.RESOURCE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RESOURCEs_Deleted(global::LightSwitchApplication.RESOURCE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RESOURCEs_Validate(global::LightSwitchApplication.RESOURCE entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RESOURCEs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.RESOURCE, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_APPLICATIONs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_APPLICATIONs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_APPLICATIONs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_APPLICATIONs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_APPLICATIONs_Inserting(global::LightSwitchApplication.TP_APPLICATION entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_APPLICATIONs_Inserted(global::LightSwitchApplication.TP_APPLICATION entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_APPLICATIONs_Updating(global::LightSwitchApplication.TP_APPLICATION entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_APPLICATIONs_Updated(global::LightSwitchApplication.TP_APPLICATION entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_APPLICATIONs_Deleting(global::LightSwitchApplication.TP_APPLICATION entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_APPLICATIONs_Deleted(global::LightSwitchApplication.TP_APPLICATION entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_APPLICATIONs_Validate(global::LightSwitchApplication.TP_APPLICATION entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_APPLICATIONs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_APPLICATION, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_DOCUMENT_LINKs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_DOCUMENT_LINKs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_DOCUMENT_LINKs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_DOCUMENT_LINKs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_DOCUMENT_LINKs_Inserting(global::LightSwitchApplication.TP_DOCUMENT_LINK entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_DOCUMENT_LINKs_Inserted(global::LightSwitchApplication.TP_DOCUMENT_LINK entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_DOCUMENT_LINKs_Updating(global::LightSwitchApplication.TP_DOCUMENT_LINK entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_DOCUMENT_LINKs_Updated(global::LightSwitchApplication.TP_DOCUMENT_LINK entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_DOCUMENT_LINKs_Deleting(global::LightSwitchApplication.TP_DOCUMENT_LINK entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_DOCUMENT_LINKs_Deleted(global::LightSwitchApplication.TP_DOCUMENT_LINK entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_DOCUMENT_LINKs_Validate(global::LightSwitchApplication.TP_DOCUMENT_LINK entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_DOCUMENT_LINKs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_DOCUMENT_LINK, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_PHASEs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_PHASEs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_PHASEs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_PHASEs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_PHASEs_Inserting(global::LightSwitchApplication.TP_PHASE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_PHASEs_Inserted(global::LightSwitchApplication.TP_PHASE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_PHASEs_Updating(global::LightSwitchApplication.TP_PHASE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_PHASEs_Updated(global::LightSwitchApplication.TP_PHASE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_PHASEs_Deleting(global::LightSwitchApplication.TP_PHASE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_PHASEs_Deleted(global::LightSwitchApplication.TP_PHASE entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_PHASEs_Validate(global::LightSwitchApplication.TP_PHASE entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_PHASEs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_PHASE, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_RESOURCE_ALLOCATIONs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_RESOURCE_ALLOCATIONs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_RESOURCE_ALLOCATIONs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_RESOURCE_ALLOCATIONs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_RESOURCE_ALLOCATIONs_Inserting(global::LightSwitchApplication.TP_RESOURCE_ALLOCATION entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_RESOURCE_ALLOCATIONs_Inserted(global::LightSwitchApplication.TP_RESOURCE_ALLOCATION entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_RESOURCE_ALLOCATIONs_Updating(global::LightSwitchApplication.TP_RESOURCE_ALLOCATION entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_RESOURCE_ALLOCATIONs_Updated(global::LightSwitchApplication.TP_RESOURCE_ALLOCATION entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_RESOURCE_ALLOCATIONs_Deleting(global::LightSwitchApplication.TP_RESOURCE_ALLOCATION entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_RESOURCE_ALLOCATIONs_Deleted(global::LightSwitchApplication.TP_RESOURCE_ALLOCATION entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_RESOURCE_ALLOCATIONs_Validate(global::LightSwitchApplication.TP_RESOURCE_ALLOCATION entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_RESOURCE_ALLOCATIONs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_RESOURCE_ALLOCATION, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_STAKEHOLDERs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_STAKEHOLDERs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_STAKEHOLDERs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_STAKEHOLDERs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_STAKEHOLDERs_Inserting(global::LightSwitchApplication.TP_STAKEHOLDER entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_STAKEHOLDERs_Inserted(global::LightSwitchApplication.TP_STAKEHOLDER entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_STAKEHOLDERs_Updating(global::LightSwitchApplication.TP_STAKEHOLDER entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_STAKEHOLDERs_Updated(global::LightSwitchApplication.TP_STAKEHOLDER entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_STAKEHOLDERs_Deleting(global::LightSwitchApplication.TP_STAKEHOLDER entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_STAKEHOLDERs_Deleted(global::LightSwitchApplication.TP_STAKEHOLDER entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_STAKEHOLDERs_Validate(global::LightSwitchApplication.TP_STAKEHOLDER entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_STAKEHOLDERs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_STAKEHOLDER, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_VENDORs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_VENDORs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_VENDORs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_VENDORs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_VENDORs_Inserting(global::LightSwitchApplication.TP_VENDOR entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_VENDORs_Inserted(global::LightSwitchApplication.TP_VENDOR entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_VENDORs_Updating(global::LightSwitchApplication.TP_VENDOR entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_VENDORs_Updated(global::LightSwitchApplication.TP_VENDOR entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_VENDORs_Deleting(global::LightSwitchApplication.TP_VENDOR entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_VENDORs_Deleted(global::LightSwitchApplication.TP_VENDOR entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_VENDORs_Validate(global::LightSwitchApplication.TP_VENDOR entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TP_VENDORs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_VENDOR, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_Inserting(global::LightSwitchApplication.TP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_Inserted(global::LightSwitchApplication.TP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_Updating(global::LightSwitchApplication.TP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_Updated(global::LightSwitchApplication.TP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_Deleting(global::LightSwitchApplication.TP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_Deleted(global::LightSwitchApplication.TP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_Validate(global::LightSwitchApplication.TP entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaveChanges_CanExecute(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaveChanges_Executing();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaveChanges_Executed();
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void SaveChanges_ExecuteFailed(global::System.Exception exception);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Query_Executing(global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Query_Executed(global::Microsoft.LightSwitch.QueryExecutedDescriptor queryDescriptor);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Query_ExecuteFailed(global::Microsoft.LightSwitch.QueryExecuteFailedDescriptor queryDescriptor);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void FMData_InitializingConnection(global::Microsoft.LightSwitch.DatabaseConnectionState state);
+    
+        #endregion
+    
+        #region Details Class
+    
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
+        [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
+        public static new class DetailsClass
+        {
+    
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1810:InitializeReferenceTypeStaticFieldsInline")]
+            static DetailsClass()
+            {
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.APP>
+                __APPLICATIONsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.APP>(
+                    "APPLICATIONs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__APPLICATIONs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__APPLICATIONs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__APPLICATIONs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__APPLICATIONs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__APPLICATIONs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__APPLICATIONs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__APPLICATIONs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__APPLICATIONs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__APPLICATIONs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__APPLICATIONs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__APPLICATIONs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__APPLICATIONs_Filter);
+            private static bool __APPLICATIONs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.APPLICATIONs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __APPLICATIONs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.APPLICATIONs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __APPLICATIONs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.APPLICATIONs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __APPLICATIONs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.APPLICATIONs_CanRead(ref result);
+                return result;
+            }
+            private static void __APPLICATIONs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.APP e)
+            {
+                d.APPLICATIONs_Inserting(e);
+            }
+            private static void __APPLICATIONs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.APP e)
+            {
+                d.APPLICATIONs_Inserted(e);
+            }
+            private static void __APPLICATIONs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.APP e)
+            {
+                d.APPLICATIONs_Updating(e);
+            }
+            private static void __APPLICATIONs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.APP e)
+            {
+                d.APPLICATIONs_Updated(e);
+            }
+            private static void __APPLICATIONs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.APP e)
+            {
+                d.APPLICATIONs_Deleting(e);
+            }
+            private static void __APPLICATIONs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.APP e)
+            {
+                d.APPLICATIONs_Deleted(e);
+            }
+            private static void __APPLICATIONs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.APP e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.APPLICATIONs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.APP, bool>> __APPLICATIONs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.APP, bool>> filter = null;
+                d.APPLICATIONs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_APPLICATION_TYPE>
+                __REF_APPLICATION_TYPEsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_APPLICATION_TYPE>(
+                    "REF_APPLICATION_TYPEs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_APPLICATION_TYPEs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_APPLICATION_TYPEs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_APPLICATION_TYPEs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_APPLICATION_TYPEs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_APPLICATION_TYPEs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_APPLICATION_TYPEs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_APPLICATION_TYPEs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_APPLICATION_TYPEs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_APPLICATION_TYPEs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_APPLICATION_TYPEs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_APPLICATION_TYPEs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_APPLICATION_TYPEs_Filter);
+            private static bool __REF_APPLICATION_TYPEs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_APPLICATION_TYPEs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __REF_APPLICATION_TYPEs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_APPLICATION_TYPEs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __REF_APPLICATION_TYPEs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_APPLICATION_TYPEs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __REF_APPLICATION_TYPEs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_APPLICATION_TYPEs_CanRead(ref result);
+                return result;
+            }
+            private static void __REF_APPLICATION_TYPEs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_APPLICATION_TYPE e)
+            {
+                d.REF_APPLICATION_TYPEs_Inserting(e);
+            }
+            private static void __REF_APPLICATION_TYPEs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_APPLICATION_TYPE e)
+            {
+                d.REF_APPLICATION_TYPEs_Inserted(e);
+            }
+            private static void __REF_APPLICATION_TYPEs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_APPLICATION_TYPE e)
+            {
+                d.REF_APPLICATION_TYPEs_Updating(e);
+            }
+            private static void __REF_APPLICATION_TYPEs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_APPLICATION_TYPE e)
+            {
+                d.REF_APPLICATION_TYPEs_Updated(e);
+            }
+            private static void __REF_APPLICATION_TYPEs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_APPLICATION_TYPE e)
+            {
+                d.REF_APPLICATION_TYPEs_Deleting(e);
+            }
+            private static void __REF_APPLICATION_TYPEs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_APPLICATION_TYPE e)
+            {
+                d.REF_APPLICATION_TYPEs_Deleted(e);
+            }
+            private static void __REF_APPLICATION_TYPEs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_APPLICATION_TYPE e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.REF_APPLICATION_TYPEs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_APPLICATION_TYPE, bool>> __REF_APPLICATION_TYPEs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_APPLICATION_TYPE, bool>> filter = null;
+                d.REF_APPLICATION_TYPEs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_COMPLEXITY>
+                __REF_COMPLEXITiesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_COMPLEXITY>(
+                    "REF_COMPLEXITies",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_COMPLEXITies_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_COMPLEXITies_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_COMPLEXITies_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_COMPLEXITies_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_COMPLEXITies_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_COMPLEXITies_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_COMPLEXITies_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_COMPLEXITies_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_COMPLEXITies_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_COMPLEXITies_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_COMPLEXITies_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_COMPLEXITies_Filter);
+            private static bool __REF_COMPLEXITies_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_COMPLEXITies_CanInsert(ref result);
+                return result;
+            }
+            private static bool __REF_COMPLEXITies_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_COMPLEXITies_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __REF_COMPLEXITies_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_COMPLEXITies_CanDelete(ref result);
+                return result;
+            }
+            private static bool __REF_COMPLEXITies_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_COMPLEXITies_CanRead(ref result);
+                return result;
+            }
+            private static void __REF_COMPLEXITies_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_COMPLEXITY e)
+            {
+                d.REF_COMPLEXITies_Inserting(e);
+            }
+            private static void __REF_COMPLEXITies_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_COMPLEXITY e)
+            {
+                d.REF_COMPLEXITies_Inserted(e);
+            }
+            private static void __REF_COMPLEXITies_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_COMPLEXITY e)
+            {
+                d.REF_COMPLEXITies_Updating(e);
+            }
+            private static void __REF_COMPLEXITies_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_COMPLEXITY e)
+            {
+                d.REF_COMPLEXITies_Updated(e);
+            }
+            private static void __REF_COMPLEXITies_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_COMPLEXITY e)
+            {
+                d.REF_COMPLEXITies_Deleting(e);
+            }
+            private static void __REF_COMPLEXITies_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_COMPLEXITY e)
+            {
+                d.REF_COMPLEXITies_Deleted(e);
+            }
+            private static void __REF_COMPLEXITies_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_COMPLEXITY e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.REF_COMPLEXITies_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_COMPLEXITY, bool>> __REF_COMPLEXITies_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_COMPLEXITY, bool>> filter = null;
+                d.REF_COMPLEXITies_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_DOCUMENT_TYPE>
+                __REF_DOCUMENT_TYPEsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_DOCUMENT_TYPE>(
+                    "REF_DOCUMENT_TYPEs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_DOCUMENT_TYPEs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_DOCUMENT_TYPEs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_DOCUMENT_TYPEs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_DOCUMENT_TYPEs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_DOCUMENT_TYPEs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_DOCUMENT_TYPEs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_DOCUMENT_TYPEs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_DOCUMENT_TYPEs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_DOCUMENT_TYPEs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_DOCUMENT_TYPEs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_DOCUMENT_TYPEs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_DOCUMENT_TYPEs_Filter);
+            private static bool __REF_DOCUMENT_TYPEs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_DOCUMENT_TYPEs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __REF_DOCUMENT_TYPEs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_DOCUMENT_TYPEs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __REF_DOCUMENT_TYPEs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_DOCUMENT_TYPEs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __REF_DOCUMENT_TYPEs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_DOCUMENT_TYPEs_CanRead(ref result);
+                return result;
+            }
+            private static void __REF_DOCUMENT_TYPEs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_DOCUMENT_TYPE e)
+            {
+                d.REF_DOCUMENT_TYPEs_Inserting(e);
+            }
+            private static void __REF_DOCUMENT_TYPEs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_DOCUMENT_TYPE e)
+            {
+                d.REF_DOCUMENT_TYPEs_Inserted(e);
+            }
+            private static void __REF_DOCUMENT_TYPEs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_DOCUMENT_TYPE e)
+            {
+                d.REF_DOCUMENT_TYPEs_Updating(e);
+            }
+            private static void __REF_DOCUMENT_TYPEs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_DOCUMENT_TYPE e)
+            {
+                d.REF_DOCUMENT_TYPEs_Updated(e);
+            }
+            private static void __REF_DOCUMENT_TYPEs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_DOCUMENT_TYPE e)
+            {
+                d.REF_DOCUMENT_TYPEs_Deleting(e);
+            }
+            private static void __REF_DOCUMENT_TYPEs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_DOCUMENT_TYPE e)
+            {
+                d.REF_DOCUMENT_TYPEs_Deleted(e);
+            }
+            private static void __REF_DOCUMENT_TYPEs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_DOCUMENT_TYPE e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.REF_DOCUMENT_TYPEs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_DOCUMENT_TYPE, bool>> __REF_DOCUMENT_TYPEs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_DOCUMENT_TYPE, bool>> filter = null;
+                d.REF_DOCUMENT_TYPEs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_GAP>
+                __REF_GAPsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_GAP>(
+                    "REF_GAPs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_GAPs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_GAPs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_GAPs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_GAPs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_GAPs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_GAPs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_GAPs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_GAPs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_GAPs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_GAPs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_GAPs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_GAPs_Filter);
+            private static bool __REF_GAPs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_GAPs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __REF_GAPs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_GAPs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __REF_GAPs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_GAPs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __REF_GAPs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_GAPs_CanRead(ref result);
+                return result;
+            }
+            private static void __REF_GAPs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_GAP e)
+            {
+                d.REF_GAPs_Inserting(e);
+            }
+            private static void __REF_GAPs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_GAP e)
+            {
+                d.REF_GAPs_Inserted(e);
+            }
+            private static void __REF_GAPs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_GAP e)
+            {
+                d.REF_GAPs_Updating(e);
+            }
+            private static void __REF_GAPs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_GAP e)
+            {
+                d.REF_GAPs_Updated(e);
+            }
+            private static void __REF_GAPs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_GAP e)
+            {
+                d.REF_GAPs_Deleting(e);
+            }
+            private static void __REF_GAPs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_GAP e)
+            {
+                d.REF_GAPs_Deleted(e);
+            }
+            private static void __REF_GAPs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_GAP e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.REF_GAPs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_GAP, bool>> __REF_GAPs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_GAP, bool>> filter = null;
+                d.REF_GAPs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_PHASE>
+                __REF_PHASEsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_PHASE>(
+                    "REF_PHASEs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_PHASEs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_PHASEs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_PHASEs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_PHASEs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_PHASEs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_PHASEs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_PHASEs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_PHASEs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_PHASEs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_PHASEs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_PHASEs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_PHASEs_Filter);
+            private static bool __REF_PHASEs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_PHASEs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __REF_PHASEs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_PHASEs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __REF_PHASEs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_PHASEs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __REF_PHASEs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_PHASEs_CanRead(ref result);
+                return result;
+            }
+            private static void __REF_PHASEs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_PHASE e)
+            {
+                d.REF_PHASEs_Inserting(e);
+            }
+            private static void __REF_PHASEs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_PHASE e)
+            {
+                d.REF_PHASEs_Inserted(e);
+            }
+            private static void __REF_PHASEs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_PHASE e)
+            {
+                d.REF_PHASEs_Updating(e);
+            }
+            private static void __REF_PHASEs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_PHASE e)
+            {
+                d.REF_PHASEs_Updated(e);
+            }
+            private static void __REF_PHASEs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_PHASE e)
+            {
+                d.REF_PHASEs_Deleting(e);
+            }
+            private static void __REF_PHASEs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_PHASE e)
+            {
+                d.REF_PHASEs_Deleted(e);
+            }
+            private static void __REF_PHASEs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_PHASE e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.REF_PHASEs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_PHASE, bool>> __REF_PHASEs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_PHASE, bool>> filter = null;
+                d.REF_PHASEs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_ROLE>
+                __REF_ROLEsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_ROLE>(
+                    "REF_ROLEs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_ROLEs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_ROLEs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_ROLEs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_ROLEs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_ROLEs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_ROLEs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_ROLEs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_ROLEs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_ROLEs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_ROLEs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_ROLEs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_ROLEs_Filter);
+            private static bool __REF_ROLEs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_ROLEs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __REF_ROLEs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_ROLEs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __REF_ROLEs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_ROLEs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __REF_ROLEs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_ROLEs_CanRead(ref result);
+                return result;
+            }
+            private static void __REF_ROLEs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_ROLE e)
+            {
+                d.REF_ROLEs_Inserting(e);
+            }
+            private static void __REF_ROLEs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_ROLE e)
+            {
+                d.REF_ROLEs_Inserted(e);
+            }
+            private static void __REF_ROLEs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_ROLE e)
+            {
+                d.REF_ROLEs_Updating(e);
+            }
+            private static void __REF_ROLEs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_ROLE e)
+            {
+                d.REF_ROLEs_Updated(e);
+            }
+            private static void __REF_ROLEs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_ROLE e)
+            {
+                d.REF_ROLEs_Deleting(e);
+            }
+            private static void __REF_ROLEs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_ROLE e)
+            {
+                d.REF_ROLEs_Deleted(e);
+            }
+            private static void __REF_ROLEs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_ROLE e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.REF_ROLEs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_ROLE, bool>> __REF_ROLEs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_ROLE, bool>> filter = null;
+                d.REF_ROLEs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_STAKEHOLDER>
+                __REF_STAKEHOLDERsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_STAKEHOLDER>(
+                    "REF_STAKEHOLDERs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STAKEHOLDERs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STAKEHOLDERs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STAKEHOLDERs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STAKEHOLDERs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STAKEHOLDERs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STAKEHOLDERs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STAKEHOLDERs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STAKEHOLDERs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STAKEHOLDERs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STAKEHOLDERs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STAKEHOLDERs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STAKEHOLDERs_Filter);
+            private static bool __REF_STAKEHOLDERs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_STAKEHOLDERs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __REF_STAKEHOLDERs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_STAKEHOLDERs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __REF_STAKEHOLDERs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_STAKEHOLDERs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __REF_STAKEHOLDERs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_STAKEHOLDERs_CanRead(ref result);
+                return result;
+            }
+            private static void __REF_STAKEHOLDERs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_STAKEHOLDER e)
+            {
+                d.REF_STAKEHOLDERs_Inserting(e);
+            }
+            private static void __REF_STAKEHOLDERs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_STAKEHOLDER e)
+            {
+                d.REF_STAKEHOLDERs_Inserted(e);
+            }
+            private static void __REF_STAKEHOLDERs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_STAKEHOLDER e)
+            {
+                d.REF_STAKEHOLDERs_Updating(e);
+            }
+            private static void __REF_STAKEHOLDERs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_STAKEHOLDER e)
+            {
+                d.REF_STAKEHOLDERs_Updated(e);
+            }
+            private static void __REF_STAKEHOLDERs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_STAKEHOLDER e)
+            {
+                d.REF_STAKEHOLDERs_Deleting(e);
+            }
+            private static void __REF_STAKEHOLDERs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_STAKEHOLDER e)
+            {
+                d.REF_STAKEHOLDERs_Deleted(e);
+            }
+            private static void __REF_STAKEHOLDERs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_STAKEHOLDER e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.REF_STAKEHOLDERs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_STAKEHOLDER, bool>> __REF_STAKEHOLDERs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_STAKEHOLDER, bool>> filter = null;
+                d.REF_STAKEHOLDERs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_STATUS>
+                __REF_STATUSEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_STATUS>(
+                    "REF_STATUS",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STATUS_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STATUS_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STATUS_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STATUS_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STATUS_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STATUS_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STATUS_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STATUS_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STATUS_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STATUS_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STATUS_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_STATUS_Filter);
+            private static bool __REF_STATUS_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_STATUS_CanInsert(ref result);
+                return result;
+            }
+            private static bool __REF_STATUS_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_STATUS_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __REF_STATUS_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_STATUS_CanDelete(ref result);
+                return result;
+            }
+            private static bool __REF_STATUS_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_STATUS_CanRead(ref result);
+                return result;
+            }
+            private static void __REF_STATUS_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_STATUS e)
+            {
+                d.REF_STATUS_Inserting(e);
+            }
+            private static void __REF_STATUS_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_STATUS e)
+            {
+                d.REF_STATUS_Inserted(e);
+            }
+            private static void __REF_STATUS_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_STATUS e)
+            {
+                d.REF_STATUS_Updating(e);
+            }
+            private static void __REF_STATUS_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_STATUS e)
+            {
+                d.REF_STATUS_Updated(e);
+            }
+            private static void __REF_STATUS_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_STATUS e)
+            {
+                d.REF_STATUS_Deleting(e);
+            }
+            private static void __REF_STATUS_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_STATUS e)
+            {
+                d.REF_STATUS_Deleted(e);
+            }
+            private static void __REF_STATUS_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_STATUS e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.REF_STATUS_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_STATUS, bool>> __REF_STATUS_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_STATUS, bool>> filter = null;
+                d.REF_STATUS_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_TECHNOLOGY>
+                __REF_TECHNOLOGiesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_TECHNOLOGY>(
+                    "REF_TECHNOLOGies",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGies_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGies_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGies_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGies_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGies_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGies_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGies_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGies_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGies_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGies_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGies_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGies_Filter);
+            private static bool __REF_TECHNOLOGies_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_TECHNOLOGies_CanInsert(ref result);
+                return result;
+            }
+            private static bool __REF_TECHNOLOGies_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_TECHNOLOGies_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __REF_TECHNOLOGies_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_TECHNOLOGies_CanDelete(ref result);
+                return result;
+            }
+            private static bool __REF_TECHNOLOGies_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_TECHNOLOGies_CanRead(ref result);
+                return result;
+            }
+            private static void __REF_TECHNOLOGies_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_TECHNOLOGY e)
+            {
+                d.REF_TECHNOLOGies_Inserting(e);
+            }
+            private static void __REF_TECHNOLOGies_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_TECHNOLOGY e)
+            {
+                d.REF_TECHNOLOGies_Inserted(e);
+            }
+            private static void __REF_TECHNOLOGies_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_TECHNOLOGY e)
+            {
+                d.REF_TECHNOLOGies_Updating(e);
+            }
+            private static void __REF_TECHNOLOGies_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_TECHNOLOGY e)
+            {
+                d.REF_TECHNOLOGies_Updated(e);
+            }
+            private static void __REF_TECHNOLOGies_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_TECHNOLOGY e)
+            {
+                d.REF_TECHNOLOGies_Deleting(e);
+            }
+            private static void __REF_TECHNOLOGies_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_TECHNOLOGY e)
+            {
+                d.REF_TECHNOLOGies_Deleted(e);
+            }
+            private static void __REF_TECHNOLOGies_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_TECHNOLOGY e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.REF_TECHNOLOGies_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_TECHNOLOGY, bool>> __REF_TECHNOLOGies_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_TECHNOLOGY, bool>> filter = null;
+                d.REF_TECHNOLOGies_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_TECHNOLOGY_STACK>
+                __REF_TECHNOLOGY_STACKsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_TECHNOLOGY_STACK>(
+                    "REF_TECHNOLOGY_STACKs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGY_STACKs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGY_STACKs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGY_STACKs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGY_STACKs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGY_STACKs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGY_STACKs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGY_STACKs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGY_STACKs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGY_STACKs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGY_STACKs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGY_STACKs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_TECHNOLOGY_STACKs_Filter);
+            private static bool __REF_TECHNOLOGY_STACKs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_TECHNOLOGY_STACKs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __REF_TECHNOLOGY_STACKs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_TECHNOLOGY_STACKs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __REF_TECHNOLOGY_STACKs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_TECHNOLOGY_STACKs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __REF_TECHNOLOGY_STACKs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_TECHNOLOGY_STACKs_CanRead(ref result);
+                return result;
+            }
+            private static void __REF_TECHNOLOGY_STACKs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_TECHNOLOGY_STACK e)
+            {
+                d.REF_TECHNOLOGY_STACKs_Inserting(e);
+            }
+            private static void __REF_TECHNOLOGY_STACKs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_TECHNOLOGY_STACK e)
+            {
+                d.REF_TECHNOLOGY_STACKs_Inserted(e);
+            }
+            private static void __REF_TECHNOLOGY_STACKs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_TECHNOLOGY_STACK e)
+            {
+                d.REF_TECHNOLOGY_STACKs_Updating(e);
+            }
+            private static void __REF_TECHNOLOGY_STACKs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_TECHNOLOGY_STACK e)
+            {
+                d.REF_TECHNOLOGY_STACKs_Updated(e);
+            }
+            private static void __REF_TECHNOLOGY_STACKs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_TECHNOLOGY_STACK e)
+            {
+                d.REF_TECHNOLOGY_STACKs_Deleting(e);
+            }
+            private static void __REF_TECHNOLOGY_STACKs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_TECHNOLOGY_STACK e)
+            {
+                d.REF_TECHNOLOGY_STACKs_Deleted(e);
+            }
+            private static void __REF_TECHNOLOGY_STACKs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_TECHNOLOGY_STACK e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.REF_TECHNOLOGY_STACKs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_TECHNOLOGY_STACK, bool>> __REF_TECHNOLOGY_STACKs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_TECHNOLOGY_STACK, bool>> filter = null;
+                d.REF_TECHNOLOGY_STACKs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_VENDOR>
+                __REF_VENDORsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.REF_VENDOR>(
+                    "REF_VENDORs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_VENDORs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_VENDORs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_VENDORs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_VENDORs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_VENDORs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_VENDORs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_VENDORs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_VENDORs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_VENDORs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_VENDORs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_VENDORs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__REF_VENDORs_Filter);
+            private static bool __REF_VENDORs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_VENDORs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __REF_VENDORs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_VENDORs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __REF_VENDORs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_VENDORs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __REF_VENDORs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.REF_VENDORs_CanRead(ref result);
+                return result;
+            }
+            private static void __REF_VENDORs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_VENDOR e)
+            {
+                d.REF_VENDORs_Inserting(e);
+            }
+            private static void __REF_VENDORs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_VENDOR e)
+            {
+                d.REF_VENDORs_Inserted(e);
+            }
+            private static void __REF_VENDORs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_VENDOR e)
+            {
+                d.REF_VENDORs_Updating(e);
+            }
+            private static void __REF_VENDORs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_VENDOR e)
+            {
+                d.REF_VENDORs_Updated(e);
+            }
+            private static void __REF_VENDORs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_VENDOR e)
+            {
+                d.REF_VENDORs_Deleting(e);
+            }
+            private static void __REF_VENDORs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_VENDOR e)
+            {
+                d.REF_VENDORs_Deleted(e);
+            }
+            private static void __REF_VENDORs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.REF_VENDOR e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.REF_VENDORs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_VENDOR, bool>> __REF_VENDORs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.REF_VENDOR, bool>> filter = null;
+                d.REF_VENDORs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.RESOURCE>
+                __RESOURCEsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.RESOURCE>(
+                    "RESOURCEs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__RESOURCEs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__RESOURCEs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__RESOURCEs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__RESOURCEs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__RESOURCEs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__RESOURCEs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__RESOURCEs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__RESOURCEs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__RESOURCEs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__RESOURCEs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__RESOURCEs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__RESOURCEs_Filter);
+            private static bool __RESOURCEs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.RESOURCEs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __RESOURCEs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.RESOURCEs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __RESOURCEs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.RESOURCEs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __RESOURCEs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.RESOURCEs_CanRead(ref result);
+                return result;
+            }
+            private static void __RESOURCEs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.RESOURCE e)
+            {
+                d.RESOURCEs_Inserting(e);
+            }
+            private static void __RESOURCEs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.RESOURCE e)
+            {
+                d.RESOURCEs_Inserted(e);
+            }
+            private static void __RESOURCEs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.RESOURCE e)
+            {
+                d.RESOURCEs_Updating(e);
+            }
+            private static void __RESOURCEs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.RESOURCE e)
+            {
+                d.RESOURCEs_Updated(e);
+            }
+            private static void __RESOURCEs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.RESOURCE e)
+            {
+                d.RESOURCEs_Deleting(e);
+            }
+            private static void __RESOURCEs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.RESOURCE e)
+            {
+                d.RESOURCEs_Deleted(e);
+            }
+            private static void __RESOURCEs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.RESOURCE e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.RESOURCEs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.RESOURCE, bool>> __RESOURCEs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.RESOURCE, bool>> filter = null;
+                d.RESOURCEs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP_APPLICATION>
+                __TP_APPLICATIONsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP_APPLICATION>(
+                    "TP_APPLICATIONs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_APPLICATIONs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_APPLICATIONs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_APPLICATIONs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_APPLICATIONs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_APPLICATIONs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_APPLICATIONs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_APPLICATIONs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_APPLICATIONs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_APPLICATIONs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_APPLICATIONs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_APPLICATIONs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_APPLICATIONs_Filter);
+            private static bool __TP_APPLICATIONs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_APPLICATIONs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __TP_APPLICATIONs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_APPLICATIONs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __TP_APPLICATIONs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_APPLICATIONs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __TP_APPLICATIONs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_APPLICATIONs_CanRead(ref result);
+                return result;
+            }
+            private static void __TP_APPLICATIONs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_APPLICATION e)
+            {
+                d.TP_APPLICATIONs_Inserting(e);
+            }
+            private static void __TP_APPLICATIONs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_APPLICATION e)
+            {
+                d.TP_APPLICATIONs_Inserted(e);
+            }
+            private static void __TP_APPLICATIONs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_APPLICATION e)
+            {
+                d.TP_APPLICATIONs_Updating(e);
+            }
+            private static void __TP_APPLICATIONs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_APPLICATION e)
+            {
+                d.TP_APPLICATIONs_Updated(e);
+            }
+            private static void __TP_APPLICATIONs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_APPLICATION e)
+            {
+                d.TP_APPLICATIONs_Deleting(e);
+            }
+            private static void __TP_APPLICATIONs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_APPLICATION e)
+            {
+                d.TP_APPLICATIONs_Deleted(e);
+            }
+            private static void __TP_APPLICATIONs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_APPLICATION e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.TP_APPLICATIONs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_APPLICATION, bool>> __TP_APPLICATIONs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_APPLICATION, bool>> filter = null;
+                d.TP_APPLICATIONs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP_DOCUMENT_LINK>
+                __TP_DOCUMENT_LINKsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP_DOCUMENT_LINK>(
+                    "TP_DOCUMENT_LINKs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_DOCUMENT_LINKs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_DOCUMENT_LINKs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_DOCUMENT_LINKs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_DOCUMENT_LINKs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_DOCUMENT_LINKs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_DOCUMENT_LINKs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_DOCUMENT_LINKs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_DOCUMENT_LINKs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_DOCUMENT_LINKs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_DOCUMENT_LINKs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_DOCUMENT_LINKs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_DOCUMENT_LINKs_Filter);
+            private static bool __TP_DOCUMENT_LINKs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_DOCUMENT_LINKs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __TP_DOCUMENT_LINKs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_DOCUMENT_LINKs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __TP_DOCUMENT_LINKs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_DOCUMENT_LINKs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __TP_DOCUMENT_LINKs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_DOCUMENT_LINKs_CanRead(ref result);
+                return result;
+            }
+            private static void __TP_DOCUMENT_LINKs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_DOCUMENT_LINK e)
+            {
+                d.TP_DOCUMENT_LINKs_Inserting(e);
+            }
+            private static void __TP_DOCUMENT_LINKs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_DOCUMENT_LINK e)
+            {
+                d.TP_DOCUMENT_LINKs_Inserted(e);
+            }
+            private static void __TP_DOCUMENT_LINKs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_DOCUMENT_LINK e)
+            {
+                d.TP_DOCUMENT_LINKs_Updating(e);
+            }
+            private static void __TP_DOCUMENT_LINKs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_DOCUMENT_LINK e)
+            {
+                d.TP_DOCUMENT_LINKs_Updated(e);
+            }
+            private static void __TP_DOCUMENT_LINKs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_DOCUMENT_LINK e)
+            {
+                d.TP_DOCUMENT_LINKs_Deleting(e);
+            }
+            private static void __TP_DOCUMENT_LINKs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_DOCUMENT_LINK e)
+            {
+                d.TP_DOCUMENT_LINKs_Deleted(e);
+            }
+            private static void __TP_DOCUMENT_LINKs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_DOCUMENT_LINK e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.TP_DOCUMENT_LINKs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_DOCUMENT_LINK, bool>> __TP_DOCUMENT_LINKs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_DOCUMENT_LINK, bool>> filter = null;
+                d.TP_DOCUMENT_LINKs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP_PHASE>
+                __TP_PHASEsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP_PHASE>(
+                    "TP_PHASEs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_PHASEs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_PHASEs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_PHASEs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_PHASEs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_PHASEs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_PHASEs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_PHASEs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_PHASEs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_PHASEs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_PHASEs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_PHASEs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_PHASEs_Filter);
+            private static bool __TP_PHASEs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_PHASEs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __TP_PHASEs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_PHASEs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __TP_PHASEs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_PHASEs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __TP_PHASEs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_PHASEs_CanRead(ref result);
+                return result;
+            }
+            private static void __TP_PHASEs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_PHASE e)
+            {
+                d.TP_PHASEs_Inserting(e);
+            }
+            private static void __TP_PHASEs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_PHASE e)
+            {
+                d.TP_PHASEs_Inserted(e);
+            }
+            private static void __TP_PHASEs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_PHASE e)
+            {
+                d.TP_PHASEs_Updating(e);
+            }
+            private static void __TP_PHASEs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_PHASE e)
+            {
+                d.TP_PHASEs_Updated(e);
+            }
+            private static void __TP_PHASEs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_PHASE e)
+            {
+                d.TP_PHASEs_Deleting(e);
+            }
+            private static void __TP_PHASEs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_PHASE e)
+            {
+                d.TP_PHASEs_Deleted(e);
+            }
+            private static void __TP_PHASEs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_PHASE e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.TP_PHASEs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_PHASE, bool>> __TP_PHASEs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_PHASE, bool>> filter = null;
+                d.TP_PHASEs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP_RESOURCE_ALLOCATION>
+                __TP_RESOURCE_ALLOCATIONsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP_RESOURCE_ALLOCATION>(
+                    "TP_RESOURCE_ALLOCATIONs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_RESOURCE_ALLOCATIONs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_RESOURCE_ALLOCATIONs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_RESOURCE_ALLOCATIONs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_RESOURCE_ALLOCATIONs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_RESOURCE_ALLOCATIONs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_RESOURCE_ALLOCATIONs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_RESOURCE_ALLOCATIONs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_RESOURCE_ALLOCATIONs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_RESOURCE_ALLOCATIONs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_RESOURCE_ALLOCATIONs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_RESOURCE_ALLOCATIONs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_RESOURCE_ALLOCATIONs_Filter);
+            private static bool __TP_RESOURCE_ALLOCATIONs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_RESOURCE_ALLOCATIONs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __TP_RESOURCE_ALLOCATIONs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_RESOURCE_ALLOCATIONs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __TP_RESOURCE_ALLOCATIONs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_RESOURCE_ALLOCATIONs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __TP_RESOURCE_ALLOCATIONs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_RESOURCE_ALLOCATIONs_CanRead(ref result);
+                return result;
+            }
+            private static void __TP_RESOURCE_ALLOCATIONs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_RESOURCE_ALLOCATION e)
+            {
+                d.TP_RESOURCE_ALLOCATIONs_Inserting(e);
+            }
+            private static void __TP_RESOURCE_ALLOCATIONs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_RESOURCE_ALLOCATION e)
+            {
+                d.TP_RESOURCE_ALLOCATIONs_Inserted(e);
+            }
+            private static void __TP_RESOURCE_ALLOCATIONs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_RESOURCE_ALLOCATION e)
+            {
+                d.TP_RESOURCE_ALLOCATIONs_Updating(e);
+            }
+            private static void __TP_RESOURCE_ALLOCATIONs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_RESOURCE_ALLOCATION e)
+            {
+                d.TP_RESOURCE_ALLOCATIONs_Updated(e);
+            }
+            private static void __TP_RESOURCE_ALLOCATIONs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_RESOURCE_ALLOCATION e)
+            {
+                d.TP_RESOURCE_ALLOCATIONs_Deleting(e);
+            }
+            private static void __TP_RESOURCE_ALLOCATIONs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_RESOURCE_ALLOCATION e)
+            {
+                d.TP_RESOURCE_ALLOCATIONs_Deleted(e);
+            }
+            private static void __TP_RESOURCE_ALLOCATIONs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_RESOURCE_ALLOCATION e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.TP_RESOURCE_ALLOCATIONs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_RESOURCE_ALLOCATION, bool>> __TP_RESOURCE_ALLOCATIONs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_RESOURCE_ALLOCATION, bool>> filter = null;
+                d.TP_RESOURCE_ALLOCATIONs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP_STAKEHOLDER>
+                __TP_STAKEHOLDERsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP_STAKEHOLDER>(
+                    "TP_STAKEHOLDERs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_STAKEHOLDERs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_STAKEHOLDERs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_STAKEHOLDERs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_STAKEHOLDERs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_STAKEHOLDERs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_STAKEHOLDERs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_STAKEHOLDERs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_STAKEHOLDERs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_STAKEHOLDERs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_STAKEHOLDERs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_STAKEHOLDERs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_STAKEHOLDERs_Filter);
+            private static bool __TP_STAKEHOLDERs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_STAKEHOLDERs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __TP_STAKEHOLDERs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_STAKEHOLDERs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __TP_STAKEHOLDERs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_STAKEHOLDERs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __TP_STAKEHOLDERs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_STAKEHOLDERs_CanRead(ref result);
+                return result;
+            }
+            private static void __TP_STAKEHOLDERs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_STAKEHOLDER e)
+            {
+                d.TP_STAKEHOLDERs_Inserting(e);
+            }
+            private static void __TP_STAKEHOLDERs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_STAKEHOLDER e)
+            {
+                d.TP_STAKEHOLDERs_Inserted(e);
+            }
+            private static void __TP_STAKEHOLDERs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_STAKEHOLDER e)
+            {
+                d.TP_STAKEHOLDERs_Updating(e);
+            }
+            private static void __TP_STAKEHOLDERs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_STAKEHOLDER e)
+            {
+                d.TP_STAKEHOLDERs_Updated(e);
+            }
+            private static void __TP_STAKEHOLDERs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_STAKEHOLDER e)
+            {
+                d.TP_STAKEHOLDERs_Deleting(e);
+            }
+            private static void __TP_STAKEHOLDERs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_STAKEHOLDER e)
+            {
+                d.TP_STAKEHOLDERs_Deleted(e);
+            }
+            private static void __TP_STAKEHOLDERs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_STAKEHOLDER e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.TP_STAKEHOLDERs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_STAKEHOLDER, bool>> __TP_STAKEHOLDERs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_STAKEHOLDER, bool>> filter = null;
+                d.TP_STAKEHOLDERs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP_VENDOR>
+                __TP_VENDORsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP_VENDOR>(
+                    "TP_VENDORs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_VENDORs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_VENDORs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_VENDORs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_VENDORs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_VENDORs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_VENDORs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_VENDORs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_VENDORs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_VENDORs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_VENDORs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_VENDORs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TP_VENDORs_Filter);
+            private static bool __TP_VENDORs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_VENDORs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __TP_VENDORs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_VENDORs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __TP_VENDORs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_VENDORs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __TP_VENDORs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TP_VENDORs_CanRead(ref result);
+                return result;
+            }
+            private static void __TP_VENDORs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_VENDOR e)
+            {
+                d.TP_VENDORs_Inserting(e);
+            }
+            private static void __TP_VENDORs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_VENDOR e)
+            {
+                d.TP_VENDORs_Inserted(e);
+            }
+            private static void __TP_VENDORs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_VENDOR e)
+            {
+                d.TP_VENDORs_Updating(e);
+            }
+            private static void __TP_VENDORs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_VENDOR e)
+            {
+                d.TP_VENDORs_Updated(e);
+            }
+            private static void __TP_VENDORs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_VENDOR e)
+            {
+                d.TP_VENDORs_Deleting(e);
+            }
+            private static void __TP_VENDORs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_VENDOR e)
+            {
+                d.TP_VENDORs_Deleted(e);
+            }
+            private static void __TP_VENDORs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP_VENDOR e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.TP_VENDORs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_VENDOR, bool>> __TP_VENDORs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_VENDOR, bool>> filter = null;
+                d.TP_VENDORs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP>
+                __TPsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP>(
+                    "TPs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Filter);
+            private static bool __TPs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TPs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __TPs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TPs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __TPs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TPs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __TPs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TPs_CanRead(ref result);
+                return result;
+            }
+            private static void __TPs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
+            {
+                d.TPs_Inserting(e);
+            }
+            private static void __TPs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
+            {
+                d.TPs_Inserted(e);
+            }
+            private static void __TPs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
+            {
+                d.TPs_Updating(e);
+            }
+            private static void __TPs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
+            {
+                d.TPs_Updated(e);
+            }
+            private static void __TPs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
+            {
+                d.TPs_Deleting(e);
+            }
+            private static void __TPs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
+            {
+                d.TPs_Deleted(e);
+            }
+            private static void __TPs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.TPs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP, bool>> __TPs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP, bool>> filter = null;
+                d.TPs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.FMDataService>
+                __SaveChangesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.OperationEntry<global::LightSwitchApplication.FMDataService>(
+                    "SaveChanges",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__SaveChanges_CanExecute,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__SaveChanges_Executing,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__SaveChanges_Executed,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__SaveChanges_Failed);
+            private static bool __SaveChanges_CanExecute(global::LightSwitchApplication.FMDataService d, bool r)
+            {
+                d.SaveChanges_CanExecute(ref r);
+                return r;
+            }
+            private static void __SaveChanges_Executing(global::LightSwitchApplication.FMDataService d, object[] args)
+            {
+                d.SaveChanges_Executing();
+            }
+            private static void __SaveChanges_Executed(global::LightSwitchApplication.FMDataService d, object[] args)
+            {
+                d.SaveChanges_Executed();
+            }
+            private static void __SaveChanges_Failed(global::LightSwitchApplication.FMDataService d, object[] args, global::System.Exception ex)
+            {
+                d.SaveChanges_ExecuteFailed(ex);
+            }
+    
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.QueryEntry<global::LightSwitchApplication.FMDataService>
+                ___QueryEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.QueryEntry<global::LightSwitchApplication.FMDataService>(
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__Query_Executing,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__Query_Executed,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__Query_Failed);
+            private static void __Query_Executing(global::LightSwitchApplication.FMDataService d, global::Microsoft.LightSwitch.QueryExecutingDescriptor queryDescriptor)
+            {
+                d.Query_Executing(queryDescriptor);
+            }
+            private static void __Query_Executed(global::LightSwitchApplication.FMDataService d, global::Microsoft.LightSwitch.QueryExecutedDescriptor queryDescriptor)
+            {
+                d.Query_Executed(queryDescriptor);
+            }
+            private static void __Query_Failed(global::LightSwitchApplication.FMDataService d, global::Microsoft.LightSwitch.QueryExecuteFailedDescriptor queryDescriptor)
+            {
+                d.Query_ExecuteFailed(queryDescriptor);
+            }
+    
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.DatabaseAuthEntry<global::LightSwitchApplication.FMDataService>
+                ___DatabaseAuthEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.DatabaseAuthEntry<global::LightSwitchApplication.FMDataService>(
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__FMData_InitializingConnection);
+            private static void __FMData_InitializingConnection(global::LightSwitchApplication.FMDataService d, global::Microsoft.LightSwitch.DatabaseConnectionState state)
+            {
+                d.FMData_InitializingConnection(state);
+            }
+        }
+    
+        #endregion
+    }
+    
     #endregion
 }

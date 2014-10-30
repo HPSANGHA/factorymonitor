@@ -1,0 +1,264 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="TP_RESOURCE_ALLOCATION">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="TpResourceAllocationId"
+        IsReadOnly="True"
+        PropertyType=":Int32">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Percentage"
+        PropertyType=":Double?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PlannedStartDate"
+        PropertyType=":Date?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="PlannedEndDate"
+        PropertyType=":Date?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="0"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedBy"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="RESOURCE"
+        Association="FK_TP_RESOURCE_ALLOCATION_RESOURCE"
+        FromEnd="TP_RESOURCE_ALLOCATION"
+        ToEnd="RESOURCE" />
+      <NavigationProperty
+        Name="TP"
+        Association="FK_TP_RESOURCE_TP"
+        FromEnd="TP_RESOURCE_ALLOCATION"
+        ToEnd="TP" />
+    </EntityType.Properties>
+  </EntityType>
+  <EntityContainer
+    Name="FMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="TP_RESOURCE_ALLOCATIONs"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="TP_RESOURCE_ALLOCATION" />
+    <QueryOperation
+      Name="TP_RESOURCE_ALLOCATIONs_Single"
+      ReturnType="TP_RESOURCE_ALLOCATION">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="TpResourceAllocationId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="TpResourceAllocationId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="TP_RESOURCE_ALLOCATIONs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="TpResourceAllocationId"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'TpResourceAllocationId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="TP_RESOURCE_ALLOCATIONs_SingleOrDefault"
+      ReturnType="TP_RESOURCE_ALLOCATION">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="TpResourceAllocationId" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="TpResourceAllocationId" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="TP_RESOURCE_ALLOCATIONs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="TpResourceAllocationId"
+        ParameterType="Microsoft.LightSwitch:Int32?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'TpResourceAllocationId' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="FMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="TP_RESOURCE_ALLOCATIONs">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="TP_RESOURCE_ALLOCATION" />
+        <SsdlProperty
+          Name="TpResourceAllocationId"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="int"
+          Property="TP_RESOURCE_ALLOCATION/Properties[TpResourceAllocationId]" />
+        <SsdlProperty
+          Name="Percentage"
+          Nullable="True"
+          Type="float"
+          Property="TP_RESOURCE_ALLOCATION/Properties[Percentage]" />
+        <SsdlProperty
+          Name="PlannedStartDate"
+          Nullable="True"
+          Type="date"
+          Property="TP_RESOURCE_ALLOCATION/Properties[PlannedStartDate]" />
+        <SsdlProperty
+          Name="PlannedEndDate"
+          Nullable="True"
+          Type="date"
+          Property="TP_RESOURCE_ALLOCATION/Properties[PlannedEndDate]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="CreatedBy"
+          Nullable="True"
+          Type="varchar"
+          Property="TP_RESOURCE_ALLOCATION/Properties[CreatedBy]" />
+        <SsdlProperty
+          Name="CreatedDate"
+          Nullable="True"
+          Type="datetime"
+          Property="TP_RESOURCE_ALLOCATION/Properties[CreatedDate]" />
+        <SsdlProperty
+          Name="ModifiedDate"
+          Nullable="True"
+          Type="datetime"
+          Property="TP_RESOURCE_ALLOCATION/Properties[ModifiedDate]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ModifiedBy"
+          Nullable="True"
+          Type="varchar"
+          Property="TP_RESOURCE_ALLOCATION/Properties[ModifiedBy]" />
+        <SsdlForeignKeyProperty
+          Name="ResourceID"
+          Nullable="True"
+          Type="int"
+          PropertyName="ResourceID" />
+        <SsdlForeignKeyProperty
+          Name="TpID"
+          Nullable="True"
+          Type="int"
+          PropertyName="TpID" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+  </DataService>
+</ServiceApplication>

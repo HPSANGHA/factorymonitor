@@ -1,0 +1,250 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="REF_PHASE">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="PhaseID"
+        PropertyType=":Int16">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="20" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Description"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="150" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedBy"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="TP_PHASEs"
+        Association="FK_TP_PHASE_TP_PHASE"
+        FromEnd="REF_PHASE"
+        ToEnd="TP_PHASE" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_TP_PHASE_TP_PHASE">
+    <AssociationEnd
+      Name="REF_PHASE"
+      EntityType="REF_PHASE">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="TP_PHASE"
+      Multiplicity="Many"
+      EntityType="TP_PHASE" />
+  </Association>
+  <EntityContainer
+    Name="FMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="REF_PHASEs"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="REF_PHASE" />
+    <AssociationSet
+      Name="FK_TP_PHASE_TP_PHASE"
+      Association="FK_TP_PHASE_TP_PHASE">
+      <AssociationSetEnd
+        Name="REF_PHASE"
+        EntitySet="REF_PHASEs" />
+      <AssociationSetEnd
+        Name="TP_PHASE"
+        EntitySet="TP_PHASEs" />
+    </AssociationSet>
+    <QueryOperation
+      Name="REF_PHASEs_Single"
+      ReturnType="REF_PHASE">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="PhaseID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="PhaseID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="REF_PHASEs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="PhaseID"
+        ParameterType="Microsoft.LightSwitch:Int16?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'PhaseID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="REF_PHASEs_SingleOrDefault"
+      ReturnType="REF_PHASE">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="PhaseID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="PhaseID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="REF_PHASEs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="PhaseID"
+        ParameterType="Microsoft.LightSwitch:Int16?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'PhaseID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="FMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="REF_PHASEs">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="REF_PHASE" />
+        <SsdlProperty
+          Name="PhaseID"
+          Nullable="False"
+          Type="smallint"
+          Property="REF_PHASE/Properties[PhaseID]" />
+        <SsdlProperty
+          MaxLength="20"
+          Name="Name"
+          Nullable="False"
+          Type="varchar"
+          Property="REF_PHASE/Properties[Name]" />
+        <SsdlProperty
+          MaxLength="150"
+          Name="Description"
+          Nullable="True"
+          Type="varchar"
+          Property="REF_PHASE/Properties[Description]" />
+        <SsdlProperty
+          Name="CreatedDate"
+          Nullable="True"
+          Type="datetime"
+          Property="REF_PHASE/Properties[CreatedDate]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="CreatedBy"
+          Nullable="True"
+          Type="varchar"
+          Property="REF_PHASE/Properties[CreatedBy]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_TP_PHASE_TP_PHASE">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_TP_PHASE_TP_PHASE" />
+        <SsdlAssociationSetEnd
+          End="FMData/Members[FK_TP_PHASE_TP_PHASE]/Members[REF_PHASE]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="PhaseID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="FMData/Members[FK_TP_PHASE_TP_PHASE]/Members[TP_PHASE]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="PhaseID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

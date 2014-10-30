@@ -1,0 +1,283 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="REF_TECHNOLOGY_STACK">
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <KeyProperty
+        Name="TechnologyStackID"
+        IsReadOnly="True"
+        PropertyType=":Int16">
+        <KeyProperty.Attributes>
+          <Hidden />
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Description"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="500" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CreatedBy"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="TPs"
+        Association="FK_TP_REF_TECHNOLOGY_STACK"
+        FromEnd="REF_TECHNOLOGY_STACK"
+        ToEnd="TP" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="FK_TP_REF_TECHNOLOGY_STACK">
+    <AssociationEnd
+      Name="REF_TECHNOLOGY_STACK"
+      EntityType="REF_TECHNOLOGY_STACK">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="TP"
+      Multiplicity="Many"
+      EntityType="TP" />
+  </Association>
+  <EntityContainer
+    Name="FMData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="REF_TECHNOLOGY_STACKs"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="REF_TECHNOLOGY_STACK" />
+    <AssociationSet
+      Name="FK_TP_REF_TECHNOLOGY_STACK"
+      Association="FK_TP_REF_TECHNOLOGY_STACK">
+      <AssociationSetEnd
+        Name="REF_TECHNOLOGY_STACK"
+        EntitySet="REF_TECHNOLOGY_STACKs" />
+      <AssociationSetEnd
+        Name="TP"
+        EntitySet="TPs" />
+    </AssociationSet>
+    <QueryOperation
+      Name="REF_TECHNOLOGY_STACKs_Single"
+      ReturnType="REF_TECHNOLOGY_STACK">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="TechnologyStackID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="TechnologyStackID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="REF_TECHNOLOGY_STACKs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="TechnologyStackID"
+        ParameterType="Microsoft.LightSwitch:Int16?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'TechnologyStackID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="REF_TECHNOLOGY_STACKs_SingleOrDefault"
+      ReturnType="REF_TECHNOLOGY_STACK">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="TechnologyStackID" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="TechnologyStackID" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="REF_TECHNOLOGY_STACKs" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="TechnologyStackID"
+        ParameterType="Microsoft.LightSwitch:Int16?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'TechnologyStackID' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="FMDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="REF_TECHNOLOGY_STACKs">
+      <EntitySetMapping.Attributes>
+        <SsdlEntitySet
+          Schema="dbo"
+          Table="REF_TECHNOLOGY_STACK" />
+        <SsdlProperty
+          Name="TechnologyStackID"
+          Nullable="False"
+          StoreGeneratedPattern="Identity"
+          Type="smallint"
+          Property="REF_TECHNOLOGY_STACK/Properties[TechnologyStackID]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="Name"
+          Nullable="False"
+          Type="varchar"
+          Property="REF_TECHNOLOGY_STACK/Properties[Name]" />
+        <SsdlProperty
+          MaxLength="500"
+          Name="Description"
+          Nullable="True"
+          Type="varchar"
+          Property="REF_TECHNOLOGY_STACK/Properties[Description]" />
+        <SsdlProperty
+          Name="CreatedDate"
+          Nullable="True"
+          Type="datetime"
+          Property="REF_TECHNOLOGY_STACK/Properties[CreatedDate]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="CreatedBy"
+          Nullable="True"
+          Type="varchar"
+          Property="REF_TECHNOLOGY_STACK/Properties[CreatedBy]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ModifiedBy"
+          Nullable="True"
+          Type="varchar"
+          Property="REF_TECHNOLOGY_STACK/Properties[ModifiedBy]" />
+        <SsdlProperty
+          Name="ModifiedDate"
+          Nullable="True"
+          Type="datetime"
+          Property="REF_TECHNOLOGY_STACK/Properties[ModifiedDate]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="FK_TP_REF_TECHNOLOGY_STACK">
+      <AssociationSetMapping.Attributes>
+        <SsdlAssociationSet
+          Name="FK_TP_REF_TECHNOLOGY_STACK" />
+        <SsdlAssociationSetEnd
+          End="FMData/Members[FK_TP_REF_TECHNOLOGY_STACK]/Members[REF_TECHNOLOGY_STACK]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="TechnologyStackID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+        <SsdlAssociationSetEnd
+          End="FMData/Members[FK_TP_REF_TECHNOLOGY_STACK]/Members[TP]">
+          <SsdlAssociationSetEnd.Attributes>
+            <SsdlPropertyRef
+              Name="TechnologyStackID" />
+          </SsdlAssociationSetEnd.Attributes>
+        </SsdlAssociationSetEnd>
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

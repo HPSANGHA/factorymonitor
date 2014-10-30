@@ -1,0 +1,678 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="FMDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityContainer Name="FMDataStore">
+    <EntitySet Name="APPLICATIONs" EntityType="FMDataStore.APP" store:Type="Tables" Schema="dbo" Table="APPLICATION" />
+    <EntitySet Name="REF_APPLICATION_TYPEs" EntityType="FMDataStore.REF_APPLICATION_TYPE" store:Type="Tables" Schema="dbo" Table="REF_APPLICATION_TYPE" />
+    <EntitySet Name="REF_COMPLEXITies" EntityType="FMDataStore.REF_COMPLEXITY" store:Type="Tables" Schema="dbo" Table="REF_COMPLEXITY" />
+    <EntitySet Name="REF_DOCUMENT_TYPEs" EntityType="FMDataStore.REF_DOCUMENT_TYPE" store:Type="Tables" Schema="dbo" Table="REF_DOCUMENT_TYPE" />
+    <EntitySet Name="REF_GAPs" EntityType="FMDataStore.REF_GAP" store:Type="Tables" Schema="dbo" Table="REF_GAP" />
+    <EntitySet Name="REF_PHASEs" EntityType="FMDataStore.REF_PHASE" store:Type="Tables" Schema="dbo" Table="REF_PHASE" />
+    <EntitySet Name="REF_ROLEs" EntityType="FMDataStore.REF_ROLE" store:Type="Tables" Schema="dbo" Table="REF_ROLE" />
+    <EntitySet Name="REF_STAKEHOLDERs" EntityType="FMDataStore.REF_STAKEHOLDER" store:Type="Tables" Schema="dbo" Table="REF_STAKEHOLDER" />
+    <EntitySet Name="REF_STATUS" EntityType="FMDataStore.REF_STATUS" store:Type="Tables" Schema="dbo" Table="REF_STATUS" />
+    <EntitySet Name="REF_TECHNOLOGies" EntityType="FMDataStore.REF_TECHNOLOGY" store:Type="Tables" Schema="dbo" Table="REF_TECHNOLOGY" />
+    <EntitySet Name="REF_TECHNOLOGY_STACKs" EntityType="FMDataStore.REF_TECHNOLOGY_STACK" store:Type="Tables" Schema="dbo" Table="REF_TECHNOLOGY_STACK" />
+    <EntitySet Name="REF_VENDORs" EntityType="FMDataStore.REF_VENDOR" store:Type="Tables" Schema="dbo" Table="REF_VENDOR" />
+    <EntitySet Name="RESOURCEs" EntityType="FMDataStore.RESOURCE" store:Type="Tables" Schema="dbo" Table="RESOURCE" />
+    <EntitySet Name="TP_APPLICATIONs" EntityType="FMDataStore.TP_APPLICATION" store:Type="Tables" Schema="dbo" Table="TP_APPLICATION" />
+    <EntitySet Name="TP_DOCUMENT_LINKs" EntityType="FMDataStore.TP_DOCUMENT_LINK" store:Type="Tables" Schema="dbo" Table="TP_DOCUMENT_LINK" />
+    <EntitySet Name="TP_PHASEs" EntityType="FMDataStore.TP_PHASE" store:Type="Tables" Schema="dbo" Table="TP_PHASE" />
+    <EntitySet Name="TP_RESOURCE_ALLOCATIONs" EntityType="FMDataStore.TP_RESOURCE_ALLOCATION" store:Type="Tables" Schema="dbo" Table="TP_RESOURCE_ALLOCATION" />
+    <EntitySet Name="TP_STAKEHOLDERs" EntityType="FMDataStore.TP_STAKEHOLDER" store:Type="Tables" Schema="dbo" Table="TP_STAKEHOLDER" />
+    <EntitySet Name="TP_VENDORs" EntityType="FMDataStore.TP_VENDOR" store:Type="Tables" Schema="dbo" Table="TP_VENDOR" />
+    <EntitySet Name="TPs" EntityType="FMDataStore.TP" store:Type="Tables" Schema="dbo" Table="TP" />
+    <AssociationSet Name="APP_TP_APPLICATION" Association="FMDataStore.APP_TP_APPLICATION">
+      <End Role="APP" EntitySet="APPLICATIONs" />
+      <End Role="TP_APPLICATION" EntitySet="TP_APPLICATIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_REF_APPLICATION_TYPE" Association="FMDataStore.FK_TP_REF_APPLICATION_TYPE">
+      <End Role="REF_APPLICATION_TYPE" EntitySet="REF_APPLICATION_TYPEs" />
+      <End Role="TP" EntitySet="TPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_REF_COMPLEXITY" Association="FMDataStore.FK_TP_REF_COMPLEXITY">
+      <End Role="REF_COMPLEXITY" EntitySet="REF_COMPLEXITies" />
+      <End Role="TP" EntitySet="TPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_REF_COMPLEXITY1" Association="FMDataStore.FK_TP_REF_COMPLEXITY1">
+      <End Role="REF_COMPLEXITY" EntitySet="REF_COMPLEXITies" />
+      <End Role="TP" EntitySet="TPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE" Association="FMDataStore.FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE">
+      <End Role="REF_DOCUMENT_TYPE" EntitySet="REF_DOCUMENT_TYPEs" />
+      <End Role="TP_DOCUMENT_LINK" EntitySet="TP_DOCUMENT_LINKs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_REF_GAP" Association="FMDataStore.FK_TP_REF_GAP">
+      <End Role="REF_GAP" EntitySet="REF_GAPs" />
+      <End Role="TP" EntitySet="TPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_REF_GAP1" Association="FMDataStore.FK_TP_REF_GAP1">
+      <End Role="REF_GAP" EntitySet="REF_GAPs" />
+      <End Role="TP" EntitySet="TPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_PHASE_TP_PHASE" Association="FMDataStore.FK_TP_PHASE_TP_PHASE">
+      <End Role="REF_PHASE" EntitySet="REF_PHASEs" />
+      <End Role="TP_PHASE" EntitySet="TP_PHASEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESOURCE_REF_ROLE" Association="FMDataStore.FK_RESOURCE_REF_ROLE">
+      <End Role="REF_ROLE" EntitySet="REF_ROLEs" />
+      <End Role="RESOURCE" EntitySet="RESOURCEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_STAKEHOLDER_REF_STAKEHOLDER" Association="FMDataStore.FK_TP_STAKEHOLDER_REF_STAKEHOLDER">
+      <End Role="REF_STAKEHOLDER" EntitySet="REF_STAKEHOLDERs" />
+      <End Role="TP_STAKEHOLDER" EntitySet="TP_STAKEHOLDERs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESOURCE_REF_STATUS" Association="FMDataStore.FK_RESOURCE_REF_STATUS">
+      <End Role="REF_STATUS" EntitySet="REF_STATUS" />
+      <End Role="RESOURCE" EntitySet="RESOURCEs" />
+    </AssociationSet>
+    <AssociationSet Name="REF_TECHNOLOGY_APP" Association="FMDataStore.REF_TECHNOLOGY_APP">
+      <End Role="REF_TECHNOLOGY" EntitySet="REF_TECHNOLOGies" />
+      <End Role="APP" EntitySet="APPLICATIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_REF_TECHNOLOGY_STACK" Association="FMDataStore.FK_TP_REF_TECHNOLOGY_STACK">
+      <End Role="REF_TECHNOLOGY_STACK" EntitySet="REF_TECHNOLOGY_STACKs" />
+      <End Role="TP" EntitySet="TPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_VENDOR_REF_VENDOR" Association="FMDataStore.FK_TP_VENDOR_REF_VENDOR">
+      <End Role="REF_VENDOR" EntitySet="REF_VENDORs" />
+      <End Role="TP_VENDOR" EntitySet="TP_VENDORs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_RESOURCE_ALLOCATION_RESOURCE" Association="FMDataStore.FK_TP_RESOURCE_ALLOCATION_RESOURCE">
+      <End Role="RESOURCE" EntitySet="RESOURCEs" />
+      <End Role="TP_RESOURCE_ALLOCATION" EntitySet="TP_RESOURCE_ALLOCATIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_APPLICATION_TP_APPLICATION" Association="FMDataStore.FK_TP_APPLICATION_TP_APPLICATION">
+      <End Role="TP" EntitySet="TPs" />
+      <End Role="TP_APPLICATION" EntitySet="TP_APPLICATIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_DOCUMENT_LINK_TP" Association="FMDataStore.FK_TP_DOCUMENT_LINK_TP">
+      <End Role="TP" EntitySet="TPs" />
+      <End Role="TP_DOCUMENT_LINK" EntitySet="TP_DOCUMENT_LINKs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_PHASE_TP" Association="FMDataStore.FK_TP_PHASE_TP">
+      <End Role="TP" EntitySet="TPs" />
+      <End Role="TP_PHASE" EntitySet="TP_PHASEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_RESOURCE_TP" Association="FMDataStore.FK_TP_RESOURCE_TP">
+      <End Role="TP" EntitySet="TPs" />
+      <End Role="TP_RESOURCE_ALLOCATION" EntitySet="TP_RESOURCE_ALLOCATIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_STAKEHOLDER_TP" Association="FMDataStore.FK_TP_STAKEHOLDER_TP">
+      <End Role="TP" EntitySet="TPs" />
+      <End Role="TP_STAKEHOLDER" EntitySet="TP_STAKEHOLDERs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_VENDOR_TP" Association="FMDataStore.FK_TP_VENDOR_TP">
+      <End Role="TP" EntitySet="TPs" />
+      <End Role="TP_VENDOR" EntitySet="TP_VENDORs" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="APP">
+    <Key>
+      <PropertyRef Name="ApplicationID" />
+    </Key>
+    <Property Name="ApplicationID" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="TechnologyID" Type="int" />
+  </EntityType>
+  <EntityType Name="REF_APPLICATION_TYPE">
+    <Key>
+      <PropertyRef Name="ApplicationTypeID" />
+    </Key>
+    <Property Name="ApplicationTypeID" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="20" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedTime" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="REF_COMPLEXITY">
+    <Key>
+      <PropertyRef Name="ComplexityID" />
+    </Key>
+    <Property Name="ComplexityID" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="REF_DOCUMENT_TYPE">
+    <Key>
+      <PropertyRef Name="DocumentTypeID" />
+    </Key>
+    <Property Name="DocumentTypeID" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="20" />
+    <Property Name="Description" Type="varchar" MaxLength="150" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="REF_GAP">
+    <Key>
+      <PropertyRef Name="GapID" />
+    </Key>
+    <Property Name="GapID" Type="smallint" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" />
+    <Property Name="Description" Type="varchar" MaxLength="150" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="REF_PHASE">
+    <Key>
+      <PropertyRef Name="PhaseID" />
+    </Key>
+    <Property Name="PhaseID" Type="smallint" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="20" />
+    <Property Name="Description" Type="varchar" MaxLength="150" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="REF_ROLE">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="400" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="REF_STAKEHOLDER">
+    <Key>
+      <PropertyRef Name="StakeholderID" />
+    </Key>
+    <Property Name="StakeholderID" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="REF_STATUS">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="smallint" Nullable="false" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="150" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="REF_TECHNOLOGY">
+    <Key>
+      <PropertyRef Name="TechnologyID" />
+    </Key>
+    <Property Name="TechnologyID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="400" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="REF_TECHNOLOGY_STACK">
+    <Key>
+      <PropertyRef Name="TechnologyStackID" />
+    </Key>
+    <Property Name="TechnologyStackID" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="REF_VENDOR">
+    <Key>
+      <PropertyRef Name="VendorID" />
+    </Key>
+    <Property Name="VendorID" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="IsEsu" Type="bit" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="RESOURCE">
+    <Key>
+      <PropertyRef Name="ResourceID" />
+    </Key>
+    <Property Name="ResourceID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
+    <Property Name="EmailId" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="RoleID" Type="smallint" />
+    <Property Name="StatusID" Type="smallint" />
+  </EntityType>
+  <EntityType Name="TP_APPLICATION">
+    <Key>
+      <PropertyRef Name="TpApplicationID" />
+    </Key>
+    <Property Name="TpApplicationID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ApplicationID" Type="smallint" />
+    <Property Name="TpID" Type="int" />
+  </EntityType>
+  <EntityType Name="TP_DOCUMENT_LINK">
+    <Key>
+      <PropertyRef Name="TpDocumentLinkID" />
+    </Key>
+    <Property Name="TpDocumentLinkID" Type="int" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="Link" Type="varchar" MaxLength="250" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="DocumentTypeID" Type="smallint" Nullable="false" />
+    <Property Name="TpID" Type="int" />
+  </EntityType>
+  <EntityType Name="TP_PHASE">
+    <Key>
+      <PropertyRef Name="TpPhaseID" />
+    </Key>
+    <Property Name="TpPhaseID" Type="int" Nullable="false" />
+    <Property Name="PlannedStartDate" Type="date" Nullable="false" />
+    <Property Name="PlannedEndDate" Type="date" />
+    <Property Name="ActualStartDate" Type="date" />
+    <Property Name="ActualEndDate" Type="date" />
+    <Property Name="Duration" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="PhaseID" Type="smallint" />
+    <Property Name="TpID" Type="int" />
+  </EntityType>
+  <EntityType Name="TP_RESOURCE_ALLOCATION">
+    <Key>
+      <PropertyRef Name="TpResourceAllocationId" />
+    </Key>
+    <Property Name="TpResourceAllocationId" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Percentage" Type="float" />
+    <Property Name="PlannedStartDate" Type="date" />
+    <Property Name="PlannedEndDate" Type="date" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ResourceID" Type="int" />
+    <Property Name="TpID" Type="int" />
+  </EntityType>
+  <EntityType Name="TP_STAKEHOLDER">
+    <Key>
+      <PropertyRef Name="TpStakeholderID" />
+    </Key>
+    <Property Name="TpStakeholderID" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="StakeholderID" Type="smallint" />
+    <Property Name="TpID" Type="int" />
+  </EntityType>
+  <EntityType Name="TP_VENDOR">
+    <Key>
+      <PropertyRef Name="TpVendorID" />
+    </Key>
+    <Property Name="TpVendorID" Type="int" Nullable="false" />
+    <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="VendorID" Type="smallint" />
+    <Property Name="TpID" Type="int" />
+  </EntityType>
+  <EntityType Name="TP">
+    <Key>
+      <PropertyRef Name="TpID" />
+    </Key>
+    <Property Name="TpID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Number" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="WorkOrderNumber" Type="nchar" MaxLength="10" />
+    <Property Name="WorkOrderStatus" Type="smallint" />
+    <Property Name="WorkOrderIssuedOn" Type="date" />
+    <Property Name="PlannedEffort" Type="nchar" MaxLength="10" />
+    <Property Name="EstimatedCost" Type="money" />
+    <Property Name="IssueDateToHP" Type="date" />
+    <Property Name="EffortDateProvidedByHP" Type="date" />
+    <Property Name="ApprovedDateByDL" Type="date" />
+    <Property Name="PlannedStartDate" Type="date" Nullable="false" />
+    <Property Name="PlannedEndDate" Type="date" />
+    <Property Name="ActualStartDate" Type="date" />
+    <Property Name="ActualEndDate" Type="date" />
+    <Property Name="ApplicationSize" Type="varchar" MaxLength="50" />
+    <Property Name="HasInputDocument" Type="bit" Nullable="false" />
+    <Property Name="HasFeasibilityStudy" Type="bit" Nullable="false" />
+    <Property Name="HasUnderstandingDocument" Type="bit" Nullable="false" />
+    <Property Name="HasEstimation" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApplicationTypeID" Type="smallint" />
+    <Property Name="TechnicalComplexityID" Type="smallint" />
+    <Property Name="ForcedComplexityID" Type="smallint" />
+    <Property Name="TechnologyGapID" Type="smallint" />
+    <Property Name="FunctionalGapID" Type="smallint" />
+    <Property Name="TechnologyStackID" Type="smallint" />
+  </EntityType>
+  <Association Name="APP_TP_APPLICATION">
+    <End Role="APP" Type="FMDataStore.APP" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_APPLICATION" Type="FMDataStore.TP_APPLICATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APP">
+        <PropertyRef Name="ApplicationID" />
+      </Principal>
+      <Dependent Role="TP_APPLICATION">
+        <PropertyRef Name="ApplicationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_REF_APPLICATION_TYPE">
+    <End Role="REF_APPLICATION_TYPE" Type="FMDataStore.REF_APPLICATION_TYPE" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_APPLICATION_TYPE">
+        <PropertyRef Name="ApplicationTypeID" />
+      </Principal>
+      <Dependent Role="TP">
+        <PropertyRef Name="ApplicationTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_REF_COMPLEXITY">
+    <End Role="REF_COMPLEXITY" Type="FMDataStore.REF_COMPLEXITY" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_COMPLEXITY">
+        <PropertyRef Name="ComplexityID" />
+      </Principal>
+      <Dependent Role="TP">
+        <PropertyRef Name="TechnicalComplexityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_REF_COMPLEXITY1">
+    <End Role="REF_COMPLEXITY" Type="FMDataStore.REF_COMPLEXITY" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_COMPLEXITY">
+        <PropertyRef Name="ComplexityID" />
+      </Principal>
+      <Dependent Role="TP">
+        <PropertyRef Name="ForcedComplexityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE">
+    <End Role="REF_DOCUMENT_TYPE" Type="FMDataStore.REF_DOCUMENT_TYPE" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_DOCUMENT_LINK" Type="FMDataStore.TP_DOCUMENT_LINK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_DOCUMENT_TYPE">
+        <PropertyRef Name="DocumentTypeID" />
+      </Principal>
+      <Dependent Role="TP_DOCUMENT_LINK">
+        <PropertyRef Name="DocumentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_REF_GAP">
+    <End Role="REF_GAP" Type="FMDataStore.REF_GAP" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_GAP">
+        <PropertyRef Name="GapID" />
+      </Principal>
+      <Dependent Role="TP">
+        <PropertyRef Name="TechnologyGapID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_REF_GAP1">
+    <End Role="REF_GAP" Type="FMDataStore.REF_GAP" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_GAP">
+        <PropertyRef Name="GapID" />
+      </Principal>
+      <Dependent Role="TP">
+        <PropertyRef Name="FunctionalGapID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_PHASE_TP_PHASE">
+    <End Role="REF_PHASE" Type="FMDataStore.REF_PHASE" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_PHASE" Type="FMDataStore.TP_PHASE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_PHASE">
+        <PropertyRef Name="PhaseID" />
+      </Principal>
+      <Dependent Role="TP_PHASE">
+        <PropertyRef Name="PhaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESOURCE_REF_ROLE">
+    <End Role="REF_ROLE" Type="FMDataStore.REF_ROLE" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="RESOURCE" Type="FMDataStore.RESOURCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_ROLE">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="RESOURCE">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_STAKEHOLDER_REF_STAKEHOLDER">
+    <End Role="REF_STAKEHOLDER" Type="FMDataStore.REF_STAKEHOLDER" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_STAKEHOLDER" Type="FMDataStore.TP_STAKEHOLDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_STAKEHOLDER">
+        <PropertyRef Name="StakeholderID" />
+      </Principal>
+      <Dependent Role="TP_STAKEHOLDER">
+        <PropertyRef Name="StakeholderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESOURCE_REF_STATUS">
+    <End Role="REF_STATUS" Type="FMDataStore.REF_STATUS" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="RESOURCE" Type="FMDataStore.RESOURCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_STATUS">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="RESOURCE">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="REF_TECHNOLOGY_APP">
+    <End Role="REF_TECHNOLOGY" Type="FMDataStore.REF_TECHNOLOGY" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="APP" Type="FMDataStore.APP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_TECHNOLOGY">
+        <PropertyRef Name="TechnologyID" />
+      </Principal>
+      <Dependent Role="APP">
+        <PropertyRef Name="TechnologyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_REF_TECHNOLOGY_STACK">
+    <End Role="REF_TECHNOLOGY_STACK" Type="FMDataStore.REF_TECHNOLOGY_STACK" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_TECHNOLOGY_STACK">
+        <PropertyRef Name="TechnologyStackID" />
+      </Principal>
+      <Dependent Role="TP">
+        <PropertyRef Name="TechnologyStackID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_VENDOR_REF_VENDOR">
+    <End Role="REF_VENDOR" Type="FMDataStore.REF_VENDOR" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_VENDOR" Type="FMDataStore.TP_VENDOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_VENDOR">
+        <PropertyRef Name="VendorID" />
+      </Principal>
+      <Dependent Role="TP_VENDOR">
+        <PropertyRef Name="VendorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_RESOURCE_ALLOCATION_RESOURCE">
+    <End Role="RESOURCE" Type="FMDataStore.RESOURCE" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_RESOURCE_ALLOCATION" Type="FMDataStore.TP_RESOURCE_ALLOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESOURCE">
+        <PropertyRef Name="ResourceID" />
+      </Principal>
+      <Dependent Role="TP_RESOURCE_ALLOCATION">
+        <PropertyRef Name="ResourceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_APPLICATION_TP_APPLICATION">
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_APPLICATION" Type="FMDataStore.TP_APPLICATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TP">
+        <PropertyRef Name="TpID" />
+      </Principal>
+      <Dependent Role="TP_APPLICATION">
+        <PropertyRef Name="TpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_DOCUMENT_LINK_TP">
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_DOCUMENT_LINK" Type="FMDataStore.TP_DOCUMENT_LINK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TP">
+        <PropertyRef Name="TpID" />
+      </Principal>
+      <Dependent Role="TP_DOCUMENT_LINK">
+        <PropertyRef Name="TpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_PHASE_TP">
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_PHASE" Type="FMDataStore.TP_PHASE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TP">
+        <PropertyRef Name="TpID" />
+      </Principal>
+      <Dependent Role="TP_PHASE">
+        <PropertyRef Name="TpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_RESOURCE_TP">
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_RESOURCE_ALLOCATION" Type="FMDataStore.TP_RESOURCE_ALLOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TP">
+        <PropertyRef Name="TpID" />
+      </Principal>
+      <Dependent Role="TP_RESOURCE_ALLOCATION">
+        <PropertyRef Name="TpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_STAKEHOLDER_TP">
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_STAKEHOLDER" Type="FMDataStore.TP_STAKEHOLDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TP">
+        <PropertyRef Name="TpID" />
+      </Principal>
+      <Dependent Role="TP_STAKEHOLDER">
+        <PropertyRef Name="TpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_VENDOR_TP">
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_VENDOR" Type="FMDataStore.TP_VENDOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TP">
+        <PropertyRef Name="TpID" />
+      </Principal>
+      <Dependent Role="TP_VENDOR">
+        <PropertyRef Name="TpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>
