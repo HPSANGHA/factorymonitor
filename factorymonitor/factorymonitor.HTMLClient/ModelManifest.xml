@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Documents>
+    <Document FullPath="C:\Users\VEEDI\Documents\factorymonitor\factorymonitor\factorymonitor.HTMLClient\Properties\Client.lsml" Checksum="E34108751FC9E102F3B7D56A68BCF3E4FCD29D7868AB617D4DA8AA6E72E76DF1" />
+    <Document FullPath="C:\Users\VEEDI\Documents\factorymonitor\factorymonitor\factorymonitor.HTMLClient\Properties\Proxies.lsml" Checksum="9A53B41A767D03C0D6FC896C826D0673C0C2F2049C9F966810BA62EE1D7C15BE" />
+  </Documents>
+</ModelDocumentManifest>
