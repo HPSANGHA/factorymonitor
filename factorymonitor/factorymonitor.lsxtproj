@@ -4,7 +4,7 @@
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{f9829a60-2919-4e38-b603-c967f74bec8b}</ProjectGuid>
+    <ProjectGuid>{b521708d-1df5-41c0-ac64-dc3a47fc1bc3}</ProjectGuid>
     <OutputType>WinEXE</OutputType>
     <CopyBuildOutputToOutputDirectory>false</CopyBuildOutputToOutputDirectory>
     <RootNamespace>factorymonitor</RootNamespace>
@@ -101,13 +101,13 @@
   <ItemGroup>
     <ProjectReference Include="factorymonitor.HTMLClient\factorymonitor.HTMLClient.jsproj">
       <Name>factorymonitor.HTMLClient</Name>
-      <Project>{a745445e-6493-44e2-8490-904089e00a44}</Project>
+      <Project>{271c84bd-438b-4d20-940a-e9f7c6c493d4}</Project>
       <Private>True</Private>
       <Type>Client</Type>
     </ProjectReference>
     <ProjectReference Include="factorymonitor.Server\factorymonitor.Server.csproj">
       <Name>factorymonitor.Server</Name>
-      <Project>{7d1fa880-8218-48a9-ad9c-d88ec2d4d65d}</Project>
+      <Project>{64ebe037-cfd5-41b0-b832-f9df2631d29b}</Project>
       <Private>True</Private>
       <Type>Server</Type>
     </ProjectReference>

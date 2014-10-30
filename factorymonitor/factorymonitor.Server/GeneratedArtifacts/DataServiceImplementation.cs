@@ -94,10 +94,6 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.RESOURCE();
             }
-            if (type == typeof(global::LightSwitchApplication.Implementation.TP))
-            {
-                return new global::LightSwitchApplication.Implementation.TP();
-            }
             if (type == typeof(global::LightSwitchApplication.Implementation.TP_APPLICATION))
             {
                 return new global::LightSwitchApplication.Implementation.TP_APPLICATION();
@@ -121,6 +117,10 @@ namespace LightSwitchApplication.Implementation
             if (type == typeof(global::LightSwitchApplication.Implementation.TP_VENDOR))
             {
                 return new global::LightSwitchApplication.Implementation.TP_VENDOR();
+            }
+            if (type == typeof(global::LightSwitchApplication.Implementation.TP))
+            {
+                return new global::LightSwitchApplication.Implementation.TP();
             }
     
             return base.CreateObject(type);
@@ -190,10 +190,6 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.RESOURCE();
             }
-            if (typeof(T) == typeof(global::LightSwitchApplication.TP))
-            {
-                return new global::LightSwitchApplication.Implementation.TP();
-            }
             if (typeof(T) == typeof(global::LightSwitchApplication.TP_APPLICATION))
             {
                 return new global::LightSwitchApplication.Implementation.TP_APPLICATION();
@@ -217,6 +213,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(T) == typeof(global::LightSwitchApplication.TP_VENDOR))
             {
                 return new global::LightSwitchApplication.Implementation.TP_VENDOR();
+            }
+            if (typeof(T) == typeof(global::LightSwitchApplication.TP))
+            {
+                return new global::LightSwitchApplication.Implementation.TP();
             }
             return null;
         }
@@ -315,10 +315,6 @@ namespace LightSwitchApplication.Implementation
             {
                 return typeof(global::LightSwitchApplication.Implementation.RESOURCE);
             }
-            if (typeof(global::LightSwitchApplication.TP) == definitionType)
-            {
-                return typeof(global::LightSwitchApplication.Implementation.TP);
-            }
             if (typeof(global::LightSwitchApplication.TP_APPLICATION) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.TP_APPLICATION);
@@ -342,6 +338,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.TP_VENDOR) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.TP_VENDOR);
+            }
+            if (typeof(global::LightSwitchApplication.TP) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.TP);
             }
             return null;
         }
@@ -969,231 +969,6 @@ namespace LightSwitchApplication.Implementation
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public partial class TP :
-        global::LightSwitchApplication.TP.DetailsClass.IImplementation
-    {
-    
-        global::System.Collections.IEnumerable global::LightSwitchApplication.TP.DetailsClass.IImplementation.TP_APPLICATIONs
-        {
-            get
-            {
-                return this.TP_APPLICATIONs;
-            }
-        }
-        
-        global::System.Collections.IEnumerable global::LightSwitchApplication.TP.DetailsClass.IImplementation.TP_DOCUMENT_LINKs
-        {
-            get
-            {
-                return this.TP_DOCUMENT_LINKs;
-            }
-        }
-        
-        global::System.Collections.IEnumerable global::LightSwitchApplication.TP.DetailsClass.IImplementation.TP_PHASEs
-        {
-            get
-            {
-                return this.TP_PHASEs;
-            }
-        }
-        
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TP.DetailsClass.IImplementation.REF_APPLICATION_TYPE
-        {
-            get
-            {
-                return this.REF_APPLICATION_TYPE;
-            }
-            set
-            {
-                this.REF_APPLICATION_TYPE = (global::LightSwitchApplication.Implementation.REF_APPLICATION_TYPE)value;
-                if (this.__host != null)
-                {
-                    this.__host.RaisePropertyChanged("REF_APPLICATION_TYPE");
-                }
-            }
-        }
-        
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TP.DetailsClass.IImplementation.REF_COMPLEXITY
-        {
-            get
-            {
-                return this.REF_COMPLEXITY;
-            }
-            set
-            {
-                this.REF_COMPLEXITY = (global::LightSwitchApplication.Implementation.REF_COMPLEXITY)value;
-                if (this.__host != null)
-                {
-                    this.__host.RaisePropertyChanged("REF_COMPLEXITY");
-                }
-            }
-        }
-        
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TP.DetailsClass.IImplementation.REF_COMPLEXITY1
-        {
-            get
-            {
-                return this.REF_COMPLEXITY1;
-            }
-            set
-            {
-                this.REF_COMPLEXITY1 = (global::LightSwitchApplication.Implementation.REF_COMPLEXITY)value;
-                if (this.__host != null)
-                {
-                    this.__host.RaisePropertyChanged("REF_COMPLEXITY1");
-                }
-            }
-        }
-        
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TP.DetailsClass.IImplementation.REF_GAP
-        {
-            get
-            {
-                return this.REF_GAP;
-            }
-            set
-            {
-                this.REF_GAP = (global::LightSwitchApplication.Implementation.REF_GAP)value;
-                if (this.__host != null)
-                {
-                    this.__host.RaisePropertyChanged("REF_GAP");
-                }
-            }
-        }
-        
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TP.DetailsClass.IImplementation.REF_GAP1
-        {
-            get
-            {
-                return this.REF_GAP1;
-            }
-            set
-            {
-                this.REF_GAP1 = (global::LightSwitchApplication.Implementation.REF_GAP)value;
-                if (this.__host != null)
-                {
-                    this.__host.RaisePropertyChanged("REF_GAP1");
-                }
-            }
-        }
-        
-        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TP.DetailsClass.IImplementation.REF_TECHNOLOGY_STACK
-        {
-            get
-            {
-                return this.REF_TECHNOLOGY_STACK;
-            }
-            set
-            {
-                this.REF_TECHNOLOGY_STACK = (global::LightSwitchApplication.Implementation.REF_TECHNOLOGY_STACK)value;
-                if (this.__host != null)
-                {
-                    this.__host.RaisePropertyChanged("REF_TECHNOLOGY_STACK");
-                }
-            }
-        }
-        
-        global::System.Collections.IEnumerable global::LightSwitchApplication.TP.DetailsClass.IImplementation.TP_RESOURCE_ALLOCATIONs
-        {
-            get
-            {
-                return this.TP_RESOURCE_ALLOCATIONs;
-            }
-        }
-        
-        global::System.Collections.IEnumerable global::LightSwitchApplication.TP.DetailsClass.IImplementation.TP_STAKEHOLDERs
-        {
-            get
-            {
-                return this.TP_STAKEHOLDERs;
-            }
-        }
-        
-        global::System.Collections.IEnumerable global::LightSwitchApplication.TP.DetailsClass.IImplementation.TP_VENDORs
-        {
-            get
-            {
-                return this.TP_VENDORs;
-            }
-        }
-        
-        partial void OnApplicationTypeIDChanged()
-        {
-            if (this.__host != null)
-            {
-                this.__host.RaisePropertyChanged("REF_APPLICATION_TYPE");
-            }
-        }
-        
-        partial void OnTechnicalComplexityIDChanged()
-        {
-            if (this.__host != null)
-            {
-                this.__host.RaisePropertyChanged("REF_COMPLEXITY");
-            }
-        }
-        
-        partial void OnForcedComplexityIDChanged()
-        {
-            if (this.__host != null)
-            {
-                this.__host.RaisePropertyChanged("REF_COMPLEXITY1");
-            }
-        }
-        
-        partial void OnTechnologyGapIDChanged()
-        {
-            if (this.__host != null)
-            {
-                this.__host.RaisePropertyChanged("REF_GAP");
-            }
-        }
-        
-        partial void OnFunctionalGapIDChanged()
-        {
-            if (this.__host != null)
-            {
-                this.__host.RaisePropertyChanged("REF_GAP1");
-            }
-        }
-        
-        partial void OnTechnologyStackIDChanged()
-        {
-            if (this.__host != null)
-            {
-                this.__host.RaisePropertyChanged("REF_TECHNOLOGY_STACK");
-            }
-        }
-        
-        #region IEntityImplementation Members
-        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
-        
-        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
-        {
-            get
-            {
-                return this.__host;
-            }
-        }
-        
-        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
-        {
-            this.__host = host;
-        }
-        
-        protected override void OnPropertyChanged(string propertyName)
-        {
-            base.OnPropertyChanged(propertyName);
-            if (this.__host != null)
-            {
-                this.__host.RaisePropertyChanged(propertyName);
-            }
-        }
-        #endregion
-    }
-    
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public partial class TP_APPLICATION :
         global::LightSwitchApplication.TP_APPLICATION.DetailsClass.IImplementation
     {
@@ -1648,6 +1423,231 @@ namespace LightSwitchApplication.Implementation
             if (this.__host != null)
             {
                 this.__host.RaisePropertyChanged("TP");
+            }
+        }
+        
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class TP :
+        global::LightSwitchApplication.TP.DetailsClass.IImplementation
+    {
+    
+        global::System.Collections.IEnumerable global::LightSwitchApplication.TP.DetailsClass.IImplementation.TP_APPLICATIONs
+        {
+            get
+            {
+                return this.TP_APPLICATIONs;
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.TP.DetailsClass.IImplementation.TP_DOCUMENT_LINKs
+        {
+            get
+            {
+                return this.TP_DOCUMENT_LINKs;
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.TP.DetailsClass.IImplementation.TP_PHASEs
+        {
+            get
+            {
+                return this.TP_PHASEs;
+            }
+        }
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TP.DetailsClass.IImplementation.REF_APPLICATION_TYPE
+        {
+            get
+            {
+                return this.REF_APPLICATION_TYPE;
+            }
+            set
+            {
+                this.REF_APPLICATION_TYPE = (global::LightSwitchApplication.Implementation.REF_APPLICATION_TYPE)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("REF_APPLICATION_TYPE");
+                }
+            }
+        }
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TP.DetailsClass.IImplementation.REF_COMPLEXITY
+        {
+            get
+            {
+                return this.REF_COMPLEXITY;
+            }
+            set
+            {
+                this.REF_COMPLEXITY = (global::LightSwitchApplication.Implementation.REF_COMPLEXITY)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("REF_COMPLEXITY");
+                }
+            }
+        }
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TP.DetailsClass.IImplementation.REF_COMPLEXITY1
+        {
+            get
+            {
+                return this.REF_COMPLEXITY1;
+            }
+            set
+            {
+                this.REF_COMPLEXITY1 = (global::LightSwitchApplication.Implementation.REF_COMPLEXITY)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("REF_COMPLEXITY1");
+                }
+            }
+        }
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TP.DetailsClass.IImplementation.REF_GAP
+        {
+            get
+            {
+                return this.REF_GAP;
+            }
+            set
+            {
+                this.REF_GAP = (global::LightSwitchApplication.Implementation.REF_GAP)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("REF_GAP");
+                }
+            }
+        }
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TP.DetailsClass.IImplementation.REF_GAP1
+        {
+            get
+            {
+                return this.REF_GAP1;
+            }
+            set
+            {
+                this.REF_GAP1 = (global::LightSwitchApplication.Implementation.REF_GAP)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("REF_GAP1");
+                }
+            }
+        }
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementation global::LightSwitchApplication.TP.DetailsClass.IImplementation.REF_TECHNOLOGY_STACK
+        {
+            get
+            {
+                return this.REF_TECHNOLOGY_STACK;
+            }
+            set
+            {
+                this.REF_TECHNOLOGY_STACK = (global::LightSwitchApplication.Implementation.REF_TECHNOLOGY_STACK)value;
+                if (this.__host != null)
+                {
+                    this.__host.RaisePropertyChanged("REF_TECHNOLOGY_STACK");
+                }
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.TP.DetailsClass.IImplementation.TP_RESOURCE_ALLOCATIONs
+        {
+            get
+            {
+                return this.TP_RESOURCE_ALLOCATIONs;
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.TP.DetailsClass.IImplementation.TP_STAKEHOLDERs
+        {
+            get
+            {
+                return this.TP_STAKEHOLDERs;
+            }
+        }
+        
+        global::System.Collections.IEnumerable global::LightSwitchApplication.TP.DetailsClass.IImplementation.TP_VENDORs
+        {
+            get
+            {
+                return this.TP_VENDORs;
+            }
+        }
+        
+        partial void OnApplicationTypeIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("REF_APPLICATION_TYPE");
+            }
+        }
+        
+        partial void OnTechnicalComplexityIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("REF_COMPLEXITY");
+            }
+        }
+        
+        partial void OnForcedComplexityIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("REF_COMPLEXITY1");
+            }
+        }
+        
+        partial void OnTechnologyGapIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("REF_GAP");
+            }
+        }
+        
+        partial void OnFunctionalGapIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("REF_GAP1");
+            }
+        }
+        
+        partial void OnTechnologyStackIDChanged()
+        {
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged("REF_TECHNOLOGY_STACK");
             }
         }
         

@@ -106,14 +106,6 @@
         created: [lightSwitchApplication.RESOURCE]
     });
 
-    msls._addEntryPoints(lightSwitchApplication.TP, {
-        /// <field>
-        /// Called when a new tP is created.
-        /// <br/>created(msls.application.TP entity)
-        /// </field>
-        created: [lightSwitchApplication.TP]
-    });
-
     msls._addEntryPoints(lightSwitchApplication.TP_APPLICATION, {
         /// <field>
         /// Called when a new tP_APPLICATION is created.
@@ -160,6 +152,14 @@
         /// <br/>created(msls.application.TP_VENDOR entity)
         /// </field>
         created: [lightSwitchApplication.TP_VENDOR]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.TP, {
+        /// <field>
+        /// Called when a new tP is created.
+        /// <br/>created(msls.application.TP entity)
+        /// </field>
+        created: [lightSwitchApplication.TP]
     });
 
 }(msls.application));

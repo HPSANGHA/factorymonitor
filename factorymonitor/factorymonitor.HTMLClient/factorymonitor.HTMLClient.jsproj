@@ -14,7 +14,7 @@
     <UseDesignTimeFeatures>true</UseDesignTimeFeatures>
   </PropertyGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{a745445e-6493-44e2-8490-904089e00a44}</ProjectGuid>
+    <ProjectGuid>{271c84bd-438b-4d20-940a-e9f7c6c493d4}</ProjectGuid>
     <LightSwitchVersion>v4.5</LightSwitchVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -69,6 +69,12 @@
     <Content Include="Screens\Reference\Role\ViewRole.lsml.js">
       <DependentUpon>ViewRole.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\Reference\Status\ViewStatus.lsml.js">
+      <DependentUpon>ViewStatus.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Resource\ViewResourceDetail.lsml.js">
+      <DependentUpon>ViewResourceDetail.lsml</DependentUpon>
+    </Content>
     <Content Include="Scripts\datajs-1.1.1.js" />
     <Content Include="Scripts\datajs-1.1.1.min.js" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
@@ -94,10 +100,18 @@
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
     <LightSwitchModel Include="Properties\FMData\REF_ROLEs.lsml" />
+    <LightSwitchModel Include="Properties\FMData\REF_STATUS.lsml" />
+    <LightSwitchModel Include="Properties\FMData\RESOURCEs.lsml" />
     <LightSwitchModel Include="Properties\Proxies.lsml" />
     <LightSwitchModel Include="Screens\Reference\Role\AddEditRole.lsml" />
     <LightSwitchModel Include="Screens\Reference\Role\BrowseRoles.lsml" />
     <LightSwitchModel Include="Screens\Reference\Role\ViewRole.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Status\AddEditStatus.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Status\BrowseStatusSet.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Status\ViewStatus.lsml" />
+    <LightSwitchModel Include="Screens\Resource\AddEditResourceDetail.lsml" />
+    <LightSwitchModel Include="Screens\Resource\BrowseResourceDetails.lsml" />
+    <LightSwitchModel Include="Screens\Resource\ViewResourceDetail.lsml" />
   </ItemGroup>
   <ItemGroup>
     <_ClientBuildFile Include="GeneratedArtifacts\model.json">

@@ -14,48 +14,16 @@
     <EntitySet Name="REF_TECHNOLOGY_STACKs" EntityType="FMDataStore.REF_TECHNOLOGY_STACK" store:Type="Tables" Schema="dbo" Table="REF_TECHNOLOGY_STACK" />
     <EntitySet Name="REF_VENDORs" EntityType="FMDataStore.REF_VENDOR" store:Type="Tables" Schema="dbo" Table="REF_VENDOR" />
     <EntitySet Name="RESOURCEs" EntityType="FMDataStore.RESOURCE" store:Type="Tables" Schema="dbo" Table="RESOURCE" />
-    <EntitySet Name="TPs" EntityType="FMDataStore.TP" store:Type="Tables" Schema="dbo" Table="TP" />
     <EntitySet Name="TP_APPLICATIONs" EntityType="FMDataStore.TP_APPLICATION" store:Type="Tables" Schema="dbo" Table="TP_APPLICATION" />
     <EntitySet Name="TP_DOCUMENT_LINKs" EntityType="FMDataStore.TP_DOCUMENT_LINK" store:Type="Tables" Schema="dbo" Table="TP_DOCUMENT_LINK" />
     <EntitySet Name="TP_PHASEs" EntityType="FMDataStore.TP_PHASE" store:Type="Tables" Schema="dbo" Table="TP_PHASE" />
     <EntitySet Name="TP_RESOURCE_ALLOCATIONs" EntityType="FMDataStore.TP_RESOURCE_ALLOCATION" store:Type="Tables" Schema="dbo" Table="TP_RESOURCE_ALLOCATION" />
     <EntitySet Name="TP_STAKEHOLDERs" EntityType="FMDataStore.TP_STAKEHOLDER" store:Type="Tables" Schema="dbo" Table="TP_STAKEHOLDER" />
     <EntitySet Name="TP_VENDORs" EntityType="FMDataStore.TP_VENDOR" store:Type="Tables" Schema="dbo" Table="TP_VENDOR" />
-    <AssociationSet Name="REF_TECHNOLOGY_APP" Association="FMDataStore.REF_TECHNOLOGY_APP">
-      <End Role="REF_TECHNOLOGY" EntitySet="REF_TECHNOLOGies" />
-      <End Role="APP" EntitySet="APPLICATIONs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_RESOURCE_REF_ROLE" Association="FMDataStore.FK_RESOURCE_REF_ROLE">
-      <End Role="REF_ROLE" EntitySet="REF_ROLEs" />
-      <End Role="RESOURCE" EntitySet="RESOURCEs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_RESOURCE_REF_STATUS" Association="FMDataStore.FK_RESOURCE_REF_STATUS">
-      <End Role="REF_STATUS" EntitySet="REF_STATUS" />
-      <End Role="RESOURCE" EntitySet="RESOURCEs" />
-    </AssociationSet>
+    <EntitySet Name="TPs" EntityType="FMDataStore.TP" store:Type="Tables" Schema="dbo" Table="TP" />
     <AssociationSet Name="APP_TP_APPLICATION" Association="FMDataStore.APP_TP_APPLICATION">
       <End Role="APP" EntitySet="APPLICATIONs" />
       <End Role="TP_APPLICATION" EntitySet="TP_APPLICATIONs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TP_APPLICATION_TP_APPLICATION" Association="FMDataStore.FK_TP_APPLICATION_TP_APPLICATION">
-      <End Role="TP" EntitySet="TPs" />
-      <End Role="TP_APPLICATION" EntitySet="TP_APPLICATIONs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE" Association="FMDataStore.FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE">
-      <End Role="REF_DOCUMENT_TYPE" EntitySet="REF_DOCUMENT_TYPEs" />
-      <End Role="TP_DOCUMENT_LINK" EntitySet="TP_DOCUMENT_LINKs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TP_DOCUMENT_LINK_TP" Association="FMDataStore.FK_TP_DOCUMENT_LINK_TP">
-      <End Role="TP" EntitySet="TPs" />
-      <End Role="TP_DOCUMENT_LINK" EntitySet="TP_DOCUMENT_LINKs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TP_PHASE_TP" Association="FMDataStore.FK_TP_PHASE_TP">
-      <End Role="TP" EntitySet="TPs" />
-      <End Role="TP_PHASE" EntitySet="TP_PHASEs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TP_PHASE_TP_PHASE" Association="FMDataStore.FK_TP_PHASE_TP_PHASE">
-      <End Role="REF_PHASE" EntitySet="REF_PHASEs" />
-      <End Role="TP_PHASE" EntitySet="TP_PHASEs" />
     </AssociationSet>
     <AssociationSet Name="FK_TP_REF_APPLICATION_TYPE" Association="FMDataStore.FK_TP_REF_APPLICATION_TYPE">
       <End Role="REF_APPLICATION_TYPE" EntitySet="REF_APPLICATION_TYPEs" />
@@ -69,6 +37,10 @@
       <End Role="REF_COMPLEXITY" EntitySet="REF_COMPLEXITies" />
       <End Role="TP" EntitySet="TPs" />
     </AssociationSet>
+    <AssociationSet Name="FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE" Association="FMDataStore.FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE">
+      <End Role="REF_DOCUMENT_TYPE" EntitySet="REF_DOCUMENT_TYPEs" />
+      <End Role="TP_DOCUMENT_LINK" EntitySet="TP_DOCUMENT_LINKs" />
+    </AssociationSet>
     <AssociationSet Name="FK_TP_REF_GAP" Association="FMDataStore.FK_TP_REF_GAP">
       <End Role="REF_GAP" EntitySet="REF_GAPs" />
       <End Role="TP" EntitySet="TPs" />
@@ -77,29 +49,57 @@
       <End Role="REF_GAP" EntitySet="REF_GAPs" />
       <End Role="TP" EntitySet="TPs" />
     </AssociationSet>
-    <AssociationSet Name="FK_TP_REF_TECHNOLOGY_STACK" Association="FMDataStore.FK_TP_REF_TECHNOLOGY_STACK">
-      <End Role="REF_TECHNOLOGY_STACK" EntitySet="REF_TECHNOLOGY_STACKs" />
-      <End Role="TP" EntitySet="TPs" />
+    <AssociationSet Name="FK_TP_PHASE_TP_PHASE" Association="FMDataStore.FK_TP_PHASE_TP_PHASE">
+      <End Role="REF_PHASE" EntitySet="REF_PHASEs" />
+      <End Role="TP_PHASE" EntitySet="TP_PHASEs" />
     </AssociationSet>
-    <AssociationSet Name="FK_TP_RESOURCE_ALLOCATION_RESOURCE" Association="FMDataStore.FK_TP_RESOURCE_ALLOCATION_RESOURCE">
+    <AssociationSet Name="FK_RESOURCE_REF_ROLE" Association="FMDataStore.FK_RESOURCE_REF_ROLE">
+      <End Role="REF_ROLE" EntitySet="REF_ROLEs" />
       <End Role="RESOURCE" EntitySet="RESOURCEs" />
-      <End Role="TP_RESOURCE_ALLOCATION" EntitySet="TP_RESOURCE_ALLOCATIONs" />
-    </AssociationSet>
-    <AssociationSet Name="FK_TP_RESOURCE_TP" Association="FMDataStore.FK_TP_RESOURCE_TP">
-      <End Role="TP" EntitySet="TPs" />
-      <End Role="TP_RESOURCE_ALLOCATION" EntitySet="TP_RESOURCE_ALLOCATIONs" />
     </AssociationSet>
     <AssociationSet Name="FK_TP_STAKEHOLDER_REF_STAKEHOLDER" Association="FMDataStore.FK_TP_STAKEHOLDER_REF_STAKEHOLDER">
       <End Role="REF_STAKEHOLDER" EntitySet="REF_STAKEHOLDERs" />
       <End Role="TP_STAKEHOLDER" EntitySet="TP_STAKEHOLDERs" />
     </AssociationSet>
-    <AssociationSet Name="FK_TP_STAKEHOLDER_TP" Association="FMDataStore.FK_TP_STAKEHOLDER_TP">
+    <AssociationSet Name="FK_RESOURCE_REF_STATUS" Association="FMDataStore.FK_RESOURCE_REF_STATUS">
+      <End Role="REF_STATUS" EntitySet="REF_STATUS" />
+      <End Role="RESOURCE" EntitySet="RESOURCEs" />
+    </AssociationSet>
+    <AssociationSet Name="REF_TECHNOLOGY_APP" Association="FMDataStore.REF_TECHNOLOGY_APP">
+      <End Role="REF_TECHNOLOGY" EntitySet="REF_TECHNOLOGies" />
+      <End Role="APP" EntitySet="APPLICATIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_REF_TECHNOLOGY_STACK" Association="FMDataStore.FK_TP_REF_TECHNOLOGY_STACK">
+      <End Role="REF_TECHNOLOGY_STACK" EntitySet="REF_TECHNOLOGY_STACKs" />
       <End Role="TP" EntitySet="TPs" />
-      <End Role="TP_STAKEHOLDER" EntitySet="TP_STAKEHOLDERs" />
     </AssociationSet>
     <AssociationSet Name="FK_TP_VENDOR_REF_VENDOR" Association="FMDataStore.FK_TP_VENDOR_REF_VENDOR">
       <End Role="REF_VENDOR" EntitySet="REF_VENDORs" />
       <End Role="TP_VENDOR" EntitySet="TP_VENDORs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_RESOURCE_ALLOCATION_RESOURCE" Association="FMDataStore.FK_TP_RESOURCE_ALLOCATION_RESOURCE">
+      <End Role="RESOURCE" EntitySet="RESOURCEs" />
+      <End Role="TP_RESOURCE_ALLOCATION" EntitySet="TP_RESOURCE_ALLOCATIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_APPLICATION_TP_APPLICATION" Association="FMDataStore.FK_TP_APPLICATION_TP_APPLICATION">
+      <End Role="TP" EntitySet="TPs" />
+      <End Role="TP_APPLICATION" EntitySet="TP_APPLICATIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_DOCUMENT_LINK_TP" Association="FMDataStore.FK_TP_DOCUMENT_LINK_TP">
+      <End Role="TP" EntitySet="TPs" />
+      <End Role="TP_DOCUMENT_LINK" EntitySet="TP_DOCUMENT_LINKs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_PHASE_TP" Association="FMDataStore.FK_TP_PHASE_TP">
+      <End Role="TP" EntitySet="TPs" />
+      <End Role="TP_PHASE" EntitySet="TP_PHASEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_RESOURCE_TP" Association="FMDataStore.FK_TP_RESOURCE_TP">
+      <End Role="TP" EntitySet="TPs" />
+      <End Role="TP_RESOURCE_ALLOCATION" EntitySet="TP_RESOURCE_ALLOCATIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_STAKEHOLDER_TP" Association="FMDataStore.FK_TP_STAKEHOLDER_TP">
+      <End Role="TP" EntitySet="TPs" />
+      <End Role="TP_STAKEHOLDER" EntitySet="TP_STAKEHOLDERs" />
     </AssociationSet>
     <AssociationSet Name="FK_TP_VENDOR_TP" Association="FMDataStore.FK_TP_VENDOR_TP">
       <End Role="TP" EntitySet="TPs" />
@@ -203,7 +203,7 @@
     <Key>
       <PropertyRef Name="StatusID" />
     </Key>
-    <Property Name="StatusID" Type="smallint" Nullable="false" />
+    <Property Name="StatusID" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="Description" Type="varchar" MaxLength="150" />
     <Property Name="CreatedDate" Type="datetime" />
@@ -254,49 +254,13 @@
     </Key>
     <Property Name="ResourceID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="varchar" Nullable="false" MaxLength="50" />
-    <Property Name="EmailId" Type="varchar" MaxLength="50" />
+    <Property Name="EmailId" Type="varchar" Nullable="false" MaxLength="50" />
     <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
     <Property Name="CreatedDate" Type="datetime" />
     <Property Name="ModifiedDate" Type="datetime" />
     <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
     <Property Name="RoleID" Type="smallint" />
     <Property Name="StatusID" Type="smallint" />
-  </EntityType>
-  <EntityType Name="TP">
-    <Key>
-      <PropertyRef Name="TpID" />
-    </Key>
-    <Property Name="TpID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
-    <Property Name="Number" Type="int" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
-    <Property Name="Description" Type="varchar" MaxLength="500" />
-    <Property Name="WorkOrderNumber" Type="nchar" MaxLength="10" />
-    <Property Name="WorkOrderStatus" Type="smallint" />
-    <Property Name="WorkOrderIssuedOn" Type="date" />
-    <Property Name="PlannedEffort" Type="nchar" MaxLength="10" />
-    <Property Name="EstimatedCost" Type="money" />
-    <Property Name="IssueDateToHP" Type="date" />
-    <Property Name="EffortDateProvidedByHP" Type="date" />
-    <Property Name="ApprovedDateByDL" Type="date" />
-    <Property Name="PlannedStartDate" Type="date" Nullable="false" />
-    <Property Name="PlannedEndDate" Type="date" />
-    <Property Name="ActualStartDate" Type="date" />
-    <Property Name="ActualEndDate" Type="date" />
-    <Property Name="ApplicationSize" Type="varchar" MaxLength="50" />
-    <Property Name="HasInputDocument" Type="bit" Nullable="false" />
-    <Property Name="HasFeasibilityStudy" Type="bit" Nullable="false" />
-    <Property Name="HasUnderstandingDocument" Type="bit" Nullable="false" />
-    <Property Name="HasEstimation" Type="bit" Nullable="false" />
-    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
-    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
-    <Property Name="ModifiedDate" Type="datetime" />
-    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
-    <Property Name="ApplicationTypeID" Type="smallint" />
-    <Property Name="TechnicalComplexityID" Type="smallint" />
-    <Property Name="ForcedComplexityID" Type="smallint" />
-    <Property Name="TechnologyGapID" Type="smallint" />
-    <Property Name="FunctionalGapID" Type="smallint" />
-    <Property Name="TechnologyStackID" Type="smallint" />
   </EntityType>
   <EntityType Name="TP_APPLICATION">
     <Key>
@@ -339,8 +303,8 @@
     <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
     <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
     <Property Name="ModifiedDate" Type="datetime" />
-    <Property Name="TpID" Type="int" />
     <Property Name="PhaseID" Type="smallint" />
+    <Property Name="TpID" Type="int" />
   </EntityType>
   <EntityType Name="TP_RESOURCE_ALLOCATION">
     <Key>
@@ -381,48 +345,42 @@
     <Property Name="VendorID" Type="smallint" />
     <Property Name="TpID" Type="int" />
   </EntityType>
-  <Association Name="REF_TECHNOLOGY_APP">
-    <End Role="REF_TECHNOLOGY" Type="FMDataStore.REF_TECHNOLOGY" Multiplicity="0..1">
-      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="APP" Type="FMDataStore.APP" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="REF_TECHNOLOGY">
-        <PropertyRef Name="TechnologyID" />
-      </Principal>
-      <Dependent Role="APP">
-        <PropertyRef Name="TechnologyID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_RESOURCE_REF_ROLE">
-    <End Role="REF_ROLE" Type="FMDataStore.REF_ROLE" Multiplicity="0..1">
-      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="RESOURCE" Type="FMDataStore.RESOURCE" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="REF_ROLE">
-        <PropertyRef Name="RoleID" />
-      </Principal>
-      <Dependent Role="RESOURCE">
-        <PropertyRef Name="RoleID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_RESOURCE_REF_STATUS">
-    <End Role="REF_STATUS" Type="FMDataStore.REF_STATUS" Multiplicity="0..1">
-      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="RESOURCE" Type="FMDataStore.RESOURCE" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="REF_STATUS">
-        <PropertyRef Name="StatusID" />
-      </Principal>
-      <Dependent Role="RESOURCE">
-        <PropertyRef Name="StatusID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
+  <EntityType Name="TP">
+    <Key>
+      <PropertyRef Name="TpID" />
+    </Key>
+    <Property Name="TpID" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="Number" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" Nullable="false" MaxLength="50" />
+    <Property Name="Description" Type="varchar" MaxLength="500" />
+    <Property Name="WorkOrderNumber" Type="nchar" MaxLength="10" />
+    <Property Name="WorkOrderStatus" Type="smallint" />
+    <Property Name="WorkOrderIssuedOn" Type="date" />
+    <Property Name="PlannedEffort" Type="nchar" MaxLength="10" />
+    <Property Name="EstimatedCost" Type="money" />
+    <Property Name="IssueDateToHP" Type="date" />
+    <Property Name="EffortDateProvidedByHP" Type="date" />
+    <Property Name="ApprovedDateByDL" Type="date" />
+    <Property Name="PlannedStartDate" Type="date" Nullable="false" />
+    <Property Name="PlannedEndDate" Type="date" />
+    <Property Name="ActualStartDate" Type="date" />
+    <Property Name="ActualEndDate" Type="date" />
+    <Property Name="ApplicationSize" Type="varchar" MaxLength="50" />
+    <Property Name="HasInputDocument" Type="bit" Nullable="false" />
+    <Property Name="HasFeasibilityStudy" Type="bit" Nullable="false" />
+    <Property Name="HasUnderstandingDocument" Type="bit" Nullable="false" />
+    <Property Name="HasEstimation" Type="bit" Nullable="false" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="CreatedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
+    <Property Name="ModifiedBy" Type="nvarchar" MaxLength="50" />
+    <Property Name="ApplicationTypeID" Type="smallint" />
+    <Property Name="TechnicalComplexityID" Type="smallint" />
+    <Property Name="ForcedComplexityID" Type="smallint" />
+    <Property Name="TechnologyGapID" Type="smallint" />
+    <Property Name="FunctionalGapID" Type="smallint" />
+    <Property Name="TechnologyStackID" Type="smallint" />
+  </EntityType>
   <Association Name="APP_TP_APPLICATION">
     <End Role="APP" Type="FMDataStore.APP" Multiplicity="0..1">
       <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
@@ -434,76 +392,6 @@
       </Principal>
       <Dependent Role="TP_APPLICATION">
         <PropertyRef Name="ApplicationID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_TP_APPLICATION_TP_APPLICATION">
-    <End Role="TP" Type="FMDataStore.TP" Multiplicity="0..1">
-      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="TP_APPLICATION" Type="FMDataStore.TP_APPLICATION" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TP">
-        <PropertyRef Name="TpID" />
-      </Principal>
-      <Dependent Role="TP_APPLICATION">
-        <PropertyRef Name="TpID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE">
-    <End Role="REF_DOCUMENT_TYPE" Type="FMDataStore.REF_DOCUMENT_TYPE" Multiplicity="1">
-      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="TP_DOCUMENT_LINK" Type="FMDataStore.TP_DOCUMENT_LINK" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="REF_DOCUMENT_TYPE">
-        <PropertyRef Name="DocumentTypeID" />
-      </Principal>
-      <Dependent Role="TP_DOCUMENT_LINK">
-        <PropertyRef Name="DocumentTypeID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_TP_DOCUMENT_LINK_TP">
-    <End Role="TP" Type="FMDataStore.TP" Multiplicity="0..1">
-      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="TP_DOCUMENT_LINK" Type="FMDataStore.TP_DOCUMENT_LINK" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TP">
-        <PropertyRef Name="TpID" />
-      </Principal>
-      <Dependent Role="TP_DOCUMENT_LINK">
-        <PropertyRef Name="TpID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_TP_PHASE_TP">
-    <End Role="TP" Type="FMDataStore.TP" Multiplicity="0..1">
-      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="TP_PHASE" Type="FMDataStore.TP_PHASE" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TP">
-        <PropertyRef Name="TpID" />
-      </Principal>
-      <Dependent Role="TP_PHASE">
-        <PropertyRef Name="TpID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_TP_PHASE_TP_PHASE">
-    <End Role="REF_PHASE" Type="FMDataStore.REF_PHASE" Multiplicity="0..1">
-      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="TP_PHASE" Type="FMDataStore.TP_PHASE" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="REF_PHASE">
-        <PropertyRef Name="PhaseID" />
-      </Principal>
-      <Dependent Role="TP_PHASE">
-        <PropertyRef Name="PhaseID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -549,6 +437,20 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE">
+    <End Role="REF_DOCUMENT_TYPE" Type="FMDataStore.REF_DOCUMENT_TYPE" Multiplicity="1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_DOCUMENT_LINK" Type="FMDataStore.TP_DOCUMENT_LINK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_DOCUMENT_TYPE">
+        <PropertyRef Name="DocumentTypeID" />
+      </Principal>
+      <Dependent Role="TP_DOCUMENT_LINK">
+        <PropertyRef Name="DocumentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_TP_REF_GAP">
     <End Role="REF_GAP" Type="FMDataStore.REF_GAP" Multiplicity="0..1">
       <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
@@ -577,45 +479,31 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_TP_REF_TECHNOLOGY_STACK">
-    <End Role="REF_TECHNOLOGY_STACK" Type="FMDataStore.REF_TECHNOLOGY_STACK" Multiplicity="0..1">
+  <Association Name="FK_TP_PHASE_TP_PHASE">
+    <End Role="REF_PHASE" Type="FMDataStore.REF_PHASE" Multiplicity="0..1">
       <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
     </End>
-    <End Role="TP" Type="FMDataStore.TP" Multiplicity="*" />
+    <End Role="TP_PHASE" Type="FMDataStore.TP_PHASE" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="REF_TECHNOLOGY_STACK">
-        <PropertyRef Name="TechnologyStackID" />
+      <Principal Role="REF_PHASE">
+        <PropertyRef Name="PhaseID" />
       </Principal>
-      <Dependent Role="TP">
-        <PropertyRef Name="TechnologyStackID" />
+      <Dependent Role="TP_PHASE">
+        <PropertyRef Name="PhaseID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_TP_RESOURCE_ALLOCATION_RESOURCE">
-    <End Role="RESOURCE" Type="FMDataStore.RESOURCE" Multiplicity="0..1">
+  <Association Name="FK_RESOURCE_REF_ROLE">
+    <End Role="REF_ROLE" Type="FMDataStore.REF_ROLE" Multiplicity="0..1">
       <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
     </End>
-    <End Role="TP_RESOURCE_ALLOCATION" Type="FMDataStore.TP_RESOURCE_ALLOCATION" Multiplicity="*" />
+    <End Role="RESOURCE" Type="FMDataStore.RESOURCE" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="RESOURCE">
-        <PropertyRef Name="ResourceID" />
+      <Principal Role="REF_ROLE">
+        <PropertyRef Name="RoleID" />
       </Principal>
-      <Dependent Role="TP_RESOURCE_ALLOCATION">
-        <PropertyRef Name="ResourceID" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK_TP_RESOURCE_TP">
-    <End Role="TP" Type="FMDataStore.TP" Multiplicity="0..1">
-      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="TP_RESOURCE_ALLOCATION" Type="FMDataStore.TP_RESOURCE_ALLOCATION" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="TP">
-        <PropertyRef Name="TpID" />
-      </Principal>
-      <Dependent Role="TP_RESOURCE_ALLOCATION">
-        <PropertyRef Name="TpID" />
+      <Dependent Role="RESOURCE">
+        <PropertyRef Name="RoleID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -633,17 +521,45 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_TP_STAKEHOLDER_TP">
-    <End Role="TP" Type="FMDataStore.TP" Multiplicity="0..1">
+  <Association Name="FK_RESOURCE_REF_STATUS">
+    <End Role="REF_STATUS" Type="FMDataStore.REF_STATUS" Multiplicity="0..1">
       <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
     </End>
-    <End Role="TP_STAKEHOLDER" Type="FMDataStore.TP_STAKEHOLDER" Multiplicity="*" />
+    <End Role="RESOURCE" Type="FMDataStore.RESOURCE" Multiplicity="*" />
     <ReferentialConstraint>
-      <Principal Role="TP">
-        <PropertyRef Name="TpID" />
+      <Principal Role="REF_STATUS">
+        <PropertyRef Name="StatusID" />
       </Principal>
-      <Dependent Role="TP_STAKEHOLDER">
-        <PropertyRef Name="TpID" />
+      <Dependent Role="RESOURCE">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="REF_TECHNOLOGY_APP">
+    <End Role="REF_TECHNOLOGY" Type="FMDataStore.REF_TECHNOLOGY" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="APP" Type="FMDataStore.APP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_TECHNOLOGY">
+        <PropertyRef Name="TechnologyID" />
+      </Principal>
+      <Dependent Role="APP">
+        <PropertyRef Name="TechnologyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_REF_TECHNOLOGY_STACK">
+    <End Role="REF_TECHNOLOGY_STACK" Type="FMDataStore.REF_TECHNOLOGY_STACK" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_TECHNOLOGY_STACK">
+        <PropertyRef Name="TechnologyStackID" />
+      </Principal>
+      <Dependent Role="TP">
+        <PropertyRef Name="TechnologyStackID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -658,6 +574,90 @@
       </Principal>
       <Dependent Role="TP_VENDOR">
         <PropertyRef Name="VendorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_RESOURCE_ALLOCATION_RESOURCE">
+    <End Role="RESOURCE" Type="FMDataStore.RESOURCE" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_RESOURCE_ALLOCATION" Type="FMDataStore.TP_RESOURCE_ALLOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESOURCE">
+        <PropertyRef Name="ResourceID" />
+      </Principal>
+      <Dependent Role="TP_RESOURCE_ALLOCATION">
+        <PropertyRef Name="ResourceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_APPLICATION_TP_APPLICATION">
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_APPLICATION" Type="FMDataStore.TP_APPLICATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TP">
+        <PropertyRef Name="TpID" />
+      </Principal>
+      <Dependent Role="TP_APPLICATION">
+        <PropertyRef Name="TpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_DOCUMENT_LINK_TP">
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_DOCUMENT_LINK" Type="FMDataStore.TP_DOCUMENT_LINK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TP">
+        <PropertyRef Name="TpID" />
+      </Principal>
+      <Dependent Role="TP_DOCUMENT_LINK">
+        <PropertyRef Name="TpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_PHASE_TP">
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_PHASE" Type="FMDataStore.TP_PHASE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TP">
+        <PropertyRef Name="TpID" />
+      </Principal>
+      <Dependent Role="TP_PHASE">
+        <PropertyRef Name="TpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_RESOURCE_TP">
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_RESOURCE_ALLOCATION" Type="FMDataStore.TP_RESOURCE_ALLOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TP">
+        <PropertyRef Name="TpID" />
+      </Principal>
+      <Dependent Role="TP_RESOURCE_ALLOCATION">
+        <PropertyRef Name="TpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_STAKEHOLDER_TP">
+    <End Role="TP" Type="FMDataStore.TP" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="TP_STAKEHOLDER" Type="FMDataStore.TP_STAKEHOLDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TP">
+        <PropertyRef Name="TpID" />
+      </Principal>
+      <Dependent Role="TP_STAKEHOLDER">
+        <PropertyRef Name="TpID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

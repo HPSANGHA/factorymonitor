@@ -19,26 +19,26 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "REF_TECHNOLOGY_APP", "REF_TECHNOLOGY", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.REF_TECHNOLOGY), "APP", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.APP), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_RESOURCE_REF_ROLE", "REF_ROLE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.REF_ROLE), "RESOURCE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.RESOURCE), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_RESOURCE_REF_STATUS", "REF_STATUS", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.REF_STATUS), "RESOURCE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.RESOURCE), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "APP_TP_APPLICATION", "APP", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.APP), "TP_APPLICATION", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_APPLICATION), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_APPLICATION_TP_APPLICATION", "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.TP), "TP_APPLICATION", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_APPLICATION), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE", "REF_DOCUMENT_TYPE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.REF_DOCUMENT_TYPE), "TP_DOCUMENT_LINK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_DOCUMENT_LINK), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_DOCUMENT_LINK_TP", "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.TP), "TP_DOCUMENT_LINK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_DOCUMENT_LINK), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_PHASE_TP", "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.TP), "TP_PHASE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_PHASE), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_PHASE_TP_PHASE", "REF_PHASE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.REF_PHASE), "TP_PHASE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_PHASE), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_REF_APPLICATION_TYPE", "REF_APPLICATION_TYPE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.REF_APPLICATION_TYPE), "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_REF_COMPLEXITY", "REF_COMPLEXITY", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.REF_COMPLEXITY), "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_REF_COMPLEXITY1", "REF_COMPLEXITY", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.REF_COMPLEXITY), "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE", "REF_DOCUMENT_TYPE", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.REF_DOCUMENT_TYPE), "TP_DOCUMENT_LINK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_DOCUMENT_LINK), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_REF_GAP", "REF_GAP", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.REF_GAP), "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_REF_GAP1", "REF_GAP", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.REF_GAP), "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_REF_TECHNOLOGY_STACK", "REF_TECHNOLOGY_STACK", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.REF_TECHNOLOGY_STACK), "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_RESOURCE_ALLOCATION_RESOURCE", "RESOURCE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.RESOURCE), "TP_RESOURCE_ALLOCATION", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_RESOURCE_ALLOCATION), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_RESOURCE_TP", "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.TP), "TP_RESOURCE_ALLOCATION", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_RESOURCE_ALLOCATION), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_PHASE_TP_PHASE", "REF_PHASE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.REF_PHASE), "TP_PHASE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_PHASE), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_RESOURCE_REF_ROLE", "REF_ROLE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.REF_ROLE), "RESOURCE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.RESOURCE), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_STAKEHOLDER_REF_STAKEHOLDER", "REF_STAKEHOLDER", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.REF_STAKEHOLDER), "TP_STAKEHOLDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_STAKEHOLDER), true)]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_STAKEHOLDER_TP", "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.TP), "TP_STAKEHOLDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_STAKEHOLDER), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_RESOURCE_REF_STATUS", "REF_STATUS", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.REF_STATUS), "RESOURCE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.RESOURCE), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "REF_TECHNOLOGY_APP", "REF_TECHNOLOGY", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.REF_TECHNOLOGY), "APP", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.APP), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_REF_TECHNOLOGY_STACK", "REF_TECHNOLOGY_STACK", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.REF_TECHNOLOGY_STACK), "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_VENDOR_REF_VENDOR", "REF_VENDOR", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.REF_VENDOR), "TP_VENDOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_VENDOR), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_RESOURCE_ALLOCATION_RESOURCE", "RESOURCE", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.RESOURCE), "TP_RESOURCE_ALLOCATION", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_RESOURCE_ALLOCATION), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_APPLICATION_TP_APPLICATION", "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.TP), "TP_APPLICATION", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_APPLICATION), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_DOCUMENT_LINK_TP", "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.TP), "TP_DOCUMENT_LINK", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_DOCUMENT_LINK), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_PHASE_TP", "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.TP), "TP_PHASE", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_PHASE), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_RESOURCE_TP", "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.TP), "TP_RESOURCE_ALLOCATION", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_RESOURCE_ALLOCATION), true)]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_STAKEHOLDER_TP", "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.TP), "TP_STAKEHOLDER", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_STAKEHOLDER), true)]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "FK_TP_VENDOR_TP", "TP", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.TP), "TP_VENDOR", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.TP_VENDOR), true)]
 
 #endregion
@@ -299,22 +299,6 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<TP> TPs
-        {
-            get
-            {
-                if ((_TPs == null))
-                {
-                    _TPs = base.CreateObjectSet<TP>("TPs");
-                }
-                return _TPs;
-            }
-        }
-        private ObjectSet<TP> _TPs;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<TP_APPLICATION> TP_APPLICATIONs
         {
             get
@@ -407,6 +391,22 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<TP_VENDOR> _TP_VENDORs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<TP> TPs
+        {
+            get
+            {
+                if ((_TPs == null))
+                {
+                    _TPs = base.CreateObjectSet<TP>("TPs");
+                }
+                return _TPs;
+            }
+        }
+        private ObjectSet<TP> _TPs;
 
         #endregion
 
@@ -517,14 +517,6 @@ namespace LightSwitchApplication.Implementation
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the TPs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToTPs(TP tP)
-        {
-            base.AddObject("TPs", tP);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the TP_APPLICATIONs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToTP_APPLICATIONs(TP_APPLICATION tP_APPLICATION)
@@ -570,6 +562,14 @@ namespace LightSwitchApplication.Implementation
         public void AddToTP_VENDORs(TP_VENDOR tP_VENDOR)
         {
             base.AddObject("TP_VENDORs", tP_VENDOR);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the TPs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToTPs(TP tP)
+        {
+            base.AddObject("TPs", tP);
         }
 
         #endregion
@@ -3367,11 +3367,13 @@ namespace LightSwitchApplication.Implementation
         /// </summary>
         /// <param name="resourceID">Initial value of the ResourceID property.</param>
         /// <param name="name">Initial value of the Name property.</param>
-        public static RESOURCE CreateRESOURCE(global::System.Int32 resourceID, global::System.String name)
+        /// <param name="emailId">Initial value of the EmailId property.</param>
+        public static RESOURCE CreateRESOURCE(global::System.Int32 resourceID, global::System.String name, global::System.String emailId)
         {
             RESOURCE rESOURCE = new RESOURCE();
             rESOURCE.ResourceID = resourceID;
             rESOURCE.Name = name;
+            rESOURCE.EmailId = emailId;
             return rESOURCE;
         }
 
@@ -3433,7 +3435,7 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String EmailId
         {

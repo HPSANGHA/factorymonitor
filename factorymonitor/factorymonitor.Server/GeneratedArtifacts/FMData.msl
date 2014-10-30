@@ -170,43 +170,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TPs">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.TP)">
-        <MappingFragment StoreEntitySet="TPs">
-          <ScalarProperty Name="TpID" ColumnName="TpID" />
-          <ScalarProperty Name="Number" ColumnName="Number" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="WorkOrderNumber" ColumnName="WorkOrderNumber" />
-          <ScalarProperty Name="WorkOrderStatus" ColumnName="WorkOrderStatus" />
-          <ScalarProperty Name="WorkOrderIssuedOn" ColumnName="WorkOrderIssuedOn" />
-          <ScalarProperty Name="PlannedEffort" ColumnName="PlannedEffort" />
-          <ScalarProperty Name="EstimatedCost" ColumnName="EstimatedCost" />
-          <ScalarProperty Name="IssueDateToHP" ColumnName="IssueDateToHP" />
-          <ScalarProperty Name="EffortDateProvidedByHP" ColumnName="EffortDateProvidedByHP" />
-          <ScalarProperty Name="ApprovedDateByDL" ColumnName="ApprovedDateByDL" />
-          <ScalarProperty Name="PlannedStartDate" ColumnName="PlannedStartDate" />
-          <ScalarProperty Name="PlannedEndDate" ColumnName="PlannedEndDate" />
-          <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
-          <ScalarProperty Name="ActualEndDate" ColumnName="ActualEndDate" />
-          <ScalarProperty Name="ApplicationSize" ColumnName="ApplicationSize" />
-          <ScalarProperty Name="HasInputDocument" ColumnName="HasInputDocument" />
-          <ScalarProperty Name="HasFeasibilityStudy" ColumnName="HasFeasibilityStudy" />
-          <ScalarProperty Name="HasUnderstandingDocument" ColumnName="HasUnderstandingDocument" />
-          <ScalarProperty Name="HasEstimation" ColumnName="HasEstimation" />
-          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-          <ScalarProperty Name="ApplicationTypeID" ColumnName="ApplicationTypeID" />
-          <ScalarProperty Name="TechnicalComplexityID" ColumnName="TechnicalComplexityID" />
-          <ScalarProperty Name="ForcedComplexityID" ColumnName="ForcedComplexityID" />
-          <ScalarProperty Name="TechnologyGapID" ColumnName="TechnologyGapID" />
-          <ScalarProperty Name="FunctionalGapID" ColumnName="FunctionalGapID" />
-          <ScalarProperty Name="TechnologyStackID" ColumnName="TechnologyStackID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="TP_APPLICATIONs">
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.TP_APPLICATION)">
         <MappingFragment StoreEntitySet="TP_APPLICATIONs">
@@ -293,6 +256,43 @@
           <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
           <ScalarProperty Name="VendorID" ColumnName="VendorID" />
           <ScalarProperty Name="TpID" ColumnName="TpID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TPs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.TP)">
+        <MappingFragment StoreEntitySet="TPs">
+          <ScalarProperty Name="TpID" ColumnName="TpID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="WorkOrderNumber" ColumnName="WorkOrderNumber" />
+          <ScalarProperty Name="WorkOrderStatus" ColumnName="WorkOrderStatus" />
+          <ScalarProperty Name="WorkOrderIssuedOn" ColumnName="WorkOrderIssuedOn" />
+          <ScalarProperty Name="PlannedEffort" ColumnName="PlannedEffort" />
+          <ScalarProperty Name="EstimatedCost" ColumnName="EstimatedCost" />
+          <ScalarProperty Name="IssueDateToHP" ColumnName="IssueDateToHP" />
+          <ScalarProperty Name="EffortDateProvidedByHP" ColumnName="EffortDateProvidedByHP" />
+          <ScalarProperty Name="ApprovedDateByDL" ColumnName="ApprovedDateByDL" />
+          <ScalarProperty Name="PlannedStartDate" ColumnName="PlannedStartDate" />
+          <ScalarProperty Name="PlannedEndDate" ColumnName="PlannedEndDate" />
+          <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
+          <ScalarProperty Name="ActualEndDate" ColumnName="ActualEndDate" />
+          <ScalarProperty Name="ApplicationSize" ColumnName="ApplicationSize" />
+          <ScalarProperty Name="HasInputDocument" ColumnName="HasInputDocument" />
+          <ScalarProperty Name="HasFeasibilityStudy" ColumnName="HasFeasibilityStudy" />
+          <ScalarProperty Name="HasUnderstandingDocument" ColumnName="HasUnderstandingDocument" />
+          <ScalarProperty Name="HasEstimation" ColumnName="HasEstimation" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ApplicationTypeID" ColumnName="ApplicationTypeID" />
+          <ScalarProperty Name="TechnicalComplexityID" ColumnName="TechnicalComplexityID" />
+          <ScalarProperty Name="ForcedComplexityID" ColumnName="ForcedComplexityID" />
+          <ScalarProperty Name="TechnologyGapID" ColumnName="TechnologyGapID" />
+          <ScalarProperty Name="FunctionalGapID" ColumnName="FunctionalGapID" />
+          <ScalarProperty Name="TechnologyStackID" ColumnName="TechnologyStackID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

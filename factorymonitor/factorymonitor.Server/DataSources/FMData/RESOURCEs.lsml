@@ -37,8 +37,9 @@
       </EntityProperty>
       <EntityProperty
         Name="EmailId"
-        PropertyType=":String?">
+        PropertyType=":String">
         <EntityProperty.Attributes>
+          <Required />
           <MaxLength
             Value="50" />
           <AnsiConstraint />
@@ -241,7 +242,7 @@
         <SsdlProperty
           MaxLength="50"
           Name="EmailId"
-          Nullable="True"
+          Nullable="False"
           Type="varchar"
           Property="RESOURCE/Properties[EmailId]" />
         <SsdlProperty

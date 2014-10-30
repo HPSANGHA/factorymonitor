@@ -2177,6 +2177,16 @@
           ]
         },
         {
+          "id": "LightSwitchServiceApplicationGroup",
+          "name": "LightSwitchServiceApplicationGroup"
+        },
+        {
+          "id": "TP_VENDOR*",
+          "name": "TP_VENDOR*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "TP_VENDOR" }
+        },
+        {
           "id": "CollectionView$TP_VENDOR",
           "name": "CollectionView$TP_VENDOR",
           "kind": "CollectionView",
@@ -2229,10 +2239,10 @@
           ]
         },
         {
-          "id": "TP_VENDOR*",
-          "name": "TP_VENDOR*",
+          "id": "TP_STAKEHOLDER*",
+          "name": "TP_STAKEHOLDER*",
           "kind": "Enumerable",
-          "elementType": { "__id": "TP_VENDOR" }
+          "elementType": { "__id": "TP_STAKEHOLDER" }
         },
         {
           "id": "CollectionView$TP_STAKEHOLDER",
@@ -2287,10 +2297,10 @@
           ]
         },
         {
-          "id": "TP_STAKEHOLDER*",
-          "name": "TP_STAKEHOLDER*",
+          "id": "TP_RESOURCE_ALLOCATION*",
+          "name": "TP_RESOURCE_ALLOCATION*",
           "kind": "Enumerable",
-          "elementType": { "__id": "TP_STAKEHOLDER" }
+          "elementType": { "__id": "TP_RESOURCE_ALLOCATION" }
         },
         {
           "id": "CollectionView$TP_RESOURCE_ALLOCATION",
@@ -2345,10 +2355,10 @@
           ]
         },
         {
-          "id": "TP_RESOURCE_ALLOCATION*",
-          "name": "TP_RESOURCE_ALLOCATION*",
+          "id": "TP_PHASE*",
+          "name": "TP_PHASE*",
           "kind": "Enumerable",
-          "elementType": { "__id": "TP_RESOURCE_ALLOCATION" }
+          "elementType": { "__id": "TP_PHASE" }
         },
         {
           "id": "CollectionView$TP_PHASE",
@@ -2403,10 +2413,10 @@
           ]
         },
         {
-          "id": "TP_PHASE*",
-          "name": "TP_PHASE*",
+          "id": "TP_DOCUMENT_LINK*",
+          "name": "TP_DOCUMENT_LINK*",
           "kind": "Enumerable",
-          "elementType": { "__id": "TP_PHASE" }
+          "elementType": { "__id": "TP_DOCUMENT_LINK" }
         },
         {
           "id": "CollectionView$TP_DOCUMENT_LINK",
@@ -2461,10 +2471,10 @@
           ]
         },
         {
-          "id": "TP_DOCUMENT_LINK*",
-          "name": "TP_DOCUMENT_LINK*",
+          "id": "TP_APPLICATION*",
+          "name": "TP_APPLICATION*",
           "kind": "Enumerable",
-          "elementType": { "__id": "TP_DOCUMENT_LINK" }
+          "elementType": { "__id": "TP_APPLICATION" }
         },
         {
           "id": "CollectionView$TP_APPLICATION",
@@ -2519,10 +2529,10 @@
           ]
         },
         {
-          "id": "TP_APPLICATION*",
-          "name": "TP_APPLICATION*",
+          "id": "TP*",
+          "name": "TP*",
           "kind": "Enumerable",
-          "elementType": { "__id": "TP_APPLICATION" }
+          "elementType": { "__id": "TP" }
         },
         {
           "id": "CollectionView$TP",
@@ -2577,10 +2587,10 @@
           ]
         },
         {
-          "id": "TP*",
-          "name": "TP*",
+          "id": "RESOURCE*",
+          "name": "RESOURCE*",
           "kind": "Enumerable",
-          "elementType": { "__id": "TP" }
+          "elementType": { "__id": "RESOURCE" }
         },
         {
           "id": "CollectionView$RESOURCE",
@@ -2635,10 +2645,10 @@
           ]
         },
         {
-          "id": "RESOURCE*",
-          "name": "RESOURCE*",
+          "id": "REF_VENDOR*",
+          "name": "REF_VENDOR*",
           "kind": "Enumerable",
-          "elementType": { "__id": "RESOURCE" }
+          "elementType": { "__id": "REF_VENDOR" }
         },
         {
           "id": "CollectionView$REF_VENDOR",
@@ -2693,10 +2703,10 @@
           ]
         },
         {
-          "id": "REF_VENDOR*",
-          "name": "REF_VENDOR*",
+          "id": "REF_TECHNOLOGY_STACK*",
+          "name": "REF_TECHNOLOGY_STACK*",
           "kind": "Enumerable",
-          "elementType": { "__id": "REF_VENDOR" }
+          "elementType": { "__id": "REF_TECHNOLOGY_STACK" }
         },
         {
           "id": "CollectionView$REF_TECHNOLOGY_STACK",
@@ -2751,10 +2761,10 @@
           ]
         },
         {
-          "id": "REF_TECHNOLOGY_STACK*",
-          "name": "REF_TECHNOLOGY_STACK*",
+          "id": "REF_TECHNOLOGY*",
+          "name": "REF_TECHNOLOGY*",
           "kind": "Enumerable",
-          "elementType": { "__id": "REF_TECHNOLOGY_STACK" }
+          "elementType": { "__id": "REF_TECHNOLOGY" }
         },
         {
           "id": "CollectionView$REF_TECHNOLOGY",
@@ -2809,68 +2819,10 @@
           ]
         },
         {
-          "id": "REF_TECHNOLOGY*",
-          "name": "REF_TECHNOLOGY*",
+          "id": "REF_STAKEHOLDER*",
+          "name": "REF_STAKEHOLDER*",
           "kind": "Enumerable",
-          "elementType": { "__id": "REF_TECHNOLOGY" }
-        },
-        {
-          "id": "CollectionView$REF_STATUS",
-          "name": "CollectionView$REF_STATUS",
-          "kind": "CollectionView",
-          "elementType": { "__id": "REF_STATUS" },
-          "methods":
-          [
-            {
-              "id": "CollectionView$REF_STATUS/Methods[addNew]",
-              "name": "addNew",
-              "returnType": { "__id": "REF_STATUS" }
-            },
-            {
-              "id": "CollectionView$REF_STATUS/Methods[addAndEditNew]",
-              "name": "addAndEditNew",
-              "returnType": { "__id": "REF_STATUS" }
-            },
-            {
-              "id": "CollectionView$REF_STATUS/Methods[showSearch]",
-              "name": "showSearch",
-              "returnType": { "__id": "REF_STATUS" }
-            },
-            {
-              "id": "CollectionView$REF_STATUS/Methods[editSelected]",
-              "name": "editSelected"
-            },
-            {
-              "id": "CollectionView$REF_STATUS/Methods[deleteSelected]",
-              "name": "deleteSelected"
-            },
-            {
-              "id": "CollectionView$REF_STATUS/Methods[removeSelected]",
-              "name": "removeSelected"
-            },
-            {
-              "id": "CollectionView$REF_STATUS/Methods[refresh]",
-              "name": "refresh"
-            },
-            {
-              "id": "CollectionView$REF_STATUS/Methods[viewSelected]",
-              "name": "viewSelected"
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "CollectionView$REF_STATUS/Properties[selectedItem]",
-              "name": "selectedItem",
-              "propertyType": { "__id": "REF_STATUS" }
-            }
-          ]
-        },
-        {
-          "id": "REF_STATUS*",
-          "name": "REF_STATUS*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "REF_STATUS" }
+          "elementType": { "__id": "REF_STAKEHOLDER" }
         },
         {
           "id": "CollectionView$REF_STAKEHOLDER",
@@ -2925,68 +2877,10 @@
           ]
         },
         {
-          "id": "REF_STAKEHOLDER*",
-          "name": "REF_STAKEHOLDER*",
+          "id": "REF_PHASE*",
+          "name": "REF_PHASE*",
           "kind": "Enumerable",
-          "elementType": { "__id": "REF_STAKEHOLDER" }
-        },
-        {
-          "id": "CollectionView$REF_ROLE",
-          "name": "CollectionView$REF_ROLE",
-          "kind": "CollectionView",
-          "elementType": { "__id": "REF_ROLE" },
-          "methods":
-          [
-            {
-              "id": "CollectionView$REF_ROLE/Methods[addNew]",
-              "name": "addNew",
-              "returnType": { "__id": "REF_ROLE" }
-            },
-            {
-              "id": "CollectionView$REF_ROLE/Methods[addAndEditNew]",
-              "name": "addAndEditNew",
-              "returnType": { "__id": "REF_ROLE" }
-            },
-            {
-              "id": "CollectionView$REF_ROLE/Methods[showSearch]",
-              "name": "showSearch",
-              "returnType": { "__id": "REF_ROLE" }
-            },
-            {
-              "id": "CollectionView$REF_ROLE/Methods[editSelected]",
-              "name": "editSelected"
-            },
-            {
-              "id": "CollectionView$REF_ROLE/Methods[deleteSelected]",
-              "name": "deleteSelected"
-            },
-            {
-              "id": "CollectionView$REF_ROLE/Methods[removeSelected]",
-              "name": "removeSelected"
-            },
-            {
-              "id": "CollectionView$REF_ROLE/Methods[refresh]",
-              "name": "refresh"
-            },
-            {
-              "id": "CollectionView$REF_ROLE/Methods[viewSelected]",
-              "name": "viewSelected"
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "CollectionView$REF_ROLE/Properties[selectedItem]",
-              "name": "selectedItem",
-              "propertyType": { "__id": "REF_ROLE" }
-            }
-          ]
-        },
-        {
-          "id": "REF_ROLE*",
-          "name": "REF_ROLE*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "REF_ROLE" }
+          "elementType": { "__id": "REF_PHASE" }
         },
         {
           "id": "CollectionView$REF_PHASE",
@@ -3041,10 +2935,10 @@
           ]
         },
         {
-          "id": "REF_PHASE*",
-          "name": "REF_PHASE*",
+          "id": "REF_GAP*",
+          "name": "REF_GAP*",
           "kind": "Enumerable",
-          "elementType": { "__id": "REF_PHASE" }
+          "elementType": { "__id": "REF_GAP" }
         },
         {
           "id": "CollectionView$REF_GAP",
@@ -3099,10 +2993,10 @@
           ]
         },
         {
-          "id": "REF_GAP*",
-          "name": "REF_GAP*",
+          "id": "REF_DOCUMENT_TYPE*",
+          "name": "REF_DOCUMENT_TYPE*",
           "kind": "Enumerable",
-          "elementType": { "__id": "REF_GAP" }
+          "elementType": { "__id": "REF_DOCUMENT_TYPE" }
         },
         {
           "id": "CollectionView$REF_DOCUMENT_TYPE",
@@ -3157,10 +3051,10 @@
           ]
         },
         {
-          "id": "REF_DOCUMENT_TYPE*",
-          "name": "REF_DOCUMENT_TYPE*",
+          "id": "REF_COMPLEXITY*",
+          "name": "REF_COMPLEXITY*",
           "kind": "Enumerable",
-          "elementType": { "__id": "REF_DOCUMENT_TYPE" }
+          "elementType": { "__id": "REF_COMPLEXITY" }
         },
         {
           "id": "CollectionView$REF_COMPLEXITY",
@@ -3215,10 +3109,10 @@
           ]
         },
         {
-          "id": "REF_COMPLEXITY*",
-          "name": "REF_COMPLEXITY*",
+          "id": "REF_APPLICATION_TYPE*",
+          "name": "REF_APPLICATION_TYPE*",
           "kind": "Enumerable",
-          "elementType": { "__id": "REF_COMPLEXITY" }
+          "elementType": { "__id": "REF_APPLICATION_TYPE" }
         },
         {
           "id": "CollectionView$REF_APPLICATION_TYPE",
@@ -3273,10 +3167,10 @@
           ]
         },
         {
-          "id": "REF_APPLICATION_TYPE*",
-          "name": "REF_APPLICATION_TYPE*",
+          "id": "APP*",
+          "name": "APP*",
           "kind": "Enumerable",
-          "elementType": { "__id": "REF_APPLICATION_TYPE" }
+          "elementType": { "__id": "APP" }
         },
         {
           "id": "CollectionView$APP",
@@ -3331,10 +3225,352 @@
           ]
         },
         {
-          "id": "APP*",
-          "name": "APP*",
+          "id": "REF_STATUS*",
+          "name": "REF_STATUS*",
           "kind": "Enumerable",
-          "elementType": { "__id": "APP" }
+          "elementType": { "__id": "REF_STATUS" }
+        },
+        {
+          "id": "CollectionView$REF_STATUS",
+          "name": "CollectionView$REF_STATUS",
+          "kind": "CollectionView",
+          "elementType": { "__id": "REF_STATUS" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$REF_STATUS/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "REF_STATUS" }
+            },
+            {
+              "id": "CollectionView$REF_STATUS/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "REF_STATUS" }
+            },
+            {
+              "id": "CollectionView$REF_STATUS/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "REF_STATUS" }
+            },
+            {
+              "id": "CollectionView$REF_STATUS/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$REF_STATUS/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$REF_STATUS/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$REF_STATUS/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$REF_STATUS/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$REF_STATUS/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "REF_STATUS" }
+            }
+          ]
+        },
+        {
+          "id": "REF_ROLE*",
+          "name": "REF_ROLE*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "REF_ROLE" }
+        },
+        {
+          "id": "CollectionView$REF_ROLE",
+          "name": "CollectionView$REF_ROLE",
+          "kind": "CollectionView",
+          "elementType": { "__id": "REF_ROLE" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$REF_ROLE/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "REF_ROLE" }
+            },
+            {
+              "id": "CollectionView$REF_ROLE/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "REF_ROLE" }
+            },
+            {
+              "id": "CollectionView$REF_ROLE/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "REF_ROLE" }
+            },
+            {
+              "id": "CollectionView$REF_ROLE/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$REF_ROLE/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$REF_ROLE/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$REF_ROLE/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$REF_ROLE/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$REF_ROLE/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "REF_ROLE" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "REF_ROLE/Properties[Name]" } },
+          "id": "REF_ROLE",
+          "name": "REF_ROLE",
+          ":@DefaultScreen":
+          {
+            "value": { "__id": "ViewRole" },
+            ":@ScreenParameterMapping":
+            {
+              "screenParameter": { "__id": "ViewRole/Properties[REF_ROLE]" }
+            }
+          },
+          "methods":
+          [
+            {
+              "id": "REF_ROLE/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "REF_ROLE/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "REF_ROLE/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "REF_ROLE/Properties[RoleID]",
+              "name": "RoleID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int16" },
+              ":@Hidden": { },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "REF_ROLE/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 50
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "REF_ROLE/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 400
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "REF_ROLE/Properties[CreatedDate]",
+              "name": "CreatedDate",
+              "propertyType": { "__id": ":DateTime?" },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "REF_ROLE/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "REF_ROLE/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "REF_ROLE/Properties[ModifiedDate]",
+              "name": "ModifiedDate",
+              "propertyType": { "__id": ":DateTime?" },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "REF_ROLE/Properties[RESOURCEs]",
+              "name": "RESOURCEs",
+              "association": { "__id": "FK_RESOURCE_REF_ROLE" },
+              "elementType": { "__id": "RESOURCE" },
+              "fromEnd": { "__id": "FK_RESOURCE_REF_ROLE/Ends[REF_ROLE]" },
+              "propertyType": { "__id": "RESOURCE*" },
+              "toEnd": { "__id": "FK_RESOURCE_REF_ROLE/Ends[RESOURCE]" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "REF_STATUS/Properties[Name]" } },
+          "id": "REF_STATUS",
+          "name": "REF_STATUS",
+          ":@DefaultScreen":
+          {
+            "value": { "__id": "ViewStatus" },
+            ":@ScreenParameterMapping":
+            {
+              "screenParameter": { "__id": "ViewStatus/Properties[REF_STATUS]" }
+            }
+          },
+          "methods":
+          [
+            {
+              "id": "REF_STATUS/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "REF_STATUS/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "REF_STATUS/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "REF_STATUS/Properties[StatusID]",
+              "name": "StatusID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int16" },
+              ":@Hidden": { },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "REF_STATUS/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 50
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "REF_STATUS/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 150
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "REF_STATUS/Properties[CreatedDate]",
+              "name": "CreatedDate",
+              "propertyType": { "__id": ":DateTime?" },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "REF_STATUS/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "REF_STATUS/Properties[ModifiedDate]",
+              "name": "ModifiedDate",
+              "propertyType": { "__id": ":DateTime?" },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "REF_STATUS/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "REF_STATUS/Properties[RESOURCEs]",
+              "name": "RESOURCEs",
+              "association": { "__id": "FK_RESOURCE_REF_STATUS" },
+              "elementType": { "__id": "RESOURCE" },
+              "fromEnd": { "__id": "FK_RESOURCE_REF_STATUS/Ends[REF_STATUS]" },
+              "propertyType": { "__id": "RESOURCE*" },
+              "toEnd": { "__id": "FK_RESOURCE_REF_STATUS/Ends[RESOURCE]" }
+            }
+          ]
         },
         {
           "__isEntityType": 1,
@@ -3348,12 +3584,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "APP/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "APP/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "APP/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -3454,12 +3690,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "REF_APPLICATION_TYPE/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "REF_APPLICATION_TYPE/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "REF_APPLICATION_TYPE/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -3561,12 +3797,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "REF_COMPLEXITY/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "REF_COMPLEXITY/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "REF_COMPLEXITY/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -3668,12 +3904,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "REF_DOCUMENT_TYPE/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "REF_DOCUMENT_TYPE/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "REF_DOCUMENT_TYPE/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -3775,12 +4011,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "REF_GAP/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "REF_GAP/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "REF_GAP/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -3889,12 +4125,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "REF_PHASE/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "REF_PHASE/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "REF_PHASE/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -3963,122 +4199,6 @@
         },
         {
           "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "REF_ROLE/Properties[Name]" } },
-          "id": "REF_ROLE",
-          "name": "REF_ROLE",
-          ":@DefaultScreen":
-          {
-            "value": { "__id": "ViewRole" },
-            ":@ScreenParameterMapping":
-            {
-              "screenParameter": { "__id": "ViewRole/Properties[REF_ROLE]" }
-            }
-          },
-          "methods":
-          [
-            {
-              "id": "REF_ROLE/Methods[deleteEntity]",
-              "name": "deleteEntity"
-            },
-            {
-              "id": "REF_ROLE/Methods[view]",
-              "name": "view"
-            },
-            {
-              "id": "REF_ROLE/Methods[edit]",
-              "name": "edit"
-            }
-          ],
-          "properties":
-          [
-            {
-              "__isKeyProperty": 1,
-              "id": "REF_ROLE/Properties[RoleID]",
-              "name": "RoleID",
-              "isReadOnly": true,
-              "propertyType": { "__id": ":Int16" },
-              ":@Hidden": { },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "REF_ROLE/Properties[Name]",
-              "name": "Name",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 50
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "REF_ROLE/Properties[Description]",
-              "name": "Description",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 400
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "REF_ROLE/Properties[CreatedDate]",
-              "name": "CreatedDate",
-              "propertyType": { "__id": ":DateTime?" },
-              ":@DateTimeConstraint":
-              {
-                "kind": "Unspecified",
-                "precision": 3,
-                "preserveSeconds": true
-              },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "REF_ROLE/Properties[CreatedBy]",
-              "name": "CreatedBy",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 50
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "REF_ROLE/Properties[ModifiedBy]",
-              "name": "ModifiedBy",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 50
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "REF_ROLE/Properties[ModifiedDate]",
-              "name": "ModifiedDate",
-              "propertyType": { "__id": ":DateTime?" },
-              ":@DateTimeConstraint":
-              {
-                "kind": "Unspecified",
-                "precision": 3,
-                "preserveSeconds": true
-              },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "REF_ROLE/Properties[RESOURCEs]",
-              "name": "RESOURCEs",
-              "association": { "__id": "FK_RESOURCE_REF_ROLE" },
-              "elementType": { "__id": "RESOURCE" },
-              "fromEnd": { "__id": "FK_RESOURCE_REF_ROLE/Ends[REF_ROLE]" },
-              "propertyType": { "__id": "RESOURCE*" },
-              "toEnd": { "__id": "FK_RESOURCE_REF_ROLE/Ends[RESOURCE]" }
-            }
-          ]
-        },
-        {
-          "__isEntityType": 1,
           ":@SummaryProperty": { "property": { "__id": "REF_STAKEHOLDER/Properties[Name]" } },
           "id": "REF_STAKEHOLDER",
           "name": "REF_STAKEHOLDER",
@@ -4089,12 +4209,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "REF_STAKEHOLDER/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "REF_STAKEHOLDER/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "REF_STAKEHOLDER/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -4186,112 +4306,6 @@
         },
         {
           "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "REF_STATUS/Properties[Name]" } },
-          "id": "REF_STATUS",
-          "name": "REF_STATUS",
-          "methods":
-          [
-            {
-              "id": "REF_STATUS/Methods[deleteEntity]",
-              "name": "deleteEntity"
-            },
-            {
-              "id": "REF_STATUS/Methods[view]",
-              "name": "view"
-            },
-            {
-              "id": "REF_STATUS/Methods[edit]",
-              "name": "edit"
-            }
-          ],
-          "properties":
-          [
-            {
-              "__isKeyProperty": 1,
-              "id": "REF_STATUS/Properties[StatusID]",
-              "name": "StatusID",
-              "propertyType": { "__id": ":Int16" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "REF_STATUS/Properties[Name]",
-              "name": "Name",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 50
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "REF_STATUS/Properties[Description]",
-              "name": "Description",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 150
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "REF_STATUS/Properties[CreatedDate]",
-              "name": "CreatedDate",
-              "propertyType": { "__id": ":DateTime?" },
-              ":@DateTimeConstraint":
-              {
-                "kind": "Unspecified",
-                "precision": 3,
-                "preserveSeconds": true
-              },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "REF_STATUS/Properties[CreatedBy]",
-              "name": "CreatedBy",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 50
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "REF_STATUS/Properties[ModifiedDate]",
-              "name": "ModifiedDate",
-              "propertyType": { "__id": ":DateTime?" },
-              ":@DateTimeConstraint":
-              {
-                "kind": "Unspecified",
-                "precision": 3,
-                "preserveSeconds": true
-              },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "REF_STATUS/Properties[ModifiedBy]",
-              "name": "ModifiedBy",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 50
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "REF_STATUS/Properties[RESOURCEs]",
-              "name": "RESOURCEs",
-              "association": { "__id": "FK_RESOURCE_REF_STATUS" },
-              "elementType": { "__id": "RESOURCE" },
-              "fromEnd": { "__id": "FK_RESOURCE_REF_STATUS/Ends[REF_STATUS]" },
-              "propertyType": { "__id": "RESOURCE*" },
-              "toEnd": { "__id": "FK_RESOURCE_REF_STATUS/Ends[RESOURCE]" }
-            }
-          ]
-        },
-        {
-          "__isEntityType": 1,
           ":@SummaryProperty": { "property": { "__id": "REF_TECHNOLOGY/Properties[Name]" } },
           "id": "REF_TECHNOLOGY",
           "name": "REF_TECHNOLOGY",
@@ -4302,12 +4316,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "REF_TECHNOLOGY/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "REF_TECHNOLOGY/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "REF_TECHNOLOGY/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -4410,12 +4424,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "REF_TECHNOLOGY_STACK/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "REF_TECHNOLOGY_STACK/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "REF_TECHNOLOGY_STACK/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -4518,12 +4532,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "REF_VENDOR/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "REF_VENDOR/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "REF_VENDOR/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -4625,6 +4639,14 @@
           ":@SummaryProperty": { "property": { "__id": "RESOURCE/Properties[Name]" } },
           "id": "RESOURCE",
           "name": "RESOURCE",
+          ":@DefaultScreen":
+          {
+            "value": { "__id": "ViewResourceDetail" },
+            ":@ScreenParameterMapping":
+            {
+              "screenParameter": { "__id": "ViewResourceDetail/Properties[RESOURCE]" }
+            }
+          },
           "methods":
           [
             {
@@ -4632,12 +4654,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "RESOURCE/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "RESOURCE/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "RESOURCE/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -4666,7 +4688,8 @@
             {
               "id": "RESOURCE/Properties[EmailId]",
               "name": "EmailId",
-              "propertyType": { "__id": ":String?" },
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
               ":@MaxLength":
               {
                 "value": 50
@@ -4758,12 +4781,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "TP/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "TP/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "TP/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -5142,12 +5165,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "TP_APPLICATION/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "TP_APPLICATION/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "TP_APPLICATION/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -5238,12 +5261,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "TP_DOCUMENT_LINK/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "TP_DOCUMENT_LINK/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "TP_DOCUMENT_LINK/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -5362,12 +5385,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "TP_PHASE/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "TP_PHASE/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "TP_PHASE/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -5515,12 +5538,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "TP_RESOURCE_ALLOCATION/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "TP_RESOURCE_ALLOCATION/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "TP_RESOURCE_ALLOCATION/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -5641,12 +5664,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "TP_STAKEHOLDER/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "TP_STAKEHOLDER/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "TP_STAKEHOLDER/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -5735,12 +5758,12 @@
               "name": "deleteEntity"
             },
             {
-              "id": "TP_VENDOR/Methods[view]",
-              "name": "view"
-            },
-            {
               "id": "TP_VENDOR/Methods[edit]",
               "name": "edit"
+            },
+            {
+              "id": "TP_VENDOR/Methods[view]",
+              "name": "view"
             }
           ],
           "properties":
@@ -6241,68 +6264,9 @@
           "id": "FMData",
           "name": "FMData",
           "dataProvider": "EntityFrameworkDataProvider",
+          ":@Partial": { "isPrimary": true },
           "associationSets":
           [
-            {
-              "id": "FMData/Members[FK_APPLICATION_REF_TECHNOLOGY]",
-              "name": "FK_APPLICATION_REF_TECHNOLOGY",
-              "association": { "__id": "REF_TECHNOLOGY_APP" },
-              "ends":
-              [
-                {
-                  "properties": [ "TechnologyID" ],
-                  "id": "FMData/Members[FK_APPLICATION_REF_TECHNOLOGY]/Members[REF_TECHNOLOGY]",
-                  "name": "REF_TECHNOLOGY",
-                  "entitySet": { "__id": "FMData/Members[REF_TECHNOLOGies]" }
-                },
-                {
-                  "properties": [ "TechnologyID" ],
-                  "id": "FMData/Members[FK_APPLICATION_REF_TECHNOLOGY]/Members[APP]",
-                  "name": "APP",
-                  "entitySet": { "__id": "FMData/Members[APPLICATIONs]" }
-                }
-              ]
-            },
-            {
-              "id": "FMData/Members[FK_RESOURCE_REF_ROLE]",
-              "name": "FK_RESOURCE_REF_ROLE",
-              "association": { "__id": "FK_RESOURCE_REF_ROLE" },
-              "ends":
-              [
-                {
-                  "properties": [ "RoleID" ],
-                  "id": "FMData/Members[FK_RESOURCE_REF_ROLE]/Members[REF_ROLE]",
-                  "name": "REF_ROLE",
-                  "entitySet": { "__id": "FMData/Members[REF_ROLEs]" }
-                },
-                {
-                  "properties": [ "RoleID" ],
-                  "id": "FMData/Members[FK_RESOURCE_REF_ROLE]/Members[RESOURCE]",
-                  "name": "RESOURCE",
-                  "entitySet": { "__id": "FMData/Members[RESOURCEs]" }
-                }
-              ]
-            },
-            {
-              "id": "FMData/Members[FK_RESOURCE_REF_STATUS]",
-              "name": "FK_RESOURCE_REF_STATUS",
-              "association": { "__id": "FK_RESOURCE_REF_STATUS" },
-              "ends":
-              [
-                {
-                  "properties": [ "StatusID" ],
-                  "id": "FMData/Members[FK_RESOURCE_REF_STATUS]/Members[REF_STATUS]",
-                  "name": "REF_STATUS",
-                  "entitySet": { "__id": "FMData/Members[REF_STATUS]" }
-                },
-                {
-                  "properties": [ "StatusID" ],
-                  "id": "FMData/Members[FK_RESOURCE_REF_STATUS]/Members[RESOURCE]",
-                  "name": "RESOURCE",
-                  "entitySet": { "__id": "FMData/Members[RESOURCEs]" }
-                }
-              ]
-            },
             {
               "id": "FMData/Members[FK_TP_APPLICATION_Application]",
               "name": "FK_TP_APPLICATION_Application",
@@ -6320,106 +6284,6 @@
                   "id": "FMData/Members[FK_TP_APPLICATION_Application]/Members[TP_APPLICATION]",
                   "name": "TP_APPLICATION",
                   "entitySet": { "__id": "FMData/Members[TP_APPLICATIONs]" }
-                }
-              ]
-            },
-            {
-              "id": "FMData/Members[FK_TP_APPLICATION_TP_APPLICATION]",
-              "name": "FK_TP_APPLICATION_TP_APPLICATION",
-              "association": { "__id": "FK_TP_APPLICATION_TP_APPLICATION" },
-              "ends":
-              [
-                {
-                  "properties": [ "TpID" ],
-                  "id": "FMData/Members[FK_TP_APPLICATION_TP_APPLICATION]/Members[TP]",
-                  "name": "TP",
-                  "entitySet": { "__id": "FMData/Members[TPs]" }
-                },
-                {
-                  "properties": [ "TpID" ],
-                  "id": "FMData/Members[FK_TP_APPLICATION_TP_APPLICATION]/Members[TP_APPLICATION]",
-                  "name": "TP_APPLICATION",
-                  "entitySet": { "__id": "FMData/Members[TP_APPLICATIONs]" }
-                }
-              ]
-            },
-            {
-              "id": "FMData/Members[FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE]",
-              "name": "FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE",
-              "association": { "__id": "FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE" },
-              "ends":
-              [
-                {
-                  "properties": [ "DocumentTypeID" ],
-                  "id": "FMData/Members[FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE]/Members[REF_DOCUMENT_TYPE]",
-                  "name": "REF_DOCUMENT_TYPE",
-                  "entitySet": { "__id": "FMData/Members[REF_DOCUMENT_TYPEs]" }
-                },
-                {
-                  "properties": [ "DocumentTypeID" ],
-                  "id": "FMData/Members[FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE]/Members[TP_DOCUMENT_LINK]",
-                  "name": "TP_DOCUMENT_LINK",
-                  "entitySet": { "__id": "FMData/Members[TP_DOCUMENT_LINKs]" }
-                }
-              ]
-            },
-            {
-              "id": "FMData/Members[FK_TP_DOCUMENT_LINK_TP]",
-              "name": "FK_TP_DOCUMENT_LINK_TP",
-              "association": { "__id": "FK_TP_DOCUMENT_LINK_TP" },
-              "ends":
-              [
-                {
-                  "properties": [ "TpID" ],
-                  "id": "FMData/Members[FK_TP_DOCUMENT_LINK_TP]/Members[TP]",
-                  "name": "TP",
-                  "entitySet": { "__id": "FMData/Members[TPs]" }
-                },
-                {
-                  "properties": [ "TpID" ],
-                  "id": "FMData/Members[FK_TP_DOCUMENT_LINK_TP]/Members[TP_DOCUMENT_LINK]",
-                  "name": "TP_DOCUMENT_LINK",
-                  "entitySet": { "__id": "FMData/Members[TP_DOCUMENT_LINKs]" }
-                }
-              ]
-            },
-            {
-              "id": "FMData/Members[FK_TP_PHASE_TP]",
-              "name": "FK_TP_PHASE_TP",
-              "association": { "__id": "FK_TP_PHASE_TP" },
-              "ends":
-              [
-                {
-                  "properties": [ "TpID" ],
-                  "id": "FMData/Members[FK_TP_PHASE_TP]/Members[TP]",
-                  "name": "TP",
-                  "entitySet": { "__id": "FMData/Members[TPs]" }
-                },
-                {
-                  "properties": [ "TpID" ],
-                  "id": "FMData/Members[FK_TP_PHASE_TP]/Members[TP_PHASE]",
-                  "name": "TP_PHASE",
-                  "entitySet": { "__id": "FMData/Members[TP_PHASEs]" }
-                }
-              ]
-            },
-            {
-              "id": "FMData/Members[FK_TP_PHASE_TP_PHASE]",
-              "name": "FK_TP_PHASE_TP_PHASE",
-              "association": { "__id": "FK_TP_PHASE_TP_PHASE" },
-              "ends":
-              [
-                {
-                  "properties": [ "PhaseID" ],
-                  "id": "FMData/Members[FK_TP_PHASE_TP_PHASE]/Members[REF_PHASE]",
-                  "name": "REF_PHASE",
-                  "entitySet": { "__id": "FMData/Members[REF_PHASEs]" }
-                },
-                {
-                  "properties": [ "PhaseID" ],
-                  "id": "FMData/Members[FK_TP_PHASE_TP_PHASE]/Members[TP_PHASE]",
-                  "name": "TP_PHASE",
-                  "entitySet": { "__id": "FMData/Members[TP_PHASEs]" }
                 }
               ]
             },
@@ -6484,6 +6348,26 @@
               ]
             },
             {
+              "id": "FMData/Members[FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE]",
+              "name": "FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE",
+              "association": { "__id": "FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE" },
+              "ends":
+              [
+                {
+                  "properties": [ "DocumentTypeID" ],
+                  "id": "FMData/Members[FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE]/Members[REF_DOCUMENT_TYPE]",
+                  "name": "REF_DOCUMENT_TYPE",
+                  "entitySet": { "__id": "FMData/Members[REF_DOCUMENT_TYPEs]" }
+                },
+                {
+                  "properties": [ "DocumentTypeID" ],
+                  "id": "FMData/Members[FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE]/Members[TP_DOCUMENT_LINK]",
+                  "name": "TP_DOCUMENT_LINK",
+                  "entitySet": { "__id": "FMData/Members[TP_DOCUMENT_LINKs]" }
+                }
+              ]
+            },
+            {
               "id": "FMData/Members[FK_TP_REF_GAP]",
               "name": "FK_TP_REF_GAP",
               "association": { "__id": "FK_TP_REF_GAP" },
@@ -6524,62 +6408,42 @@
               ]
             },
             {
-              "id": "FMData/Members[FK_TP_REF_TECHNOLOGY_STACK]",
-              "name": "FK_TP_REF_TECHNOLOGY_STACK",
-              "association": { "__id": "FK_TP_REF_TECHNOLOGY_STACK" },
+              "id": "FMData/Members[FK_TP_PHASE_TP_PHASE]",
+              "name": "FK_TP_PHASE_TP_PHASE",
+              "association": { "__id": "FK_TP_PHASE_TP_PHASE" },
               "ends":
               [
                 {
-                  "properties": [ "TechnologyStackID" ],
-                  "id": "FMData/Members[FK_TP_REF_TECHNOLOGY_STACK]/Members[REF_TECHNOLOGY_STACK]",
-                  "name": "REF_TECHNOLOGY_STACK",
-                  "entitySet": { "__id": "FMData/Members[REF_TECHNOLOGY_STACKs]" }
+                  "properties": [ "PhaseID" ],
+                  "id": "FMData/Members[FK_TP_PHASE_TP_PHASE]/Members[REF_PHASE]",
+                  "name": "REF_PHASE",
+                  "entitySet": { "__id": "FMData/Members[REF_PHASEs]" }
                 },
                 {
-                  "properties": [ "TechnologyStackID" ],
-                  "id": "FMData/Members[FK_TP_REF_TECHNOLOGY_STACK]/Members[TP]",
-                  "name": "TP",
-                  "entitySet": { "__id": "FMData/Members[TPs]" }
+                  "properties": [ "PhaseID" ],
+                  "id": "FMData/Members[FK_TP_PHASE_TP_PHASE]/Members[TP_PHASE]",
+                  "name": "TP_PHASE",
+                  "entitySet": { "__id": "FMData/Members[TP_PHASEs]" }
                 }
               ]
             },
             {
-              "id": "FMData/Members[FK_TP_RESOURCE_ALLOCATION_RESOURCE]",
-              "name": "FK_TP_RESOURCE_ALLOCATION_RESOURCE",
-              "association": { "__id": "FK_TP_RESOURCE_ALLOCATION_RESOURCE" },
+              "id": "FMData/Members[FK_RESOURCE_REF_ROLE]",
+              "name": "FK_RESOURCE_REF_ROLE",
+              "association": { "__id": "FK_RESOURCE_REF_ROLE" },
               "ends":
               [
                 {
-                  "properties": [ "ResourceID" ],
-                  "id": "FMData/Members[FK_TP_RESOURCE_ALLOCATION_RESOURCE]/Members[RESOURCE]",
+                  "properties": [ "RoleID" ],
+                  "id": "FMData/Members[FK_RESOURCE_REF_ROLE]/Members[REF_ROLE]",
+                  "name": "REF_ROLE",
+                  "entitySet": { "__id": "FMData/Members[REF_ROLEs]" }
+                },
+                {
+                  "properties": [ "RoleID" ],
+                  "id": "FMData/Members[FK_RESOURCE_REF_ROLE]/Members[RESOURCE]",
                   "name": "RESOURCE",
                   "entitySet": { "__id": "FMData/Members[RESOURCEs]" }
-                },
-                {
-                  "properties": [ "ResourceID" ],
-                  "id": "FMData/Members[FK_TP_RESOURCE_ALLOCATION_RESOURCE]/Members[TP_RESOURCE_ALLOCATION]",
-                  "name": "TP_RESOURCE_ALLOCATION",
-                  "entitySet": { "__id": "FMData/Members[TP_RESOURCE_ALLOCATIONs]" }
-                }
-              ]
-            },
-            {
-              "id": "FMData/Members[FK_TP_RESOURCE_TP]",
-              "name": "FK_TP_RESOURCE_TP",
-              "association": { "__id": "FK_TP_RESOURCE_TP" },
-              "ends":
-              [
-                {
-                  "properties": [ "TpID" ],
-                  "id": "FMData/Members[FK_TP_RESOURCE_TP]/Members[TP]",
-                  "name": "TP",
-                  "entitySet": { "__id": "FMData/Members[TPs]" }
-                },
-                {
-                  "properties": [ "TpID" ],
-                  "id": "FMData/Members[FK_TP_RESOURCE_TP]/Members[TP_RESOURCE_ALLOCATION]",
-                  "name": "TP_RESOURCE_ALLOCATION",
-                  "entitySet": { "__id": "FMData/Members[TP_RESOURCE_ALLOCATIONs]" }
                 }
               ]
             },
@@ -6604,22 +6468,62 @@
               ]
             },
             {
-              "id": "FMData/Members[FK_TP_STAKEHOLDER_TP]",
-              "name": "FK_TP_STAKEHOLDER_TP",
-              "association": { "__id": "FK_TP_STAKEHOLDER_TP" },
+              "id": "FMData/Members[FK_RESOURCE_REF_STATUS]",
+              "name": "FK_RESOURCE_REF_STATUS",
+              "association": { "__id": "FK_RESOURCE_REF_STATUS" },
               "ends":
               [
                 {
-                  "properties": [ "TpID" ],
-                  "id": "FMData/Members[FK_TP_STAKEHOLDER_TP]/Members[TP]",
-                  "name": "TP",
-                  "entitySet": { "__id": "FMData/Members[TPs]" }
+                  "properties": [ "StatusID" ],
+                  "id": "FMData/Members[FK_RESOURCE_REF_STATUS]/Members[REF_STATUS]",
+                  "name": "REF_STATUS",
+                  "entitySet": { "__id": "FMData/Members[REF_STATUS]" }
                 },
                 {
-                  "properties": [ "TpID" ],
-                  "id": "FMData/Members[FK_TP_STAKEHOLDER_TP]/Members[TP_STAKEHOLDER]",
-                  "name": "TP_STAKEHOLDER",
-                  "entitySet": { "__id": "FMData/Members[TP_STAKEHOLDERs]" }
+                  "properties": [ "StatusID" ],
+                  "id": "FMData/Members[FK_RESOURCE_REF_STATUS]/Members[RESOURCE]",
+                  "name": "RESOURCE",
+                  "entitySet": { "__id": "FMData/Members[RESOURCEs]" }
+                }
+              ]
+            },
+            {
+              "id": "FMData/Members[FK_APPLICATION_REF_TECHNOLOGY]",
+              "name": "FK_APPLICATION_REF_TECHNOLOGY",
+              "association": { "__id": "REF_TECHNOLOGY_APP" },
+              "ends":
+              [
+                {
+                  "properties": [ "TechnologyID" ],
+                  "id": "FMData/Members[FK_APPLICATION_REF_TECHNOLOGY]/Members[REF_TECHNOLOGY]",
+                  "name": "REF_TECHNOLOGY",
+                  "entitySet": { "__id": "FMData/Members[REF_TECHNOLOGies]" }
+                },
+                {
+                  "properties": [ "TechnologyID" ],
+                  "id": "FMData/Members[FK_APPLICATION_REF_TECHNOLOGY]/Members[APP]",
+                  "name": "APP",
+                  "entitySet": { "__id": "FMData/Members[APPLICATIONs]" }
+                }
+              ]
+            },
+            {
+              "id": "FMData/Members[FK_TP_REF_TECHNOLOGY_STACK]",
+              "name": "FK_TP_REF_TECHNOLOGY_STACK",
+              "association": { "__id": "FK_TP_REF_TECHNOLOGY_STACK" },
+              "ends":
+              [
+                {
+                  "properties": [ "TechnologyStackID" ],
+                  "id": "FMData/Members[FK_TP_REF_TECHNOLOGY_STACK]/Members[REF_TECHNOLOGY_STACK]",
+                  "name": "REF_TECHNOLOGY_STACK",
+                  "entitySet": { "__id": "FMData/Members[REF_TECHNOLOGY_STACKs]" }
+                },
+                {
+                  "properties": [ "TechnologyStackID" ],
+                  "id": "FMData/Members[FK_TP_REF_TECHNOLOGY_STACK]/Members[TP]",
+                  "name": "TP",
+                  "entitySet": { "__id": "FMData/Members[TPs]" }
                 }
               ]
             },
@@ -6640,6 +6544,126 @@
                   "id": "FMData/Members[FK_TP_VENDOR_REF_VENDOR]/Members[TP_VENDOR]",
                   "name": "TP_VENDOR",
                   "entitySet": { "__id": "FMData/Members[TP_VENDORs]" }
+                }
+              ]
+            },
+            {
+              "id": "FMData/Members[FK_TP_RESOURCE_ALLOCATION_RESOURCE]",
+              "name": "FK_TP_RESOURCE_ALLOCATION_RESOURCE",
+              "association": { "__id": "FK_TP_RESOURCE_ALLOCATION_RESOURCE" },
+              "ends":
+              [
+                {
+                  "properties": [ "ResourceID" ],
+                  "id": "FMData/Members[FK_TP_RESOURCE_ALLOCATION_RESOURCE]/Members[RESOURCE]",
+                  "name": "RESOURCE",
+                  "entitySet": { "__id": "FMData/Members[RESOURCEs]" }
+                },
+                {
+                  "properties": [ "ResourceID" ],
+                  "id": "FMData/Members[FK_TP_RESOURCE_ALLOCATION_RESOURCE]/Members[TP_RESOURCE_ALLOCATION]",
+                  "name": "TP_RESOURCE_ALLOCATION",
+                  "entitySet": { "__id": "FMData/Members[TP_RESOURCE_ALLOCATIONs]" }
+                }
+              ]
+            },
+            {
+              "id": "FMData/Members[FK_TP_APPLICATION_TP_APPLICATION]",
+              "name": "FK_TP_APPLICATION_TP_APPLICATION",
+              "association": { "__id": "FK_TP_APPLICATION_TP_APPLICATION" },
+              "ends":
+              [
+                {
+                  "properties": [ "TpID" ],
+                  "id": "FMData/Members[FK_TP_APPLICATION_TP_APPLICATION]/Members[TP]",
+                  "name": "TP",
+                  "entitySet": { "__id": "FMData/Members[TPs]" }
+                },
+                {
+                  "properties": [ "TpID" ],
+                  "id": "FMData/Members[FK_TP_APPLICATION_TP_APPLICATION]/Members[TP_APPLICATION]",
+                  "name": "TP_APPLICATION",
+                  "entitySet": { "__id": "FMData/Members[TP_APPLICATIONs]" }
+                }
+              ]
+            },
+            {
+              "id": "FMData/Members[FK_TP_DOCUMENT_LINK_TP]",
+              "name": "FK_TP_DOCUMENT_LINK_TP",
+              "association": { "__id": "FK_TP_DOCUMENT_LINK_TP" },
+              "ends":
+              [
+                {
+                  "properties": [ "TpID" ],
+                  "id": "FMData/Members[FK_TP_DOCUMENT_LINK_TP]/Members[TP]",
+                  "name": "TP",
+                  "entitySet": { "__id": "FMData/Members[TPs]" }
+                },
+                {
+                  "properties": [ "TpID" ],
+                  "id": "FMData/Members[FK_TP_DOCUMENT_LINK_TP]/Members[TP_DOCUMENT_LINK]",
+                  "name": "TP_DOCUMENT_LINK",
+                  "entitySet": { "__id": "FMData/Members[TP_DOCUMENT_LINKs]" }
+                }
+              ]
+            },
+            {
+              "id": "FMData/Members[FK_TP_PHASE_TP]",
+              "name": "FK_TP_PHASE_TP",
+              "association": { "__id": "FK_TP_PHASE_TP" },
+              "ends":
+              [
+                {
+                  "properties": [ "TpID" ],
+                  "id": "FMData/Members[FK_TP_PHASE_TP]/Members[TP]",
+                  "name": "TP",
+                  "entitySet": { "__id": "FMData/Members[TPs]" }
+                },
+                {
+                  "properties": [ "TpID" ],
+                  "id": "FMData/Members[FK_TP_PHASE_TP]/Members[TP_PHASE]",
+                  "name": "TP_PHASE",
+                  "entitySet": { "__id": "FMData/Members[TP_PHASEs]" }
+                }
+              ]
+            },
+            {
+              "id": "FMData/Members[FK_TP_RESOURCE_TP]",
+              "name": "FK_TP_RESOURCE_TP",
+              "association": { "__id": "FK_TP_RESOURCE_TP" },
+              "ends":
+              [
+                {
+                  "properties": [ "TpID" ],
+                  "id": "FMData/Members[FK_TP_RESOURCE_TP]/Members[TP]",
+                  "name": "TP",
+                  "entitySet": { "__id": "FMData/Members[TPs]" }
+                },
+                {
+                  "properties": [ "TpID" ],
+                  "id": "FMData/Members[FK_TP_RESOURCE_TP]/Members[TP_RESOURCE_ALLOCATION]",
+                  "name": "TP_RESOURCE_ALLOCATION",
+                  "entitySet": { "__id": "FMData/Members[TP_RESOURCE_ALLOCATIONs]" }
+                }
+              ]
+            },
+            {
+              "id": "FMData/Members[FK_TP_STAKEHOLDER_TP]",
+              "name": "FK_TP_STAKEHOLDER_TP",
+              "association": { "__id": "FK_TP_STAKEHOLDER_TP" },
+              "ends":
+              [
+                {
+                  "properties": [ "TpID" ],
+                  "id": "FMData/Members[FK_TP_STAKEHOLDER_TP]/Members[TP]",
+                  "name": "TP",
+                  "entitySet": { "__id": "FMData/Members[TPs]" }
+                },
+                {
+                  "properties": [ "TpID" ],
+                  "id": "FMData/Members[FK_TP_STAKEHOLDER_TP]/Members[TP_STAKEHOLDER]",
+                  "name": "TP_STAKEHOLDER",
+                  "entitySet": { "__id": "FMData/Members[TP_STAKEHOLDERs]" }
                 }
               ]
             },
@@ -6784,15 +6808,6 @@
               "entityType": { "__id": "RESOURCE" }
             },
             {
-              "id": "FMData/Members[TPs]",
-              "name": "TPs",
-              "canDelete": true,
-              "canInsert": true,
-              "canUpdate": true,
-              "elementType": { "__id": "TP" },
-              "entityType": { "__id": "TP" }
-            },
-            {
               "id": "FMData/Members[TP_APPLICATIONs]",
               "name": "TP_APPLICATIONs",
               "canDelete": true,
@@ -6845,6 +6860,15 @@
               "canUpdate": true,
               "elementType": { "__id": "TP_VENDOR" },
               "entityType": { "__id": "TP_VENDOR" }
+            },
+            {
+              "id": "FMData/Members[TPs]",
+              "name": "TPs",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "TP" },
+              "entityType": { "__id": "TP" }
             }
           ],
           "queryOperations":
@@ -7344,44 +7368,6 @@
               ]
             },
             {
-              "id": "FMData/Members[TPs_Single]",
-              "name": "TPs_Single",
-              "elementType": { "__id": "TP" },
-              "query": { "__id": "FMData/Members[TPs_Single]" },
-              "returnType": { "__id": "TP" },
-              "source":
-              {
-                "member": { "__id": "FMData/Members[TPs]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "FMData/Members[TPs_Single]/Parameters[TpID]",
-                  "name": "TpID",
-                  "parameterType": { "__id": ":Int32?" }
-                }
-              ]
-            },
-            {
-              "id": "FMData/Members[TPs_SingleOrDefault]",
-              "name": "TPs_SingleOrDefault",
-              "elementType": { "__id": "TP" },
-              "query": { "__id": "FMData/Members[TPs_SingleOrDefault]" },
-              "returnType": { "__id": "TP" },
-              "source":
-              {
-                "member": { "__id": "FMData/Members[TPs]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "FMData/Members[TPs_SingleOrDefault]/Parameters[TpID]",
-                  "name": "TpID",
-                  "parameterType": { "__id": ":Int32?" }
-                }
-              ]
-            },
-            {
               "id": "FMData/Members[TP_APPLICATIONs_Single]",
               "name": "TP_APPLICATIONs_Single",
               "elementType": { "__id": "TP_APPLICATION" },
@@ -7608,6 +7594,44 @@
                   "parameterType": { "__id": ":Int32?" }
                 }
               ]
+            },
+            {
+              "id": "FMData/Members[TPs_Single]",
+              "name": "TPs_Single",
+              "elementType": { "__id": "TP" },
+              "query": { "__id": "FMData/Members[TPs_Single]" },
+              "returnType": { "__id": "TP" },
+              "source":
+              {
+                "member": { "__id": "FMData/Members[TPs]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "FMData/Members[TPs_Single]/Parameters[TpID]",
+                  "name": "TpID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
+            },
+            {
+              "id": "FMData/Members[TPs_SingleOrDefault]",
+              "name": "TPs_SingleOrDefault",
+              "elementType": { "__id": "TP" },
+              "query": { "__id": "FMData/Members[TPs_SingleOrDefault]" },
+              "returnType": { "__id": "TP" },
+              "source":
+              {
+                "member": { "__id": "FMData/Members[TPs]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "FMData/Members[TPs_SingleOrDefault]/Parameters[TpID]",
+                  "name": "TpID",
+                  "parameterType": { "__id": ":Int32?" }
+                }
+              ]
             }
           ]
         },
@@ -7692,6 +7716,23 @@
                                 "value": 400
                               }
                             ]
+                          },
+                          {
+                            "displayName": "right",
+                            "name": "right",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
                           }
                         ]
                       }
@@ -7753,379 +7794,6 @@
               "elementType": { "__id": "REF_ROLE" },
               "propertyType": { "__id": "REF_ROLE" },
               ":@IsParameter": { }
-            }
-          ]
-        },
-        {
-          "displayName": "Role",
-          "id": "ViewRole",
-          "name": "ViewRole",
-          "launchMode": "Single",
-          ":@SaveChangesTo":
-          {
-            "property": { "__id": "DataWorkspace/Members[FMData]" }
-          },
-          "rootContentItem":
-          {
-            "displayName": "Role",
-            "name": "RootContentItem",
-            "kind": "Screen",
-            "view": { "__id": ":Screen" },
-            "childContentItems":
-            [
-              {
-                "displayName": "Tabs",
-                "name": "Tabs",
-                "kind": "Group",
-                "view": { "__id": ":TabPages" },
-                "childContentItems":
-                [
-                  {
-                    "displayName": "Details",
-                    "name": "Details",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "columns",
-                        "name": "columns",
-                        "kind": "Details",
-                        "view": { "__id": ":ColumnsLayout" },
-                        "dataSource":
-                        {
-                          "member": { "__id": "ViewRole/Properties[REF_ROLE]" }
-                        },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Role Detail",
-                            "name": "left",
-                            "kind": "Group",
-                            "view": { "__id": ":RowsLayout" },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "Name",
-                                "name": "Name",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "REF_ROLE/Properties[Name]" }
-                                }
-                              },
-                              {
-                                "displayName": "Description",
-                                "name": "Description",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "REF_ROLE/Properties[Description]" }
-                                }
-                              },
-                              {
-                                "displayName": "Created Date",
-                                "name": "CreatedDate",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "REF_ROLE/Properties[CreatedDate]" }
-                                }
-                              },
-                              {
-                                "displayName": "Created By",
-                                "name": "CreatedBy",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "REF_ROLE/Properties[CreatedBy]" }
-                                }
-                              },
-                              {
-                                "displayName": "Modified By",
-                                "name": "ModifiedBy",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "REF_ROLE/Properties[ModifiedBy]" }
-                                }
-                              },
-                              {
-                                "displayName": "Modified Date",
-                                "name": "ModifiedDate",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "REF_ROLE/Properties[ModifiedDate]" }
-                                }
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                "value": 200
-                              },
-                              {
-                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
-                              }
-                            ]
-                          },
-                          {
-                            "displayName": "Resources",
-                            "name": "right",
-                            "kind": "Group",
-                            "view": { "__id": ":RowsLayout" },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "RESOURCEs",
-                                "name": "RESOURCEs1",
-                                "kind": "Collection",
-                                "view": { "__id": ":TileList" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "ViewRole/Properties[RESOURCEs]" }
-                                },
-                                "childContentItems":
-                                [
-                                  {
-                                    "displayName": "rows",
-                                    "name": "rows",
-                                    "kind": "Details",
-                                    "view": { "__id": ":RowsLayout" },
-                                    "dataSource":
-                                    {
-                                      "links":
-                                      [
-                                      ]
-                                    },
-                                    "childContentItems":
-                                    [
-                                      {
-                                        "displayName": "Name",
-                                        "name": "Name1",
-                                        "kind": "Value",
-                                        "view": { "__id": ":Text" },
-                                        "dataSource":
-                                        {
-                                          "member": { "__id": "RESOURCE/Properties[Name]" }
-                                        },
-                                        "propertySources":
-                                        [
-                                          {
-                                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                            "value": "Large"
-                                          }
-                                        ]
-                                      },
-                                      {
-                                        "displayName": "Email Id",
-                                        "name": "EmailId",
-                                        "kind": "Value",
-                                        "view": { "__id": ":Text" },
-                                        "dataSource":
-                                        {
-                                          "member": { "__id": "RESOURCE/Properties[EmailId]" }
-                                        },
-                                        "propertySources":
-                                        [
-                                          {
-                                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                            "value": "Small"
-                                          }
-                                        ]
-                                      },
-                                      {
-                                        "displayName": "Created By",
-                                        "name": "CreatedBy1",
-                                        "kind": "Value",
-                                        "view": { "__id": ":Text" },
-                                        "dataSource":
-                                        {
-                                          "member": { "__id": "RESOURCE/Properties[CreatedBy]" }
-                                        },
-                                        "propertySources":
-                                        [
-                                          {
-                                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                            "value": "Small"
-                                          }
-                                        ]
-                                      }
-                                    ],
-                                    "propertySources":
-                                    [
-                                      {
-                                        "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
-                                        "value": "FitToContent"
-                                      }
-                                    ]
-                                  }
-                                ],
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
-                                    "source":
-                                    {
-                                      "links":
-                                      [
-                                        {
-                                          "member": { "__id": "ViewRole/Properties[RESOURCEs]" }
-                                        },
-                                        {
-                                          "target": { "__id": "CollectionView$RESOURCE/Methods[viewSelected]" }
-                                        }
-                                      ]
-                                    }
-                                  }
-                                ]
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                "value": 200
-                              },
-                              {
-                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ],
-                    "commandItems":
-                    [
-                      {
-                        "displayName": "Edit",
-                        "name": "EditRole",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
-                            {
-                              "target": { "__id": "!module/Methods[showAddEditRole]" },
-                              "arguments":
-                              [
-                                {
-                                  "parameter": { "__id": "!module/Methods[showAddEditRole]/Parameters[REF_ROLE]" },
-                                  "value":
-                                  {
-                                    "links":
-                                    [
-                                      {
-                                        "member": { "__id": "ViewRole/Properties[REF_ROLE]" }
-                                      }
-                                    ]
-                                  }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-edit"
-                          }
-                        ]
-                      }
-                    ]
-                  }
-                ],
-                "propertySources":
-                [
-                  {
-                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
-                    "value": true
-                  }
-                ]
-              },
-              {
-                "displayName": "Popups",
-                "name": "Popups",
-                "kind": "Group",
-                "view": { "__id": ":DialogPages" }
-              }
-            ]
-          },
-          "methods":
-          [
-            {
-              "id": "ViewRole/Methods[showTab]",
-              "name": "showTab",
-              "parameters":
-              [
-                {
-                  "id": "ViewRole/Methods[showTab]/Parameters[tabName]",
-                  "name": "tabName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            },
-            {
-              "id": "ViewRole/Methods[showDialog]",
-              "name": "showDialog",
-              "parameters":
-              [
-                {
-                  "id": "ViewRole/Methods[showDialog]/Parameters[dialogName]",
-                  "name": "dialogName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "ViewRole/Properties[REF_ROLE]",
-              "name": "REF_ROLE",
-              "elementType": { "__id": "REF_ROLE" },
-              "propertyType": { "__id": "REF_ROLE" },
-              ":@IsParameter": { }
-            },
-            {
-              "id": "ViewRole/Properties[RESOURCEs]",
-              "name": "RESOURCEs",
-              "pageSize": 15,
-              "elementType": { "__id": "RESOURCE" },
-              "propertyType": { "__id": "CollectionView$RESOURCE" },
-              "query":
-              {
-                "id": "ViewRole/Properties[RESOURCEs]/Query",
-                "name": "RESOURCEsQuery",
-                "elementType": { "__id": "RESOURCE" },
-                "returnType": { "__id": "RESOURCE*" },
-                "source":
-                {
-                  "links":
-                  [
-                    {
-                      "member": { "__id": "ViewRole/Properties[REF_ROLE]" }
-                    },
-                    {
-                      "member": { "__id": "REF_ROLE/Properties[RESOURCEs]" }
-                    }
-                  ]
-                }
-              },
-              "source":
-              {
-                "target": { "__id": "ViewRole/Properties[RESOURCEs]/Query" }
-              }
             }
           ]
         },
@@ -8402,6 +8070,2069 @@
               }
             }
           ]
+        },
+        {
+          "displayName": "Role",
+          "id": "ViewRole",
+          "name": "ViewRole",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Role",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ViewRole/Properties[REF_ROLE]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_ROLE/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_ROLE/Properties[Description]" }
+                                }
+                              },
+                              {
+                                "displayName": "Created Date",
+                                "name": "CreatedDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_ROLE/Properties[CreatedDate]" }
+                                }
+                              },
+                              {
+                                "displayName": "Created By",
+                                "name": "CreatedBy",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_ROLE/Properties[CreatedBy]" }
+                                }
+                              },
+                              {
+                                "displayName": "Modified By",
+                                "name": "ModifiedBy",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_ROLE/Properties[ModifiedBy]" }
+                                }
+                              },
+                              {
+                                "displayName": "Modified Date",
+                                "name": "ModifiedDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_ROLE/Properties[ModifiedDate]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Edit",
+                        "name": "EditRole",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditRole]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showAddEditRole]/Parameters[REF_ROLE]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "ViewRole/Properties[REF_ROLE]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-edit"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "displayName": "RESOURCEs",
+                    "name": "RESOURCEs",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "RESOURCEs",
+                        "name": "RESOURCEs1",
+                        "kind": "Collection",
+                        "view": { "__id": ":TileList" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ViewRole/Properties[RESOURCEs]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name1",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[Name]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Large"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Email Id",
+                                "name": "EmailId",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[EmailId]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Created By",
+                                "name": "CreatedBy1",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[CreatedBy]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "ViewRole/Properties[RESOURCEs]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$RESOURCE/Methods[viewSelected]" }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ViewRole/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ViewRole/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ViewRole/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ViewRole/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ViewRole/Properties[REF_ROLE]",
+              "name": "REF_ROLE",
+              "elementType": { "__id": "REF_ROLE" },
+              "propertyType": { "__id": "REF_ROLE" },
+              ":@IsParameter": { }
+            },
+            {
+              "id": "ViewRole/Properties[RESOURCEs]",
+              "name": "RESOURCEs",
+              "pageSize": 15,
+              "elementType": { "__id": "RESOURCE" },
+              "propertyType": { "__id": "CollectionView$RESOURCE" },
+              "query":
+              {
+                "id": "ViewRole/Properties[RESOURCEs]/Query",
+                "name": "RESOURCEsQuery",
+                "elementType": { "__id": "RESOURCE" },
+                "returnType": { "__id": "RESOURCE*" },
+                "source":
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "ViewRole/Properties[REF_ROLE]" }
+                    },
+                    {
+                      "member": { "__id": "REF_ROLE/Properties[RESOURCEs]" }
+                    }
+                  ]
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "ViewRole/Properties[RESOURCEs]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "Status",
+          "id": "AddEditStatus",
+          "name": "AddEditStatus",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Status",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditStatus/Properties[REF_STATUS]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_STATUS/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":TextArea" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_STATUS/Properties[Description]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "right",
+                            "name": "right",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "AddEditStatus/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "AddEditStatus/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "AddEditStatus/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "AddEditStatus/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "AddEditStatus/Properties[REF_STATUS]",
+              "name": "REF_STATUS",
+              "elementType": { "__id": "REF_STATUS" },
+              "propertyType": { "__id": "REF_STATUS" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "displayName": "StatusSet",
+          "id": "BrowseStatusSet",
+          "name": "BrowseStatusSet",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "StatusSet",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Status List",
+                    "name": "StatusList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "REF_STATUS",
+                        "name": "REF_STATUS",
+                        "kind": "Collection",
+                        "view": { "__id": ":TileList" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseStatusSet/Properties[REF_STATUS]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_STATUS/Properties[Name]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Large"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_STATUS/Properties[Description]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Created Date",
+                                "name": "CreatedDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_STATUS/Properties[CreatedDate]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showViewStatus]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseStatusSet/Properties[REF_STATUS]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showViewStatus]/Parameters[REF_STATUS]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "BrowseStatusSet/Properties[REF_STATUS]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$REF_STATUS/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Add",
+                        "name": "AddStatus",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditStatus]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseStatusSet/Properties[REF_STATUS]" } },
+                              ":@CreateNewEntity":
+                              {
+                                "targetParameter": { "__id": "!module/Methods[showAddEditStatus]/Parameters[REF_STATUS]" }
+                              }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Search",
+                        "name": "SearchStatusSet",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "BrowseStatusSet/Properties[REF_STATUS]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$REF_STATUS/Methods[showSearch]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-search"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "BrowseStatusSet/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "BrowseStatusSet/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "BrowseStatusSet/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "BrowseStatusSet/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "BrowseStatusSet/Properties[REF_STATUS]",
+              "name": "REF_STATUS",
+              "pageSize": 45,
+              "elementType": { "__id": "REF_STATUS" },
+              "propertyType": { "__id": "CollectionView$REF_STATUS" },
+              "query":
+              {
+                "id": "BrowseStatusSet/Properties[REF_STATUS]/Query",
+                "name": "REF_STATUSQuery",
+                "elementType": { "__id": "REF_STATUS" },
+                "returnType": { "__id": "REF_STATUS*" },
+                "source":
+                {
+                  "member": { "__id": "FMData/Members[REF_STATUS]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "BrowseStatusSet/Properties[REF_STATUS]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "Status",
+          "id": "ViewStatus",
+          "name": "ViewStatus",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Status",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ViewStatus/Properties[REF_STATUS]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_STATUS/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_STATUS/Properties[Description]" }
+                                }
+                              },
+                              {
+                                "displayName": "Created Date",
+                                "name": "CreatedDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_STATUS/Properties[CreatedDate]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "right",
+                            "name": "right",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Created By",
+                                "name": "CreatedBy",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_STATUS/Properties[CreatedBy]" }
+                                }
+                              },
+                              {
+                                "displayName": "Modified Date",
+                                "name": "ModifiedDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_STATUS/Properties[ModifiedDate]" }
+                                }
+                              },
+                              {
+                                "displayName": "Modified By",
+                                "name": "ModifiedBy",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_STATUS/Properties[ModifiedBy]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Edit",
+                        "name": "EditStatus",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditStatus]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showAddEditStatus]/Parameters[REF_STATUS]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "ViewStatus/Properties[REF_STATUS]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-edit"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "displayName": "RESOURCEs",
+                    "name": "RESOURCEs",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "RESOURCEs",
+                        "name": "RESOURCEs1",
+                        "kind": "Collection",
+                        "view": { "__id": ":TileList" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ViewStatus/Properties[RESOURCEs]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name1",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[Name]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Large"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Email Id",
+                                "name": "EmailId",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[EmailId]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Created By",
+                                "name": "CreatedBy1",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[CreatedBy]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "ViewStatus/Properties[RESOURCEs]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$RESOURCE/Methods[viewSelected]" }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ViewStatus/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ViewStatus/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ViewStatus/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ViewStatus/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ViewStatus/Properties[REF_STATUS]",
+              "name": "REF_STATUS",
+              "elementType": { "__id": "REF_STATUS" },
+              "propertyType": { "__id": "REF_STATUS" },
+              ":@IsParameter": { }
+            },
+            {
+              "id": "ViewStatus/Properties[RESOURCEs]",
+              "name": "RESOURCEs",
+              "pageSize": 15,
+              "elementType": { "__id": "RESOURCE" },
+              "propertyType": { "__id": "CollectionView$RESOURCE" },
+              "query":
+              {
+                "id": "ViewStatus/Properties[RESOURCEs]/Query",
+                "name": "RESOURCEsQuery",
+                "elementType": { "__id": "RESOURCE" },
+                "returnType": { "__id": "RESOURCE*" },
+                "source":
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "ViewStatus/Properties[REF_STATUS]" }
+                    },
+                    {
+                      "member": { "__id": "REF_STATUS/Properties[RESOURCEs]" }
+                    }
+                  ]
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "ViewStatus/Properties[RESOURCEs]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "ResourceDetail",
+          "id": "AddEditResourceDetail",
+          "name": "AddEditResourceDetail",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "ResourceDetail",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditResourceDetail/Properties[RESOURCE]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Email Id",
+                                "name": "EmailId",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[EmailId]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "right",
+                            "name": "right",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "REF ROLE",
+                                "name": "REF_ROLE",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[REF_ROLE]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "REF ROLE",
+                                    "name": "RowTemplate",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "REF_ROLE/Properties[Name]" }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "REF STATUS",
+                                "name": "REF_STATUS",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[REF_STATUS]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "REF STATUS",
+                                    "name": "RowTemplate1",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "REF_STATUS/Properties[Name]" }
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "AddEditResourceDetail/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "AddEditResourceDetail/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "AddEditResourceDetail/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "AddEditResourceDetail/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "AddEditResourceDetail/Properties[RESOURCE]",
+              "name": "RESOURCE",
+              "elementType": { "__id": "RESOURCE" },
+              "propertyType": { "__id": "RESOURCE" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "displayName": "ResourceDetail",
+          "id": "ViewResourceDetail",
+          "name": "ViewResourceDetail",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "ResourceDetail",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ViewResourceDetail/Properties[RESOURCE]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Email Id",
+                                "name": "EmailId",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[EmailId]" }
+                                }
+                              },
+                              {
+                                "displayName": "Created By",
+                                "name": "CreatedBy",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[CreatedBy]" }
+                                }
+                              },
+                              {
+                                "displayName": "Created Date",
+                                "name": "CreatedDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[CreatedDate]" }
+                                }
+                              },
+                              {
+                                "displayName": "Modified Date",
+                                "name": "ModifiedDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[ModifiedDate]" }
+                                }
+                              },
+                              {
+                                "displayName": "Modified By",
+                                "name": "ModifiedBy",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[ModifiedBy]" }
+                                }
+                              },
+                              {
+                                "displayName": "REF ROLE",
+                                "name": "REF_ROLE",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "links":
+                                  [
+                                    {
+                                      "member": { "__id": "RESOURCE/Properties[REF_ROLE]" }
+                                    },
+                                    {
+                                      "member": { "__id": "REF_ROLE/Properties[Name]" }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "displayName": "REF STATUS",
+                                "name": "REF_STATUS",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "links":
+                                  [
+                                    {
+                                      "member": { "__id": "RESOURCE/Properties[REF_STATUS]" }
+                                    },
+                                    {
+                                      "member": { "__id": "REF_STATUS/Properties[Name]" }
+                                    }
+                                  ]
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "Resource Allocation",
+                            "name": "TP_RESOURCE_ALLOCATIONs",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "TP_RESOURCE_ALLOCATIONs",
+                                "name": "TP_RESOURCE_ALLOCATIONs1",
+                                "kind": "Collection",
+                                "view": { "__id": ":TileList" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ViewResourceDetail/Properties[TP_RESOURCE_ALLOCATIONs]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "rows",
+                                    "name": "rows",
+                                    "kind": "Details",
+                                    "view": { "__id": ":RowsLayout" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    },
+                                    "childContentItems":
+                                    [
+                                      {
+                                        "displayName": "Created By",
+                                        "name": "CreatedBy1",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "TP_RESOURCE_ALLOCATION/Properties[CreatedBy]" }
+                                        },
+                                        "propertySources":
+                                        [
+                                          {
+                                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                            "value": "Large"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "displayName": "Percentage",
+                                        "name": "Percentage",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "TP_RESOURCE_ALLOCATION/Properties[Percentage]" }
+                                        },
+                                        "propertySources":
+                                        [
+                                          {
+                                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                            "value": "Small"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "displayName": "Planned Start Date",
+                                        "name": "PlannedStartDate",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "TP_RESOURCE_ALLOCATION/Properties[PlannedStartDate]" }
+                                        },
+                                        "propertySources":
+                                        [
+                                          {
+                                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                            "value": "Small"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "propertySources":
+                                    [
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                        "value": "FitToContent"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                                    "source":
+                                    {
+                                      "links":
+                                      [
+                                        {
+                                          "member": { "__id": "ViewResourceDetail/Properties[TP_RESOURCE_ALLOCATIONs]" }
+                                        },
+                                        {
+                                          "target": { "__id": "CollectionView$TP_RESOURCE_ALLOCATION/Methods[viewSelected]" }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Edit",
+                        "name": "EditResourceDetail",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditResourceDetail]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showAddEditResourceDetail]/Parameters[RESOURCE]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "ViewResourceDetail/Properties[RESOURCE]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-edit"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ViewResourceDetail/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ViewResourceDetail/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ViewResourceDetail/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ViewResourceDetail/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ViewResourceDetail/Properties[RESOURCE]",
+              "name": "RESOURCE",
+              "elementType": { "__id": "RESOURCE" },
+              "propertyType": { "__id": "RESOURCE" },
+              ":@IsParameter": { }
+            },
+            {
+              "id": "ViewResourceDetail/Properties[TP_RESOURCE_ALLOCATIONs]",
+              "name": "TP_RESOURCE_ALLOCATIONs",
+              "pageSize": 15,
+              "elementType": { "__id": "TP_RESOURCE_ALLOCATION" },
+              "propertyType": { "__id": "CollectionView$TP_RESOURCE_ALLOCATION" },
+              "query":
+              {
+                "id": "ViewResourceDetail/Properties[TP_RESOURCE_ALLOCATIONs]/Query",
+                "name": "TP_RESOURCE_ALLOCATIONsQuery",
+                "elementType": { "__id": "TP_RESOURCE_ALLOCATION" },
+                "returnType": { "__id": "TP_RESOURCE_ALLOCATION*" },
+                "source":
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "ViewResourceDetail/Properties[RESOURCE]" }
+                    },
+                    {
+                      "member": { "__id": "RESOURCE/Properties[TP_RESOURCE_ALLOCATIONs]" }
+                    }
+                  ]
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "ViewResourceDetail/Properties[TP_RESOURCE_ALLOCATIONs]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "ResourceDetails",
+          "id": "BrowseResourceDetails",
+          "name": "BrowseResourceDetails",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "ResourceDetails",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Resource Detail List",
+                    "name": "ResourceDetailList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "RESOURCEs",
+                        "name": "RESOURCEs",
+                        "kind": "Collection",
+                        "view": { "__id": ":TileList" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[Name]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Large"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Email Id",
+                                "name": "EmailId",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[EmailId]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Created By",
+                                "name": "CreatedBy",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[CreatedBy]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showViewResourceDetail]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showViewResourceDetail]/Parameters[RESOURCE]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$RESOURCE/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Add",
+                        "name": "AddResourceDetail",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditResourceDetail]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]" } },
+                              ":@CreateNewEntity":
+                              {
+                                "targetParameter": { "__id": "!module/Methods[showAddEditResourceDetail]/Parameters[RESOURCE]" }
+                              }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Search",
+                        "name": "SearchResourceDetails",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$RESOURCE/Methods[showSearch]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-search"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "BrowseResourceDetails/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "BrowseResourceDetails/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "BrowseResourceDetails/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "BrowseResourceDetails/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "BrowseResourceDetails/Properties[RESOURCEs]",
+              "name": "RESOURCEs",
+              "pageSize": 45,
+              "elementType": { "__id": "RESOURCE" },
+              "propertyType": { "__id": "CollectionView$RESOURCE" },
+              "query":
+              {
+                "id": "BrowseResourceDetails/Properties[RESOURCEs]/Query",
+                "name": "RESOURCEsQuery",
+                "elementType": { "__id": "RESOURCE" },
+                "returnType": { "__id": "RESOURCE*" },
+                "source":
+                {
+                  "member": { "__id": "FMData/Members[RESOURCEs]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]/Query" }
+              }
+            }
+          ]
         }
       ],
       "methods":
@@ -8420,6 +10151,11 @@
           ]
         },
         {
+          "id": "!module/Methods[showBrowseRoles]",
+          "name": "showBrowseRoles",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseRoles" } }
+        },
+        {
           "id": "!module/Methods[showViewRole]",
           "name": "showViewRole",
           ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewRole" } },
@@ -8433,9 +10169,66 @@
           ]
         },
         {
-          "id": "!module/Methods[showBrowseRoles]",
-          "name": "showBrowseRoles",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseRoles" } }
+          "id": "!module/Methods[showAddEditStatus]",
+          "name": "showAddEditStatus",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditStatus" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showAddEditStatus]/Parameters[REF_STATUS]",
+              "name": "REF_STATUS",
+              "parameterType": { "__id": "REF_STATUS" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showBrowseStatusSet]",
+          "name": "showBrowseStatusSet",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseStatusSet" } }
+        },
+        {
+          "id": "!module/Methods[showViewStatus]",
+          "name": "showViewStatus",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewStatus" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showViewStatus]/Parameters[REF_STATUS]",
+              "name": "REF_STATUS",
+              "parameterType": { "__id": "REF_STATUS" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showAddEditResourceDetail]",
+          "name": "showAddEditResourceDetail",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditResourceDetail" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showAddEditResourceDetail]/Parameters[RESOURCE]",
+              "name": "RESOURCE",
+              "parameterType": { "__id": "RESOURCE" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showViewResourceDetail]",
+          "name": "showViewResourceDetail",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewResourceDetail" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showViewResourceDetail]/Parameters[RESOURCE]",
+              "name": "RESOURCE",
+              "parameterType": { "__id": "RESOURCE" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showBrowseResourceDetails]",
+          "name": "showBrowseResourceDetails",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseResourceDetails" } }
         }
       ],
       "navigationItems":
@@ -8444,6 +10237,16 @@
           "id": "!module/NavigationItems[link]",
           "name": "link",
           "method": { "__id": "!module/Methods[showBrowseRoles]" }
+        },
+        {
+          "id": "!module/NavigationItems[link1]",
+          "name": "link1",
+          "method": { "__id": "!module/Methods[showBrowseStatusSet]" }
+        },
+        {
+          "id": "!module/NavigationItems[link2]",
+          "name": "link2",
+          "method": { "__id": "!module/Methods[showBrowseResourceDetails]" }
         }
       ]
     }

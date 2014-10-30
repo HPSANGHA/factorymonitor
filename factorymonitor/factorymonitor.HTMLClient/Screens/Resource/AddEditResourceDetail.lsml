@@ -5,12 +5,12 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="AddEditRole">
+    Name="AddEditResourceDetail">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="FMData" />
       <DisplayName
-        Value="Role" />
+        Value="ResourceDetail" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -32,7 +32,7 @@
             <ContentItem
               Name="columns"
               Kind="Details"
-              DataType="REF_ROLE"
+              DataType="RESOURCE"
               View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
               <ContentItem.Attributes>
                 <DisplayName
@@ -42,7 +42,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="AddEditRole/Properties[REF_ROLE]" />
+                      Member="AddEditResourceDetail/Properties[RESOURCE]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -57,21 +57,20 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="REF_ROLE/Properties[Name]" />
+                          Member="RESOURCE/Properties[Name]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="Description"
+                  Name="EmailId"
                   Kind="Value"
-                  DataType=":String?"
-                  View="Microsoft.LightSwitch.MobileWeb:TextArea">
+                  DataType=":String">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="REF_ROLE/Properties[Description]" />
+                          Member="RESOURCE/Properties[EmailId]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -102,6 +101,60 @@
               <ContentItem
                 Name="right"
                 Kind="Group">
+                <ContentItem
+                  Name="REF_ROLE"
+                  Kind="Details"
+                  DataType="REF_ROLE">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Role" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RESOURCE/Properties[REF_ROLE]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="RowTemplate"
+                    Kind="Details"
+                    DataType="REF_ROLE">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
+                <ContentItem
+                  Name="REF_STATUS"
+                  Kind="Details"
+                  DataType="REF_STATUS">
+                  <ContentItem.Attributes>
+                    <DisplayName
+                      Value="Status" />
+                  </ContentItem.Attributes>
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RESOURCE/Properties[REF_STATUS]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                  <ContentItem
+                    Name="RowTemplate1"
+                    Kind="Details"
+                    DataType="REF_STATUS">
+                    <ContentItem.DataSource>
+                      <ScreenExpressionTree>
+                        <ChainExpression />
+                      </ScreenExpressionTree>
+                    </ContentItem.DataSource>
+                  </ContentItem>
+                </ContentItem>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MinWidth]">
@@ -182,8 +235,8 @@
     </Screen.Methods>
     <Screen.Properties>
       <ScreenProperty
-        Name="REF_ROLE"
-        PropertyType="REF_ROLE">
+        Name="RESOURCE"
+        PropertyType="RESOURCE">
         <ScreenProperty.Attributes>
           <IsParameter />
         </ScreenProperty.Attributes>
@@ -192,14 +245,14 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showAddEditRole">
+      Name="showAddEditResourceDetail">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="AddEditRole" />
+          TargetScreen="AddEditResourceDetail" />
       </ApplicationMethod.Attributes>
       <ApplicationMethodParameter
-        Name="REF_ROLE"
-        ParameterType="REF_ROLE" />
+        Name="RESOURCE"
+        ParameterType="RESOURCE" />
     </ApplicationMethod>
   </Application.Methods>
 </Application>

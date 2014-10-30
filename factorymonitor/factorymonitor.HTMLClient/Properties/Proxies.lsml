@@ -49,12 +49,6 @@
   <EntityType>
     <EntityType.Attributes>
       <Proxy
-        Target="ServiceInterface:REF_STATUS" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
         Target="ServiceInterface:REF_TECHNOLOGY" />
     </EntityType.Attributes>
   </EntityType>
@@ -68,12 +62,6 @@
     <EntityType.Attributes>
       <Proxy
         Target="ServiceInterface:REF_VENDOR" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
-        Target="ServiceInterface:RESOURCE" />
     </EntityType.Attributes>
   </EntityType>
   <EntityType>

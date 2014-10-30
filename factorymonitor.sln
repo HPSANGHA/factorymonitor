@@ -3,11 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.30324.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{581633EB-B896-402F-8E60-36F3DA191C85}") = "factorymonitor", "factorymonitor\factorymonitor.lsxtproj", "{F9829A60-2919-4E38-B603-C967F74BEC8B}"
+Project("{581633EB-B896-402F-8E60-36F3DA191C85}") = "factorymonitor", "factorymonitor\factorymonitor.lsxtproj", "{B521708D-1DF5-41C0-AC64-DC3A47FC1BC3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "factorymonitor.Server", "factorymonitor\factorymonitor.Server\factorymonitor.Server.csproj", "{7D1FA880-8218-48A9-AD9C-D88EC2D4D65D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "factorymonitor.Server", "factorymonitor\factorymonitor.Server\factorymonitor.Server.csproj", "{64EBE037-CFD5-41B0-B832-F9DF2631D29B}"
 EndProject
-Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "factorymonitor.HTMLClient", "factorymonitor\factorymonitor.HTMLClient\factorymonitor.HTMLClient.jsproj", "{A745445E-6493-44E2-8490-904089E00A44}"
+Project("{262852C6-CD72-467D-83FE-5EEB1973A190}") = "factorymonitor.HTMLClient", "factorymonitor\factorymonitor.HTMLClient\factorymonitor.HTMLClient.jsproj", "{271C84BD-438B-4D20-940A-E9F7C6C493D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,18 +15,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F9829A60-2919-4E38-B603-C967F74BEC8B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F9829A60-2919-4E38-B603-C967F74BEC8B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F9829A60-2919-4E38-B603-C967F74BEC8B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F9829A60-2919-4E38-B603-C967F74BEC8B}.Release|Any CPU.Build.0 = Release|Any CPU
-		{7D1FA880-8218-48A9-AD9C-D88EC2D4D65D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7D1FA880-8218-48A9-AD9C-D88EC2D4D65D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7D1FA880-8218-48A9-AD9C-D88EC2D4D65D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7D1FA880-8218-48A9-AD9C-D88EC2D4D65D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{A745445E-6493-44E2-8490-904089E00A44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{A745445E-6493-44E2-8490-904089E00A44}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{A745445E-6493-44E2-8490-904089E00A44}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{A745445E-6493-44E2-8490-904089E00A44}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B521708D-1DF5-41C0-AC64-DC3A47FC1BC3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B521708D-1DF5-41C0-AC64-DC3A47FC1BC3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B521708D-1DF5-41C0-AC64-DC3A47FC1BC3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B521708D-1DF5-41C0-AC64-DC3A47FC1BC3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{64EBE037-CFD5-41B0-B832-F9DF2631D29B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{64EBE037-CFD5-41B0-B832-F9DF2631D29B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{64EBE037-CFD5-41B0-B832-F9DF2631D29B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{64EBE037-CFD5-41B0-B832-F9DF2631D29B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{271C84BD-438B-4D20-940A-E9F7C6C493D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{271C84BD-438B-4D20-940A-E9F7C6C493D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{271C84BD-438B-4D20-940A-E9F7C6C493D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{271C84BD-438B-4D20-940A-E9F7C6C493D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

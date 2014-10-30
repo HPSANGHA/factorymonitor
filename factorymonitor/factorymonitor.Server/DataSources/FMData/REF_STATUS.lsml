@@ -17,8 +17,10 @@
     <EntityType.Properties>
       <KeyProperty
         Name="StatusID"
+        IsReadOnly="True"
         PropertyType=":Int16">
         <KeyProperty.Attributes>
+          <Hidden />
           <Required />
           <NotSearchable />
         </KeyProperty.Attributes>
@@ -217,6 +219,7 @@
         <SsdlProperty
           Name="StatusID"
           Nullable="False"
+          StoreGeneratedPattern="Identity"
           Type="smallint"
           Property="REF_STATUS/Properties[StatusID]" />
         <SsdlProperty

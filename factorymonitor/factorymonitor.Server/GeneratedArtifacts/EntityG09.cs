@@ -89,10 +89,6 @@ namespace LightSwitchApplication
             {
                 return global::LightSwitchApplication.REF_STATUS.DetailsClass.GetValue(this, global::LightSwitchApplication.REF_STATUS.DetailsClass.PropertySetProperties.StatusID);
             }
-            set
-            {
-                global::LightSwitchApplication.REF_STATUS.DetailsClass.SetValue(this, global::LightSwitchApplication.REF_STATUS.DetailsClass.PropertySetProperties.StatusID, value);
-            }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -421,7 +417,7 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
-                new short StatusID { get; set; }
+                new short StatusID { get; }
                 new string Name { get; set; }
                 new string Description { get; set; }
                 new global::System.Nullable<global::System.DateTime> CreatedDate { get; set; }
@@ -446,7 +442,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.REF_STATUS.DetailsClass.PropertySetProperties._StatusID_ComputeIsReadOnly,
                         global::LightSwitchApplication.REF_STATUS.DetailsClass.PropertySetProperties._StatusID_Validate,
                         global::LightSwitchApplication.REF_STATUS.DetailsClass.PropertySetProperties._StatusID_GetImplementationValue,
-                        global::LightSwitchApplication.REF_STATUS.DetailsClass.PropertySetProperties._StatusID_SetImplementationValue,
+                        null,
                         global::LightSwitchApplication.REF_STATUS.DetailsClass.PropertySetProperties._StatusID_OnValueChanged);
                 private static void _StatusID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.REF_STATUS.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.REF_STATUS, global::LightSwitchApplication.REF_STATUS.DetailsClass, short>.Data> c, global::LightSwitchApplication.REF_STATUS.DetailsClass d, object sf)
                 {
@@ -465,10 +461,6 @@ namespace LightSwitchApplication
                 private static short _StatusID_GetImplementationValue(global::LightSwitchApplication.REF_STATUS.DetailsClass d)
                 {
                     return d.ImplementationEntity.StatusID;
-                }
-                private static void _StatusID_SetImplementationValue(global::LightSwitchApplication.REF_STATUS.DetailsClass d, short v)
-                {
-                    d.ImplementationEntity.StatusID = v;
                 }
                 private static void _StatusID_OnValueChanged(global::LightSwitchApplication.REF_STATUS e)
                 {

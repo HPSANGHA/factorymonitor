@@ -30,6 +30,28 @@
         $Screen.call(this, dataWorkspace, "AddEditRole", parameters);
     }
 
+    function BrowseRoles(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the BrowseRoles screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="REF_ROLEs" type="msls.VisualCollection" elementType="msls.application.REF_ROLE">
+        /// Gets the rEF_ROLEs for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.BrowseRoles.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "BrowseRoles", parameters);
+    }
+
     function ViewRole(parameters, dataWorkspace) {
         /// <summary>
         /// Represents the ViewRole screen.
@@ -55,9 +77,9 @@
         $Screen.call(this, dataWorkspace, "ViewRole", parameters);
     }
 
-    function BrowseRoles(parameters, dataWorkspace) {
+    function AddEditStatus(parameters, dataWorkspace) {
         /// <summary>
-        /// Represents the BrowseRoles screen.
+        /// Represents the AddEditStatus screen.
         /// </summary>
         /// <param name="parameters" type="Array">
         /// An array of screen parameter values.
@@ -65,22 +87,148 @@
         /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
         /// An existing data workspace for this screen to use. By default, a new data workspace is created.
         /// </param>
-        /// <field name="REF_ROLEs" type="msls.VisualCollection" elementType="msls.application.REF_ROLE">
-        /// Gets the rEF_ROLEs for this screen.
+        /// <field name="REF_STATUS" type="msls.application.REF_STATUS">
+        /// Gets or sets the rEF_STATUS for this screen.
         /// </field>
-        /// <field name="details" type="msls.application.BrowseRoles.Details">
+        /// <field name="details" type="msls.application.AddEditStatus.Details">
         /// Gets the details for this screen.
         /// </field>
         if (!dataWorkspace) {
             dataWorkspace = new lightSwitchApplication.DataWorkspace();
         }
-        $Screen.call(this, dataWorkspace, "BrowseRoles", parameters);
+        $Screen.call(this, dataWorkspace, "AddEditStatus", parameters);
+    }
+
+    function BrowseStatusSet(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the BrowseStatusSet screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="REF_STATUS" type="msls.VisualCollection" elementType="msls.application.REF_STATUS">
+        /// Gets the rEF_STATUS for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.BrowseStatusSet.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "BrowseStatusSet", parameters);
+    }
+
+    function ViewStatus(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the ViewStatus screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="REF_STATUS" type="msls.application.REF_STATUS">
+        /// Gets or sets the rEF_STATUS for this screen.
+        /// </field>
+        /// <field name="RESOURCEs" type="msls.VisualCollection" elementType="msls.application.RESOURCE">
+        /// Gets the rESOURCEs for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.ViewStatus.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "ViewStatus", parameters);
+    }
+
+    function AddEditResourceDetail(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the AddEditResourceDetail screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="RESOURCE" type="msls.application.RESOURCE">
+        /// Gets or sets the rESOURCE for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.AddEditResourceDetail.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "AddEditResourceDetail", parameters);
+    }
+
+    function ViewResourceDetail(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the ViewResourceDetail screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="RESOURCE" type="msls.application.RESOURCE">
+        /// Gets or sets the rESOURCE for this screen.
+        /// </field>
+        /// <field name="TP_RESOURCE_ALLOCATIONs" type="msls.VisualCollection" elementType="msls.application.TP_RESOURCE_ALLOCATION">
+        /// Gets the tP_RESOURCE_ALLOCATIONs for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.ViewResourceDetail.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "ViewResourceDetail", parameters);
+    }
+
+    function BrowseResourceDetails(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the BrowseResourceDetails screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="RESOURCEs" type="msls.VisualCollection" elementType="msls.application.RESOURCE">
+        /// Gets the rESOURCEs for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.BrowseResourceDetails.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "BrowseResourceDetails", parameters);
     }
 
     msls._addToNamespace("msls.application", {
 
         AddEditRole: $defineScreen(AddEditRole, [
             { name: "REF_ROLE", kind: "local", type: lightSwitchApplication.REF_ROLE }
+        ], [
+        ]),
+
+        BrowseRoles: $defineScreen(BrowseRoles, [
+            {
+                name: "REF_ROLEs", kind: "collection", elementType: lightSwitchApplication.REF_ROLE,
+                createQuery: function () {
+                    return this.dataWorkspace.FMData.REF_ROLEs;
+                }
+            }
         ], [
         ]),
 
@@ -101,11 +249,65 @@
         ], [
         ]),
 
-        BrowseRoles: $defineScreen(BrowseRoles, [
+        AddEditStatus: $defineScreen(AddEditStatus, [
+            { name: "REF_STATUS", kind: "local", type: lightSwitchApplication.REF_STATUS }
+        ], [
+        ]),
+
+        BrowseStatusSet: $defineScreen(BrowseStatusSet, [
             {
-                name: "REF_ROLEs", kind: "collection", elementType: lightSwitchApplication.REF_ROLE,
+                name: "REF_STATUS", kind: "collection", elementType: lightSwitchApplication.REF_STATUS,
                 createQuery: function () {
-                    return this.dataWorkspace.FMData.REF_ROLEs;
+                    return this.dataWorkspace.FMData.REF_STATUS;
+                }
+            }
+        ], [
+        ]),
+
+        ViewStatus: $defineScreen(ViewStatus, [
+            { name: "REF_STATUS", kind: "local", type: lightSwitchApplication.REF_STATUS },
+            {
+                name: "RESOURCEs", kind: "collection", elementType: lightSwitchApplication.RESOURCE,
+                getNavigationProperty: function () {
+                    if (this.owner.REF_STATUS) {
+                        return this.owner.REF_STATUS.details.properties.RESOURCEs;
+                    }
+                    return null;
+                },
+                appendQuery: function () {
+                    return this;
+                }
+            }
+        ], [
+        ]),
+
+        AddEditResourceDetail: $defineScreen(AddEditResourceDetail, [
+            { name: "RESOURCE", kind: "local", type: lightSwitchApplication.RESOURCE }
+        ], [
+        ]),
+
+        ViewResourceDetail: $defineScreen(ViewResourceDetail, [
+            { name: "RESOURCE", kind: "local", type: lightSwitchApplication.RESOURCE },
+            {
+                name: "TP_RESOURCE_ALLOCATIONs", kind: "collection", elementType: lightSwitchApplication.TP_RESOURCE_ALLOCATION,
+                getNavigationProperty: function () {
+                    if (this.owner.RESOURCE) {
+                        return this.owner.RESOURCE.details.properties.TP_RESOURCE_ALLOCATIONs;
+                    }
+                    return null;
+                },
+                appendQuery: function () {
+                    return this;
+                }
+            }
+        ], [
+        ]),
+
+        BrowseResourceDetails: $defineScreen(BrowseResourceDetails, [
+            {
+                name: "RESOURCEs", kind: "collection", elementType: lightSwitchApplication.RESOURCE,
+                createQuery: function () {
+                    return this.dataWorkspace.FMData.RESOURCEs;
                 }
             }
         ], [
@@ -123,6 +325,18 @@
             return lightSwitchApplication.showScreen("AddEditRole", parameters, options);
         }),
 
+        showBrowseRoles: $defineShowScreen(function showBrowseRoles(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the BrowseRoles screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("BrowseRoles", parameters, options);
+        }),
+
         showViewRole: $defineShowScreen(function showViewRole(REF_ROLE, options) {
             /// <summary>
             /// Asynchronously navigates forward to the ViewRole screen.
@@ -135,16 +349,76 @@
             return lightSwitchApplication.showScreen("ViewRole", parameters, options);
         }),
 
-        showBrowseRoles: $defineShowScreen(function showBrowseRoles(options) {
+        showAddEditStatus: $defineShowScreen(function showAddEditStatus(REF_STATUS, options) {
             /// <summary>
-            /// Asynchronously navigates forward to the BrowseRoles screen.
+            /// Asynchronously navigates forward to the AddEditStatus screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("AddEditStatus", parameters, options);
+        }),
+
+        showBrowseStatusSet: $defineShowScreen(function showBrowseStatusSet(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the BrowseStatusSet screen.
             /// </summary>
             /// <param name="options" optional="true">
             /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
             /// </param>
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 0);
-            return lightSwitchApplication.showScreen("BrowseRoles", parameters, options);
+            return lightSwitchApplication.showScreen("BrowseStatusSet", parameters, options);
+        }),
+
+        showViewStatus: $defineShowScreen(function showViewStatus(REF_STATUS, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the ViewStatus screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("ViewStatus", parameters, options);
+        }),
+
+        showAddEditResourceDetail: $defineShowScreen(function showAddEditResourceDetail(RESOURCE, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the AddEditResourceDetail screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("AddEditResourceDetail", parameters, options);
+        }),
+
+        showViewResourceDetail: $defineShowScreen(function showViewResourceDetail(RESOURCE, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the ViewResourceDetail screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("ViewResourceDetail", parameters, options);
+        }),
+
+        showBrowseResourceDetails: $defineShowScreen(function showBrowseResourceDetails(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the BrowseResourceDetails screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("BrowseResourceDetails", parameters, options);
         })
 
     });

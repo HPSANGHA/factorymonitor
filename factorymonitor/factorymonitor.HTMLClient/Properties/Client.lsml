@@ -28,9 +28,21 @@
       Name="FMData"
       EntityContainer="FMData" />
   </EntityContainerGroup>
+  <GlobalAttributeGroup>
+    <GlobalAttributeGroup.Attributes>
+      <Proxy
+        Target="ServiceInterface:LightSwitchServiceApplicationGroup" />
+    </GlobalAttributeGroup.Attributes>
+  </GlobalAttributeGroup>
   <Application.NavigationItems>
     <ApplicationNavigationMethodLink
       Name="link"
       Method="!module/Methods[showBrowseRoles]" />
+    <ApplicationNavigationMethodLink
+      Name="link1"
+      Method="!module/Methods[showBrowseStatusSet]" />
+    <ApplicationNavigationMethodLink
+      Name="link2"
+      Method="!module/Methods[showBrowseResourceDetails]" />
   </Application.NavigationItems>
 </Application>

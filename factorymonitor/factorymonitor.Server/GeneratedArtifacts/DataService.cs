@@ -528,42 +528,6 @@ namespace LightSwitchApplication
         partial void RESOURCEs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.RESOURCE, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TPs_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TPs_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TPs_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TPs_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TPs_Inserting(global::LightSwitchApplication.TP entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TPs_Inserted(global::LightSwitchApplication.TP entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TPs_Updating(global::LightSwitchApplication.TP entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TPs_Updated(global::LightSwitchApplication.TP entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TPs_Deleting(global::LightSwitchApplication.TP entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TPs_Deleted(global::LightSwitchApplication.TP entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TPs_Validate(global::LightSwitchApplication.TP entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TPs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP, bool>> filter);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void TP_APPLICATIONs_CanInsert(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -778,6 +742,42 @@ namespace LightSwitchApplication
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void TP_VENDORs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_VENDOR, bool>> filter);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_Inserting(global::LightSwitchApplication.TP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_Inserted(global::LightSwitchApplication.TP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_Updating(global::LightSwitchApplication.TP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_Updated(global::LightSwitchApplication.TP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_Deleting(global::LightSwitchApplication.TP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_Deleted(global::LightSwitchApplication.TP entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_Validate(global::LightSwitchApplication.TP entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void TPs_Filter(ref global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP, bool>> filter);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void SaveChanges_CanExecute(ref bool result);
@@ -1808,82 +1808,6 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP>
-                __TPsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP>(
-                    "TPs",
-                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_CanInsert,
-                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_CanUpdate,
-                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_CanDelete,
-                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_CanRead,
-                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Inserting,
-                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Inserted,
-                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Updating,
-                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Updated,
-                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Deleting,
-                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Deleted,
-                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Validate,
-                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Filter);
-            private static bool __TPs_CanInsert(global::LightSwitchApplication.FMDataService d)
-            {
-                bool result = true;
-                d.TPs_CanInsert(ref result);
-                return result;
-            }
-            private static bool __TPs_CanUpdate(global::LightSwitchApplication.FMDataService d)
-            {
-                bool result = true;
-                d.TPs_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __TPs_CanDelete(global::LightSwitchApplication.FMDataService d)
-            {
-                bool result = true;
-                d.TPs_CanDelete(ref result);
-                return result;
-            }
-            private static bool __TPs_CanRead(global::LightSwitchApplication.FMDataService d)
-            {
-                bool result = true;
-                d.TPs_CanRead(ref result);
-                return result;
-            }
-            private static void __TPs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
-            {
-                d.TPs_Inserting(e);
-            }
-            private static void __TPs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
-            {
-                d.TPs_Inserted(e);
-            }
-            private static void __TPs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
-            {
-                d.TPs_Updating(e);
-            }
-            private static void __TPs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
-            {
-                d.TPs_Updated(e);
-            }
-            private static void __TPs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
-            {
-                d.TPs_Deleting(e);
-            }
-            private static void __TPs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
-            {
-                d.TPs_Deleted(e);
-            }
-            private static void __TPs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.TPs_Validate(e, r);
-            }
-            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP, bool>> __TPs_Filter(global::LightSwitchApplication.FMDataService d)
-            {
-                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP, bool>> filter = null;
-                d.TPs_Filter(ref filter);
-                return filter;
-            }
-            
-            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP_APPLICATION>
                 __TP_APPLICATIONsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP_APPLICATION>(
                     "TP_APPLICATIONs",
@@ -2335,6 +2259,82 @@ namespace LightSwitchApplication
             {
                 global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP_VENDOR, bool>> filter = null;
                 d.TP_VENDORs_Filter(ref filter);
+                return filter;
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP>
+                __TPsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.FMDataService, global::LightSwitchApplication.TP>(
+                    "TPs",
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_CanInsert,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_CanUpdate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_CanDelete,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_CanRead,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Inserting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Inserted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Updating,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Updated,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Deleting,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Deleted,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Validate,
+                    global::LightSwitchApplication.FMDataService.DetailsClass.__TPs_Filter);
+            private static bool __TPs_CanInsert(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TPs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __TPs_CanUpdate(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TPs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __TPs_CanDelete(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TPs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __TPs_CanRead(global::LightSwitchApplication.FMDataService d)
+            {
+                bool result = true;
+                d.TPs_CanRead(ref result);
+                return result;
+            }
+            private static void __TPs_Inserting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
+            {
+                d.TPs_Inserting(e);
+            }
+            private static void __TPs_Inserted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
+            {
+                d.TPs_Inserted(e);
+            }
+            private static void __TPs_Updating(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
+            {
+                d.TPs_Updating(e);
+            }
+            private static void __TPs_Updated(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
+            {
+                d.TPs_Updated(e);
+            }
+            private static void __TPs_Deleting(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
+            {
+                d.TPs_Deleting(e);
+            }
+            private static void __TPs_Deleted(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e)
+            {
+                d.TPs_Deleted(e);
+            }
+            private static void __TPs_Validate(global::LightSwitchApplication.FMDataService d, global::LightSwitchApplication.TP e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.TPs_Validate(e, r);
+            }
+            private static global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP, bool>> __TPs_Filter(global::LightSwitchApplication.FMDataService d)
+            {
+                global::System.Linq.Expressions.Expression<global::System.Func<global::LightSwitchApplication.TP, bool>> filter = null;
+                d.TPs_Filter(ref filter);
                 return filter;
             }
             

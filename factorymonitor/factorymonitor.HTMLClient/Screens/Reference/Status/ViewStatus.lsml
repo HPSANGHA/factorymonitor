@@ -5,12 +5,12 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="ViewRole">
+    Name="ViewStatus">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="FMData" />
       <DisplayName
-        Value="Role" />
+        Value="Status" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -32,7 +32,7 @@
             <ContentItem
               Name="columns"
               Kind="Details"
-              DataType="REF_ROLE"
+              DataType="REF_STATUS"
               View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
               <ContentItem.Attributes>
                 <DisplayName
@@ -42,7 +42,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ViewRole/Properties[REF_ROLE]" />
+                      Member="ViewStatus/Properties[REF_STATUS]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -57,7 +57,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="REF_ROLE/Properties[Name]" />
+                          Member="REF_STATUS/Properties[Name]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -70,7 +70,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="REF_ROLE/Properties[Description]" />
+                          Member="REF_STATUS/Properties[Description]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -83,11 +83,37 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="REF_ROLE/Properties[CreatedDate]" />
+                          Member="REF_STATUS/Properties[CreatedDate]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                 </ContentItem>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MinWidth]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="200"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MaxWidth]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="400"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="right"
+                Kind="Group">
                 <ContentItem
                   Name="CreatedBy"
                   Kind="Value"
@@ -96,20 +122,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="REF_ROLE/Properties[CreatedBy]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
-                  Name="ModifiedBy"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="REF_ROLE/Properties[ModifiedBy]" />
+                          Member="REF_STATUS/Properties[CreatedBy]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -122,7 +135,20 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="REF_ROLE/Properties[ModifiedDate]" />
+                          Member="REF_STATUS/Properties[ModifiedDate]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="ModifiedBy"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="REF_STATUS/Properties[ModifiedBy]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -153,7 +179,7 @@
             </ContentItem>
             <ContentItem.CommandItems>
               <ContentItem
-                Name="EditRole"
+                Name="EditStatus"
                 Kind="Command">
                 <ContentItem.Attributes>
                   <DisplayName
@@ -165,12 +191,12 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showAddEditRole]">
+                          Target="!module/Methods[showAddEditStatus]">
                           <ArgumentExpression
-                            Parameter="REF_ROLE">
+                            Parameter="REF_STATUS">
                             <ChainExpression>
                               <MemberExpression
-                                Member="ViewRole/Properties[REF_ROLE]" />
+                                Member="ViewStatus/Properties[REF_STATUS]" />
                             </ChainExpression>
                           </ArgumentExpression>
                         </CallExpression>
@@ -208,7 +234,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ViewRole/Properties[RESOURCEs]" />
+                      Member="ViewStatus/Properties[RESOURCEs]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -320,7 +346,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="ViewRole/Properties[RESOURCEs]" />
+                        Member="ViewStatus/Properties[RESOURCEs]" />
                       <CallExpression
                         Target="viewSelected" />
                     </ChainExpression>
@@ -374,8 +400,8 @@
     </Screen.Methods>
     <Screen.Properties>
       <ScreenProperty
-        Name="REF_ROLE"
-        PropertyType="REF_ROLE">
+        Name="REF_STATUS"
+        PropertyType="REF_STATUS">
         <ScreenProperty.Attributes>
           <IsParameter />
         </ScreenProperty.Attributes>
@@ -395,7 +421,7 @@
               <QuerySourceExpressionTree>
                 <ChainExpression>
                   <MemberExpression
-                    Member="ViewRole/Properties[REF_ROLE]" />
+                    Member="ViewStatus/Properties[REF_STATUS]" />
                   <MemberExpression
                     Member="RESOURCEs" />
                 </ChainExpression>
@@ -406,7 +432,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="ViewRole/Properties[RESOURCEs]/Query" />
+              Target="ViewStatus/Properties[RESOURCEs]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -414,14 +440,14 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showViewRole">
+      Name="showViewStatus">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="ViewRole" />
+          TargetScreen="ViewStatus" />
       </ApplicationMethod.Attributes>
       <ApplicationMethodParameter
-        Name="REF_ROLE"
-        ParameterType="REF_ROLE" />
+        Name="REF_STATUS"
+        ParameterType="REF_STATUS" />
     </ApplicationMethod>
   </Application.Methods>
 </Application>
