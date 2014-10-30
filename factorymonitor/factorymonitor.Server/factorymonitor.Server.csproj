@@ -31,8 +31,8 @@
     <WCFRIASERVICESSDKPath Condition=" '$(WCFRIASERVICESSDKPath)' == '' ">$(Registry:HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\WCFRIAServices\v1.0@InstallPath)</WCFRIASERVICESSDKPath>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
-    <IISExpressAnonymousAuthentication />
-    <IISExpressWindowsAuthentication />
+    <IISExpressAnonymousAuthentication>disabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>enabled</IISExpressWindowsAuthentication>
     <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -191,6 +191,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSources\FMData\_FMDataService.lsml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -200,6 +201,27 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Web.config" />
+    <LightSwitchModel Include="DataSources\FMData\APPLICATIONs.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\REF_APPLICATION_TYPEs.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\REF_COMPLEXITies.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\REF_DOCUMENT_TYPEs.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\REF_GAPs.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\REF_PHASEs.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\REF_ROLEs.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\REF_STAKEHOLDERs.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\REF_STATUS.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\REF_TECHNOLOGies.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\REF_TECHNOLOGY_STACKs.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\REF_VENDORs.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\RESOURCEs.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\TPs.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\TP_APPLICATIONs.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\TP_DOCUMENT_LINKs.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\TP_PHASEs.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\TP_RESOURCE_ALLOCATIONs.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\TP_STAKEHOLDERs.lsml" />
+    <LightSwitchModel Include="DataSources\FMData\TP_VENDORs.lsml" />
+    <LightSwitchModel Include="Properties\DataSources\FMData.lsml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -216,9 +238,7 @@
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataSources\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

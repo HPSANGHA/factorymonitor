@@ -1,7 +1,11 @@
 <?xml version="1.0"?>
 <ModelDocumentManifest xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <Documents>
-    <Document FullPath="C:\Users\VEEDI\Documents\factorymonitor\factorymonitor\factorymonitor.HTMLClient\Properties\Client.lsml" Checksum="E34108751FC9E102F3B7D56A68BCF3E4FCD29D7868AB617D4DA8AA6E72E76DF1" />
-    <Document FullPath="C:\Users\VEEDI\Documents\factorymonitor\factorymonitor\factorymonitor.HTMLClient\Properties\Proxies.lsml" Checksum="9A53B41A767D03C0D6FC896C826D0673C0C2F2049C9F966810BA62EE1D7C15BE" />
+    <Document FullPath="C:\Users\VEEDI\Documents\factorymonitor\factorymonitor\factorymonitor.HTMLClient\Properties\Client.lsml" Checksum="1D9EABC934911D9C1C4DB722A5064C8384849C7CA5840D2BAB99E44024FD70DD" />
+    <Document FullPath="C:\Users\VEEDI\Documents\factorymonitor\factorymonitor\factorymonitor.HTMLClient\Properties\Proxies.lsml" Checksum="C03F2E0BF8E855EF96E1561E68736DCDCAF3025AEAC07B9EE20917CB296614D8" />
+    <Document FullPath="C:\Users\VEEDI\Documents\factorymonitor\factorymonitor\factorymonitor.HTMLClient\Screens\Reference\Role\AddEditRole.lsml" Checksum="B1E33889E1873BE3121952F2E07485A311DD1FAA87731697BAA17021CDCFA4C4" />
+    <Document FullPath="C:\Users\VEEDI\Documents\factorymonitor\factorymonitor\factorymonitor.HTMLClient\Screens\Reference\Role\ViewRole.lsml" Checksum="5C050E6F7A46E4C6D11B44EC5A841B1AB7DA43BEF8B825286F4BD2324B40675A" />
+    <Document FullPath="C:\Users\VEEDI\Documents\factorymonitor\factorymonitor\factorymonitor.HTMLClient\Properties\FMData\REF_ROLEs.lsml" Checksum="ED37DFF6A2E70046CBE7E6AF1139CB1EE92A10A551804AC06F92BB9896E90E9A" />
+    <Document FullPath="C:\Users\VEEDI\Documents\factorymonitor\factorymonitor\factorymonitor.HTMLClient\Screens\Reference\Role\BrowseRoles.lsml" Checksum="958451501EBFCA60D45C5BBEA94A4D029CC55FAAD6F4FE005168B12ADE6F3559" />
   </Documents>
 </ModelDocumentManifest>

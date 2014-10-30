@@ -17,32 +17,32 @@ namespace LightSwitchApplication
     /// No Modeled Description Available
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-    public sealed partial class TP_VENDOR : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass>
+    public sealed partial class TP_STAKEHOLDER : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass>
     {
         #region Constructors
     
         /// <summary>
-        /// Initializes a new instance of the TP_VENDOR entity.
+        /// Initializes a new instance of the TP_STAKEHOLDER entity.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public TP_VENDOR()
+        public TP_STAKEHOLDER()
             : this(null)
         {
         }
     
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public TP_VENDOR(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.TP_VENDOR> entitySet)
+        public TP_STAKEHOLDER(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.TP_STAKEHOLDER> entitySet)
             : base(entitySet)
         {
-            global::LightSwitchApplication.TP_VENDOR.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.Initialize(this);
         }
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TP_VENDOR_Created();
+        partial void TP_STAKEHOLDER_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TP_VENDOR_AllowSaveWithErrors(ref bool result);
+        partial void TP_STAKEHOLDER_AllowSaveWithErrors(ref bool result);
     
         #endregion
     
@@ -83,24 +83,24 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int TpVendorID
+        public int TpStakeholderID
         {
             get
             {
-                return global::LightSwitchApplication.TP_VENDOR.DetailsClass.GetValue(this, global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.TpVendorID);
+                return global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.GetValue(this, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.TpStakeholderID);
             }
             set
             {
-                global::LightSwitchApplication.TP_VENDOR.DetailsClass.SetValue(this, global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.TpVendorID, value);
+                global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.SetValue(this, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.TpStakeholderID, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TpVendorID_IsReadOnly(ref bool result);
+        partial void TpStakeholderID_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TpVendorID_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void TpStakeholderID_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void TpVendorID_Changed();
+        partial void TpStakeholderID_Changed();
 
         /// <summary>
         /// No Modeled Description Available
@@ -111,11 +111,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.TP_VENDOR.DetailsClass.GetValue(this, global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.CreatedBy);
+                return global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.GetValue(this, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.CreatedBy);
             }
             set
             {
-                global::LightSwitchApplication.TP_VENDOR.DetailsClass.SetValue(this, global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.CreatedBy, value);
+                global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.SetValue(this, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.CreatedBy, value);
             }
         }
         
@@ -135,11 +135,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.TP_VENDOR.DetailsClass.GetValue(this, global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.CreatedDate);
+                return global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.GetValue(this, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.CreatedDate);
             }
             set
             {
-                global::LightSwitchApplication.TP_VENDOR.DetailsClass.SetValue(this, global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.CreatedDate, value);
+                global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.SetValue(this, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.CreatedDate, value);
             }
         }
         
@@ -159,11 +159,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.TP_VENDOR.DetailsClass.GetValue(this, global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.ModifiedBy);
+                return global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.GetValue(this, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.ModifiedBy);
             }
             set
             {
-                global::LightSwitchApplication.TP_VENDOR.DetailsClass.SetValue(this, global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.ModifiedBy, value);
+                global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.SetValue(this, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.ModifiedBy, value);
             }
         }
         
@@ -183,11 +183,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.TP_VENDOR.DetailsClass.GetValue(this, global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.ModifiedDate);
+                return global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.GetValue(this, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.ModifiedDate);
             }
             set
             {
-                global::LightSwitchApplication.TP_VENDOR.DetailsClass.SetValue(this, global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.ModifiedDate, value);
+                global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.SetValue(this, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.ModifiedDate, value);
             }
         }
         
@@ -203,24 +203,24 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::LightSwitchApplication.REF_VENDOR REF_VENDOR
+        public global::LightSwitchApplication.REF_STAKEHOLDER REF_STAKEHOLDER
         {
             get
             {
-                return global::LightSwitchApplication.TP_VENDOR.DetailsClass.GetValue(this, global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.REF_VENDOR);
+                return global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.GetValue(this, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.REF_STAKEHOLDER);
             }
             set
             {
-                global::LightSwitchApplication.TP_VENDOR.DetailsClass.SetValue(this, global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.REF_VENDOR, value);
+                global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.SetValue(this, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.REF_STAKEHOLDER, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void REF_VENDOR_IsReadOnly(ref bool result);
+        partial void REF_STAKEHOLDER_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void REF_VENDOR_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void REF_STAKEHOLDER_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void REF_VENDOR_Changed();
+        partial void REF_STAKEHOLDER_Changed();
 
         /// <summary>
         /// No Modeled Description Available
@@ -231,11 +231,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.TP_VENDOR.DetailsClass.GetValue(this, global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.TP);
+                return global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.GetValue(this, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.TP);
             }
             set
             {
-                global::LightSwitchApplication.TP_VENDOR.DetailsClass.SetValue(this, global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.TP, value);
+                global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.SetValue(this, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.TP, value);
             }
         }
         
@@ -255,37 +255,37 @@ namespace LightSwitchApplication
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
-                global::LightSwitchApplication.TP_VENDOR,
-                global::LightSwitchApplication.TP_VENDOR.DetailsClass,
-                global::LightSwitchApplication.TP_VENDOR.DetailsClass.IImplementation,
-                global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySet,
-                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass>,
-                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass>>
+                global::LightSwitchApplication.TP_STAKEHOLDER,
+                global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass,
+                global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.IImplementation,
+                global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass>>
         {
     
             static DetailsClass()
             {
-                var initializeEntry = global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.TpVendorID;
+                var initializeEntry = global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.TpStakeholderID;
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass>.Entry
-                __TP_VENDOREntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass>.Entry(
-                    global::LightSwitchApplication.TP_VENDOR.DetailsClass.__TP_VENDOR_CreateNew,
-                    global::LightSwitchApplication.TP_VENDOR.DetailsClass.__TP_VENDOR_Created,
-                    global::LightSwitchApplication.TP_VENDOR.DetailsClass.__TP_VENDOR_AllowSaveWithErrors);
-            private static global::LightSwitchApplication.TP_VENDOR __TP_VENDOR_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.TP_VENDOR> es)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass>.Entry
+                __TP_STAKEHOLDEREntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass>.Entry(
+                    global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.__TP_STAKEHOLDER_CreateNew,
+                    global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.__TP_STAKEHOLDER_Created,
+                    global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.__TP_STAKEHOLDER_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.TP_STAKEHOLDER __TP_STAKEHOLDER_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.TP_STAKEHOLDER> es)
             {
-                return new global::LightSwitchApplication.TP_VENDOR(es);
+                return new global::LightSwitchApplication.TP_STAKEHOLDER(es);
             }
-            private static void __TP_VENDOR_Created(global::LightSwitchApplication.TP_VENDOR e)
+            private static void __TP_STAKEHOLDER_Created(global::LightSwitchApplication.TP_STAKEHOLDER e)
             {
-                e.TP_VENDOR_Created();
+                e.TP_STAKEHOLDER_Created();
             }
-            private static bool __TP_VENDOR_AllowSaveWithErrors(global::LightSwitchApplication.TP_VENDOR e)
+            private static bool __TP_STAKEHOLDER_AllowSaveWithErrors(global::LightSwitchApplication.TP_STAKEHOLDER e)
             {
                 bool result = false;
-                e.TP_VENDOR_AllowSaveWithErrors(ref result);
+                e.TP_STAKEHOLDER_AllowSaveWithErrors(ref result);
                 return result;
             }
     
@@ -293,7 +293,7 @@ namespace LightSwitchApplication
             {
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass> Commands
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass> Commands
             {
                 get
                 {
@@ -301,7 +301,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass> Methods
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass> Methods
             {
                 get
                 {
@@ -309,7 +309,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -321,66 +321,66 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass>
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass>
             {
     
                 public PropertySet() : base()
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, int> TpVendorID
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, int> TpStakeholderID
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.TpVendorID) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.TpStakeholderID) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, int>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, string> CreatedBy
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, string> CreatedBy
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.CreatedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.CreatedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::System.Nullable<global::System.DateTime>> CreatedDate
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::System.Nullable<global::System.DateTime>> CreatedDate
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.CreatedDate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::System.Nullable<global::System.DateTime>>;
+                        return base.GetItem(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.CreatedDate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::System.Nullable<global::System.DateTime>>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, string> ModifiedBy
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, string> ModifiedBy
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.ModifiedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.ModifiedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::System.Nullable<global::System.DateTime>> ModifiedDate
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::System.Nullable<global::System.DateTime>> ModifiedDate
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.ModifiedDate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::System.Nullable<global::System.DateTime>>;
+                        return base.GetItem(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.ModifiedDate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::System.Nullable<global::System.DateTime>>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::LightSwitchApplication.REF_VENDOR> REF_VENDOR
+                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::LightSwitchApplication.REF_STAKEHOLDER> REF_STAKEHOLDER
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.REF_VENDOR) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::LightSwitchApplication.REF_VENDOR>;
+                        return base.GetItem(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.REF_STAKEHOLDER) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::LightSwitchApplication.REF_STAKEHOLDER>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::LightSwitchApplication.TP> TP
+                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::LightSwitchApplication.TP> TP
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.TP) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::LightSwitchApplication.TP>;
+                        return base.GetItem(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.TP) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::LightSwitchApplication.TP>;
                     }
                 }
                 
@@ -390,12 +390,12 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
-                new int TpVendorID { get; set; }
+                new int TpStakeholderID { get; set; }
                 new string CreatedBy { get; set; }
                 new global::System.Nullable<global::System.DateTime> CreatedDate { get; set; }
                 new string ModifiedBy { get; set; }
                 new global::System.Nullable<global::System.DateTime> ModifiedDate { get; set; }
-                new global::Microsoft.LightSwitch.Internal.IEntityImplementation REF_VENDOR { get; set; }
+                new global::Microsoft.LightSwitch.Internal.IEntityImplementation REF_STAKEHOLDER { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation TP { get; set; }
             }
             #pragma warning restore 109
@@ -407,280 +407,280 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, int>.Entry
-                    TpVendorID = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, int>.Entry(
-                        "TpVendorID",
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._TpVendorID_Stub,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._TpVendorID_ComputeIsReadOnly,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._TpVendorID_Validate,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._TpVendorID_GetImplementationValue,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._TpVendorID_SetImplementationValue,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._TpVendorID_OnValueChanged);
-                private static void _TpVendorID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, int>.Data> c, global::LightSwitchApplication.TP_VENDOR.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, int>.Entry
+                    TpStakeholderID = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, int>.Entry(
+                        "TpStakeholderID",
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._TpStakeholderID_Stub,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._TpStakeholderID_ComputeIsReadOnly,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._TpStakeholderID_Validate,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._TpStakeholderID_GetImplementationValue,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._TpStakeholderID_SetImplementationValue,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._TpStakeholderID_OnValueChanged);
+                private static void _TpStakeholderID_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, int>.Data> c, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d, object sf)
                 {
-                    c(d, ref d._TpVendorID, sf);
+                    c(d, ref d._TpStakeholderID, sf);
                 }
-                private static bool _TpVendorID_ComputeIsReadOnly(global::LightSwitchApplication.TP_VENDOR e)
+                private static bool _TpStakeholderID_ComputeIsReadOnly(global::LightSwitchApplication.TP_STAKEHOLDER e)
                 {
                     bool result = false;
-                    e.TpVendorID_IsReadOnly(ref result);
+                    e.TpStakeholderID_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _TpVendorID_Validate(global::LightSwitchApplication.TP_VENDOR e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _TpStakeholderID_Validate(global::LightSwitchApplication.TP_STAKEHOLDER e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.TpVendorID_Validate(r);
+                    e.TpStakeholderID_Validate(r);
                 }
-                private static int _TpVendorID_GetImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass d)
+                private static int _TpStakeholderID_GetImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d)
                 {
-                    return d.ImplementationEntity.TpVendorID;
+                    return d.ImplementationEntity.TpStakeholderID;
                 }
-                private static void _TpVendorID_SetImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass d, int v)
+                private static void _TpStakeholderID_SetImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d, int v)
                 {
-                    d.ImplementationEntity.TpVendorID = v;
+                    d.ImplementationEntity.TpStakeholderID = v;
                 }
-                private static void _TpVendorID_OnValueChanged(global::LightSwitchApplication.TP_VENDOR e)
+                private static void _TpStakeholderID_OnValueChanged(global::LightSwitchApplication.TP_STAKEHOLDER e)
                 {
-                    e.TpVendorID_Changed();
+                    e.TpStakeholderID_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, string>.Entry
-                    CreatedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, string>.Entry
+                    CreatedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, string>.Entry(
                         "CreatedBy",
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._CreatedBy_Stub,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._CreatedBy_ComputeIsReadOnly,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._CreatedBy_Validate,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._CreatedBy_GetImplementationValue,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._CreatedBy_SetImplementationValue,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._CreatedBy_OnValueChanged);
-                private static void _CreatedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, string>.Data> c, global::LightSwitchApplication.TP_VENDOR.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._CreatedBy_Stub,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._CreatedBy_ComputeIsReadOnly,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._CreatedBy_Validate,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._CreatedBy_GetImplementationValue,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._CreatedBy_SetImplementationValue,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._CreatedBy_OnValueChanged);
+                private static void _CreatedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, string>.Data> c, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d, object sf)
                 {
                     c(d, ref d._CreatedBy, sf);
                 }
-                private static bool _CreatedBy_ComputeIsReadOnly(global::LightSwitchApplication.TP_VENDOR e)
+                private static bool _CreatedBy_ComputeIsReadOnly(global::LightSwitchApplication.TP_STAKEHOLDER e)
                 {
                     bool result = false;
                     e.CreatedBy_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _CreatedBy_Validate(global::LightSwitchApplication.TP_VENDOR e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _CreatedBy_Validate(global::LightSwitchApplication.TP_STAKEHOLDER e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.CreatedBy_Validate(r);
                 }
-                private static string _CreatedBy_GetImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass d)
+                private static string _CreatedBy_GetImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d)
                 {
                     return d.ImplementationEntity.CreatedBy;
                 }
-                private static void _CreatedBy_SetImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass d, string v)
+                private static void _CreatedBy_SetImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d, string v)
                 {
                     d.ImplementationEntity.CreatedBy = v;
                 }
-                private static void _CreatedBy_OnValueChanged(global::LightSwitchApplication.TP_VENDOR e)
+                private static void _CreatedBy_OnValueChanged(global::LightSwitchApplication.TP_STAKEHOLDER e)
                 {
                     e.CreatedBy_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
-                    CreatedDate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
+                    CreatedDate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
                         "CreatedDate",
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._CreatedDate_Stub,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._CreatedDate_ComputeIsReadOnly,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._CreatedDate_Validate,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._CreatedDate_GetImplementationValue,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._CreatedDate_SetImplementationValue,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._CreatedDate_OnValueChanged);
-                private static void _CreatedDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.TP_VENDOR.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._CreatedDate_Stub,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._CreatedDate_ComputeIsReadOnly,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._CreatedDate_Validate,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._CreatedDate_GetImplementationValue,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._CreatedDate_SetImplementationValue,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._CreatedDate_OnValueChanged);
+                private static void _CreatedDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d, object sf)
                 {
                     c(d, ref d._CreatedDate, sf);
                 }
-                private static bool _CreatedDate_ComputeIsReadOnly(global::LightSwitchApplication.TP_VENDOR e)
+                private static bool _CreatedDate_ComputeIsReadOnly(global::LightSwitchApplication.TP_STAKEHOLDER e)
                 {
                     bool result = false;
                     e.CreatedDate_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _CreatedDate_Validate(global::LightSwitchApplication.TP_VENDOR e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _CreatedDate_Validate(global::LightSwitchApplication.TP_STAKEHOLDER e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.CreatedDate_Validate(r);
                 }
-                private static global::System.Nullable<global::System.DateTime> _CreatedDate_GetImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass d)
+                private static global::System.Nullable<global::System.DateTime> _CreatedDate_GetImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d)
                 {
                     return d.ImplementationEntity.CreatedDate;
                 }
-                private static void _CreatedDate_SetImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass d, global::System.Nullable<global::System.DateTime> v)
+                private static void _CreatedDate_SetImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d, global::System.Nullable<global::System.DateTime> v)
                 {
-                    d.ImplementationEntity.CreatedDate = global::LightSwitchApplication.TP_VENDOR.DetailsClass.ClearDateTimeKind(v);
+                    d.ImplementationEntity.CreatedDate = global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.ClearDateTimeKind(v);
                 }
-                private static void _CreatedDate_OnValueChanged(global::LightSwitchApplication.TP_VENDOR e)
+                private static void _CreatedDate_OnValueChanged(global::LightSwitchApplication.TP_STAKEHOLDER e)
                 {
                     e.CreatedDate_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, string>.Entry
-                    ModifiedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, string>.Entry
+                    ModifiedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, string>.Entry(
                         "ModifiedBy",
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._ModifiedBy_Stub,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._ModifiedBy_ComputeIsReadOnly,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._ModifiedBy_Validate,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._ModifiedBy_GetImplementationValue,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._ModifiedBy_SetImplementationValue,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._ModifiedBy_OnValueChanged);
-                private static void _ModifiedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, string>.Data> c, global::LightSwitchApplication.TP_VENDOR.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._ModifiedBy_Stub,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._ModifiedBy_ComputeIsReadOnly,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._ModifiedBy_Validate,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._ModifiedBy_GetImplementationValue,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._ModifiedBy_SetImplementationValue,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._ModifiedBy_OnValueChanged);
+                private static void _ModifiedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, string>.Data> c, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d, object sf)
                 {
                     c(d, ref d._ModifiedBy, sf);
                 }
-                private static bool _ModifiedBy_ComputeIsReadOnly(global::LightSwitchApplication.TP_VENDOR e)
+                private static bool _ModifiedBy_ComputeIsReadOnly(global::LightSwitchApplication.TP_STAKEHOLDER e)
                 {
                     bool result = false;
                     e.ModifiedBy_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _ModifiedBy_Validate(global::LightSwitchApplication.TP_VENDOR e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _ModifiedBy_Validate(global::LightSwitchApplication.TP_STAKEHOLDER e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.ModifiedBy_Validate(r);
                 }
-                private static string _ModifiedBy_GetImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass d)
+                private static string _ModifiedBy_GetImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d)
                 {
                     return d.ImplementationEntity.ModifiedBy;
                 }
-                private static void _ModifiedBy_SetImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass d, string v)
+                private static void _ModifiedBy_SetImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d, string v)
                 {
                     d.ImplementationEntity.ModifiedBy = v;
                 }
-                private static void _ModifiedBy_OnValueChanged(global::LightSwitchApplication.TP_VENDOR e)
+                private static void _ModifiedBy_OnValueChanged(global::LightSwitchApplication.TP_STAKEHOLDER e)
                 {
                     e.ModifiedBy_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
-                    ModifiedDate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
+                    ModifiedDate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
                         "ModifiedDate",
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._ModifiedDate_Stub,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._ModifiedDate_ComputeIsReadOnly,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._ModifiedDate_Validate,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._ModifiedDate_GetImplementationValue,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._ModifiedDate_SetImplementationValue,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._ModifiedDate_OnValueChanged);
-                private static void _ModifiedDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.TP_VENDOR.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._ModifiedDate_Stub,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._ModifiedDate_ComputeIsReadOnly,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._ModifiedDate_Validate,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._ModifiedDate_GetImplementationValue,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._ModifiedDate_SetImplementationValue,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._ModifiedDate_OnValueChanged);
+                private static void _ModifiedDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d, object sf)
                 {
                     c(d, ref d._ModifiedDate, sf);
                 }
-                private static bool _ModifiedDate_ComputeIsReadOnly(global::LightSwitchApplication.TP_VENDOR e)
+                private static bool _ModifiedDate_ComputeIsReadOnly(global::LightSwitchApplication.TP_STAKEHOLDER e)
                 {
                     bool result = false;
                     e.ModifiedDate_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _ModifiedDate_Validate(global::LightSwitchApplication.TP_VENDOR e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _ModifiedDate_Validate(global::LightSwitchApplication.TP_STAKEHOLDER e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.ModifiedDate_Validate(r);
                 }
-                private static global::System.Nullable<global::System.DateTime> _ModifiedDate_GetImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass d)
+                private static global::System.Nullable<global::System.DateTime> _ModifiedDate_GetImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d)
                 {
                     return d.ImplementationEntity.ModifiedDate;
                 }
-                private static void _ModifiedDate_SetImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass d, global::System.Nullable<global::System.DateTime> v)
+                private static void _ModifiedDate_SetImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d, global::System.Nullable<global::System.DateTime> v)
                 {
-                    d.ImplementationEntity.ModifiedDate = global::LightSwitchApplication.TP_VENDOR.DetailsClass.ClearDateTimeKind(v);
+                    d.ImplementationEntity.ModifiedDate = global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.ClearDateTimeKind(v);
                 }
-                private static void _ModifiedDate_OnValueChanged(global::LightSwitchApplication.TP_VENDOR e)
+                private static void _ModifiedDate_OnValueChanged(global::LightSwitchApplication.TP_STAKEHOLDER e)
                 {
                     e.ModifiedDate_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::LightSwitchApplication.REF_VENDOR>.Entry
-                    REF_VENDOR = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::LightSwitchApplication.REF_VENDOR>.Entry(
-                        "REF_VENDOR",
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._REF_VENDOR_Stub,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._REF_VENDOR_ComputeIsReadOnly,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._REF_VENDOR_Validate,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._REF_VENDOR_GetCoreImplementationValue,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._REF_VENDOR_GetImplementationValue,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._REF_VENDOR_SetImplementationValue,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._REF_VENDOR_Refresh,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._REF_VENDOR_OnValueChanged);
-                private static void _REF_VENDOR_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::LightSwitchApplication.REF_VENDOR>.Data> c, global::LightSwitchApplication.TP_VENDOR.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::LightSwitchApplication.REF_STAKEHOLDER>.Entry
+                    REF_STAKEHOLDER = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::LightSwitchApplication.REF_STAKEHOLDER>.Entry(
+                        "REF_STAKEHOLDER",
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._REF_STAKEHOLDER_Stub,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._REF_STAKEHOLDER_ComputeIsReadOnly,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._REF_STAKEHOLDER_Validate,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._REF_STAKEHOLDER_GetCoreImplementationValue,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._REF_STAKEHOLDER_GetImplementationValue,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._REF_STAKEHOLDER_SetImplementationValue,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._REF_STAKEHOLDER_Refresh,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._REF_STAKEHOLDER_OnValueChanged);
+                private static void _REF_STAKEHOLDER_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::LightSwitchApplication.REF_STAKEHOLDER>.Data> c, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d, object sf)
                 {
-                    c(d, ref d._REF_VENDOR, sf);
+                    c(d, ref d._REF_STAKEHOLDER, sf);
                 }
-                private static bool _REF_VENDOR_ComputeIsReadOnly(global::LightSwitchApplication.TP_VENDOR e)
+                private static bool _REF_STAKEHOLDER_ComputeIsReadOnly(global::LightSwitchApplication.TP_STAKEHOLDER e)
                 {
                     bool result = false;
-                    e.REF_VENDOR_IsReadOnly(ref result);
+                    e.REF_STAKEHOLDER_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _REF_VENDOR_Validate(global::LightSwitchApplication.TP_VENDOR e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _REF_STAKEHOLDER_Validate(global::LightSwitchApplication.TP_STAKEHOLDER e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.REF_VENDOR_Validate(r);
+                    e.REF_STAKEHOLDER_Validate(r);
                 }
-                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _REF_VENDOR_GetCoreImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass d)
+                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _REF_STAKEHOLDER_GetCoreImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d)
                 {
-                    return d.ImplementationEntity.REF_VENDOR;
+                    return d.ImplementationEntity.REF_STAKEHOLDER;
                 }
-                private static global::LightSwitchApplication.REF_VENDOR _REF_VENDOR_GetImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass d)
+                private static global::LightSwitchApplication.REF_STAKEHOLDER _REF_STAKEHOLDER_GetImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d)
                 {
-                    return d.GetImplementationValue<global::LightSwitchApplication.REF_VENDOR, global::LightSwitchApplication.REF_VENDOR.DetailsClass>(global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.REF_VENDOR, ref d._REF_VENDOR);
+                    return d.GetImplementationValue<global::LightSwitchApplication.REF_STAKEHOLDER, global::LightSwitchApplication.REF_STAKEHOLDER.DetailsClass>(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.REF_STAKEHOLDER, ref d._REF_STAKEHOLDER);
                 }
-                private static void _REF_VENDOR_SetImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass d, global::LightSwitchApplication.REF_VENDOR v)
+                private static void _REF_STAKEHOLDER_SetImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d, global::LightSwitchApplication.REF_STAKEHOLDER v)
                 {
-                    d.SetImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.REF_VENDOR, ref d._REF_VENDOR, (i, ev) => i.REF_VENDOR = ev, v);
+                    d.SetImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.REF_STAKEHOLDER, ref d._REF_STAKEHOLDER, (i, ev) => i.REF_STAKEHOLDER = ev, v);
                 }
-                private static void _REF_VENDOR_Refresh(global::LightSwitchApplication.TP_VENDOR.DetailsClass d)
+                private static void _REF_STAKEHOLDER_Refresh(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d)
                 {
-                    d.RefreshNavigationProperty(global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.REF_VENDOR, ref d._REF_VENDOR);
+                    d.RefreshNavigationProperty(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.REF_STAKEHOLDER, ref d._REF_STAKEHOLDER);
                 }
-                private static void _REF_VENDOR_OnValueChanged(global::LightSwitchApplication.TP_VENDOR e)
+                private static void _REF_STAKEHOLDER_OnValueChanged(global::LightSwitchApplication.TP_STAKEHOLDER e)
                 {
-                    e.REF_VENDOR_Changed();
+                    e.REF_STAKEHOLDER_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::LightSwitchApplication.TP>.Entry
-                    TP = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::LightSwitchApplication.TP>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::LightSwitchApplication.TP>.Entry
+                    TP = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::LightSwitchApplication.TP>.Entry(
                         "TP",
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._TP_Stub,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._TP_ComputeIsReadOnly,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._TP_Validate,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._TP_GetCoreImplementationValue,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._TP_GetImplementationValue,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._TP_SetImplementationValue,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._TP_Refresh,
-                        global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties._TP_OnValueChanged);
-                private static void _TP_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::LightSwitchApplication.TP>.Data> c, global::LightSwitchApplication.TP_VENDOR.DetailsClass d, object sf)
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._TP_Stub,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._TP_ComputeIsReadOnly,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._TP_Validate,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._TP_GetCoreImplementationValue,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._TP_GetImplementationValue,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._TP_SetImplementationValue,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._TP_Refresh,
+                        global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties._TP_OnValueChanged);
+                private static void _TP_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::LightSwitchApplication.TP>.Data> c, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d, object sf)
                 {
                     c(d, ref d._TP, sf);
                 }
-                private static bool _TP_ComputeIsReadOnly(global::LightSwitchApplication.TP_VENDOR e)
+                private static bool _TP_ComputeIsReadOnly(global::LightSwitchApplication.TP_STAKEHOLDER e)
                 {
                     bool result = false;
                     e.TP_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _TP_Validate(global::LightSwitchApplication.TP_VENDOR e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _TP_Validate(global::LightSwitchApplication.TP_STAKEHOLDER e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.TP_Validate(r);
                 }
-                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _TP_GetCoreImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass d)
+                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _TP_GetCoreImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d)
                 {
                     return d.ImplementationEntity.TP;
                 }
-                private static global::LightSwitchApplication.TP _TP_GetImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass d)
+                private static global::LightSwitchApplication.TP _TP_GetImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d)
                 {
-                    return d.GetImplementationValue<global::LightSwitchApplication.TP, global::LightSwitchApplication.TP.DetailsClass>(global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.TP, ref d._TP);
+                    return d.GetImplementationValue<global::LightSwitchApplication.TP, global::LightSwitchApplication.TP.DetailsClass>(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.TP, ref d._TP);
                 }
-                private static void _TP_SetImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass d, global::LightSwitchApplication.TP v)
+                private static void _TP_SetImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d, global::LightSwitchApplication.TP v)
                 {
-                    d.SetImplementationValue(global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.TP, ref d._TP, (i, ev) => i.TP = ev, v);
+                    d.SetImplementationValue(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.TP, ref d._TP, (i, ev) => i.TP = ev, v);
                 }
-                private static void _TP_Refresh(global::LightSwitchApplication.TP_VENDOR.DetailsClass d)
+                private static void _TP_Refresh(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass d)
                 {
-                    d.RefreshNavigationProperty(global::LightSwitchApplication.TP_VENDOR.DetailsClass.PropertySetProperties.TP, ref d._TP);
+                    d.RefreshNavigationProperty(global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass.PropertySetProperties.TP, ref d._TP);
                 }
-                private static void _TP_OnValueChanged(global::LightSwitchApplication.TP_VENDOR e)
+                private static void _TP_OnValueChanged(global::LightSwitchApplication.TP_STAKEHOLDER e)
                 {
                     e.TP_Changed();
                 }
@@ -688,25 +688,25 @@ namespace LightSwitchApplication
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, int>.Data _TpVendorID;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, int>.Data _TpStakeholderID;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, string>.Data _CreatedBy;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, string>.Data _CreatedBy;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _CreatedDate;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _CreatedDate;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, string>.Data _ModifiedBy;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, string>.Data _ModifiedBy;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _ModifiedDate;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _ModifiedDate;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::LightSwitchApplication.REF_VENDOR>.Data _REF_VENDOR;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::LightSwitchApplication.REF_STAKEHOLDER>.Data _REF_STAKEHOLDER;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_VENDOR, global::LightSwitchApplication.TP_VENDOR.DetailsClass, global::LightSwitchApplication.TP>.Data _TP;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.TP_STAKEHOLDER, global::LightSwitchApplication.TP_STAKEHOLDER.DetailsClass, global::LightSwitchApplication.TP>.Data _TP;
             
         }
     

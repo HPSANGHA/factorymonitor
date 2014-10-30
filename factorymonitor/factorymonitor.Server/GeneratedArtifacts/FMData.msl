@@ -1,0 +1,300 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+  <EntityContainerMapping CdmEntityContainer="FMData" StorageEntityContainer="FMDataStore">
+    <EntitySetMapping Name="APPLICATIONs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.APP)">
+        <MappingFragment StoreEntitySet="APPLICATIONs">
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="TechnologyID" ColumnName="TechnologyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REF_APPLICATION_TYPEs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.REF_APPLICATION_TYPE)">
+        <MappingFragment StoreEntitySet="REF_APPLICATION_TYPEs">
+          <ScalarProperty Name="ApplicationTypeID" ColumnName="ApplicationTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedTime" ColumnName="CreatedTime" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REF_COMPLEXITies">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.REF_COMPLEXITY)">
+        <MappingFragment StoreEntitySet="REF_COMPLEXITies">
+          <ScalarProperty Name="ComplexityID" ColumnName="ComplexityID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REF_DOCUMENT_TYPEs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.REF_DOCUMENT_TYPE)">
+        <MappingFragment StoreEntitySet="REF_DOCUMENT_TYPEs">
+          <ScalarProperty Name="DocumentTypeID" ColumnName="DocumentTypeID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REF_GAPs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.REF_GAP)">
+        <MappingFragment StoreEntitySet="REF_GAPs">
+          <ScalarProperty Name="GapID" ColumnName="GapID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REF_PHASEs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.REF_PHASE)">
+        <MappingFragment StoreEntitySet="REF_PHASEs">
+          <ScalarProperty Name="PhaseID" ColumnName="PhaseID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REF_ROLEs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.REF_ROLE)">
+        <MappingFragment StoreEntitySet="REF_ROLEs">
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REF_STAKEHOLDERs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.REF_STAKEHOLDER)">
+        <MappingFragment StoreEntitySet="REF_STAKEHOLDERs">
+          <ScalarProperty Name="StakeholderID" ColumnName="StakeholderID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REF_STATUS">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.REF_STATUS)">
+        <MappingFragment StoreEntitySet="REF_STATUS">
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REF_TECHNOLOGies">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.REF_TECHNOLOGY)">
+        <MappingFragment StoreEntitySet="REF_TECHNOLOGies">
+          <ScalarProperty Name="TechnologyID" ColumnName="TechnologyID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REF_TECHNOLOGY_STACKs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.REF_TECHNOLOGY_STACK)">
+        <MappingFragment StoreEntitySet="REF_TECHNOLOGY_STACKs">
+          <ScalarProperty Name="TechnologyStackID" ColumnName="TechnologyStackID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="REF_VENDORs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.REF_VENDOR)">
+        <MappingFragment StoreEntitySet="REF_VENDORs">
+          <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="IsEsu" ColumnName="IsEsu" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="RESOURCEs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.RESOURCE)">
+        <MappingFragment StoreEntitySet="RESOURCEs">
+          <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="EmailId" ColumnName="EmailId" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+          <ScalarProperty Name="StatusID" ColumnName="StatusID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TPs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.TP)">
+        <MappingFragment StoreEntitySet="TPs">
+          <ScalarProperty Name="TpID" ColumnName="TpID" />
+          <ScalarProperty Name="Number" ColumnName="Number" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="WorkOrderNumber" ColumnName="WorkOrderNumber" />
+          <ScalarProperty Name="WorkOrderStatus" ColumnName="WorkOrderStatus" />
+          <ScalarProperty Name="WorkOrderIssuedOn" ColumnName="WorkOrderIssuedOn" />
+          <ScalarProperty Name="PlannedEffort" ColumnName="PlannedEffort" />
+          <ScalarProperty Name="EstimatedCost" ColumnName="EstimatedCost" />
+          <ScalarProperty Name="IssueDateToHP" ColumnName="IssueDateToHP" />
+          <ScalarProperty Name="EffortDateProvidedByHP" ColumnName="EffortDateProvidedByHP" />
+          <ScalarProperty Name="ApprovedDateByDL" ColumnName="ApprovedDateByDL" />
+          <ScalarProperty Name="PlannedStartDate" ColumnName="PlannedStartDate" />
+          <ScalarProperty Name="PlannedEndDate" ColumnName="PlannedEndDate" />
+          <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
+          <ScalarProperty Name="ActualEndDate" ColumnName="ActualEndDate" />
+          <ScalarProperty Name="ApplicationSize" ColumnName="ApplicationSize" />
+          <ScalarProperty Name="HasInputDocument" ColumnName="HasInputDocument" />
+          <ScalarProperty Name="HasFeasibilityStudy" ColumnName="HasFeasibilityStudy" />
+          <ScalarProperty Name="HasUnderstandingDocument" ColumnName="HasUnderstandingDocument" />
+          <ScalarProperty Name="HasEstimation" ColumnName="HasEstimation" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ApplicationTypeID" ColumnName="ApplicationTypeID" />
+          <ScalarProperty Name="TechnicalComplexityID" ColumnName="TechnicalComplexityID" />
+          <ScalarProperty Name="ForcedComplexityID" ColumnName="ForcedComplexityID" />
+          <ScalarProperty Name="TechnologyGapID" ColumnName="TechnologyGapID" />
+          <ScalarProperty Name="FunctionalGapID" ColumnName="FunctionalGapID" />
+          <ScalarProperty Name="TechnologyStackID" ColumnName="TechnologyStackID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TP_APPLICATIONs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.TP_APPLICATION)">
+        <MappingFragment StoreEntitySet="TP_APPLICATIONs">
+          <ScalarProperty Name="TpApplicationID" ColumnName="TpApplicationID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ApplicationID" ColumnName="ApplicationID" />
+          <ScalarProperty Name="TpID" ColumnName="TpID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TP_DOCUMENT_LINKs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.TP_DOCUMENT_LINK)">
+        <MappingFragment StoreEntitySet="TP_DOCUMENT_LINKs">
+          <ScalarProperty Name="TpDocumentLinkID" ColumnName="TpDocumentLinkID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="Link" ColumnName="Link" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="DocumentTypeID" ColumnName="DocumentTypeID" />
+          <ScalarProperty Name="TpID" ColumnName="TpID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TP_PHASEs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.TP_PHASE)">
+        <MappingFragment StoreEntitySet="TP_PHASEs">
+          <ScalarProperty Name="TpPhaseID" ColumnName="TpPhaseID" />
+          <ScalarProperty Name="PlannedStartDate" ColumnName="PlannedStartDate" />
+          <ScalarProperty Name="PlannedEndDate" ColumnName="PlannedEndDate" />
+          <ScalarProperty Name="ActualStartDate" ColumnName="ActualStartDate" />
+          <ScalarProperty Name="ActualEndDate" ColumnName="ActualEndDate" />
+          <ScalarProperty Name="Duration" ColumnName="Duration" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="TpID" ColumnName="TpID" />
+          <ScalarProperty Name="PhaseID" ColumnName="PhaseID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TP_RESOURCE_ALLOCATIONs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.TP_RESOURCE_ALLOCATION)">
+        <MappingFragment StoreEntitySet="TP_RESOURCE_ALLOCATIONs">
+          <ScalarProperty Name="TpResourceAllocationId" ColumnName="TpResourceAllocationId" />
+          <ScalarProperty Name="Percentage" ColumnName="Percentage" />
+          <ScalarProperty Name="PlannedStartDate" ColumnName="PlannedStartDate" />
+          <ScalarProperty Name="PlannedEndDate" ColumnName="PlannedEndDate" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ResourceID" ColumnName="ResourceID" />
+          <ScalarProperty Name="TpID" ColumnName="TpID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TP_STAKEHOLDERs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.TP_STAKEHOLDER)">
+        <MappingFragment StoreEntitySet="TP_STAKEHOLDERs">
+          <ScalarProperty Name="TpStakeholderID" ColumnName="TpStakeholderID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="StakeholderID" ColumnName="StakeholderID" />
+          <ScalarProperty Name="TpID" ColumnName="TpID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TP_VENDORs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.TP_VENDOR)">
+        <MappingFragment StoreEntitySet="TP_VENDORs">
+          <ScalarProperty Name="TpVendorID" ColumnName="TpVendorID" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+          <ScalarProperty Name="VendorID" ColumnName="VendorID" />
+          <ScalarProperty Name="TpID" ColumnName="TpID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

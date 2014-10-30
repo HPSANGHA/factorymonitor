@@ -1,0 +1,678 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="APP">
+    <Key>
+      <PropertyRef Name="ApplicationID" />
+    </Key>
+    <Property Name="ApplicationID" Type="Edm.Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="TechnologyID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="REF_TECHNOLOGY" Relationship="LightSwitchApplication.REF_TECHNOLOGY_APP" ToRole="REF_TECHNOLOGY" FromRole="APP" />
+    <NavigationProperty Name="TP_APPLICATIONs" Relationship="LightSwitchApplication.APP_TP_APPLICATION" ToRole="TP_APPLICATION" FromRole="APP" />
+  </EntityType>
+  <EntityType Name="REF_APPLICATION_TYPE">
+    <Key>
+      <PropertyRef Name="ApplicationTypeID" />
+    </Key>
+    <Property Name="ApplicationTypeID" Type="Edm.Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Edm.String" MaxLength="20" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Description" Type="Edm.String" MaxLength="500" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedTime" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="TPs" Relationship="LightSwitchApplication.FK_TP_REF_APPLICATION_TYPE" ToRole="TP" FromRole="REF_APPLICATION_TYPE" />
+  </EntityType>
+  <EntityType Name="REF_COMPLEXITY">
+    <Key>
+      <PropertyRef Name="ComplexityID" />
+    </Key>
+    <Property Name="ComplexityID" Type="Edm.Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="TPs" Relationship="LightSwitchApplication.FK_TP_REF_COMPLEXITY" ToRole="TP" FromRole="REF_COMPLEXITY" />
+    <NavigationProperty Name="TPs1" Relationship="LightSwitchApplication.FK_TP_REF_COMPLEXITY1" ToRole="TP" FromRole="REF_COMPLEXITY" />
+  </EntityType>
+  <EntityType Name="REF_DOCUMENT_TYPE">
+    <Key>
+      <PropertyRef Name="DocumentTypeID" />
+    </Key>
+    <Property Name="DocumentTypeID" Type="Edm.Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Edm.String" MaxLength="20" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Description" Type="Edm.String" MaxLength="150" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="TP_DOCUMENT_LINKs" Relationship="LightSwitchApplication.FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE" ToRole="TP_DOCUMENT_LINK" FromRole="REF_DOCUMENT_TYPE" />
+  </EntityType>
+  <EntityType Name="REF_GAP">
+    <Key>
+      <PropertyRef Name="GapID" />
+    </Key>
+    <Property Name="GapID" Type="Edm.Int16" Nullable="false" />
+    <Property Name="Name" Type="Edm.String" MaxLength="100" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Description" Type="Edm.String" MaxLength="150" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="TPs" Relationship="LightSwitchApplication.FK_TP_REF_GAP" ToRole="TP" FromRole="REF_GAP" />
+    <NavigationProperty Name="TPs1" Relationship="LightSwitchApplication.FK_TP_REF_GAP1" ToRole="TP" FromRole="REF_GAP" />
+  </EntityType>
+  <EntityType Name="REF_PHASE">
+    <Key>
+      <PropertyRef Name="PhaseID" />
+    </Key>
+    <Property Name="PhaseID" Type="Edm.Int16" Nullable="false" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Description" Type="Edm.String" MaxLength="150" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="TP_PHASEs" Relationship="LightSwitchApplication.FK_TP_PHASE_TP_PHASE" ToRole="TP_PHASE" FromRole="REF_PHASE" />
+  </EntityType>
+  <EntityType Name="REF_ROLE">
+    <Key>
+      <PropertyRef Name="RoleID" />
+    </Key>
+    <Property Name="RoleID" Type="Edm.Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Description" Type="Edm.String" MaxLength="400" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="RESOURCEs" Relationship="LightSwitchApplication.FK_RESOURCE_REF_ROLE" ToRole="RESOURCE" FromRole="REF_ROLE" />
+  </EntityType>
+  <EntityType Name="REF_STAKEHOLDER">
+    <Key>
+      <PropertyRef Name="StakeholderID" />
+    </Key>
+    <Property Name="StakeholderID" Type="Edm.Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Description" Type="Edm.String" MaxLength="500" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="TP_STAKEHOLDERs" Relationship="LightSwitchApplication.FK_TP_STAKEHOLDER_REF_STAKEHOLDER" ToRole="TP_STAKEHOLDER" FromRole="REF_STAKEHOLDER" />
+  </EntityType>
+  <EntityType Name="REF_STATUS">
+    <Key>
+      <PropertyRef Name="StatusID" />
+    </Key>
+    <Property Name="StatusID" Type="Edm.Int16" Nullable="false" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Description" Type="Edm.String" MaxLength="150" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="RESOURCEs" Relationship="LightSwitchApplication.FK_RESOURCE_REF_STATUS" ToRole="RESOURCE" FromRole="REF_STATUS" />
+  </EntityType>
+  <EntityType Name="REF_TECHNOLOGY">
+    <Key>
+      <PropertyRef Name="TechnologyID" />
+    </Key>
+    <Property Name="TechnologyID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Description" Type="Edm.String" MaxLength="400" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="APPLICATIONs" Relationship="LightSwitchApplication.REF_TECHNOLOGY_APP" ToRole="APP" FromRole="REF_TECHNOLOGY" />
+  </EntityType>
+  <EntityType Name="REF_TECHNOLOGY_STACK">
+    <Key>
+      <PropertyRef Name="TechnologyStackID" />
+    </Key>
+    <Property Name="TechnologyStackID" Type="Edm.Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Description" Type="Edm.String" MaxLength="500" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="TPs" Relationship="LightSwitchApplication.FK_TP_REF_TECHNOLOGY_STACK" ToRole="TP" FromRole="REF_TECHNOLOGY_STACK" />
+  </EntityType>
+  <EntityType Name="REF_VENDOR">
+    <Key>
+      <PropertyRef Name="VendorID" />
+    </Key>
+    <Property Name="VendorID" Type="Edm.Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Description" Type="Edm.String" MaxLength="500" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="IsEsu" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="TP_VENDORs" Relationship="LightSwitchApplication.FK_TP_VENDOR_REF_VENDOR" ToRole="TP_VENDOR" FromRole="REF_VENDOR" />
+  </EntityType>
+  <EntityType Name="RESOURCE">
+    <Key>
+      <PropertyRef Name="ResourceID" />
+    </Key>
+    <Property Name="ResourceID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="EmailId" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="RoleID" Type="Edm.Int16" ConcurrencyMode="Fixed" />
+    <Property Name="StatusID" Type="Edm.Int16" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="REF_ROLE" Relationship="LightSwitchApplication.FK_RESOURCE_REF_ROLE" ToRole="REF_ROLE" FromRole="RESOURCE" />
+    <NavigationProperty Name="REF_STATUS" Relationship="LightSwitchApplication.FK_RESOURCE_REF_STATUS" ToRole="REF_STATUS" FromRole="RESOURCE" />
+    <NavigationProperty Name="TP_RESOURCE_ALLOCATIONs" Relationship="LightSwitchApplication.FK_TP_RESOURCE_ALLOCATION_RESOURCE" ToRole="TP_RESOURCE_ALLOCATION" FromRole="RESOURCE" />
+  </EntityType>
+  <EntityType Name="TP">
+    <Key>
+      <PropertyRef Name="TpID" />
+    </Key>
+    <Property Name="TpID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Number" Type="Edm.Int32" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="Description" Type="Edm.String" MaxLength="500" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="WorkOrderNumber" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
+    <Property Name="WorkOrderStatus" Type="Edm.Int16" ConcurrencyMode="Fixed" />
+    <Property Name="WorkOrderIssuedOn" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="PlannedEffort" Type="Edm.String" MaxLength="10" FixedLength="true" ConcurrencyMode="Fixed" />
+    <Property Name="EstimatedCost" Type="Edm.Decimal" Precision="19" Scale="4" ConcurrencyMode="Fixed" />
+    <Property Name="IssueDateToHP" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="EffortDateProvidedByHP" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="ApprovedDateByDL" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="PlannedStartDate" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="PlannedEndDate" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="ActualStartDate" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="ActualEndDate" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="ApplicationSize" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="HasInputDocument" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="HasFeasibilityStudy" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="HasUnderstandingDocument" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="HasEstimation" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
+    <Property Name="ApplicationTypeID" Type="Edm.Int16" ConcurrencyMode="Fixed" />
+    <Property Name="TechnicalComplexityID" Type="Edm.Int16" ConcurrencyMode="Fixed" />
+    <Property Name="ForcedComplexityID" Type="Edm.Int16" ConcurrencyMode="Fixed" />
+    <Property Name="TechnologyGapID" Type="Edm.Int16" ConcurrencyMode="Fixed" />
+    <Property Name="FunctionalGapID" Type="Edm.Int16" ConcurrencyMode="Fixed" />
+    <Property Name="TechnologyStackID" Type="Edm.Int16" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="TP_APPLICATIONs" Relationship="LightSwitchApplication.FK_TP_APPLICATION_TP_APPLICATION" ToRole="TP_APPLICATION" FromRole="TP" />
+    <NavigationProperty Name="TP_DOCUMENT_LINKs" Relationship="LightSwitchApplication.FK_TP_DOCUMENT_LINK_TP" ToRole="TP_DOCUMENT_LINK" FromRole="TP" />
+    <NavigationProperty Name="TP_PHASEs" Relationship="LightSwitchApplication.FK_TP_PHASE_TP" ToRole="TP_PHASE" FromRole="TP" />
+    <NavigationProperty Name="REF_APPLICATION_TYPE" Relationship="LightSwitchApplication.FK_TP_REF_APPLICATION_TYPE" ToRole="REF_APPLICATION_TYPE" FromRole="TP" />
+    <NavigationProperty Name="REF_COMPLEXITY" Relationship="LightSwitchApplication.FK_TP_REF_COMPLEXITY" ToRole="REF_COMPLEXITY" FromRole="TP" />
+    <NavigationProperty Name="REF_COMPLEXITY1" Relationship="LightSwitchApplication.FK_TP_REF_COMPLEXITY1" ToRole="REF_COMPLEXITY" FromRole="TP" />
+    <NavigationProperty Name="REF_GAP" Relationship="LightSwitchApplication.FK_TP_REF_GAP" ToRole="REF_GAP" FromRole="TP" />
+    <NavigationProperty Name="REF_GAP1" Relationship="LightSwitchApplication.FK_TP_REF_GAP1" ToRole="REF_GAP" FromRole="TP" />
+    <NavigationProperty Name="REF_TECHNOLOGY_STACK" Relationship="LightSwitchApplication.FK_TP_REF_TECHNOLOGY_STACK" ToRole="REF_TECHNOLOGY_STACK" FromRole="TP" />
+    <NavigationProperty Name="TP_RESOURCE_ALLOCATIONs" Relationship="LightSwitchApplication.FK_TP_RESOURCE_TP" ToRole="TP_RESOURCE_ALLOCATION" FromRole="TP" />
+    <NavigationProperty Name="TP_STAKEHOLDERs" Relationship="LightSwitchApplication.FK_TP_STAKEHOLDER_TP" ToRole="TP_STAKEHOLDER" FromRole="TP" />
+    <NavigationProperty Name="TP_VENDORs" Relationship="LightSwitchApplication.FK_TP_VENDOR_TP" ToRole="TP_VENDOR" FromRole="TP" />
+  </EntityType>
+  <EntityType Name="TP_APPLICATION">
+    <Key>
+      <PropertyRef Name="TpApplicationID" />
+    </Key>
+    <Property Name="TpApplicationID" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ApplicationID" Type="Edm.Int16" ConcurrencyMode="Fixed" />
+    <Property Name="TpID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="APP" Relationship="LightSwitchApplication.APP_TP_APPLICATION" ToRole="APP" FromRole="TP_APPLICATION" />
+    <NavigationProperty Name="TP" Relationship="LightSwitchApplication.FK_TP_APPLICATION_TP_APPLICATION" ToRole="TP" FromRole="TP_APPLICATION" />
+  </EntityType>
+  <EntityType Name="TP_DOCUMENT_LINK">
+    <Key>
+      <PropertyRef Name="TpDocumentLinkID" />
+    </Key>
+    <Property Name="TpDocumentLinkID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="Name" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="Description" Type="Edm.String" MaxLength="500" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="Link" Type="Edm.String" MaxLength="250" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="DocumentTypeID" Type="Edm.Int16" Nullable="false" ConcurrencyMode="Fixed" />
+    <Property Name="TpID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="REF_DOCUMENT_TYPE" Relationship="LightSwitchApplication.FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE" ToRole="REF_DOCUMENT_TYPE" FromRole="TP_DOCUMENT_LINK" />
+    <NavigationProperty Name="TP" Relationship="LightSwitchApplication.FK_TP_DOCUMENT_LINK_TP" ToRole="TP" FromRole="TP_DOCUMENT_LINK" />
+  </EntityType>
+  <EntityType Name="TP_PHASE">
+    <Key>
+      <PropertyRef Name="TpPhaseID" />
+    </Key>
+    <Property Name="TpPhaseID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="PlannedStartDate" Type="Edm.DateTime" Nullable="false" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="PlannedEndDate" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="ActualStartDate" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="ActualEndDate" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="Duration" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="TpID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="PhaseID" Type="Edm.Int16" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="TP" Relationship="LightSwitchApplication.FK_TP_PHASE_TP" ToRole="TP" FromRole="TP_PHASE" />
+    <NavigationProperty Name="REF_PHASE" Relationship="LightSwitchApplication.FK_TP_PHASE_TP_PHASE" ToRole="REF_PHASE" FromRole="TP_PHASE" />
+  </EntityType>
+  <EntityType Name="TP_RESOURCE_ALLOCATION">
+    <Key>
+      <PropertyRef Name="TpResourceAllocationId" />
+    </Key>
+    <Property Name="TpResourceAllocationId" Type="Edm.Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Percentage" Type="Edm.Double" />
+    <Property Name="PlannedStartDate" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="PlannedEndDate" Type="Edm.DateTime" Precision="0" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ResourceID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <Property Name="TpID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="RESOURCE" Relationship="LightSwitchApplication.FK_TP_RESOURCE_ALLOCATION_RESOURCE" ToRole="RESOURCE" FromRole="TP_RESOURCE_ALLOCATION" />
+    <NavigationProperty Name="TP" Relationship="LightSwitchApplication.FK_TP_RESOURCE_TP" ToRole="TP" FromRole="TP_RESOURCE_ALLOCATION" />
+  </EntityType>
+  <EntityType Name="TP_STAKEHOLDER">
+    <Key>
+      <PropertyRef Name="TpStakeholderID" />
+    </Key>
+    <Property Name="TpStakeholderID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="StakeholderID" Type="Edm.Int16" ConcurrencyMode="Fixed" />
+    <Property Name="TpID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="REF_STAKEHOLDER" Relationship="LightSwitchApplication.FK_TP_STAKEHOLDER_REF_STAKEHOLDER" ToRole="REF_STAKEHOLDER" FromRole="TP_STAKEHOLDER" />
+    <NavigationProperty Name="TP" Relationship="LightSwitchApplication.FK_TP_STAKEHOLDER_TP" ToRole="TP" FromRole="TP_STAKEHOLDER" />
+  </EntityType>
+  <EntityType Name="TP_VENDOR">
+    <Key>
+      <PropertyRef Name="TpVendorID" />
+    </Key>
+    <Property Name="TpVendorID" Type="Edm.Int32" Nullable="false" />
+    <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="VendorID" Type="Edm.Int16" ConcurrencyMode="Fixed" />
+    <Property Name="TpID" Type="Edm.Int32" ConcurrencyMode="Fixed" />
+    <NavigationProperty Name="REF_VENDOR" Relationship="LightSwitchApplication.FK_TP_VENDOR_REF_VENDOR" ToRole="REF_VENDOR" FromRole="TP_VENDOR" />
+    <NavigationProperty Name="TP" Relationship="LightSwitchApplication.FK_TP_VENDOR_TP" ToRole="TP" FromRole="TP_VENDOR" />
+  </EntityType>
+  <Association Name="REF_TECHNOLOGY_APP">
+    <End Role="REF_TECHNOLOGY" Type="LightSwitchApplication.REF_TECHNOLOGY" Multiplicity="0..1" />
+    <End Role="APP" Type="LightSwitchApplication.APP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_TECHNOLOGY">
+        <PropertyRef Name="TechnologyID" />
+      </Principal>
+      <Dependent Role="APP">
+        <PropertyRef Name="TechnologyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESOURCE_REF_ROLE">
+    <End Role="REF_ROLE" Type="LightSwitchApplication.REF_ROLE" Multiplicity="0..1" />
+    <End Role="RESOURCE" Type="LightSwitchApplication.RESOURCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_ROLE">
+        <PropertyRef Name="RoleID" />
+      </Principal>
+      <Dependent Role="RESOURCE">
+        <PropertyRef Name="RoleID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_RESOURCE_REF_STATUS">
+    <End Role="REF_STATUS" Type="LightSwitchApplication.REF_STATUS" Multiplicity="0..1" />
+    <End Role="RESOURCE" Type="LightSwitchApplication.RESOURCE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_STATUS">
+        <PropertyRef Name="StatusID" />
+      </Principal>
+      <Dependent Role="RESOURCE">
+        <PropertyRef Name="StatusID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="APP_TP_APPLICATION">
+    <End Role="APP" Type="LightSwitchApplication.APP" Multiplicity="0..1" />
+    <End Role="TP_APPLICATION" Type="LightSwitchApplication.TP_APPLICATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="APP">
+        <PropertyRef Name="ApplicationID" />
+      </Principal>
+      <Dependent Role="TP_APPLICATION">
+        <PropertyRef Name="ApplicationID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_APPLICATION_TP_APPLICATION">
+    <End Role="TP" Type="LightSwitchApplication.TP" Multiplicity="0..1" />
+    <End Role="TP_APPLICATION" Type="LightSwitchApplication.TP_APPLICATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TP">
+        <PropertyRef Name="TpID" />
+      </Principal>
+      <Dependent Role="TP_APPLICATION">
+        <PropertyRef Name="TpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE">
+    <End Role="REF_DOCUMENT_TYPE" Type="LightSwitchApplication.REF_DOCUMENT_TYPE" Multiplicity="1" />
+    <End Role="TP_DOCUMENT_LINK" Type="LightSwitchApplication.TP_DOCUMENT_LINK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_DOCUMENT_TYPE">
+        <PropertyRef Name="DocumentTypeID" />
+      </Principal>
+      <Dependent Role="TP_DOCUMENT_LINK">
+        <PropertyRef Name="DocumentTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_DOCUMENT_LINK_TP">
+    <End Role="TP" Type="LightSwitchApplication.TP" Multiplicity="0..1" />
+    <End Role="TP_DOCUMENT_LINK" Type="LightSwitchApplication.TP_DOCUMENT_LINK" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TP">
+        <PropertyRef Name="TpID" />
+      </Principal>
+      <Dependent Role="TP_DOCUMENT_LINK">
+        <PropertyRef Name="TpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_PHASE_TP">
+    <End Role="TP" Type="LightSwitchApplication.TP" Multiplicity="0..1" />
+    <End Role="TP_PHASE" Type="LightSwitchApplication.TP_PHASE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TP">
+        <PropertyRef Name="TpID" />
+      </Principal>
+      <Dependent Role="TP_PHASE">
+        <PropertyRef Name="TpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_PHASE_TP_PHASE">
+    <End Role="REF_PHASE" Type="LightSwitchApplication.REF_PHASE" Multiplicity="0..1" />
+    <End Role="TP_PHASE" Type="LightSwitchApplication.TP_PHASE" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_PHASE">
+        <PropertyRef Name="PhaseID" />
+      </Principal>
+      <Dependent Role="TP_PHASE">
+        <PropertyRef Name="PhaseID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_REF_APPLICATION_TYPE">
+    <End Role="REF_APPLICATION_TYPE" Type="LightSwitchApplication.REF_APPLICATION_TYPE" Multiplicity="0..1" />
+    <End Role="TP" Type="LightSwitchApplication.TP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_APPLICATION_TYPE">
+        <PropertyRef Name="ApplicationTypeID" />
+      </Principal>
+      <Dependent Role="TP">
+        <PropertyRef Name="ApplicationTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_REF_COMPLEXITY">
+    <End Role="REF_COMPLEXITY" Type="LightSwitchApplication.REF_COMPLEXITY" Multiplicity="0..1" />
+    <End Role="TP" Type="LightSwitchApplication.TP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_COMPLEXITY">
+        <PropertyRef Name="ComplexityID" />
+      </Principal>
+      <Dependent Role="TP">
+        <PropertyRef Name="TechnicalComplexityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_REF_COMPLEXITY1">
+    <End Role="REF_COMPLEXITY" Type="LightSwitchApplication.REF_COMPLEXITY" Multiplicity="0..1" />
+    <End Role="TP" Type="LightSwitchApplication.TP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_COMPLEXITY">
+        <PropertyRef Name="ComplexityID" />
+      </Principal>
+      <Dependent Role="TP">
+        <PropertyRef Name="ForcedComplexityID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_REF_GAP">
+    <End Role="REF_GAP" Type="LightSwitchApplication.REF_GAP" Multiplicity="0..1" />
+    <End Role="TP" Type="LightSwitchApplication.TP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_GAP">
+        <PropertyRef Name="GapID" />
+      </Principal>
+      <Dependent Role="TP">
+        <PropertyRef Name="TechnologyGapID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_REF_GAP1">
+    <End Role="REF_GAP" Type="LightSwitchApplication.REF_GAP" Multiplicity="0..1" />
+    <End Role="TP" Type="LightSwitchApplication.TP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_GAP">
+        <PropertyRef Name="GapID" />
+      </Principal>
+      <Dependent Role="TP">
+        <PropertyRef Name="FunctionalGapID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_REF_TECHNOLOGY_STACK">
+    <End Role="REF_TECHNOLOGY_STACK" Type="LightSwitchApplication.REF_TECHNOLOGY_STACK" Multiplicity="0..1" />
+    <End Role="TP" Type="LightSwitchApplication.TP" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_TECHNOLOGY_STACK">
+        <PropertyRef Name="TechnologyStackID" />
+      </Principal>
+      <Dependent Role="TP">
+        <PropertyRef Name="TechnologyStackID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_RESOURCE_ALLOCATION_RESOURCE">
+    <End Role="RESOURCE" Type="LightSwitchApplication.RESOURCE" Multiplicity="0..1" />
+    <End Role="TP_RESOURCE_ALLOCATION" Type="LightSwitchApplication.TP_RESOURCE_ALLOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="RESOURCE">
+        <PropertyRef Name="ResourceID" />
+      </Principal>
+      <Dependent Role="TP_RESOURCE_ALLOCATION">
+        <PropertyRef Name="ResourceID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_RESOURCE_TP">
+    <End Role="TP" Type="LightSwitchApplication.TP" Multiplicity="0..1" />
+    <End Role="TP_RESOURCE_ALLOCATION" Type="LightSwitchApplication.TP_RESOURCE_ALLOCATION" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TP">
+        <PropertyRef Name="TpID" />
+      </Principal>
+      <Dependent Role="TP_RESOURCE_ALLOCATION">
+        <PropertyRef Name="TpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_STAKEHOLDER_REF_STAKEHOLDER">
+    <End Role="REF_STAKEHOLDER" Type="LightSwitchApplication.REF_STAKEHOLDER" Multiplicity="0..1" />
+    <End Role="TP_STAKEHOLDER" Type="LightSwitchApplication.TP_STAKEHOLDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_STAKEHOLDER">
+        <PropertyRef Name="StakeholderID" />
+      </Principal>
+      <Dependent Role="TP_STAKEHOLDER">
+        <PropertyRef Name="StakeholderID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_STAKEHOLDER_TP">
+    <End Role="TP" Type="LightSwitchApplication.TP" Multiplicity="0..1" />
+    <End Role="TP_STAKEHOLDER" Type="LightSwitchApplication.TP_STAKEHOLDER" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TP">
+        <PropertyRef Name="TpID" />
+      </Principal>
+      <Dependent Role="TP_STAKEHOLDER">
+        <PropertyRef Name="TpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_VENDOR_REF_VENDOR">
+    <End Role="REF_VENDOR" Type="LightSwitchApplication.REF_VENDOR" Multiplicity="0..1" />
+    <End Role="TP_VENDOR" Type="LightSwitchApplication.TP_VENDOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="REF_VENDOR">
+        <PropertyRef Name="VendorID" />
+      </Principal>
+      <Dependent Role="TP_VENDOR">
+        <PropertyRef Name="VendorID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_TP_VENDOR_TP">
+    <End Role="TP" Type="LightSwitchApplication.TP" Multiplicity="0..1" />
+    <End Role="TP_VENDOR" Type="LightSwitchApplication.TP_VENDOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="TP">
+        <PropertyRef Name="TpID" />
+      </Principal>
+      <Dependent Role="TP_VENDOR">
+        <PropertyRef Name="TpID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="FMData" m:IsDefaultEntityContainer="true">
+    <EntitySet Name="APPLICATIONs" EntityType="LightSwitchApplication.APP" />
+    <EntitySet Name="REF_APPLICATION_TYPEs" EntityType="LightSwitchApplication.REF_APPLICATION_TYPE" />
+    <EntitySet Name="REF_COMPLEXITies" EntityType="LightSwitchApplication.REF_COMPLEXITY" />
+    <EntitySet Name="REF_DOCUMENT_TYPEs" EntityType="LightSwitchApplication.REF_DOCUMENT_TYPE" />
+    <EntitySet Name="REF_GAPs" EntityType="LightSwitchApplication.REF_GAP" />
+    <EntitySet Name="REF_PHASEs" EntityType="LightSwitchApplication.REF_PHASE" />
+    <EntitySet Name="REF_ROLEs" EntityType="LightSwitchApplication.REF_ROLE" />
+    <EntitySet Name="REF_STAKEHOLDERs" EntityType="LightSwitchApplication.REF_STAKEHOLDER" />
+    <EntitySet Name="REF_STATUS" EntityType="LightSwitchApplication.REF_STATUS" />
+    <EntitySet Name="REF_TECHNOLOGies" EntityType="LightSwitchApplication.REF_TECHNOLOGY" />
+    <EntitySet Name="REF_TECHNOLOGY_STACKs" EntityType="LightSwitchApplication.REF_TECHNOLOGY_STACK" />
+    <EntitySet Name="REF_VENDORs" EntityType="LightSwitchApplication.REF_VENDOR" />
+    <EntitySet Name="RESOURCEs" EntityType="LightSwitchApplication.RESOURCE" />
+    <EntitySet Name="TPs" EntityType="LightSwitchApplication.TP" />
+    <EntitySet Name="TP_APPLICATIONs" EntityType="LightSwitchApplication.TP_APPLICATION" />
+    <EntitySet Name="TP_DOCUMENT_LINKs" EntityType="LightSwitchApplication.TP_DOCUMENT_LINK" />
+    <EntitySet Name="TP_PHASEs" EntityType="LightSwitchApplication.TP_PHASE" />
+    <EntitySet Name="TP_RESOURCE_ALLOCATIONs" EntityType="LightSwitchApplication.TP_RESOURCE_ALLOCATION" />
+    <EntitySet Name="TP_STAKEHOLDERs" EntityType="LightSwitchApplication.TP_STAKEHOLDER" />
+    <EntitySet Name="TP_VENDORs" EntityType="LightSwitchApplication.TP_VENDOR" />
+    <AssociationSet Name="REF_TECHNOLOGY_APP" Association="LightSwitchApplication.REF_TECHNOLOGY_APP">
+      <End Role="REF_TECHNOLOGY" EntitySet="REF_TECHNOLOGies" />
+      <End Role="APP" EntitySet="APPLICATIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESOURCE_REF_ROLE" Association="LightSwitchApplication.FK_RESOURCE_REF_ROLE">
+      <End Role="REF_ROLE" EntitySet="REF_ROLEs" />
+      <End Role="RESOURCE" EntitySet="RESOURCEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_RESOURCE_REF_STATUS" Association="LightSwitchApplication.FK_RESOURCE_REF_STATUS">
+      <End Role="REF_STATUS" EntitySet="REF_STATUS" />
+      <End Role="RESOURCE" EntitySet="RESOURCEs" />
+    </AssociationSet>
+    <AssociationSet Name="APP_TP_APPLICATION" Association="LightSwitchApplication.APP_TP_APPLICATION">
+      <End Role="APP" EntitySet="APPLICATIONs" />
+      <End Role="TP_APPLICATION" EntitySet="TP_APPLICATIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_APPLICATION_TP_APPLICATION" Association="LightSwitchApplication.FK_TP_APPLICATION_TP_APPLICATION">
+      <End Role="TP" EntitySet="TPs" />
+      <End Role="TP_APPLICATION" EntitySet="TP_APPLICATIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE" Association="LightSwitchApplication.FK_TP_DOCUMENT_LINK_REF_DOCUMENT_TYPE">
+      <End Role="REF_DOCUMENT_TYPE" EntitySet="REF_DOCUMENT_TYPEs" />
+      <End Role="TP_DOCUMENT_LINK" EntitySet="TP_DOCUMENT_LINKs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_DOCUMENT_LINK_TP" Association="LightSwitchApplication.FK_TP_DOCUMENT_LINK_TP">
+      <End Role="TP" EntitySet="TPs" />
+      <End Role="TP_DOCUMENT_LINK" EntitySet="TP_DOCUMENT_LINKs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_PHASE_TP" Association="LightSwitchApplication.FK_TP_PHASE_TP">
+      <End Role="TP" EntitySet="TPs" />
+      <End Role="TP_PHASE" EntitySet="TP_PHASEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_PHASE_TP_PHASE" Association="LightSwitchApplication.FK_TP_PHASE_TP_PHASE">
+      <End Role="REF_PHASE" EntitySet="REF_PHASEs" />
+      <End Role="TP_PHASE" EntitySet="TP_PHASEs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_REF_APPLICATION_TYPE" Association="LightSwitchApplication.FK_TP_REF_APPLICATION_TYPE">
+      <End Role="REF_APPLICATION_TYPE" EntitySet="REF_APPLICATION_TYPEs" />
+      <End Role="TP" EntitySet="TPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_REF_COMPLEXITY" Association="LightSwitchApplication.FK_TP_REF_COMPLEXITY">
+      <End Role="REF_COMPLEXITY" EntitySet="REF_COMPLEXITies" />
+      <End Role="TP" EntitySet="TPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_REF_COMPLEXITY1" Association="LightSwitchApplication.FK_TP_REF_COMPLEXITY1">
+      <End Role="REF_COMPLEXITY" EntitySet="REF_COMPLEXITies" />
+      <End Role="TP" EntitySet="TPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_REF_GAP" Association="LightSwitchApplication.FK_TP_REF_GAP">
+      <End Role="REF_GAP" EntitySet="REF_GAPs" />
+      <End Role="TP" EntitySet="TPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_REF_GAP1" Association="LightSwitchApplication.FK_TP_REF_GAP1">
+      <End Role="REF_GAP" EntitySet="REF_GAPs" />
+      <End Role="TP" EntitySet="TPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_REF_TECHNOLOGY_STACK" Association="LightSwitchApplication.FK_TP_REF_TECHNOLOGY_STACK">
+      <End Role="REF_TECHNOLOGY_STACK" EntitySet="REF_TECHNOLOGY_STACKs" />
+      <End Role="TP" EntitySet="TPs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_RESOURCE_ALLOCATION_RESOURCE" Association="LightSwitchApplication.FK_TP_RESOURCE_ALLOCATION_RESOURCE">
+      <End Role="RESOURCE" EntitySet="RESOURCEs" />
+      <End Role="TP_RESOURCE_ALLOCATION" EntitySet="TP_RESOURCE_ALLOCATIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_RESOURCE_TP" Association="LightSwitchApplication.FK_TP_RESOURCE_TP">
+      <End Role="TP" EntitySet="TPs" />
+      <End Role="TP_RESOURCE_ALLOCATION" EntitySet="TP_RESOURCE_ALLOCATIONs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_STAKEHOLDER_REF_STAKEHOLDER" Association="LightSwitchApplication.FK_TP_STAKEHOLDER_REF_STAKEHOLDER">
+      <End Role="REF_STAKEHOLDER" EntitySet="REF_STAKEHOLDERs" />
+      <End Role="TP_STAKEHOLDER" EntitySet="TP_STAKEHOLDERs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_STAKEHOLDER_TP" Association="LightSwitchApplication.FK_TP_STAKEHOLDER_TP">
+      <End Role="TP" EntitySet="TPs" />
+      <End Role="TP_STAKEHOLDER" EntitySet="TP_STAKEHOLDERs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_VENDOR_REF_VENDOR" Association="LightSwitchApplication.FK_TP_VENDOR_REF_VENDOR">
+      <End Role="REF_VENDOR" EntitySet="REF_VENDORs" />
+      <End Role="TP_VENDOR" EntitySet="TP_VENDORs" />
+    </AssociationSet>
+    <AssociationSet Name="FK_TP_VENDOR_TP" Association="LightSwitchApplication.FK_TP_VENDOR_TP">
+      <End Role="TP" EntitySet="TPs" />
+      <End Role="TP_VENDOR" EntitySet="TP_VENDORs" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
