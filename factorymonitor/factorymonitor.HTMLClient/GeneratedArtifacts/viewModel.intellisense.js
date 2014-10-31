@@ -898,6 +898,453 @@
         CreatedBy1_postRender: [$element, function () { return new lightSwitchApplication.ViewStatus().findContentItem("CreatedBy1"); }]
     });
 
+    lightSwitchApplication.AddEditTechnology.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.AddEditTechnology
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.AddEditTechnology,
+            data: lightSwitchApplication.AddEditTechnology,
+            value: lightSwitchApplication.AddEditTechnology
+        },
+        columns: {
+            _$class: msls.ContentItem,
+            _$name: "columns",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.AddEditTechnology,
+            data: lightSwitchApplication.AddEditTechnology,
+            value: lightSwitchApplication.REF_TECHNOLOGY
+        },
+        left: {
+            _$class: msls.ContentItem,
+            _$name: "left",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.AddEditTechnology,
+            data: lightSwitchApplication.REF_TECHNOLOGY,
+            value: lightSwitchApplication.REF_TECHNOLOGY
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTechnology,
+            data: lightSwitchApplication.REF_TECHNOLOGY,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTechnology,
+            data: lightSwitchApplication.REF_TECHNOLOGY,
+            value: String
+        },
+        right: {
+            _$class: msls.ContentItem,
+            _$name: "right",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.AddEditTechnology,
+            data: lightSwitchApplication.REF_TECHNOLOGY,
+            value: lightSwitchApplication.REF_TECHNOLOGY
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.AddEditTechnology
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.AddEditTechnology, {
+        /// <field>
+        /// Called when a new AddEditTechnology screen is created.
+        /// <br/>created(msls.application.AddEditTechnology screen)
+        /// </field>
+        created: [lightSwitchApplication.AddEditTechnology],
+        /// <field>
+        /// Called before changes on an active AddEditTechnology screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.AddEditTechnology screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.AddEditTechnology],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.AddEditTechnology().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the columns content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        columns_postRender: [$element, function () { return new lightSwitchApplication.AddEditTechnology().findContentItem("columns"); }],
+        /// <field>
+        /// Called after the left content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        left_postRender: [$element, function () { return new lightSwitchApplication.AddEditTechnology().findContentItem("left"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.AddEditTechnology().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.AddEditTechnology().findContentItem("Description"); }],
+        /// <field>
+        /// Called after the right content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        right_postRender: [$element, function () { return new lightSwitchApplication.AddEditTechnology().findContentItem("right"); }]
+    });
+
+    lightSwitchApplication.BrowseTechnologies.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.BrowseTechnologies
+        },
+        TechnologyList: {
+            _$class: msls.ContentItem,
+            _$name: "TechnologyList",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.BrowseTechnologies,
+            data: lightSwitchApplication.BrowseTechnologies,
+            value: lightSwitchApplication.BrowseTechnologies
+        },
+        REF_TECHNOLOGies: {
+            _$class: msls.ContentItem,
+            _$name: "REF_TECHNOLOGies",
+            _$parentName: "TechnologyList",
+            screen: lightSwitchApplication.BrowseTechnologies,
+            data: lightSwitchApplication.BrowseTechnologies,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.BrowseTechnologies,
+                _$entry: {
+                    elementType: lightSwitchApplication.REF_TECHNOLOGY
+                }
+            }
+        },
+        rows: {
+            _$class: msls.ContentItem,
+            _$name: "rows",
+            _$parentName: "REF_TECHNOLOGies",
+            screen: lightSwitchApplication.BrowseTechnologies,
+            data: lightSwitchApplication.REF_TECHNOLOGY,
+            value: lightSwitchApplication.REF_TECHNOLOGY
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.BrowseTechnologies,
+            data: lightSwitchApplication.REF_TECHNOLOGY,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.BrowseTechnologies,
+            data: lightSwitchApplication.REF_TECHNOLOGY,
+            value: String
+        },
+        CreatedDate: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedDate",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.BrowseTechnologies,
+            data: lightSwitchApplication.REF_TECHNOLOGY,
+            value: Date
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.BrowseTechnologies
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.BrowseTechnologies, {
+        /// <field>
+        /// Called when a new BrowseTechnologies screen is created.
+        /// <br/>created(msls.application.BrowseTechnologies screen)
+        /// </field>
+        created: [lightSwitchApplication.BrowseTechnologies],
+        /// <field>
+        /// Called before changes on an active BrowseTechnologies screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.BrowseTechnologies screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.BrowseTechnologies],
+        /// <field>
+        /// Called after the TechnologyList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TechnologyList_postRender: [$element, function () { return new lightSwitchApplication.BrowseTechnologies().findContentItem("TechnologyList"); }],
+        /// <field>
+        /// Called after the REF_TECHNOLOGies content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        REF_TECHNOLOGies_postRender: [$element, function () { return new lightSwitchApplication.BrowseTechnologies().findContentItem("REF_TECHNOLOGies"); }],
+        /// <field>
+        /// Called after the rows content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows_postRender: [$element, function () { return new lightSwitchApplication.BrowseTechnologies().findContentItem("rows"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.BrowseTechnologies().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.BrowseTechnologies().findContentItem("Description"); }],
+        /// <field>
+        /// Called after the CreatedDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedDate_postRender: [$element, function () { return new lightSwitchApplication.BrowseTechnologies().findContentItem("CreatedDate"); }]
+    });
+
+    lightSwitchApplication.ViewTechnology.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ViewTechnology
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ViewTechnology,
+            data: lightSwitchApplication.ViewTechnology,
+            value: lightSwitchApplication.ViewTechnology
+        },
+        columns: {
+            _$class: msls.ContentItem,
+            _$name: "columns",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ViewTechnology,
+            data: lightSwitchApplication.ViewTechnology,
+            value: lightSwitchApplication.REF_TECHNOLOGY
+        },
+        left: {
+            _$class: msls.ContentItem,
+            _$name: "left",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.ViewTechnology,
+            data: lightSwitchApplication.REF_TECHNOLOGY,
+            value: lightSwitchApplication.REF_TECHNOLOGY
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTechnology,
+            data: lightSwitchApplication.REF_TECHNOLOGY,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTechnology,
+            data: lightSwitchApplication.REF_TECHNOLOGY,
+            value: String
+        },
+        CreatedDate: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTechnology,
+            data: lightSwitchApplication.REF_TECHNOLOGY,
+            value: Date
+        },
+        CreatedBy: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedBy",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTechnology,
+            data: lightSwitchApplication.REF_TECHNOLOGY,
+            value: String
+        },
+        ModifiedBy: {
+            _$class: msls.ContentItem,
+            _$name: "ModifiedBy",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTechnology,
+            data: lightSwitchApplication.REF_TECHNOLOGY,
+            value: String
+        },
+        ModifiedDate: {
+            _$class: msls.ContentItem,
+            _$name: "ModifiedDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTechnology,
+            data: lightSwitchApplication.REF_TECHNOLOGY,
+            value: Date
+        },
+        right: {
+            _$class: msls.ContentItem,
+            _$name: "right",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.ViewTechnology,
+            data: lightSwitchApplication.REF_TECHNOLOGY,
+            value: lightSwitchApplication.REF_TECHNOLOGY
+        },
+        APPLICATIONs1: {
+            _$class: msls.ContentItem,
+            _$name: "APPLICATIONs1",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewTechnology,
+            data: lightSwitchApplication.REF_TECHNOLOGY,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.ViewTechnology,
+                _$entry: {
+                    elementType: lightSwitchApplication.APP
+                }
+            }
+        },
+        rows: {
+            _$class: msls.ContentItem,
+            _$name: "rows",
+            _$parentName: "APPLICATIONs1",
+            screen: lightSwitchApplication.ViewTechnology,
+            data: lightSwitchApplication.APP,
+            value: lightSwitchApplication.APP
+        },
+        Name1: {
+            _$class: msls.ContentItem,
+            _$name: "Name1",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ViewTechnology,
+            data: lightSwitchApplication.APP,
+            value: String
+        },
+        CreatedBy1: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedBy1",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ViewTechnology,
+            data: lightSwitchApplication.APP,
+            value: String
+        },
+        CreatedDate1: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedDate1",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ViewTechnology,
+            data: lightSwitchApplication.APP,
+            value: Date
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ViewTechnology
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.ViewTechnology, {
+        /// <field>
+        /// Called when a new ViewTechnology screen is created.
+        /// <br/>created(msls.application.ViewTechnology screen)
+        /// </field>
+        created: [lightSwitchApplication.ViewTechnology],
+        /// <field>
+        /// Called before changes on an active ViewTechnology screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.ViewTechnology screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.ViewTechnology],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the columns content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        columns_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("columns"); }],
+        /// <field>
+        /// Called after the left content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        left_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("left"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("Description"); }],
+        /// <field>
+        /// Called after the CreatedDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedDate_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("CreatedDate"); }],
+        /// <field>
+        /// Called after the CreatedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedBy_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("CreatedBy"); }],
+        /// <field>
+        /// Called after the ModifiedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ModifiedBy_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("ModifiedBy"); }],
+        /// <field>
+        /// Called after the ModifiedDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ModifiedDate_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("ModifiedDate"); }],
+        /// <field>
+        /// Called after the right content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        right_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("right"); }],
+        /// <field>
+        /// Called after the APPLICATIONs1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        APPLICATIONs1_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("APPLICATIONs1"); }],
+        /// <field>
+        /// Called after the rows content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("rows"); }],
+        /// <field>
+        /// Called after the Name1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name1_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("Name1"); }],
+        /// <field>
+        /// Called after the CreatedBy1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedBy1_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("CreatedBy1"); }],
+        /// <field>
+        /// Called after the CreatedDate1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedDate1_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("CreatedDate1"); }]
+    });
+
     lightSwitchApplication.AddEditResourceDetail.prototype._$contentItems = {
         Tabs: {
             _$class: msls.ContentItem,
@@ -1423,451 +1870,425 @@
         PlannedStartDate_postRender: [$element, function () { return new lightSwitchApplication.ViewResourceDetail().findContentItem("PlannedStartDate"); }]
     });
 
-    lightSwitchApplication.AddEditTechnology.prototype._$contentItems = {
+    lightSwitchApplication.AddEditApplicationType.prototype._$contentItems = {
         Tabs: {
             _$class: msls.ContentItem,
             _$name: "Tabs",
             _$parentName: "RootContentItem",
-            screen: lightSwitchApplication.AddEditTechnology
+            screen: lightSwitchApplication.AddEditApplicationType
         },
         Details: {
             _$class: msls.ContentItem,
             _$name: "Details",
             _$parentName: "Tabs",
-            screen: lightSwitchApplication.AddEditTechnology,
-            data: lightSwitchApplication.AddEditTechnology,
-            value: lightSwitchApplication.AddEditTechnology
+            screen: lightSwitchApplication.AddEditApplicationType,
+            data: lightSwitchApplication.AddEditApplicationType,
+            value: lightSwitchApplication.AddEditApplicationType
         },
         columns: {
             _$class: msls.ContentItem,
             _$name: "columns",
             _$parentName: "Details",
-            screen: lightSwitchApplication.AddEditTechnology,
-            data: lightSwitchApplication.AddEditTechnology,
-            value: lightSwitchApplication.REF_TECHNOLOGY
+            screen: lightSwitchApplication.AddEditApplicationType,
+            data: lightSwitchApplication.AddEditApplicationType,
+            value: lightSwitchApplication.REF_APPLICATION_TYPE
         },
         left: {
             _$class: msls.ContentItem,
             _$name: "left",
             _$parentName: "columns",
-            screen: lightSwitchApplication.AddEditTechnology,
-            data: lightSwitchApplication.REF_TECHNOLOGY,
-            value: lightSwitchApplication.REF_TECHNOLOGY
+            screen: lightSwitchApplication.AddEditApplicationType,
+            data: lightSwitchApplication.REF_APPLICATION_TYPE,
+            value: lightSwitchApplication.REF_APPLICATION_TYPE
         },
         Name: {
             _$class: msls.ContentItem,
             _$name: "Name",
             _$parentName: "left",
-            screen: lightSwitchApplication.AddEditTechnology,
-            data: lightSwitchApplication.REF_TECHNOLOGY,
+            screen: lightSwitchApplication.AddEditApplicationType,
+            data: lightSwitchApplication.REF_APPLICATION_TYPE,
             value: String
         },
         Description: {
             _$class: msls.ContentItem,
             _$name: "Description",
             _$parentName: "left",
-            screen: lightSwitchApplication.AddEditTechnology,
-            data: lightSwitchApplication.REF_TECHNOLOGY,
+            screen: lightSwitchApplication.AddEditApplicationType,
+            data: lightSwitchApplication.REF_APPLICATION_TYPE,
             value: String
-        },
-        right: {
-            _$class: msls.ContentItem,
-            _$name: "right",
-            _$parentName: "columns",
-            screen: lightSwitchApplication.AddEditTechnology,
-            data: lightSwitchApplication.REF_TECHNOLOGY,
-            value: lightSwitchApplication.REF_TECHNOLOGY
         },
         Popups: {
             _$class: msls.ContentItem,
             _$name: "Popups",
             _$parentName: "RootContentItem",
-            screen: lightSwitchApplication.AddEditTechnology
+            screen: lightSwitchApplication.AddEditApplicationType
         }
     };
 
-    msls._addEntryPoints(lightSwitchApplication.AddEditTechnology, {
+    msls._addEntryPoints(lightSwitchApplication.AddEditApplicationType, {
         /// <field>
-        /// Called when a new AddEditTechnology screen is created.
-        /// <br/>created(msls.application.AddEditTechnology screen)
+        /// Called when a new AddEditApplicationType screen is created.
+        /// <br/>created(msls.application.AddEditApplicationType screen)
         /// </field>
-        created: [lightSwitchApplication.AddEditTechnology],
+        created: [lightSwitchApplication.AddEditApplicationType],
         /// <field>
-        /// Called before changes on an active AddEditTechnology screen are applied.
-        /// <br/>beforeApplyChanges(msls.application.AddEditTechnology screen)
+        /// Called before changes on an active AddEditApplicationType screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.AddEditApplicationType screen)
         /// </field>
-        beforeApplyChanges: [lightSwitchApplication.AddEditTechnology],
+        beforeApplyChanges: [lightSwitchApplication.AddEditApplicationType],
         /// <field>
         /// Called after the Details content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Details_postRender: [$element, function () { return new lightSwitchApplication.AddEditTechnology().findContentItem("Details"); }],
+        Details_postRender: [$element, function () { return new lightSwitchApplication.AddEditApplicationType().findContentItem("Details"); }],
         /// <field>
         /// Called after the columns content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        columns_postRender: [$element, function () { return new lightSwitchApplication.AddEditTechnology().findContentItem("columns"); }],
+        columns_postRender: [$element, function () { return new lightSwitchApplication.AddEditApplicationType().findContentItem("columns"); }],
         /// <field>
         /// Called after the left content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        left_postRender: [$element, function () { return new lightSwitchApplication.AddEditTechnology().findContentItem("left"); }],
+        left_postRender: [$element, function () { return new lightSwitchApplication.AddEditApplicationType().findContentItem("left"); }],
         /// <field>
         /// Called after the Name content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Name_postRender: [$element, function () { return new lightSwitchApplication.AddEditTechnology().findContentItem("Name"); }],
+        Name_postRender: [$element, function () { return new lightSwitchApplication.AddEditApplicationType().findContentItem("Name"); }],
         /// <field>
         /// Called after the Description content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Description_postRender: [$element, function () { return new lightSwitchApplication.AddEditTechnology().findContentItem("Description"); }],
-        /// <field>
-        /// Called after the right content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        right_postRender: [$element, function () { return new lightSwitchApplication.AddEditTechnology().findContentItem("right"); }]
+        Description_postRender: [$element, function () { return new lightSwitchApplication.AddEditApplicationType().findContentItem("Description"); }]
     });
 
-    lightSwitchApplication.ViewTechnology.prototype._$contentItems = {
+    lightSwitchApplication.ViewApplicationType.prototype._$contentItems = {
         Tabs: {
             _$class: msls.ContentItem,
             _$name: "Tabs",
             _$parentName: "RootContentItem",
-            screen: lightSwitchApplication.ViewTechnology
+            screen: lightSwitchApplication.ViewApplicationType
         },
         Details: {
             _$class: msls.ContentItem,
             _$name: "Details",
             _$parentName: "Tabs",
-            screen: lightSwitchApplication.ViewTechnology,
-            data: lightSwitchApplication.ViewTechnology,
-            value: lightSwitchApplication.ViewTechnology
+            screen: lightSwitchApplication.ViewApplicationType,
+            data: lightSwitchApplication.ViewApplicationType,
+            value: lightSwitchApplication.ViewApplicationType
         },
         columns: {
             _$class: msls.ContentItem,
             _$name: "columns",
             _$parentName: "Details",
-            screen: lightSwitchApplication.ViewTechnology,
-            data: lightSwitchApplication.ViewTechnology,
-            value: lightSwitchApplication.REF_TECHNOLOGY
+            screen: lightSwitchApplication.ViewApplicationType,
+            data: lightSwitchApplication.ViewApplicationType,
+            value: lightSwitchApplication.REF_APPLICATION_TYPE
         },
         left: {
             _$class: msls.ContentItem,
             _$name: "left",
             _$parentName: "columns",
-            screen: lightSwitchApplication.ViewTechnology,
-            data: lightSwitchApplication.REF_TECHNOLOGY,
-            value: lightSwitchApplication.REF_TECHNOLOGY
+            screen: lightSwitchApplication.ViewApplicationType,
+            data: lightSwitchApplication.REF_APPLICATION_TYPE,
+            value: lightSwitchApplication.REF_APPLICATION_TYPE
         },
         Name: {
             _$class: msls.ContentItem,
             _$name: "Name",
             _$parentName: "left",
-            screen: lightSwitchApplication.ViewTechnology,
-            data: lightSwitchApplication.REF_TECHNOLOGY,
+            screen: lightSwitchApplication.ViewApplicationType,
+            data: lightSwitchApplication.REF_APPLICATION_TYPE,
             value: String
         },
         Description: {
             _$class: msls.ContentItem,
             _$name: "Description",
             _$parentName: "left",
-            screen: lightSwitchApplication.ViewTechnology,
-            data: lightSwitchApplication.REF_TECHNOLOGY,
+            screen: lightSwitchApplication.ViewApplicationType,
+            data: lightSwitchApplication.REF_APPLICATION_TYPE,
             value: String
-        },
-        CreatedDate: {
-            _$class: msls.ContentItem,
-            _$name: "CreatedDate",
-            _$parentName: "left",
-            screen: lightSwitchApplication.ViewTechnology,
-            data: lightSwitchApplication.REF_TECHNOLOGY,
-            value: Date
         },
         CreatedBy: {
             _$class: msls.ContentItem,
             _$name: "CreatedBy",
             _$parentName: "left",
-            screen: lightSwitchApplication.ViewTechnology,
-            data: lightSwitchApplication.REF_TECHNOLOGY,
+            screen: lightSwitchApplication.ViewApplicationType,
+            data: lightSwitchApplication.REF_APPLICATION_TYPE,
             value: String
+        },
+        CreatedTime: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedTime",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewApplicationType,
+            data: lightSwitchApplication.REF_APPLICATION_TYPE,
+            value: Date
         },
         ModifiedBy: {
             _$class: msls.ContentItem,
             _$name: "ModifiedBy",
             _$parentName: "left",
-            screen: lightSwitchApplication.ViewTechnology,
-            data: lightSwitchApplication.REF_TECHNOLOGY,
+            screen: lightSwitchApplication.ViewApplicationType,
+            data: lightSwitchApplication.REF_APPLICATION_TYPE,
             value: String
         },
         ModifiedDate: {
             _$class: msls.ContentItem,
             _$name: "ModifiedDate",
             _$parentName: "left",
-            screen: lightSwitchApplication.ViewTechnology,
-            data: lightSwitchApplication.REF_TECHNOLOGY,
+            screen: lightSwitchApplication.ViewApplicationType,
+            data: lightSwitchApplication.REF_APPLICATION_TYPE,
             value: Date
         },
-        right: {
+        TPs: {
             _$class: msls.ContentItem,
-            _$name: "right",
+            _$name: "TPs",
             _$parentName: "columns",
-            screen: lightSwitchApplication.ViewTechnology,
-            data: lightSwitchApplication.REF_TECHNOLOGY,
-            value: lightSwitchApplication.REF_TECHNOLOGY
+            screen: lightSwitchApplication.ViewApplicationType,
+            data: lightSwitchApplication.REF_APPLICATION_TYPE,
+            value: lightSwitchApplication.REF_APPLICATION_TYPE
         },
-        APPLICATIONs1: {
+        TPs1: {
             _$class: msls.ContentItem,
-            _$name: "APPLICATIONs1",
-            _$parentName: "right",
-            screen: lightSwitchApplication.ViewTechnology,
-            data: lightSwitchApplication.REF_TECHNOLOGY,
+            _$name: "TPs1",
+            _$parentName: "TPs",
+            screen: lightSwitchApplication.ViewApplicationType,
+            data: lightSwitchApplication.REF_APPLICATION_TYPE,
             value: {
                 _$class: msls.VisualCollection,
-                screen: lightSwitchApplication.ViewTechnology,
+                screen: lightSwitchApplication.ViewApplicationType,
                 _$entry: {
-                    elementType: lightSwitchApplication.APP
+                    elementType: lightSwitchApplication.TP
                 }
             }
         },
         rows: {
             _$class: msls.ContentItem,
             _$name: "rows",
-            _$parentName: "APPLICATIONs1",
-            screen: lightSwitchApplication.ViewTechnology,
-            data: lightSwitchApplication.APP,
-            value: lightSwitchApplication.APP
+            _$parentName: "TPs1",
+            screen: lightSwitchApplication.ViewApplicationType,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.TP
         },
         Name1: {
             _$class: msls.ContentItem,
             _$name: "Name1",
             _$parentName: "rows",
-            screen: lightSwitchApplication.ViewTechnology,
-            data: lightSwitchApplication.APP,
+            screen: lightSwitchApplication.ViewApplicationType,
+            data: lightSwitchApplication.TP,
             value: String
         },
-        CreatedBy1: {
+        Number: {
             _$class: msls.ContentItem,
-            _$name: "CreatedBy1",
+            _$name: "Number",
             _$parentName: "rows",
-            screen: lightSwitchApplication.ViewTechnology,
-            data: lightSwitchApplication.APP,
-            value: String
+            screen: lightSwitchApplication.ViewApplicationType,
+            data: lightSwitchApplication.TP,
+            value: Number
         },
-        CreatedDate1: {
+        Description1: {
             _$class: msls.ContentItem,
-            _$name: "CreatedDate1",
+            _$name: "Description1",
             _$parentName: "rows",
-            screen: lightSwitchApplication.ViewTechnology,
-            data: lightSwitchApplication.APP,
-            value: Date
+            screen: lightSwitchApplication.ViewApplicationType,
+            data: lightSwitchApplication.TP,
+            value: String
         },
         Popups: {
             _$class: msls.ContentItem,
             _$name: "Popups",
             _$parentName: "RootContentItem",
-            screen: lightSwitchApplication.ViewTechnology
+            screen: lightSwitchApplication.ViewApplicationType
         }
     };
 
-    msls._addEntryPoints(lightSwitchApplication.ViewTechnology, {
+    msls._addEntryPoints(lightSwitchApplication.ViewApplicationType, {
         /// <field>
-        /// Called when a new ViewTechnology screen is created.
-        /// <br/>created(msls.application.ViewTechnology screen)
+        /// Called when a new ViewApplicationType screen is created.
+        /// <br/>created(msls.application.ViewApplicationType screen)
         /// </field>
-        created: [lightSwitchApplication.ViewTechnology],
+        created: [lightSwitchApplication.ViewApplicationType],
         /// <field>
-        /// Called before changes on an active ViewTechnology screen are applied.
-        /// <br/>beforeApplyChanges(msls.application.ViewTechnology screen)
+        /// Called before changes on an active ViewApplicationType screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.ViewApplicationType screen)
         /// </field>
-        beforeApplyChanges: [lightSwitchApplication.ViewTechnology],
+        beforeApplyChanges: [lightSwitchApplication.ViewApplicationType],
         /// <field>
         /// Called after the Details content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Details_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("Details"); }],
+        Details_postRender: [$element, function () { return new lightSwitchApplication.ViewApplicationType().findContentItem("Details"); }],
         /// <field>
         /// Called after the columns content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        columns_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("columns"); }],
+        columns_postRender: [$element, function () { return new lightSwitchApplication.ViewApplicationType().findContentItem("columns"); }],
         /// <field>
         /// Called after the left content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        left_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("left"); }],
+        left_postRender: [$element, function () { return new lightSwitchApplication.ViewApplicationType().findContentItem("left"); }],
         /// <field>
         /// Called after the Name content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Name_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("Name"); }],
+        Name_postRender: [$element, function () { return new lightSwitchApplication.ViewApplicationType().findContentItem("Name"); }],
         /// <field>
         /// Called after the Description content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Description_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("Description"); }],
-        /// <field>
-        /// Called after the CreatedDate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        CreatedDate_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("CreatedDate"); }],
+        Description_postRender: [$element, function () { return new lightSwitchApplication.ViewApplicationType().findContentItem("Description"); }],
         /// <field>
         /// Called after the CreatedBy content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        CreatedBy_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("CreatedBy"); }],
+        CreatedBy_postRender: [$element, function () { return new lightSwitchApplication.ViewApplicationType().findContentItem("CreatedBy"); }],
+        /// <field>
+        /// Called after the CreatedTime content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedTime_postRender: [$element, function () { return new lightSwitchApplication.ViewApplicationType().findContentItem("CreatedTime"); }],
         /// <field>
         /// Called after the ModifiedBy content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        ModifiedBy_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("ModifiedBy"); }],
+        ModifiedBy_postRender: [$element, function () { return new lightSwitchApplication.ViewApplicationType().findContentItem("ModifiedBy"); }],
         /// <field>
         /// Called after the ModifiedDate content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        ModifiedDate_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("ModifiedDate"); }],
+        ModifiedDate_postRender: [$element, function () { return new lightSwitchApplication.ViewApplicationType().findContentItem("ModifiedDate"); }],
         /// <field>
-        /// Called after the right content item has been rendered.
+        /// Called after the TPs content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        right_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("right"); }],
+        TPs_postRender: [$element, function () { return new lightSwitchApplication.ViewApplicationType().findContentItem("TPs"); }],
         /// <field>
-        /// Called after the APPLICATIONs1 content item has been rendered.
+        /// Called after the TPs1 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        APPLICATIONs1_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("APPLICATIONs1"); }],
+        TPs1_postRender: [$element, function () { return new lightSwitchApplication.ViewApplicationType().findContentItem("TPs1"); }],
         /// <field>
         /// Called after the rows content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        rows_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("rows"); }],
+        rows_postRender: [$element, function () { return new lightSwitchApplication.ViewApplicationType().findContentItem("rows"); }],
         /// <field>
         /// Called after the Name1 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Name1_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("Name1"); }],
+        Name1_postRender: [$element, function () { return new lightSwitchApplication.ViewApplicationType().findContentItem("Name1"); }],
         /// <field>
-        /// Called after the CreatedBy1 content item has been rendered.
+        /// Called after the Number content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        CreatedBy1_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("CreatedBy1"); }],
+        Number_postRender: [$element, function () { return new lightSwitchApplication.ViewApplicationType().findContentItem("Number"); }],
         /// <field>
-        /// Called after the CreatedDate1 content item has been rendered.
+        /// Called after the Description1 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        CreatedDate1_postRender: [$element, function () { return new lightSwitchApplication.ViewTechnology().findContentItem("CreatedDate1"); }]
+        Description1_postRender: [$element, function () { return new lightSwitchApplication.ViewApplicationType().findContentItem("Description1"); }]
     });
 
-    lightSwitchApplication.BrowseTechnologies.prototype._$contentItems = {
+    lightSwitchApplication.BrowseApplicationTypes.prototype._$contentItems = {
         Tabs: {
             _$class: msls.ContentItem,
             _$name: "Tabs",
             _$parentName: "RootContentItem",
-            screen: lightSwitchApplication.BrowseTechnologies
+            screen: lightSwitchApplication.BrowseApplicationTypes
         },
-        TechnologyList: {
+        ApplicationTypeList: {
             _$class: msls.ContentItem,
-            _$name: "TechnologyList",
+            _$name: "ApplicationTypeList",
             _$parentName: "Tabs",
-            screen: lightSwitchApplication.BrowseTechnologies,
-            data: lightSwitchApplication.BrowseTechnologies,
-            value: lightSwitchApplication.BrowseTechnologies
+            screen: lightSwitchApplication.BrowseApplicationTypes,
+            data: lightSwitchApplication.BrowseApplicationTypes,
+            value: lightSwitchApplication.BrowseApplicationTypes
         },
-        REF_TECHNOLOGies: {
+        REF_APPLICATION_TYPEs: {
             _$class: msls.ContentItem,
-            _$name: "REF_TECHNOLOGies",
-            _$parentName: "TechnologyList",
-            screen: lightSwitchApplication.BrowseTechnologies,
-            data: lightSwitchApplication.BrowseTechnologies,
+            _$name: "REF_APPLICATION_TYPEs",
+            _$parentName: "ApplicationTypeList",
+            screen: lightSwitchApplication.BrowseApplicationTypes,
+            data: lightSwitchApplication.BrowseApplicationTypes,
             value: {
                 _$class: msls.VisualCollection,
-                screen: lightSwitchApplication.BrowseTechnologies,
+                screen: lightSwitchApplication.BrowseApplicationTypes,
                 _$entry: {
-                    elementType: lightSwitchApplication.REF_TECHNOLOGY
+                    elementType: lightSwitchApplication.REF_APPLICATION_TYPE
                 }
             }
         },
         rows: {
             _$class: msls.ContentItem,
             _$name: "rows",
-            _$parentName: "REF_TECHNOLOGies",
-            screen: lightSwitchApplication.BrowseTechnologies,
-            data: lightSwitchApplication.REF_TECHNOLOGY,
-            value: lightSwitchApplication.REF_TECHNOLOGY
+            _$parentName: "REF_APPLICATION_TYPEs",
+            screen: lightSwitchApplication.BrowseApplicationTypes,
+            data: lightSwitchApplication.REF_APPLICATION_TYPE,
+            value: lightSwitchApplication.REF_APPLICATION_TYPE
         },
         Name: {
             _$class: msls.ContentItem,
             _$name: "Name",
             _$parentName: "rows",
-            screen: lightSwitchApplication.BrowseTechnologies,
-            data: lightSwitchApplication.REF_TECHNOLOGY,
+            screen: lightSwitchApplication.BrowseApplicationTypes,
+            data: lightSwitchApplication.REF_APPLICATION_TYPE,
             value: String
         },
         Description: {
             _$class: msls.ContentItem,
             _$name: "Description",
             _$parentName: "rows",
-            screen: lightSwitchApplication.BrowseTechnologies,
-            data: lightSwitchApplication.REF_TECHNOLOGY,
+            screen: lightSwitchApplication.BrowseApplicationTypes,
+            data: lightSwitchApplication.REF_APPLICATION_TYPE,
             value: String
-        },
-        CreatedDate: {
-            _$class: msls.ContentItem,
-            _$name: "CreatedDate",
-            _$parentName: "rows",
-            screen: lightSwitchApplication.BrowseTechnologies,
-            data: lightSwitchApplication.REF_TECHNOLOGY,
-            value: Date
         },
         Popups: {
             _$class: msls.ContentItem,
             _$name: "Popups",
             _$parentName: "RootContentItem",
-            screen: lightSwitchApplication.BrowseTechnologies
+            screen: lightSwitchApplication.BrowseApplicationTypes
         }
     };
 
-    msls._addEntryPoints(lightSwitchApplication.BrowseTechnologies, {
+    msls._addEntryPoints(lightSwitchApplication.BrowseApplicationTypes, {
         /// <field>
-        /// Called when a new BrowseTechnologies screen is created.
-        /// <br/>created(msls.application.BrowseTechnologies screen)
+        /// Called when a new BrowseApplicationTypes screen is created.
+        /// <br/>created(msls.application.BrowseApplicationTypes screen)
         /// </field>
-        created: [lightSwitchApplication.BrowseTechnologies],
+        created: [lightSwitchApplication.BrowseApplicationTypes],
         /// <field>
-        /// Called before changes on an active BrowseTechnologies screen are applied.
-        /// <br/>beforeApplyChanges(msls.application.BrowseTechnologies screen)
+        /// Called before changes on an active BrowseApplicationTypes screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.BrowseApplicationTypes screen)
         /// </field>
-        beforeApplyChanges: [lightSwitchApplication.BrowseTechnologies],
+        beforeApplyChanges: [lightSwitchApplication.BrowseApplicationTypes],
         /// <field>
-        /// Called after the TechnologyList content item has been rendered.
+        /// Called after the ApplicationTypeList content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        TechnologyList_postRender: [$element, function () { return new lightSwitchApplication.BrowseTechnologies().findContentItem("TechnologyList"); }],
+        ApplicationTypeList_postRender: [$element, function () { return new lightSwitchApplication.BrowseApplicationTypes().findContentItem("ApplicationTypeList"); }],
         /// <field>
-        /// Called after the REF_TECHNOLOGies content item has been rendered.
+        /// Called after the REF_APPLICATION_TYPEs content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        REF_TECHNOLOGies_postRender: [$element, function () { return new lightSwitchApplication.BrowseTechnologies().findContentItem("REF_TECHNOLOGies"); }],
+        REF_APPLICATION_TYPEs_postRender: [$element, function () { return new lightSwitchApplication.BrowseApplicationTypes().findContentItem("REF_APPLICATION_TYPEs"); }],
         /// <field>
         /// Called after the rows content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        rows_postRender: [$element, function () { return new lightSwitchApplication.BrowseTechnologies().findContentItem("rows"); }],
+        rows_postRender: [$element, function () { return new lightSwitchApplication.BrowseApplicationTypes().findContentItem("rows"); }],
         /// <field>
         /// Called after the Name content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Name_postRender: [$element, function () { return new lightSwitchApplication.BrowseTechnologies().findContentItem("Name"); }],
+        Name_postRender: [$element, function () { return new lightSwitchApplication.BrowseApplicationTypes().findContentItem("Name"); }],
         /// <field>
         /// Called after the Description content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Description_postRender: [$element, function () { return new lightSwitchApplication.BrowseTechnologies().findContentItem("Description"); }],
-        /// <field>
-        /// Called after the CreatedDate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        CreatedDate_postRender: [$element, function () { return new lightSwitchApplication.BrowseTechnologies().findContentItem("CreatedDate"); }]
+        Description_postRender: [$element, function () { return new lightSwitchApplication.BrowseApplicationTypes().findContentItem("Description"); }]
     });
 
 }(msls.application));

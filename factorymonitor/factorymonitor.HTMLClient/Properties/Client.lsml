@@ -47,5 +47,8 @@
     <ApplicationNavigationMethodLink
       Name="link3"
       Method="!module/Methods[showBrowseTechnologies]" />
+    <ApplicationNavigationMethodLink
+      Name="link4"
+      Method="!module/Methods[showBrowseApplicationTypes]" />
   </Application.NavigationItems>
 </Application>

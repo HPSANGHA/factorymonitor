@@ -56,5 +56,17 @@ namespace LightSwitchApplication
             entity.ModifiedBy = UserName;
             entity.ModifiedDate = DateTime.Now;
         }
+
+        partial void REF_APPLICATION_TYPEs_Inserting(REF_APPLICATION_TYPE entity)
+        {
+            entity.CreatedBy = UserName;
+            entity.CreatedTime = DateTime.Now;
+        }
+
+        partial void REF_APPLICATION_TYPEs_Updating(REF_APPLICATION_TYPE entity)
+        {
+            entity.ModifiedBy = UserName;
+            entity.ModifiedDate = DateTime.Now;
+        }
     }
 }

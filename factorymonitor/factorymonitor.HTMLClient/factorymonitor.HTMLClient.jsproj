@@ -66,6 +66,9 @@
     <Content Include="Content\Images\user-splash-screen.png" />
     <Content Include="Content\Web.config" />
     <Content Include="packages.config" />
+    <Content Include="Screens\Reference\ApplicationType\ViewApplicationType.lsml.js">
+      <DependentUpon>ViewApplicationType.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\Reference\Role\ViewRole.lsml.js">
       <DependentUpon>ViewRole.lsml</DependentUpon>
     </Content>
@@ -102,11 +105,15 @@
     <LightSwitchModel Include="Properties\Client.lsml">
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
+    <LightSwitchModel Include="Properties\FMData\REF_APPLICATION_TYPEs.lsml" />
     <LightSwitchModel Include="Properties\FMData\REF_ROLEs.lsml" />
     <LightSwitchModel Include="Properties\FMData\REF_STATUS.lsml" />
     <LightSwitchModel Include="Properties\FMData\REF_TECHNOLOGies.lsml" />
     <LightSwitchModel Include="Properties\FMData\RESOURCEs.lsml" />
     <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Screens\Reference\ApplicationType\AddEditApplicationType.lsml" />
+    <LightSwitchModel Include="Screens\Reference\ApplicationType\BrowseApplicationTypes.lsml" />
+    <LightSwitchModel Include="Screens\Reference\ApplicationType\ViewApplicationType.lsml" />
     <LightSwitchModel Include="Screens\Reference\Role\AddEditRole.lsml" />
     <LightSwitchModel Include="Screens\Reference\Role\BrowseRoles.lsml" />
     <LightSwitchModel Include="Screens\Reference\Role\ViewRole.lsml" />
