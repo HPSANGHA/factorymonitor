@@ -53,5 +53,8 @@
     <ApplicationNavigationMethodLink
       Name="link5"
       Method="!module/Methods[showBrowseTechnologyStacks]" />
+    <ApplicationNavigationMethodLink
+      Name="link6"
+      Method="!module/Methods[showBrowseComplexities]" />
   </Application.NavigationItems>
 </Application>

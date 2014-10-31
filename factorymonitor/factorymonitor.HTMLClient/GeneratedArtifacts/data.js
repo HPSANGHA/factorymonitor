@@ -500,6 +500,130 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
+    function TP(entitySet) {
+        /// <summary>
+        /// Represents the TP entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this tP.
+        /// </param>
+        /// <field name="TpID" type="Number">
+        /// Gets or sets the tpID for this tP.
+        /// </field>
+        /// <field name="Number" type="Number">
+        /// Gets or sets the number for this tP.
+        /// </field>
+        /// <field name="Name" type="String">
+        /// Gets or sets the name for this tP.
+        /// </field>
+        /// <field name="Description" type="String">
+        /// Gets or sets the description for this tP.
+        /// </field>
+        /// <field name="WorkOrderNumber" type="String">
+        /// Gets or sets the workOrderNumber for this tP.
+        /// </field>
+        /// <field name="WorkOrderStatus" type="Number">
+        /// Gets or sets the workOrderStatus for this tP.
+        /// </field>
+        /// <field name="WorkOrderIssuedOn" type="Date">
+        /// Gets or sets the workOrderIssuedOn for this tP.
+        /// </field>
+        /// <field name="PlannedEffort" type="String">
+        /// Gets or sets the plannedEffort for this tP.
+        /// </field>
+        /// <field name="EstimatedCost" type="String">
+        /// Gets or sets the estimatedCost for this tP.
+        /// </field>
+        /// <field name="IssueDateToHP" type="Date">
+        /// Gets or sets the issueDateToHP for this tP.
+        /// </field>
+        /// <field name="EffortDateProvidedByHP" type="Date">
+        /// Gets or sets the effortDateProvidedByHP for this tP.
+        /// </field>
+        /// <field name="ApprovedDateByDL" type="Date">
+        /// Gets or sets the approvedDateByDL for this tP.
+        /// </field>
+        /// <field name="PlannedStartDate" type="Date">
+        /// Gets or sets the plannedStartDate for this tP.
+        /// </field>
+        /// <field name="PlannedEndDate" type="Date">
+        /// Gets or sets the plannedEndDate for this tP.
+        /// </field>
+        /// <field name="ActualStartDate" type="Date">
+        /// Gets or sets the actualStartDate for this tP.
+        /// </field>
+        /// <field name="ActualEndDate" type="Date">
+        /// Gets or sets the actualEndDate for this tP.
+        /// </field>
+        /// <field name="ApplicationSize" type="String">
+        /// Gets or sets the applicationSize for this tP.
+        /// </field>
+        /// <field name="HasInputDocument" type="Boolean">
+        /// Gets or sets the hasInputDocument for this tP.
+        /// </field>
+        /// <field name="HasFeasibilityStudy" type="Boolean">
+        /// Gets or sets the hasFeasibilityStudy for this tP.
+        /// </field>
+        /// <field name="HasUnderstandingDocument" type="Boolean">
+        /// Gets or sets the hasUnderstandingDocument for this tP.
+        /// </field>
+        /// <field name="HasEstimation" type="Boolean">
+        /// Gets or sets the hasEstimation for this tP.
+        /// </field>
+        /// <field name="CreatedDate" type="Date">
+        /// Gets or sets the createdDate for this tP.
+        /// </field>
+        /// <field name="CreatedBy" type="String">
+        /// Gets or sets the createdBy for this tP.
+        /// </field>
+        /// <field name="ModifiedDate" type="Date">
+        /// Gets or sets the modifiedDate for this tP.
+        /// </field>
+        /// <field name="ModifiedBy" type="String">
+        /// Gets or sets the modifiedBy for this tP.
+        /// </field>
+        /// <field name="TP_APPLICATIONs" type="msls.EntityCollection" elementType="msls.application.TP_APPLICATION">
+        /// Gets the tP_APPLICATIONs for this tP.
+        /// </field>
+        /// <field name="TP_DOCUMENT_LINKs" type="msls.EntityCollection" elementType="msls.application.TP_DOCUMENT_LINK">
+        /// Gets the tP_DOCUMENT_LINKs for this tP.
+        /// </field>
+        /// <field name="TP_PHASEs" type="msls.EntityCollection" elementType="msls.application.TP_PHASE">
+        /// Gets the tP_PHASEs for this tP.
+        /// </field>
+        /// <field name="REF_APPLICATION_TYPE" type="msls.application.REF_APPLICATION_TYPE">
+        /// Gets or sets the rEF_APPLICATION_TYPE for this tP.
+        /// </field>
+        /// <field name="REF_COMPLEXITY" type="msls.application.REF_COMPLEXITY">
+        /// Gets or sets the rEF_COMPLEXITY for this tP.
+        /// </field>
+        /// <field name="REF_COMPLEXITY1" type="msls.application.REF_COMPLEXITY">
+        /// Gets or sets the rEF_COMPLEXITY1 for this tP.
+        /// </field>
+        /// <field name="REF_GAP" type="msls.application.REF_GAP">
+        /// Gets or sets the rEF_GAP for this tP.
+        /// </field>
+        /// <field name="REF_GAP1" type="msls.application.REF_GAP">
+        /// Gets or sets the rEF_GAP1 for this tP.
+        /// </field>
+        /// <field name="REF_TECHNOLOGY_STACK" type="msls.application.REF_TECHNOLOGY_STACK">
+        /// Gets or sets the rEF_TECHNOLOGY_STACK for this tP.
+        /// </field>
+        /// <field name="TP_RESOURCE_ALLOCATIONs" type="msls.EntityCollection" elementType="msls.application.TP_RESOURCE_ALLOCATION">
+        /// Gets the tP_RESOURCE_ALLOCATIONs for this tP.
+        /// </field>
+        /// <field name="TP_STAKEHOLDERs" type="msls.EntityCollection" elementType="msls.application.TP_STAKEHOLDER">
+        /// Gets the tP_STAKEHOLDERs for this tP.
+        /// </field>
+        /// <field name="TP_VENDORs" type="msls.EntityCollection" elementType="msls.application.TP_VENDOR">
+        /// Gets the tP_VENDORs for this tP.
+        /// </field>
+        /// <field name="details" type="msls.application.TP.Details">
+        /// Gets the details for this tP.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
     function TP_APPLICATION(entitySet) {
         /// <summary>
         /// Represents the TP_APPLICATION entity type.
@@ -737,130 +861,6 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
-    function TP(entitySet) {
-        /// <summary>
-        /// Represents the TP entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this tP.
-        /// </param>
-        /// <field name="TpID" type="Number">
-        /// Gets or sets the tpID for this tP.
-        /// </field>
-        /// <field name="Number" type="Number">
-        /// Gets or sets the number for this tP.
-        /// </field>
-        /// <field name="Name" type="String">
-        /// Gets or sets the name for this tP.
-        /// </field>
-        /// <field name="Description" type="String">
-        /// Gets or sets the description for this tP.
-        /// </field>
-        /// <field name="WorkOrderNumber" type="String">
-        /// Gets or sets the workOrderNumber for this tP.
-        /// </field>
-        /// <field name="WorkOrderStatus" type="Number">
-        /// Gets or sets the workOrderStatus for this tP.
-        /// </field>
-        /// <field name="WorkOrderIssuedOn" type="Date">
-        /// Gets or sets the workOrderIssuedOn for this tP.
-        /// </field>
-        /// <field name="PlannedEffort" type="String">
-        /// Gets or sets the plannedEffort for this tP.
-        /// </field>
-        /// <field name="EstimatedCost" type="String">
-        /// Gets or sets the estimatedCost for this tP.
-        /// </field>
-        /// <field name="IssueDateToHP" type="Date">
-        /// Gets or sets the issueDateToHP for this tP.
-        /// </field>
-        /// <field name="EffortDateProvidedByHP" type="Date">
-        /// Gets or sets the effortDateProvidedByHP for this tP.
-        /// </field>
-        /// <field name="ApprovedDateByDL" type="Date">
-        /// Gets or sets the approvedDateByDL for this tP.
-        /// </field>
-        /// <field name="PlannedStartDate" type="Date">
-        /// Gets or sets the plannedStartDate for this tP.
-        /// </field>
-        /// <field name="PlannedEndDate" type="Date">
-        /// Gets or sets the plannedEndDate for this tP.
-        /// </field>
-        /// <field name="ActualStartDate" type="Date">
-        /// Gets or sets the actualStartDate for this tP.
-        /// </field>
-        /// <field name="ActualEndDate" type="Date">
-        /// Gets or sets the actualEndDate for this tP.
-        /// </field>
-        /// <field name="ApplicationSize" type="String">
-        /// Gets or sets the applicationSize for this tP.
-        /// </field>
-        /// <field name="HasInputDocument" type="Boolean">
-        /// Gets or sets the hasInputDocument for this tP.
-        /// </field>
-        /// <field name="HasFeasibilityStudy" type="Boolean">
-        /// Gets or sets the hasFeasibilityStudy for this tP.
-        /// </field>
-        /// <field name="HasUnderstandingDocument" type="Boolean">
-        /// Gets or sets the hasUnderstandingDocument for this tP.
-        /// </field>
-        /// <field name="HasEstimation" type="Boolean">
-        /// Gets or sets the hasEstimation for this tP.
-        /// </field>
-        /// <field name="CreatedDate" type="Date">
-        /// Gets or sets the createdDate for this tP.
-        /// </field>
-        /// <field name="CreatedBy" type="String">
-        /// Gets or sets the createdBy for this tP.
-        /// </field>
-        /// <field name="ModifiedDate" type="Date">
-        /// Gets or sets the modifiedDate for this tP.
-        /// </field>
-        /// <field name="ModifiedBy" type="String">
-        /// Gets or sets the modifiedBy for this tP.
-        /// </field>
-        /// <field name="TP_APPLICATIONs" type="msls.EntityCollection" elementType="msls.application.TP_APPLICATION">
-        /// Gets the tP_APPLICATIONs for this tP.
-        /// </field>
-        /// <field name="TP_DOCUMENT_LINKs" type="msls.EntityCollection" elementType="msls.application.TP_DOCUMENT_LINK">
-        /// Gets the tP_DOCUMENT_LINKs for this tP.
-        /// </field>
-        /// <field name="TP_PHASEs" type="msls.EntityCollection" elementType="msls.application.TP_PHASE">
-        /// Gets the tP_PHASEs for this tP.
-        /// </field>
-        /// <field name="REF_APPLICATION_TYPE" type="msls.application.REF_APPLICATION_TYPE">
-        /// Gets or sets the rEF_APPLICATION_TYPE for this tP.
-        /// </field>
-        /// <field name="REF_COMPLEXITY" type="msls.application.REF_COMPLEXITY">
-        /// Gets or sets the rEF_COMPLEXITY for this tP.
-        /// </field>
-        /// <field name="REF_COMPLEXITY1" type="msls.application.REF_COMPLEXITY">
-        /// Gets or sets the rEF_COMPLEXITY1 for this tP.
-        /// </field>
-        /// <field name="REF_GAP" type="msls.application.REF_GAP">
-        /// Gets or sets the rEF_GAP for this tP.
-        /// </field>
-        /// <field name="REF_GAP1" type="msls.application.REF_GAP">
-        /// Gets or sets the rEF_GAP1 for this tP.
-        /// </field>
-        /// <field name="REF_TECHNOLOGY_STACK" type="msls.application.REF_TECHNOLOGY_STACK">
-        /// Gets or sets the rEF_TECHNOLOGY_STACK for this tP.
-        /// </field>
-        /// <field name="TP_RESOURCE_ALLOCATIONs" type="msls.EntityCollection" elementType="msls.application.TP_RESOURCE_ALLOCATION">
-        /// Gets the tP_RESOURCE_ALLOCATIONs for this tP.
-        /// </field>
-        /// <field name="TP_STAKEHOLDERs" type="msls.EntityCollection" elementType="msls.application.TP_STAKEHOLDER">
-        /// Gets the tP_STAKEHOLDERs for this tP.
-        /// </field>
-        /// <field name="TP_VENDORs" type="msls.EntityCollection" elementType="msls.application.TP_VENDOR">
-        /// Gets the tP_VENDORs for this tP.
-        /// </field>
-        /// <field name="details" type="msls.application.TP.Details">
-        /// Gets the details for this tP.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
     function FMData(dataWorkspace) {
         /// <summary>
         /// Represents the FMData data service.
@@ -907,6 +907,9 @@ window.myapp = msls.application;
         /// <field name="RESOURCEs" type="msls.EntitySet">
         /// Gets the RESOURCEs entity set.
         /// </field>
+        /// <field name="TPs" type="msls.EntitySet">
+        /// Gets the TPs entity set.
+        /// </field>
         /// <field name="TP_APPLICATIONs" type="msls.EntitySet">
         /// Gets the TP_APPLICATIONs entity set.
         /// </field>
@@ -924,9 +927,6 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="TP_VENDORs" type="msls.EntitySet">
         /// Gets the TP_VENDORs entity set.
-        /// </field>
-        /// <field name="TPs" type="msls.EntitySet">
-        /// Gets the TPs entity set.
         /// </field>
         /// <field name="details" type="msls.application.FMData.Details">
         /// Gets the details for this data service.
@@ -1093,6 +1093,46 @@ window.myapp = msls.application;
             { name: "TP_RESOURCE_ALLOCATIONs", kind: "collection", elementType: TP_RESOURCE_ALLOCATION }
         ]),
 
+        TP: $defineEntity(TP, [
+            { name: "TpID", type: Number, isReadOnly: true },
+            { name: "Number", type: Number },
+            { name: "Name", type: String },
+            { name: "Description", type: String },
+            { name: "WorkOrderNumber", type: String },
+            { name: "WorkOrderStatus", type: Number },
+            { name: "WorkOrderIssuedOn", type: Date },
+            { name: "PlannedEffort", type: String },
+            { name: "EstimatedCost", type: String },
+            { name: "IssueDateToHP", type: Date },
+            { name: "EffortDateProvidedByHP", type: Date },
+            { name: "ApprovedDateByDL", type: Date },
+            { name: "PlannedStartDate", type: Date },
+            { name: "PlannedEndDate", type: Date },
+            { name: "ActualStartDate", type: Date },
+            { name: "ActualEndDate", type: Date },
+            { name: "ApplicationSize", type: String },
+            { name: "HasInputDocument", type: Boolean },
+            { name: "HasFeasibilityStudy", type: Boolean },
+            { name: "HasUnderstandingDocument", type: Boolean },
+            { name: "HasEstimation", type: Boolean },
+            { name: "CreatedDate", type: Date },
+            { name: "CreatedBy", type: String },
+            { name: "ModifiedDate", type: Date },
+            { name: "ModifiedBy", type: String },
+            { name: "TP_APPLICATIONs", kind: "collection", elementType: TP_APPLICATION },
+            { name: "TP_DOCUMENT_LINKs", kind: "collection", elementType: TP_DOCUMENT_LINK },
+            { name: "TP_PHASEs", kind: "collection", elementType: TP_PHASE },
+            { name: "REF_APPLICATION_TYPE", kind: "reference", type: REF_APPLICATION_TYPE },
+            { name: "REF_COMPLEXITY", kind: "reference", type: REF_COMPLEXITY },
+            { name: "REF_COMPLEXITY1", kind: "reference", type: REF_COMPLEXITY },
+            { name: "REF_GAP", kind: "reference", type: REF_GAP },
+            { name: "REF_GAP1", kind: "reference", type: REF_GAP },
+            { name: "REF_TECHNOLOGY_STACK", kind: "reference", type: REF_TECHNOLOGY_STACK },
+            { name: "TP_RESOURCE_ALLOCATIONs", kind: "collection", elementType: TP_RESOURCE_ALLOCATION },
+            { name: "TP_STAKEHOLDERs", kind: "collection", elementType: TP_STAKEHOLDER },
+            { name: "TP_VENDORs", kind: "collection", elementType: TP_VENDOR }
+        ]),
+
         TP_APPLICATION: $defineEntity(TP_APPLICATION, [
             { name: "TpApplicationID", type: Number, isReadOnly: true },
             { name: "CreatedBy", type: String },
@@ -1164,46 +1204,6 @@ window.myapp = msls.application;
             { name: "TP", kind: "reference", type: TP }
         ]),
 
-        TP: $defineEntity(TP, [
-            { name: "TpID", type: Number, isReadOnly: true },
-            { name: "Number", type: Number },
-            { name: "Name", type: String },
-            { name: "Description", type: String },
-            { name: "WorkOrderNumber", type: String },
-            { name: "WorkOrderStatus", type: Number },
-            { name: "WorkOrderIssuedOn", type: Date },
-            { name: "PlannedEffort", type: String },
-            { name: "EstimatedCost", type: String },
-            { name: "IssueDateToHP", type: Date },
-            { name: "EffortDateProvidedByHP", type: Date },
-            { name: "ApprovedDateByDL", type: Date },
-            { name: "PlannedStartDate", type: Date },
-            { name: "PlannedEndDate", type: Date },
-            { name: "ActualStartDate", type: Date },
-            { name: "ActualEndDate", type: Date },
-            { name: "ApplicationSize", type: String },
-            { name: "HasInputDocument", type: Boolean },
-            { name: "HasFeasibilityStudy", type: Boolean },
-            { name: "HasUnderstandingDocument", type: Boolean },
-            { name: "HasEstimation", type: Boolean },
-            { name: "CreatedDate", type: Date },
-            { name: "CreatedBy", type: String },
-            { name: "ModifiedDate", type: Date },
-            { name: "ModifiedBy", type: String },
-            { name: "TP_APPLICATIONs", kind: "collection", elementType: TP_APPLICATION },
-            { name: "TP_DOCUMENT_LINKs", kind: "collection", elementType: TP_DOCUMENT_LINK },
-            { name: "TP_PHASEs", kind: "collection", elementType: TP_PHASE },
-            { name: "REF_APPLICATION_TYPE", kind: "reference", type: REF_APPLICATION_TYPE },
-            { name: "REF_COMPLEXITY", kind: "reference", type: REF_COMPLEXITY },
-            { name: "REF_COMPLEXITY1", kind: "reference", type: REF_COMPLEXITY },
-            { name: "REF_GAP", kind: "reference", type: REF_GAP },
-            { name: "REF_GAP1", kind: "reference", type: REF_GAP },
-            { name: "REF_TECHNOLOGY_STACK", kind: "reference", type: REF_TECHNOLOGY_STACK },
-            { name: "TP_RESOURCE_ALLOCATIONs", kind: "collection", elementType: TP_RESOURCE_ALLOCATION },
-            { name: "TP_STAKEHOLDERs", kind: "collection", elementType: TP_STAKEHOLDER },
-            { name: "TP_VENDORs", kind: "collection", elementType: TP_VENDOR }
-        ]),
-
         FMData: $defineDataService(FMData, lightSwitchApplication.rootUri + "/FMData.svc", [
             { name: "APPLICATIONs", elementType: APP },
             { name: "REF_APPLICATION_TYPEs", elementType: REF_APPLICATION_TYPE },
@@ -1218,13 +1218,13 @@ window.myapp = msls.application;
             { name: "REF_TECHNOLOGY_STACKs", elementType: REF_TECHNOLOGY_STACK },
             { name: "REF_VENDORs", elementType: REF_VENDOR },
             { name: "RESOURCEs", elementType: RESOURCE },
+            { name: "TPs", elementType: TP },
             { name: "TP_APPLICATIONs", elementType: TP_APPLICATION },
             { name: "TP_DOCUMENT_LINKs", elementType: TP_DOCUMENT_LINK },
             { name: "TP_PHASEs", elementType: TP_PHASE },
             { name: "TP_RESOURCE_ALLOCATIONs", elementType: TP_RESOURCE_ALLOCATION },
             { name: "TP_STAKEHOLDERs", elementType: TP_STAKEHOLDER },
-            { name: "TP_VENDORs", elementType: TP_VENDOR },
-            { name: "TPs", elementType: TP }
+            { name: "TP_VENDORs", elementType: TP_VENDOR }
         ], [
             {
                 name: "APPLICATIONs_SingleOrDefault", value: function (ApplicationID) {
@@ -1318,6 +1318,13 @@ window.myapp = msls.application;
                 }
             },
             {
+                name: "TPs_SingleOrDefault", value: function (TpID) {
+                    return new $DataServiceQuery({ _entitySet: this.TPs },
+                        lightSwitchApplication.rootUri + "/FMData.svc" + "/TPs(" + "TpID=" + $toODataString(TpID, "Int32?") + ")"
+                    );
+                }
+            },
+            {
                 name: "TP_APPLICATIONs_SingleOrDefault", value: function (TpApplicationID) {
                     return new $DataServiceQuery({ _entitySet: this.TP_APPLICATIONs },
                         lightSwitchApplication.rootUri + "/FMData.svc" + "/TP_APPLICATIONs(" + "TpApplicationID=" + $toODataString(TpApplicationID, "Int32?") + ")"
@@ -1356,13 +1363,6 @@ window.myapp = msls.application;
                 name: "TP_VENDORs_SingleOrDefault", value: function (TpVendorID) {
                     return new $DataServiceQuery({ _entitySet: this.TP_VENDORs },
                         lightSwitchApplication.rootUri + "/FMData.svc" + "/TP_VENDORs(" + "TpVendorID=" + $toODataString(TpVendorID, "Int32?") + ")"
-                    );
-                }
-            },
-            {
-                name: "TPs_SingleOrDefault", value: function (TpID) {
-                    return new $DataServiceQuery({ _entitySet: this.TPs },
-                        lightSwitchApplication.rootUri + "/FMData.svc" + "/TPs(" + "TpID=" + $toODataString(TpID, "Int32?") + ")"
                     );
                 }
             }
