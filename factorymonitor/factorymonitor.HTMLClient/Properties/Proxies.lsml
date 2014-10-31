@@ -43,12 +43,6 @@
   <EntityType>
     <EntityType.Attributes>
       <Proxy
-        Target="ServiceInterface:REF_TECHNOLOGY_STACK" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
         Target="ServiceInterface:REF_VENDOR" />
     </EntityType.Attributes>
   </EntityType>

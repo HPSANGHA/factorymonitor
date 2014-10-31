@@ -8,6 +8,75 @@
         $toODataString = msls._toODataString,
         $defineShowScreen = msls._defineShowScreen;
 
+    function AddEditApplicationType(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the AddEditApplicationType screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="REF_APPLICATION_TYPE" type="msls.application.REF_APPLICATION_TYPE">
+        /// Gets or sets the rEF_APPLICATION_TYPE for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.AddEditApplicationType.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "AddEditApplicationType", parameters);
+    }
+
+    function BrowseApplicationTypes(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the BrowseApplicationTypes screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="REF_APPLICATION_TYPEs" type="msls.VisualCollection" elementType="msls.application.REF_APPLICATION_TYPE">
+        /// Gets the rEF_APPLICATION_TYPEs for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.BrowseApplicationTypes.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "BrowseApplicationTypes", parameters);
+    }
+
+    function ViewApplicationType(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the ViewApplicationType screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="REF_APPLICATION_TYPE" type="msls.application.REF_APPLICATION_TYPE">
+        /// Gets or sets the rEF_APPLICATION_TYPE for this screen.
+        /// </field>
+        /// <field name="TPs" type="msls.VisualCollection" elementType="msls.application.TP">
+        /// Gets the tPs for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.ViewApplicationType.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "ViewApplicationType", parameters);
+    }
+
     function AddEditRole(parameters, dataWorkspace) {
         /// <summary>
         /// Represents the AddEditRole screen.
@@ -284,9 +353,9 @@
         $Screen.call(this, dataWorkspace, "ViewResourceDetail", parameters);
     }
 
-    function AddEditApplicationType(parameters, dataWorkspace) {
+    function AddEditTechnologyStack(parameters, dataWorkspace) {
         /// <summary>
-        /// Represents the AddEditApplicationType screen.
+        /// Represents the AddEditTechnologyStack screen.
         /// </summary>
         /// <param name="parameters" type="Array">
         /// An array of screen parameter values.
@@ -294,21 +363,21 @@
         /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
         /// An existing data workspace for this screen to use. By default, a new data workspace is created.
         /// </param>
-        /// <field name="REF_APPLICATION_TYPE" type="msls.application.REF_APPLICATION_TYPE">
-        /// Gets or sets the rEF_APPLICATION_TYPE for this screen.
+        /// <field name="REF_TECHNOLOGY_STACK" type="msls.application.REF_TECHNOLOGY_STACK">
+        /// Gets or sets the rEF_TECHNOLOGY_STACK for this screen.
         /// </field>
-        /// <field name="details" type="msls.application.AddEditApplicationType.Details">
+        /// <field name="details" type="msls.application.AddEditTechnologyStack.Details">
         /// Gets the details for this screen.
         /// </field>
         if (!dataWorkspace) {
             dataWorkspace = new lightSwitchApplication.DataWorkspace();
         }
-        $Screen.call(this, dataWorkspace, "AddEditApplicationType", parameters);
+        $Screen.call(this, dataWorkspace, "AddEditTechnologyStack", parameters);
     }
 
-    function ViewApplicationType(parameters, dataWorkspace) {
+    function ViewTechnologyStack(parameters, dataWorkspace) {
         /// <summary>
-        /// Represents the ViewApplicationType screen.
+        /// Represents the ViewTechnologyStack screen.
         /// </summary>
         /// <param name="parameters" type="Array">
         /// An array of screen parameter values.
@@ -316,24 +385,24 @@
         /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
         /// An existing data workspace for this screen to use. By default, a new data workspace is created.
         /// </param>
-        /// <field name="REF_APPLICATION_TYPE" type="msls.application.REF_APPLICATION_TYPE">
-        /// Gets or sets the rEF_APPLICATION_TYPE for this screen.
+        /// <field name="REF_TECHNOLOGY_STACK" type="msls.application.REF_TECHNOLOGY_STACK">
+        /// Gets or sets the rEF_TECHNOLOGY_STACK for this screen.
         /// </field>
         /// <field name="TPs" type="msls.VisualCollection" elementType="msls.application.TP">
         /// Gets the tPs for this screen.
         /// </field>
-        /// <field name="details" type="msls.application.ViewApplicationType.Details">
+        /// <field name="details" type="msls.application.ViewTechnologyStack.Details">
         /// Gets the details for this screen.
         /// </field>
         if (!dataWorkspace) {
             dataWorkspace = new lightSwitchApplication.DataWorkspace();
         }
-        $Screen.call(this, dataWorkspace, "ViewApplicationType", parameters);
+        $Screen.call(this, dataWorkspace, "ViewTechnologyStack", parameters);
     }
 
-    function BrowseApplicationTypes(parameters, dataWorkspace) {
+    function BrowseTechnologyStacks(parameters, dataWorkspace) {
         /// <summary>
-        /// Represents the BrowseApplicationTypes screen.
+        /// Represents the BrowseTechnologyStacks screen.
         /// </summary>
         /// <param name="parameters" type="Array">
         /// An array of screen parameter values.
@@ -341,19 +410,51 @@
         /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
         /// An existing data workspace for this screen to use. By default, a new data workspace is created.
         /// </param>
-        /// <field name="REF_APPLICATION_TYPEs" type="msls.VisualCollection" elementType="msls.application.REF_APPLICATION_TYPE">
-        /// Gets the rEF_APPLICATION_TYPEs for this screen.
+        /// <field name="REF_TECHNOLOGY_STACKs" type="msls.VisualCollection" elementType="msls.application.REF_TECHNOLOGY_STACK">
+        /// Gets the rEF_TECHNOLOGY_STACKs for this screen.
         /// </field>
-        /// <field name="details" type="msls.application.BrowseApplicationTypes.Details">
+        /// <field name="details" type="msls.application.BrowseTechnologyStacks.Details">
         /// Gets the details for this screen.
         /// </field>
         if (!dataWorkspace) {
             dataWorkspace = new lightSwitchApplication.DataWorkspace();
         }
-        $Screen.call(this, dataWorkspace, "BrowseApplicationTypes", parameters);
+        $Screen.call(this, dataWorkspace, "BrowseTechnologyStacks", parameters);
     }
 
     msls._addToNamespace("msls.application", {
+
+        AddEditApplicationType: $defineScreen(AddEditApplicationType, [
+            { name: "REF_APPLICATION_TYPE", kind: "local", type: lightSwitchApplication.REF_APPLICATION_TYPE }
+        ], [
+        ]),
+
+        BrowseApplicationTypes: $defineScreen(BrowseApplicationTypes, [
+            {
+                name: "REF_APPLICATION_TYPEs", kind: "collection", elementType: lightSwitchApplication.REF_APPLICATION_TYPE,
+                createQuery: function () {
+                    return this.dataWorkspace.FMData.REF_APPLICATION_TYPEs;
+                }
+            }
+        ], [
+        ]),
+
+        ViewApplicationType: $defineScreen(ViewApplicationType, [
+            { name: "REF_APPLICATION_TYPE", kind: "local", type: lightSwitchApplication.REF_APPLICATION_TYPE },
+            {
+                name: "TPs", kind: "collection", elementType: lightSwitchApplication.TP,
+                getNavigationProperty: function () {
+                    if (this.owner.REF_APPLICATION_TYPE) {
+                        return this.owner.REF_APPLICATION_TYPE.details.properties.TPs;
+                    }
+                    return null;
+                },
+                appendQuery: function () {
+                    return this;
+                }
+            }
+        ], [
+        ]),
 
         AddEditRole: $defineScreen(AddEditRole, [
             { name: "REF_ROLE", kind: "local", type: lightSwitchApplication.REF_ROLE }
@@ -483,18 +584,18 @@
         ], [
         ]),
 
-        AddEditApplicationType: $defineScreen(AddEditApplicationType, [
-            { name: "REF_APPLICATION_TYPE", kind: "local", type: lightSwitchApplication.REF_APPLICATION_TYPE }
+        AddEditTechnologyStack: $defineScreen(AddEditTechnologyStack, [
+            { name: "REF_TECHNOLOGY_STACK", kind: "local", type: lightSwitchApplication.REF_TECHNOLOGY_STACK }
         ], [
         ]),
 
-        ViewApplicationType: $defineScreen(ViewApplicationType, [
-            { name: "REF_APPLICATION_TYPE", kind: "local", type: lightSwitchApplication.REF_APPLICATION_TYPE },
+        ViewTechnologyStack: $defineScreen(ViewTechnologyStack, [
+            { name: "REF_TECHNOLOGY_STACK", kind: "local", type: lightSwitchApplication.REF_TECHNOLOGY_STACK },
             {
                 name: "TPs", kind: "collection", elementType: lightSwitchApplication.TP,
                 getNavigationProperty: function () {
-                    if (this.owner.REF_APPLICATION_TYPE) {
-                        return this.owner.REF_APPLICATION_TYPE.details.properties.TPs;
+                    if (this.owner.REF_TECHNOLOGY_STACK) {
+                        return this.owner.REF_TECHNOLOGY_STACK.details.properties.TPs;
                     }
                     return null;
                 },
@@ -505,15 +606,51 @@
         ], [
         ]),
 
-        BrowseApplicationTypes: $defineScreen(BrowseApplicationTypes, [
+        BrowseTechnologyStacks: $defineScreen(BrowseTechnologyStacks, [
             {
-                name: "REF_APPLICATION_TYPEs", kind: "collection", elementType: lightSwitchApplication.REF_APPLICATION_TYPE,
+                name: "REF_TECHNOLOGY_STACKs", kind: "collection", elementType: lightSwitchApplication.REF_TECHNOLOGY_STACK,
                 createQuery: function () {
-                    return this.dataWorkspace.FMData.REF_APPLICATION_TYPEs;
+                    return this.dataWorkspace.FMData.REF_TECHNOLOGY_STACKs;
                 }
             }
         ], [
         ]),
+
+        showAddEditApplicationType: $defineShowScreen(function showAddEditApplicationType(REF_APPLICATION_TYPE, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the AddEditApplicationType screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("AddEditApplicationType", parameters, options);
+        }),
+
+        showBrowseApplicationTypes: $defineShowScreen(function showBrowseApplicationTypes(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the BrowseApplicationTypes screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("BrowseApplicationTypes", parameters, options);
+        }),
+
+        showViewApplicationType: $defineShowScreen(function showViewApplicationType(REF_APPLICATION_TYPE, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the ViewApplicationType screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("ViewApplicationType", parameters, options);
+        }),
 
         showAddEditRole: $defineShowScreen(function showAddEditRole(REF_ROLE, options) {
             /// <summary>
@@ -659,40 +796,40 @@
             return lightSwitchApplication.showScreen("ViewResourceDetail", parameters, options);
         }),
 
-        showAddEditApplicationType: $defineShowScreen(function showAddEditApplicationType(REF_APPLICATION_TYPE, options) {
+        showAddEditTechnologyStack: $defineShowScreen(function showAddEditTechnologyStack(REF_TECHNOLOGY_STACK, options) {
             /// <summary>
-            /// Asynchronously navigates forward to the AddEditApplicationType screen.
+            /// Asynchronously navigates forward to the AddEditTechnologyStack screen.
             /// </summary>
             /// <param name="options" optional="true">
             /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
             /// </param>
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
-            return lightSwitchApplication.showScreen("AddEditApplicationType", parameters, options);
+            return lightSwitchApplication.showScreen("AddEditTechnologyStack", parameters, options);
         }),
 
-        showViewApplicationType: $defineShowScreen(function showViewApplicationType(REF_APPLICATION_TYPE, options) {
+        showViewTechnologyStack: $defineShowScreen(function showViewTechnologyStack(REF_TECHNOLOGY_STACK, options) {
             /// <summary>
-            /// Asynchronously navigates forward to the ViewApplicationType screen.
+            /// Asynchronously navigates forward to the ViewTechnologyStack screen.
             /// </summary>
             /// <param name="options" optional="true">
             /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
             /// </param>
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
-            return lightSwitchApplication.showScreen("ViewApplicationType", parameters, options);
+            return lightSwitchApplication.showScreen("ViewTechnologyStack", parameters, options);
         }),
 
-        showBrowseApplicationTypes: $defineShowScreen(function showBrowseApplicationTypes(options) {
+        showBrowseTechnologyStacks: $defineShowScreen(function showBrowseTechnologyStacks(options) {
             /// <summary>
-            /// Asynchronously navigates forward to the BrowseApplicationTypes screen.
+            /// Asynchronously navigates forward to the BrowseTechnologyStacks screen.
             /// </summary>
             /// <param name="options" optional="true">
             /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
             /// </param>
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 0);
-            return lightSwitchApplication.showScreen("BrowseApplicationTypes", parameters, options);
+            return lightSwitchApplication.showScreen("BrowseTechnologyStacks", parameters, options);
         })
 
     });

@@ -75,6 +75,9 @@
     <Content Include="Screens\Reference\Status\ViewStatus.lsml.js">
       <DependentUpon>ViewStatus.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\Reference\TechnologyStack\ViewTechnologyStack.lsml.js">
+      <DependentUpon>ViewTechnologyStack.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\Reference\Technology\ViewTechnology.lsml.js">
       <DependentUpon>ViewTechnology.lsml</DependentUpon>
     </Content>
@@ -109,6 +112,7 @@
     <LightSwitchModel Include="Properties\FMData\REF_ROLEs.lsml" />
     <LightSwitchModel Include="Properties\FMData\REF_STATUS.lsml" />
     <LightSwitchModel Include="Properties\FMData\REF_TECHNOLOGies.lsml" />
+    <LightSwitchModel Include="Properties\FMData\REF_TECHNOLOGY_STACKs.lsml" />
     <LightSwitchModel Include="Properties\FMData\RESOURCEs.lsml" />
     <LightSwitchModel Include="Properties\Proxies.lsml" />
     <LightSwitchModel Include="Screens\Reference\ApplicationType\AddEditApplicationType.lsml" />
@@ -120,6 +124,9 @@
     <LightSwitchModel Include="Screens\Reference\Status\AddEditStatus.lsml" />
     <LightSwitchModel Include="Screens\Reference\Status\BrowseStatusSet.lsml" />
     <LightSwitchModel Include="Screens\Reference\Status\ViewStatus.lsml" />
+    <LightSwitchModel Include="Screens\Reference\TechnologyStack\AddEditTechnologyStack.lsml" />
+    <LightSwitchModel Include="Screens\Reference\TechnologyStack\BrowseTechnologyStacks.lsml" />
+    <LightSwitchModel Include="Screens\Reference\TechnologyStack\ViewTechnologyStack.lsml" />
     <LightSwitchModel Include="Screens\Reference\Technology\AddEditTechnology.lsml" />
     <LightSwitchModel Include="Screens\Reference\Technology\BrowseTechnologies.lsml" />
     <LightSwitchModel Include="Screens\Reference\Technology\ViewTechnology.lsml" />

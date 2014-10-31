@@ -2152,7 +2152,7 @@
       ]
     },
     {
-      "homeScreen": { "__id": "BrowseRoles" },
+      "homeScreen": { "__id": "BrowseApplicationTypes" },
       "id": "!module",
       "name": "LightSwitchApplication.factorymonitor.HTMLClient",
       "logo": "/Content/Images/logo.png",
@@ -2993,64 +2993,6 @@
           ]
         },
         {
-          "id": "REF_APPLICATION_TYPE*",
-          "name": "REF_APPLICATION_TYPE*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "REF_APPLICATION_TYPE" }
-        },
-        {
-          "id": "CollectionView$REF_APPLICATION_TYPE",
-          "name": "CollectionView$REF_APPLICATION_TYPE",
-          "kind": "CollectionView",
-          "elementType": { "__id": "REF_APPLICATION_TYPE" },
-          "methods":
-          [
-            {
-              "id": "CollectionView$REF_APPLICATION_TYPE/Methods[addNew]",
-              "name": "addNew",
-              "returnType": { "__id": "REF_APPLICATION_TYPE" }
-            },
-            {
-              "id": "CollectionView$REF_APPLICATION_TYPE/Methods[addAndEditNew]",
-              "name": "addAndEditNew",
-              "returnType": { "__id": "REF_APPLICATION_TYPE" }
-            },
-            {
-              "id": "CollectionView$REF_APPLICATION_TYPE/Methods[showSearch]",
-              "name": "showSearch",
-              "returnType": { "__id": "REF_APPLICATION_TYPE" }
-            },
-            {
-              "id": "CollectionView$REF_APPLICATION_TYPE/Methods[editSelected]",
-              "name": "editSelected"
-            },
-            {
-              "id": "CollectionView$REF_APPLICATION_TYPE/Methods[deleteSelected]",
-              "name": "deleteSelected"
-            },
-            {
-              "id": "CollectionView$REF_APPLICATION_TYPE/Methods[removeSelected]",
-              "name": "removeSelected"
-            },
-            {
-              "id": "CollectionView$REF_APPLICATION_TYPE/Methods[refresh]",
-              "name": "refresh"
-            },
-            {
-              "id": "CollectionView$REF_APPLICATION_TYPE/Methods[viewSelected]",
-              "name": "viewSelected"
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "CollectionView$REF_APPLICATION_TYPE/Properties[selectedItem]",
-              "name": "selectedItem",
-              "propertyType": { "__id": "REF_APPLICATION_TYPE" }
-            }
-          ]
-        },
-        {
           "id": "APP*",
           "name": "APP*",
           "kind": "Enumerable",
@@ -3337,6 +3279,179 @@
               "id": "CollectionView$REF_ROLE/Properties[selectedItem]",
               "name": "selectedItem",
               "propertyType": { "__id": "REF_ROLE" }
+            }
+          ]
+        },
+        {
+          "id": "REF_APPLICATION_TYPE*",
+          "name": "REF_APPLICATION_TYPE*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "REF_APPLICATION_TYPE" }
+        },
+        {
+          "id": "CollectionView$REF_APPLICATION_TYPE",
+          "name": "CollectionView$REF_APPLICATION_TYPE",
+          "kind": "CollectionView",
+          "elementType": { "__id": "REF_APPLICATION_TYPE" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$REF_APPLICATION_TYPE/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "REF_APPLICATION_TYPE" }
+            },
+            {
+              "id": "CollectionView$REF_APPLICATION_TYPE/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "REF_APPLICATION_TYPE" }
+            },
+            {
+              "id": "CollectionView$REF_APPLICATION_TYPE/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "REF_APPLICATION_TYPE" }
+            },
+            {
+              "id": "CollectionView$REF_APPLICATION_TYPE/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$REF_APPLICATION_TYPE/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$REF_APPLICATION_TYPE/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$REF_APPLICATION_TYPE/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$REF_APPLICATION_TYPE/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$REF_APPLICATION_TYPE/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "REF_APPLICATION_TYPE" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "REF_APPLICATION_TYPE/Properties[Name]" } },
+          "id": "REF_APPLICATION_TYPE",
+          "name": "REF_APPLICATION_TYPE",
+          ":@DefaultScreen":
+          {
+            "value": { "__id": "ViewApplicationType" },
+            ":@ScreenParameterMapping":
+            {
+              "screenParameter": { "__id": "ViewApplicationType/Properties[REF_APPLICATION_TYPE]" }
+            }
+          },
+          "methods":
+          [
+            {
+              "id": "REF_APPLICATION_TYPE/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "REF_APPLICATION_TYPE/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "REF_APPLICATION_TYPE/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "REF_APPLICATION_TYPE/Properties[ApplicationTypeID]",
+              "name": "ApplicationTypeID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int16" },
+              ":@Hidden": { },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "REF_APPLICATION_TYPE/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 20
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "REF_APPLICATION_TYPE/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 500
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "REF_APPLICATION_TYPE/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "REF_APPLICATION_TYPE/Properties[CreatedTime]",
+              "name": "CreatedTime",
+              "propertyType": { "__id": ":DateTime?" },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "REF_APPLICATION_TYPE/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "REF_APPLICATION_TYPE/Properties[ModifiedDate]",
+              "name": "ModifiedDate",
+              "propertyType": { "__id": ":DateTime?" },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "REF_APPLICATION_TYPE/Properties[TPs]",
+              "name": "TPs",
+              "association": { "__id": "FK_TP_REF_APPLICATION_TYPE" },
+              "elementType": { "__id": "TP" },
+              "fromEnd": { "__id": "FK_TP_REF_APPLICATION_TYPE/Ends[REF_APPLICATION_TYPE]" },
+              "propertyType": { "__id": "TP*" },
+              "toEnd": { "__id": "FK_TP_REF_APPLICATION_TYPE/Ends[TP]" }
             }
           ]
         },
@@ -3931,121 +4046,6 @@
         },
         {
           "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "REF_APPLICATION_TYPE/Properties[Name]" } },
-          "id": "REF_APPLICATION_TYPE",
-          "name": "REF_APPLICATION_TYPE",
-          ":@DefaultScreen":
-          {
-            "value": { "__id": "ViewApplicationType" },
-            ":@ScreenParameterMapping":
-            {
-              "screenParameter": { "__id": "ViewApplicationType/Properties[REF_APPLICATION_TYPE]" }
-            }
-          },
-          "methods":
-          [
-            {
-              "id": "REF_APPLICATION_TYPE/Methods[deleteEntity]",
-              "name": "deleteEntity"
-            },
-            {
-              "id": "REF_APPLICATION_TYPE/Methods[edit]",
-              "name": "edit"
-            },
-            {
-              "id": "REF_APPLICATION_TYPE/Methods[view]",
-              "name": "view"
-            }
-          ],
-          "properties":
-          [
-            {
-              "__isKeyProperty": 1,
-              "id": "REF_APPLICATION_TYPE/Properties[ApplicationTypeID]",
-              "name": "ApplicationTypeID",
-              "isReadOnly": true,
-              "propertyType": { "__id": ":Int16" },
-              ":@Hidden": { },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "REF_APPLICATION_TYPE/Properties[Name]",
-              "name": "Name",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 20
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "REF_APPLICATION_TYPE/Properties[Description]",
-              "name": "Description",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 500
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "REF_APPLICATION_TYPE/Properties[CreatedBy]",
-              "name": "CreatedBy",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 50
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "REF_APPLICATION_TYPE/Properties[CreatedTime]",
-              "name": "CreatedTime",
-              "propertyType": { "__id": ":DateTime?" },
-              ":@DateTimeConstraint":
-              {
-                "kind": "Unspecified",
-                "precision": 3,
-                "preserveSeconds": true
-              },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "REF_APPLICATION_TYPE/Properties[ModifiedBy]",
-              "name": "ModifiedBy",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 50
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "REF_APPLICATION_TYPE/Properties[ModifiedDate]",
-              "name": "ModifiedDate",
-              "propertyType": { "__id": ":DateTime?" },
-              ":@DateTimeConstraint":
-              {
-                "kind": "Unspecified",
-                "precision": 3,
-                "preserveSeconds": true
-              },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "REF_APPLICATION_TYPE/Properties[TPs]",
-              "name": "TPs",
-              "association": { "__id": "FK_TP_REF_APPLICATION_TYPE" },
-              "elementType": { "__id": "TP" },
-              "fromEnd": { "__id": "FK_TP_REF_APPLICATION_TYPE/Ends[REF_APPLICATION_TYPE]" },
-              "propertyType": { "__id": "TP*" },
-              "toEnd": { "__id": "FK_TP_REF_APPLICATION_TYPE/Ends[TP]" }
-            }
-          ]
-        },
-        {
-          "__isEntityType": 1,
           ":@SummaryProperty": { "property": { "__id": "REF_COMPLEXITY/Properties[Name]" } },
           "id": "REF_COMPLEXITY",
           "name": "REF_COMPLEXITY",
@@ -4568,6 +4568,14 @@
           ":@SummaryProperty": { "property": { "__id": "REF_TECHNOLOGY_STACK/Properties[Name]" } },
           "id": "REF_TECHNOLOGY_STACK",
           "name": "REF_TECHNOLOGY_STACK",
+          ":@DefaultScreen":
+          {
+            "value": { "__id": "ViewTechnologyStack" },
+            ":@ScreenParameterMapping":
+            {
+              "screenParameter": { "__id": "ViewTechnologyStack/Properties[REF_TECHNOLOGY_STACK]" }
+            }
+          },
           "methods":
           [
             {
@@ -7648,6 +7656,770 @@
                   "parameterType": { "__id": ":Int32?" }
                 }
               ]
+            }
+          ]
+        },
+        {
+          "displayName": "ApplicationType",
+          "id": "AddEditApplicationType",
+          "name": "AddEditApplicationType",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "ApplicationType",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditApplicationType/Properties[REF_APPLICATION_TYPE]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":TextArea" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[Description]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "AddEditApplicationType/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "AddEditApplicationType/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "AddEditApplicationType/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "AddEditApplicationType/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "AddEditApplicationType/Properties[REF_APPLICATION_TYPE]",
+              "name": "REF_APPLICATION_TYPE",
+              "elementType": { "__id": "REF_APPLICATION_TYPE" },
+              "propertyType": { "__id": "REF_APPLICATION_TYPE" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "displayName": "ApplicationTypes",
+          "id": "BrowseApplicationTypes",
+          "name": "BrowseApplicationTypes",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "ApplicationTypes",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Application Type List",
+                    "name": "ApplicationTypeList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "REF_APPLICATION_TYPEs",
+                        "name": "REF_APPLICATION_TYPEs",
+                        "kind": "Collection",
+                        "view": { "__id": ":TileList" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseApplicationTypes/Properties[REF_APPLICATION_TYPEs]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[Name]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Large"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[Description]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showViewApplicationType]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseApplicationTypes/Properties[REF_APPLICATION_TYPEs]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showViewApplicationType]/Parameters[REF_APPLICATION_TYPE]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "BrowseApplicationTypes/Properties[REF_APPLICATION_TYPEs]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$REF_APPLICATION_TYPE/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Add",
+                        "name": "AddApplicationType",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditApplicationType]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseApplicationTypes/Properties[REF_APPLICATION_TYPEs]" } },
+                              ":@CreateNewEntity":
+                              {
+                                "targetParameter": { "__id": "!module/Methods[showAddEditApplicationType]/Parameters[REF_APPLICATION_TYPE]" }
+                              }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Search",
+                        "name": "SearchApplicationTypes",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "BrowseApplicationTypes/Properties[REF_APPLICATION_TYPEs]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$REF_APPLICATION_TYPE/Methods[showSearch]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-search"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "BrowseApplicationTypes/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "BrowseApplicationTypes/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "BrowseApplicationTypes/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "BrowseApplicationTypes/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "BrowseApplicationTypes/Properties[REF_APPLICATION_TYPEs]",
+              "name": "REF_APPLICATION_TYPEs",
+              "pageSize": 45,
+              "elementType": { "__id": "REF_APPLICATION_TYPE" },
+              "propertyType": { "__id": "CollectionView$REF_APPLICATION_TYPE" },
+              "query":
+              {
+                "id": "BrowseApplicationTypes/Properties[REF_APPLICATION_TYPEs]/Query",
+                "name": "REF_APPLICATION_TYPEsQuery",
+                "elementType": { "__id": "REF_APPLICATION_TYPE" },
+                "returnType": { "__id": "REF_APPLICATION_TYPE*" },
+                "source":
+                {
+                  "member": { "__id": "FMData/Members[REF_APPLICATION_TYPEs]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "BrowseApplicationTypes/Properties[REF_APPLICATION_TYPEs]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "ApplicationType",
+          "id": "ViewApplicationType",
+          "name": "ViewApplicationType",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "ApplicationType",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ViewApplicationType/Properties[REF_APPLICATION_TYPE]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[Description]" }
+                                }
+                              },
+                              {
+                                "displayName": "Created By",
+                                "name": "CreatedBy",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[CreatedBy]" }
+                                }
+                              },
+                              {
+                                "displayName": "Created Time",
+                                "name": "CreatedTime",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[CreatedTime]" }
+                                }
+                              },
+                              {
+                                "displayName": "Modified By",
+                                "name": "ModifiedBy",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[ModifiedBy]" }
+                                }
+                              },
+                              {
+                                "displayName": "Modified Date",
+                                "name": "ModifiedDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[ModifiedDate]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "TPs",
+                            "name": "TPs",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "TPs",
+                                "name": "TPs1",
+                                "kind": "Collection",
+                                "view": { "__id": ":TileList" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ViewApplicationType/Properties[TPs]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "rows",
+                                    "name": "rows",
+                                    "kind": "Details",
+                                    "view": { "__id": ":RowsLayout" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    },
+                                    "childContentItems":
+                                    [
+                                      {
+                                        "displayName": "Name",
+                                        "name": "Name1",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "TP/Properties[Name]" }
+                                        },
+                                        "propertySources":
+                                        [
+                                          {
+                                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                            "value": "Large"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "displayName": "Number",
+                                        "name": "Number",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "TP/Properties[Number]" }
+                                        },
+                                        "propertySources":
+                                        [
+                                          {
+                                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                            "value": "Small"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "displayName": "Description",
+                                        "name": "Description1",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "TP/Properties[Description]" }
+                                        },
+                                        "propertySources":
+                                        [
+                                          {
+                                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                            "value": "Small"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "propertySources":
+                                    [
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                        "value": "FitToContent"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                                    "source":
+                                    {
+                                      "links":
+                                      [
+                                        {
+                                          "member": { "__id": "ViewApplicationType/Properties[TPs]" }
+                                        },
+                                        {
+                                          "target": { "__id": "CollectionView$TP/Methods[viewSelected]" }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Edit",
+                        "name": "EditApplicationType",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditApplicationType]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showAddEditApplicationType]/Parameters[REF_APPLICATION_TYPE]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "ViewApplicationType/Properties[REF_APPLICATION_TYPE]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-edit"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ViewApplicationType/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ViewApplicationType/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ViewApplicationType/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ViewApplicationType/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ViewApplicationType/Properties[REF_APPLICATION_TYPE]",
+              "name": "REF_APPLICATION_TYPE",
+              "elementType": { "__id": "REF_APPLICATION_TYPE" },
+              "propertyType": { "__id": "REF_APPLICATION_TYPE" },
+              ":@IsParameter": { }
+            },
+            {
+              "id": "ViewApplicationType/Properties[TPs]",
+              "name": "TPs",
+              "pageSize": 15,
+              "elementType": { "__id": "TP" },
+              "propertyType": { "__id": "CollectionView$TP" },
+              "query":
+              {
+                "id": "ViewApplicationType/Properties[TPs]/Query",
+                "name": "TPsQuery",
+                "elementType": { "__id": "TP" },
+                "returnType": { "__id": "TP*" },
+                "source":
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "ViewApplicationType/Properties[REF_APPLICATION_TYPE]" }
+                    },
+                    {
+                      "member": { "__id": "REF_APPLICATION_TYPE/Properties[TPs]" }
+                    }
+                  ]
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "ViewApplicationType/Properties[TPs]/Query" }
+              }
             }
           ]
         },
@@ -10943,9 +11715,9 @@
           ]
         },
         {
-          "displayName": "ApplicationType",
-          "id": "AddEditApplicationType",
-          "name": "AddEditApplicationType",
+          "displayName": "TechnologyStack",
+          "id": "AddEditTechnologyStack",
+          "name": "AddEditTechnologyStack",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -10953,7 +11725,7 @@
           },
           "rootContentItem":
           {
-            "displayName": "ApplicationType",
+            "displayName": "TechnologyStack",
             "name": "RootContentItem",
             "kind": "Screen",
             "view": { "__id": ":Screen" },
@@ -10980,7 +11752,7 @@
                         "view": { "__id": ":ColumnsLayout" },
                         "dataSource":
                         {
-                          "member": { "__id": "AddEditApplicationType/Properties[REF_APPLICATION_TYPE]" }
+                          "member": { "__id": "AddEditTechnologyStack/Properties[REF_TECHNOLOGY_STACK]" }
                         },
                         "childContentItems":
                         [
@@ -10998,7 +11770,7 @@
                                 "view": { "__id": ":TextBox" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[Name]" }
+                                  "member": { "__id": "REF_TECHNOLOGY_STACK/Properties[Name]" }
                                 }
                               },
                               {
@@ -11008,10 +11780,27 @@
                                 "view": { "__id": ":TextArea" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[Description]" }
+                                  "member": { "__id": "REF_TECHNOLOGY_STACK/Properties[Description]" }
                                 }
                               }
                             ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "right",
+                            "name": "right",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
                             "propertySources":
                             [
                               {
@@ -11052,24 +11841,24 @@
           "methods":
           [
             {
-              "id": "AddEditApplicationType/Methods[showTab]",
+              "id": "AddEditTechnologyStack/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "AddEditApplicationType/Methods[showTab]/Parameters[tabName]",
+                  "id": "AddEditTechnologyStack/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "AddEditApplicationType/Methods[showDialog]",
+              "id": "AddEditTechnologyStack/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "AddEditApplicationType/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "AddEditTechnologyStack/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -11079,18 +11868,18 @@
           "properties":
           [
             {
-              "id": "AddEditApplicationType/Properties[REF_APPLICATION_TYPE]",
-              "name": "REF_APPLICATION_TYPE",
-              "elementType": { "__id": "REF_APPLICATION_TYPE" },
-              "propertyType": { "__id": "REF_APPLICATION_TYPE" },
+              "id": "AddEditTechnologyStack/Properties[REF_TECHNOLOGY_STACK]",
+              "name": "REF_TECHNOLOGY_STACK",
+              "elementType": { "__id": "REF_TECHNOLOGY_STACK" },
+              "propertyType": { "__id": "REF_TECHNOLOGY_STACK" },
               ":@IsParameter": { }
             }
           ]
         },
         {
-          "displayName": "ApplicationType",
-          "id": "ViewApplicationType",
-          "name": "ViewApplicationType",
+          "displayName": "TechnologyStack",
+          "id": "ViewTechnologyStack",
+          "name": "ViewTechnologyStack",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -11098,7 +11887,7 @@
           },
           "rootContentItem":
           {
-            "displayName": "ApplicationType",
+            "displayName": "TechnologyStack",
             "name": "RootContentItem",
             "kind": "Screen",
             "view": { "__id": ":Screen" },
@@ -11125,7 +11914,7 @@
                         "view": { "__id": ":ColumnsLayout" },
                         "dataSource":
                         {
-                          "member": { "__id": "ViewApplicationType/Properties[REF_APPLICATION_TYPE]" }
+                          "member": { "__id": "ViewTechnologyStack/Properties[REF_TECHNOLOGY_STACK]" }
                         },
                         "childContentItems":
                         [
@@ -11143,7 +11932,7 @@
                                 "view": { "__id": ":Text" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[Name]" }
+                                  "member": { "__id": "REF_TECHNOLOGY_STACK/Properties[Name]" }
                                 }
                               },
                               {
@@ -11153,7 +11942,17 @@
                                 "view": { "__id": ":Text" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[Description]" }
+                                  "member": { "__id": "REF_TECHNOLOGY_STACK/Properties[Description]" }
+                                }
+                              },
+                              {
+                                "displayName": "Created Date",
+                                "name": "CreatedDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_TECHNOLOGY_STACK/Properties[CreatedDate]" }
                                 }
                               },
                               {
@@ -11163,17 +11962,7 @@
                                 "view": { "__id": ":Text" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[CreatedBy]" }
-                                }
-                              },
-                              {
-                                "displayName": "Created Time",
-                                "name": "CreatedTime",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[CreatedTime]" }
+                                  "member": { "__id": "REF_TECHNOLOGY_STACK/Properties[CreatedBy]" }
                                 }
                               },
                               {
@@ -11183,7 +11972,7 @@
                                 "view": { "__id": ":Text" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[ModifiedBy]" }
+                                  "member": { "__id": "REF_TECHNOLOGY_STACK/Properties[ModifiedBy]" }
                                 }
                               },
                               {
@@ -11193,7 +11982,7 @@
                                 "view": { "__id": ":Text" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[ModifiedDate]" }
+                                  "member": { "__id": "REF_TECHNOLOGY_STACK/Properties[ModifiedDate]" }
                                 }
                               }
                             ],
@@ -11223,7 +12012,7 @@
                                 "view": { "__id": ":TileList" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "ViewApplicationType/Properties[TPs]" }
+                                  "member": { "__id": "ViewTechnologyStack/Properties[TPs]" }
                                 },
                                 "childContentItems":
                                 [
@@ -11310,7 +12099,7 @@
                                       "links":
                                       [
                                         {
-                                          "member": { "__id": "ViewApplicationType/Properties[TPs]" }
+                                          "member": { "__id": "ViewTechnologyStack/Properties[TPs]" }
                                         },
                                         {
                                           "target": { "__id": "CollectionView$TP/Methods[viewSelected]" }
@@ -11329,7 +12118,7 @@
                     [
                       {
                         "displayName": "Edit",
-                        "name": "EditApplicationType",
+                        "name": "EditTechnologyStack",
                         "kind": "Command",
                         "view": { "__id": ":CommandBarButton" },
                         "propertySources":
@@ -11338,17 +12127,17 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showAddEditApplicationType]" },
+                              "target": { "__id": "!module/Methods[showAddEditTechnologyStack]" },
                               "arguments":
                               [
                                 {
-                                  "parameter": { "__id": "!module/Methods[showAddEditApplicationType]/Parameters[REF_APPLICATION_TYPE]" },
+                                  "parameter": { "__id": "!module/Methods[showAddEditTechnologyStack]/Parameters[REF_TECHNOLOGY_STACK]" },
                                   "value":
                                   {
                                     "links":
                                     [
                                       {
-                                        "member": { "__id": "ViewApplicationType/Properties[REF_APPLICATION_TYPE]" }
+                                        "member": { "__id": "ViewTechnologyStack/Properties[REF_TECHNOLOGY_STACK]" }
                                       }
                                     ]
                                   }
@@ -11384,24 +12173,24 @@
           "methods":
           [
             {
-              "id": "ViewApplicationType/Methods[showTab]",
+              "id": "ViewTechnologyStack/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "ViewApplicationType/Methods[showTab]/Parameters[tabName]",
+                  "id": "ViewTechnologyStack/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "ViewApplicationType/Methods[showDialog]",
+              "id": "ViewTechnologyStack/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "ViewApplicationType/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "ViewTechnologyStack/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -11411,21 +12200,21 @@
           "properties":
           [
             {
-              "id": "ViewApplicationType/Properties[REF_APPLICATION_TYPE]",
-              "name": "REF_APPLICATION_TYPE",
-              "elementType": { "__id": "REF_APPLICATION_TYPE" },
-              "propertyType": { "__id": "REF_APPLICATION_TYPE" },
+              "id": "ViewTechnologyStack/Properties[REF_TECHNOLOGY_STACK]",
+              "name": "REF_TECHNOLOGY_STACK",
+              "elementType": { "__id": "REF_TECHNOLOGY_STACK" },
+              "propertyType": { "__id": "REF_TECHNOLOGY_STACK" },
               ":@IsParameter": { }
             },
             {
-              "id": "ViewApplicationType/Properties[TPs]",
+              "id": "ViewTechnologyStack/Properties[TPs]",
               "name": "TPs",
               "pageSize": 15,
               "elementType": { "__id": "TP" },
               "propertyType": { "__id": "CollectionView$TP" },
               "query":
               {
-                "id": "ViewApplicationType/Properties[TPs]/Query",
+                "id": "ViewTechnologyStack/Properties[TPs]/Query",
                 "name": "TPsQuery",
                 "elementType": { "__id": "TP" },
                 "returnType": { "__id": "TP*" },
@@ -11434,25 +12223,25 @@
                   "links":
                   [
                     {
-                      "member": { "__id": "ViewApplicationType/Properties[REF_APPLICATION_TYPE]" }
+                      "member": { "__id": "ViewTechnologyStack/Properties[REF_TECHNOLOGY_STACK]" }
                     },
                     {
-                      "member": { "__id": "REF_APPLICATION_TYPE/Properties[TPs]" }
+                      "member": { "__id": "REF_TECHNOLOGY_STACK/Properties[TPs]" }
                     }
                   ]
                 }
               },
               "source":
               {
-                "target": { "__id": "ViewApplicationType/Properties[TPs]/Query" }
+                "target": { "__id": "ViewTechnologyStack/Properties[TPs]/Query" }
               }
             }
           ]
         },
         {
-          "displayName": "ApplicationTypes",
-          "id": "BrowseApplicationTypes",
-          "name": "BrowseApplicationTypes",
+          "displayName": "TechnologyStacks",
+          "id": "BrowseTechnologyStacks",
+          "name": "BrowseTechnologyStacks",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -11460,7 +12249,7 @@
           },
           "rootContentItem":
           {
-            "displayName": "ApplicationTypes",
+            "displayName": "TechnologyStacks",
             "name": "RootContentItem",
             "kind": "Screen",
             "view": { "__id": ":Screen" },
@@ -11474,20 +12263,20 @@
                 "childContentItems":
                 [
                   {
-                    "displayName": "Application Type List",
-                    "name": "ApplicationTypeList",
+                    "displayName": "Technology Stack List",
+                    "name": "TechnologyStackList",
                     "kind": "Tab",
                     "view": { "__id": ":RowsLayout" },
                     "childContentItems":
                     [
                       {
-                        "displayName": "REF_APPLICATION_TYPEs",
-                        "name": "REF_APPLICATION_TYPEs",
+                        "displayName": "REF_TECHNOLOGY_STACKs",
+                        "name": "REF_TECHNOLOGY_STACKs",
                         "kind": "Collection",
                         "view": { "__id": ":TileList" },
                         "dataSource":
                         {
-                          "member": { "__id": "BrowseApplicationTypes/Properties[REF_APPLICATION_TYPEs]" }
+                          "member": { "__id": "BrowseTechnologyStacks/Properties[REF_TECHNOLOGY_STACKs]" }
                         },
                         "childContentItems":
                         [
@@ -11511,7 +12300,7 @@
                                 "view": { "__id": ":Text" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[Name]" }
+                                  "member": { "__id": "REF_TECHNOLOGY_STACK/Properties[Name]" }
                                 },
                                 "propertySources":
                                 [
@@ -11528,7 +12317,24 @@
                                 "view": { "__id": ":Text" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "REF_APPLICATION_TYPE/Properties[Description]" }
+                                  "member": { "__id": "REF_TECHNOLOGY_STACK/Properties[Description]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Created Date",
+                                "name": "CreatedDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_TECHNOLOGY_STACK/Properties[CreatedDate]" }
                                 },
                                 "propertySources":
                                 [
@@ -11554,21 +12360,21 @@
                             "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showViewApplicationType]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "BrowseApplicationTypes/Properties[REF_APPLICATION_TYPEs]" } },
+                              "target": { "__id": "!module/Methods[showViewTechnologyStack]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseTechnologyStacks/Properties[REF_TECHNOLOGY_STACKs]" } },
                               "arguments":
                               [
                                 {
-                                  "parameter": { "__id": "!module/Methods[showViewApplicationType]/Parameters[REF_APPLICATION_TYPE]" },
+                                  "parameter": { "__id": "!module/Methods[showViewTechnologyStack]/Parameters[REF_TECHNOLOGY_STACK]" },
                                   "value":
                                   {
                                     "links":
                                     [
                                       {
-                                        "member": { "__id": "BrowseApplicationTypes/Properties[REF_APPLICATION_TYPEs]" }
+                                        "member": { "__id": "BrowseTechnologyStacks/Properties[REF_TECHNOLOGY_STACKs]" }
                                       },
                                       {
-                                        "member": { "__id": "CollectionView$REF_APPLICATION_TYPE/Properties[selectedItem]" }
+                                        "member": { "__id": "CollectionView$REF_TECHNOLOGY_STACK/Properties[selectedItem]" }
                                       }
                                     ]
                                   }
@@ -11583,7 +12389,7 @@
                     [
                       {
                         "displayName": "Add",
-                        "name": "AddApplicationType",
+                        "name": "AddTechnologyStack",
                         "kind": "Command",
                         "view": { "__id": ":CommandBarButton" },
                         "propertySources":
@@ -11592,11 +12398,11 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showAddEditApplicationType]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "BrowseApplicationTypes/Properties[REF_APPLICATION_TYPEs]" } },
+                              "target": { "__id": "!module/Methods[showAddEditTechnologyStack]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseTechnologyStacks/Properties[REF_TECHNOLOGY_STACKs]" } },
                               ":@CreateNewEntity":
                               {
-                                "targetParameter": { "__id": "!module/Methods[showAddEditApplicationType]/Parameters[REF_APPLICATION_TYPE]" }
+                                "targetParameter": { "__id": "!module/Methods[showAddEditTechnologyStack]/Parameters[REF_TECHNOLOGY_STACK]" }
                               }
                             }
                           },
@@ -11608,7 +12414,7 @@
                       },
                       {
                         "displayName": "Search",
-                        "name": "SearchApplicationTypes",
+                        "name": "SearchTechnologyStacks",
                         "kind": "Command",
                         "view": { "__id": ":CommandBarButton" },
                         "propertySources":
@@ -11620,10 +12426,10 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "BrowseApplicationTypes/Properties[REF_APPLICATION_TYPEs]" }
+                                  "member": { "__id": "BrowseTechnologyStacks/Properties[REF_TECHNOLOGY_STACKs]" }
                                 },
                                 {
-                                  "target": { "__id": "CollectionView$REF_APPLICATION_TYPE/Methods[showSearch]" }
+                                  "target": { "__id": "CollectionView$REF_TECHNOLOGY_STACK/Methods[showSearch]" }
                                 }
                               ]
                             }
@@ -11656,24 +12462,24 @@
           "methods":
           [
             {
-              "id": "BrowseApplicationTypes/Methods[showTab]",
+              "id": "BrowseTechnologyStacks/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "BrowseApplicationTypes/Methods[showTab]/Parameters[tabName]",
+                  "id": "BrowseTechnologyStacks/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "BrowseApplicationTypes/Methods[showDialog]",
+              "id": "BrowseTechnologyStacks/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "BrowseApplicationTypes/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "BrowseTechnologyStacks/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -11683,25 +12489,25 @@
           "properties":
           [
             {
-              "id": "BrowseApplicationTypes/Properties[REF_APPLICATION_TYPEs]",
-              "name": "REF_APPLICATION_TYPEs",
+              "id": "BrowseTechnologyStacks/Properties[REF_TECHNOLOGY_STACKs]",
+              "name": "REF_TECHNOLOGY_STACKs",
               "pageSize": 45,
-              "elementType": { "__id": "REF_APPLICATION_TYPE" },
-              "propertyType": { "__id": "CollectionView$REF_APPLICATION_TYPE" },
+              "elementType": { "__id": "REF_TECHNOLOGY_STACK" },
+              "propertyType": { "__id": "CollectionView$REF_TECHNOLOGY_STACK" },
               "query":
               {
-                "id": "BrowseApplicationTypes/Properties[REF_APPLICATION_TYPEs]/Query",
-                "name": "REF_APPLICATION_TYPEsQuery",
-                "elementType": { "__id": "REF_APPLICATION_TYPE" },
-                "returnType": { "__id": "REF_APPLICATION_TYPE*" },
+                "id": "BrowseTechnologyStacks/Properties[REF_TECHNOLOGY_STACKs]/Query",
+                "name": "REF_TECHNOLOGY_STACKsQuery",
+                "elementType": { "__id": "REF_TECHNOLOGY_STACK" },
+                "returnType": { "__id": "REF_TECHNOLOGY_STACK*" },
                 "source":
                 {
-                  "member": { "__id": "FMData/Members[REF_APPLICATION_TYPEs]" }
+                  "member": { "__id": "FMData/Members[REF_TECHNOLOGY_STACKs]" }
                 }
               },
               "source":
               {
-                "target": { "__id": "BrowseApplicationTypes/Properties[REF_APPLICATION_TYPEs]/Query" }
+                "target": { "__id": "BrowseTechnologyStacks/Properties[REF_TECHNOLOGY_STACKs]/Query" }
               }
             }
           ]
@@ -11709,6 +12515,37 @@
       ],
       "methods":
       [
+        {
+          "id": "!module/Methods[showAddEditApplicationType]",
+          "name": "showAddEditApplicationType",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditApplicationType" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showAddEditApplicationType]/Parameters[REF_APPLICATION_TYPE]",
+              "name": "REF_APPLICATION_TYPE",
+              "parameterType": { "__id": "REF_APPLICATION_TYPE" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showBrowseApplicationTypes]",
+          "name": "showBrowseApplicationTypes",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseApplicationTypes" } }
+        },
+        {
+          "id": "!module/Methods[showViewApplicationType]",
+          "name": "showViewApplicationType",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewApplicationType" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showViewApplicationType]/Parameters[REF_APPLICATION_TYPE]",
+              "name": "REF_APPLICATION_TYPE",
+              "parameterType": { "__id": "REF_APPLICATION_TYPE" }
+            }
+          ]
+        },
         {
           "id": "!module/Methods[showAddEditRole]",
           "name": "showAddEditRole",
@@ -11834,35 +12671,35 @@
           ]
         },
         {
-          "id": "!module/Methods[showAddEditApplicationType]",
-          "name": "showAddEditApplicationType",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditApplicationType" } },
+          "id": "!module/Methods[showAddEditTechnologyStack]",
+          "name": "showAddEditTechnologyStack",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditTechnologyStack" } },
           "parameters":
           [
             {
-              "id": "!module/Methods[showAddEditApplicationType]/Parameters[REF_APPLICATION_TYPE]",
-              "name": "REF_APPLICATION_TYPE",
-              "parameterType": { "__id": "REF_APPLICATION_TYPE" }
+              "id": "!module/Methods[showAddEditTechnologyStack]/Parameters[REF_TECHNOLOGY_STACK]",
+              "name": "REF_TECHNOLOGY_STACK",
+              "parameterType": { "__id": "REF_TECHNOLOGY_STACK" }
             }
           ]
         },
         {
-          "id": "!module/Methods[showViewApplicationType]",
-          "name": "showViewApplicationType",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewApplicationType" } },
+          "id": "!module/Methods[showViewTechnologyStack]",
+          "name": "showViewTechnologyStack",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewTechnologyStack" } },
           "parameters":
           [
             {
-              "id": "!module/Methods[showViewApplicationType]/Parameters[REF_APPLICATION_TYPE]",
-              "name": "REF_APPLICATION_TYPE",
-              "parameterType": { "__id": "REF_APPLICATION_TYPE" }
+              "id": "!module/Methods[showViewTechnologyStack]/Parameters[REF_TECHNOLOGY_STACK]",
+              "name": "REF_TECHNOLOGY_STACK",
+              "parameterType": { "__id": "REF_TECHNOLOGY_STACK" }
             }
           ]
         },
         {
-          "id": "!module/Methods[showBrowseApplicationTypes]",
-          "name": "showBrowseApplicationTypes",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseApplicationTypes" } }
+          "id": "!module/Methods[showBrowseTechnologyStacks]",
+          "name": "showBrowseTechnologyStacks",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseTechnologyStacks" } }
         }
       ],
       "navigationItems":
@@ -11891,6 +12728,11 @@
           "id": "!module/NavigationItems[link4]",
           "name": "link4",
           "method": { "__id": "!module/Methods[showBrowseApplicationTypes]" }
+        },
+        {
+          "id": "!module/NavigationItems[link5]",
+          "name": "link5",
+          "method": { "__id": "!module/Methods[showBrowseTechnologyStacks]" }
         }
       ]
     }
