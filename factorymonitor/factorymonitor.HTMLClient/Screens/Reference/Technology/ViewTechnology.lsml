@@ -5,12 +5,12 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="ViewRole">
+    Name="ViewTechnology">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="FMData" />
       <DisplayName
-        Value="Role" />
+        Value="Technology" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -32,7 +32,7 @@
             <ContentItem
               Name="columns"
               Kind="Details"
-              DataType="REF_ROLE"
+              DataType="REF_TECHNOLOGY"
               View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
               <ContentItem.Attributes>
                 <DisplayName
@@ -42,7 +42,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="ViewRole/Properties[REF_ROLE]" />
+                      Member="ViewTechnology/Properties[REF_TECHNOLOGY]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -57,7 +57,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="REF_ROLE/Properties[Name]" />
+                          Member="REF_TECHNOLOGY/Properties[Name]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -70,7 +70,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="REF_ROLE/Properties[Description]" />
+                          Member="REF_TECHNOLOGY/Properties[Description]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -83,7 +83,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="REF_ROLE/Properties[CreatedDate]" />
+                          Member="REF_TECHNOLOGY/Properties[CreatedDate]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -96,7 +96,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="REF_ROLE/Properties[CreatedBy]" />
+                          Member="REF_TECHNOLOGY/Properties[CreatedBy]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -109,7 +109,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="REF_ROLE/Properties[ModifiedBy]" />
+                          Member="REF_TECHNOLOGY/Properties[ModifiedBy]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -122,7 +122,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="REF_ROLE/Properties[ModifiedDate]" />
+                          Member="REF_TECHNOLOGY/Properties[ModifiedDate]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -151,30 +151,29 @@
                 </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem
-                Name="RESOURCEs"
-                Kind="Group"
-                View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
+                Name="right"
+                Kind="Group">
                 <ContentItem
-                  Name="RESOURCEs1"
+                  Name="APPLICATIONs1"
                   Kind="Collection"
-                  DataType="CollectionView$RESOURCE"
+                  DataType="CollectionView$APP"
                   View="Microsoft.LightSwitch.MobileWeb:TileList">
                   <ContentItem.Attributes>
                     <DisplayName
-                      Value="RESOURCEs" />
+                      Value="APPLICATIONs" />
                   </ContentItem.Attributes>
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="ViewRole/Properties[RESOURCEs]" />
+                          Member="ViewTechnology/Properties[APPLICATIONs]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                   <ContentItem
                     Name="rows"
                     Kind="Details"
-                    DataType="RESOURCE"
+                    DataType="APP"
                     View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
                     <ContentItem.Attributes>
                       <DisplayName
@@ -188,12 +187,12 @@
                     <ContentItem
                       Name="Name1"
                       Kind="Value"
-                      DataType=":String">
+                      DataType=":String?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
                             <MemberExpression
-                              Member="RESOURCE/Properties[Name]" />
+                              Member="APP/Properties[Name]" />
                           </ChainExpression>
                         </ScreenExpressionTree>
                       </ContentItem.DataSource>
@@ -211,14 +210,39 @@
                       </ContentItem.PropertySources>
                     </ContentItem>
                     <ContentItem
-                      Name="EmailId"
+                      Name="CreatedBy1"
                       Kind="Value"
-                      DataType=":String">
+                      DataType=":String?">
                       <ContentItem.DataSource>
                         <ScreenExpressionTree>
                           <ChainExpression>
                             <MemberExpression
-                              Member="RESOURCE/Properties[EmailId]" />
+                              Member="APP/Properties[CreatedBy]" />
+                          </ChainExpression>
+                        </ScreenExpressionTree>
+                      </ContentItem.DataSource>
+                      <ContentItem.PropertySources>
+                        <ControlPropertySource
+                          Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
+                          <ScreenExpressionTree>
+                            <ChainExpression>
+                              <ConstantExpression
+                                Value="Small"
+                                ResultType=":String" />
+                            </ChainExpression>
+                          </ScreenExpressionTree>
+                        </ControlPropertySource>
+                      </ContentItem.PropertySources>
+                    </ContentItem>
+                    <ContentItem
+                      Name="CreatedDate1"
+                      Kind="Value"
+                      DataType=":DateTime?">
+                      <ContentItem.DataSource>
+                        <ScreenExpressionTree>
+                          <ChainExpression>
+                            <MemberExpression
+                              Member="APP/Properties[CreatedDate]" />
                           </ChainExpression>
                         </ScreenExpressionTree>
                       </ContentItem.DataSource>
@@ -254,7 +278,7 @@
                       <ScreenExpressionTree>
                         <ChainExpression>
                           <MemberExpression
-                            Member="ViewRole/Properties[RESOURCEs]" />
+                            Member="ViewTechnology/Properties[APPLICATIONs]" />
                           <CallExpression
                             Target="viewSelected" />
                         </ChainExpression>
@@ -262,11 +286,33 @@
                     </ControlPropertySource>
                   </ContentItem.PropertySources>
                 </ContentItem>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MinWidth]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="200"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MaxWidth]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="400"
+                          ResultType=":Double" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
               </ContentItem>
             </ContentItem>
             <ContentItem.CommandItems>
               <ContentItem
-                Name="EditRole"
+                Name="EditTechnology"
                 Kind="Command">
                 <ContentItem.Attributes>
                   <DisplayName
@@ -278,12 +324,12 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showAddEditRole]">
+                          Target="!module/Methods[showAddEditTechnology]">
                           <ArgumentExpression
-                            Parameter="REF_ROLE">
+                            Parameter="REF_TECHNOLOGY">
                             <ChainExpression>
                               <MemberExpression
-                                Member="ViewRole/Properties[REF_ROLE]" />
+                                Member="ViewTechnology/Properties[REF_TECHNOLOGY]" />
                             </ChainExpression>
                           </ArgumentExpression>
                         </CallExpression>
@@ -349,20 +395,20 @@
     </Screen.Methods>
     <Screen.Properties>
       <ScreenProperty
-        Name="REF_ROLE"
-        PropertyType="REF_ROLE">
+        Name="REF_TECHNOLOGY"
+        PropertyType="REF_TECHNOLOGY">
         <ScreenProperty.Attributes>
           <IsParameter />
         </ScreenProperty.Attributes>
       </ScreenProperty>
       <ScreenCollectionProperty
-        Name="RESOURCEs"
+        Name="APPLICATIONs"
         PageSize="15"
-        PropertyType="CollectionView$RESOURCE">
+        PropertyType="CollectionView$APP">
         <ScreenCollectionProperty.Query>
           <ScreenQueryDefinition
-            Name="RESOURCEsQuery"
-            ReturnType="RESOURCE*">
+            Name="APPLICATIONsQuery"
+            ReturnType="APP*">
             <ScreenQueryDefinition.FilterExpression>
               <QueryFilterExpressionTree />
             </ScreenQueryDefinition.FilterExpression>
@@ -370,9 +416,9 @@
               <QuerySourceExpressionTree>
                 <ChainExpression>
                   <MemberExpression
-                    Member="ViewRole/Properties[REF_ROLE]" />
+                    Member="ViewTechnology/Properties[REF_TECHNOLOGY]" />
                   <MemberExpression
-                    Member="RESOURCEs" />
+                    Member="APPLICATIONs" />
                 </ChainExpression>
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
@@ -381,7 +427,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="ViewRole/Properties[RESOURCEs]/Query" />
+              Target="ViewTechnology/Properties[APPLICATIONs]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -389,14 +435,14 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showViewRole">
+      Name="showViewTechnology">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="ViewRole" />
+          TargetScreen="ViewTechnology" />
       </ApplicationMethod.Attributes>
       <ApplicationMethodParameter
-        Name="REF_ROLE"
-        ParameterType="REF_ROLE" />
+        Name="REF_TECHNOLOGY"
+        ParameterType="REF_TECHNOLOGY" />
     </ApplicationMethod>
   </Application.Methods>
 </Application>

@@ -2109,8 +2109,7 @@
           "__isSemanticType": 1,
           "id": "Microsoft.LightSwitch.Extensions:EmailAddress",
           "name": "EmailAddress",
-          "underlyingType": { "__id": ":String" },
-          "Microsoft.LightSwitch.Extensions:@EmailAddressValidation": { "domainRequired": true }
+          "underlyingType": { "__id": ":String" }
         },
         {
           "__isSemanticType": 1,
@@ -2128,15 +2127,13 @@
           "__isSemanticType": 1,
           "id": "Microsoft.LightSwitch.Extensions:PhoneNumber",
           "name": "PhoneNumber",
-          "underlyingType": { "__id": ":String" },
-          "Microsoft.LightSwitch.Extensions:@PhoneNumberValidation": { "formats": "C (AAA) NNN-NNNN;C (AAA) NNNNNNN;CAAANNNNNNN;(AAA) NNN-NNNN;(AAA) NNNNNNN;AAANNNNNNN;NNN-NNNN;NNNNNNN" }
+          "underlyingType": { "__id": ":String" }
         },
         {
           "__isSemanticType": 1,
           "id": "Microsoft.LightSwitch.Extensions:Percent",
           "name": "Percent",
           "underlyingType": { "__id": ":Decimal" },
-          "Microsoft.LightSwitch.Extensions:@FormatParameter": { "decimalDigits": 2 },
           ":@DecimalConstraint":
           {
             "scale": 9
@@ -2146,8 +2143,7 @@
           "__isSemanticType": 1,
           "id": "Microsoft.LightSwitch.Extensions:WebAddress",
           "name": "WebAddress",
-          "underlyingType": { "__id": ":String" },
-          "Microsoft.LightSwitch.Extensions:@WebAddressValidation": { }
+          "underlyingType": { "__id": ":String" }
         }
       ]
     },
@@ -2583,64 +2579,6 @@
               "id": "CollectionView$TP/Properties[selectedItem]",
               "name": "selectedItem",
               "propertyType": { "__id": "TP" }
-            }
-          ]
-        },
-        {
-          "id": "RESOURCE*",
-          "name": "RESOURCE*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "RESOURCE" }
-        },
-        {
-          "id": "CollectionView$RESOURCE",
-          "name": "CollectionView$RESOURCE",
-          "kind": "CollectionView",
-          "elementType": { "__id": "RESOURCE" },
-          "methods":
-          [
-            {
-              "id": "CollectionView$RESOURCE/Methods[addNew]",
-              "name": "addNew",
-              "returnType": { "__id": "RESOURCE" }
-            },
-            {
-              "id": "CollectionView$RESOURCE/Methods[addAndEditNew]",
-              "name": "addAndEditNew",
-              "returnType": { "__id": "RESOURCE" }
-            },
-            {
-              "id": "CollectionView$RESOURCE/Methods[showSearch]",
-              "name": "showSearch",
-              "returnType": { "__id": "RESOURCE" }
-            },
-            {
-              "id": "CollectionView$RESOURCE/Methods[editSelected]",
-              "name": "editSelected"
-            },
-            {
-              "id": "CollectionView$RESOURCE/Methods[deleteSelected]",
-              "name": "deleteSelected"
-            },
-            {
-              "id": "CollectionView$RESOURCE/Methods[removeSelected]",
-              "name": "removeSelected"
-            },
-            {
-              "id": "CollectionView$RESOURCE/Methods[refresh]",
-              "name": "refresh"
-            },
-            {
-              "id": "CollectionView$RESOURCE/Methods[viewSelected]",
-              "name": "viewSelected"
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "CollectionView$RESOURCE/Properties[selectedItem]",
-              "name": "selectedItem",
-              "propertyType": { "__id": "RESOURCE" }
             }
           ]
         },
@@ -3225,6 +3163,64 @@
           ]
         },
         {
+          "id": "RESOURCE*",
+          "name": "RESOURCE*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "RESOURCE" }
+        },
+        {
+          "id": "CollectionView$RESOURCE",
+          "name": "CollectionView$RESOURCE",
+          "kind": "CollectionView",
+          "elementType": { "__id": "RESOURCE" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$RESOURCE/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "RESOURCE" }
+            },
+            {
+              "id": "CollectionView$RESOURCE/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "RESOURCE" }
+            },
+            {
+              "id": "CollectionView$RESOURCE/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "RESOURCE" }
+            },
+            {
+              "id": "CollectionView$RESOURCE/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$RESOURCE/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$RESOURCE/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$RESOURCE/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$RESOURCE/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$RESOURCE/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "RESOURCE" }
+            }
+          ]
+        },
+        {
           "id": "REF_STATUS*",
           "name": "REF_STATUS*",
           "kind": "Enumerable",
@@ -3569,6 +3565,141 @@
               "fromEnd": { "__id": "FK_RESOURCE_REF_STATUS/Ends[REF_STATUS]" },
               "propertyType": { "__id": "RESOURCE*" },
               "toEnd": { "__id": "FK_RESOURCE_REF_STATUS/Ends[RESOURCE]" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "RESOURCE/Properties[Name]" } },
+          "id": "RESOURCE",
+          "name": "RESOURCE",
+          ":@DefaultScreen":
+          {
+            "value": { "__id": "ViewResourceDetail" },
+            ":@ScreenParameterMapping":
+            {
+              "screenParameter": { "__id": "ViewResourceDetail/Properties[RESOURCE]" }
+            }
+          },
+          "methods":
+          [
+            {
+              "id": "RESOURCE/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "RESOURCE/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "RESOURCE/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "RESOURCE/Properties[ResourceID]",
+              "name": "ResourceID",
+              "isReadOnly": true,
+              "propertyType": { "__id": ":Int32" },
+              ":@Hidden": { },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "RESOURCE/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 50
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "RESOURCE/Properties[EmailId]",
+              "name": "EmailId",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 50
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "RESOURCE/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "RESOURCE/Properties[CreatedDate]",
+              "name": "CreatedDate",
+              "propertyType": { "__id": ":DateTime?" },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "RESOURCE/Properties[ModifiedDate]",
+              "name": "ModifiedDate",
+              "propertyType": { "__id": ":DateTime?" },
+              ":@DateTimeConstraint":
+              {
+                "kind": "Unspecified",
+                "precision": 3,
+                "preserveSeconds": true
+              },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "RESOURCE/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String?" },
+              ":@MaxLength":
+              {
+                "value": 50
+              },
+              ":@AnsiConstraint": { }
+            },
+            {
+              "id": "RESOURCE/Properties[REF_ROLE]",
+              "name": "REF_ROLE",
+              "association": { "__id": "FK_RESOURCE_REF_ROLE" },
+              "elementType": { "__id": "REF_ROLE" },
+              "fromEnd": { "__id": "FK_RESOURCE_REF_ROLE/Ends[RESOURCE]" },
+              "propertyType": { "__id": "REF_ROLE" },
+              "toEnd": { "__id": "FK_RESOURCE_REF_ROLE/Ends[REF_ROLE]" }
+            },
+            {
+              "id": "RESOURCE/Properties[REF_STATUS]",
+              "name": "REF_STATUS",
+              "association": { "__id": "FK_RESOURCE_REF_STATUS" },
+              "elementType": { "__id": "REF_STATUS" },
+              "fromEnd": { "__id": "FK_RESOURCE_REF_STATUS/Ends[RESOURCE]" },
+              "propertyType": { "__id": "REF_STATUS" },
+              "toEnd": { "__id": "FK_RESOURCE_REF_STATUS/Ends[REF_STATUS]" }
+            },
+            {
+              "id": "RESOURCE/Properties[TP_RESOURCE_ALLOCATIONs]",
+              "name": "TP_RESOURCE_ALLOCATIONs",
+              "association": { "__id": "FK_TP_RESOURCE_ALLOCATION_RESOURCE" },
+              "elementType": { "__id": "TP_RESOURCE_ALLOCATION" },
+              "fromEnd": { "__id": "FK_TP_RESOURCE_ALLOCATION_RESOURCE/Ends[RESOURCE]" },
+              "propertyType": { "__id": "TP_RESOURCE_ALLOCATION*" },
+              "toEnd": { "__id": "FK_TP_RESOURCE_ALLOCATION_RESOURCE/Ends[TP_RESOURCE_ALLOCATION]" }
             }
           ]
         },
@@ -4309,6 +4440,14 @@
           ":@SummaryProperty": { "property": { "__id": "REF_TECHNOLOGY/Properties[Name]" } },
           "id": "REF_TECHNOLOGY",
           "name": "REF_TECHNOLOGY",
+          ":@DefaultScreen":
+          {
+            "value": { "__id": "ViewTechnology" },
+            ":@ScreenParameterMapping":
+            {
+              "screenParameter": { "__id": "ViewTechnology/Properties[REF_TECHNOLOGY]" }
+            }
+          },
           "methods":
           [
             {
@@ -4631,141 +4770,6 @@
               "fromEnd": { "__id": "FK_TP_VENDOR_REF_VENDOR/Ends[REF_VENDOR]" },
               "propertyType": { "__id": "TP_VENDOR*" },
               "toEnd": { "__id": "FK_TP_VENDOR_REF_VENDOR/Ends[TP_VENDOR]" }
-            }
-          ]
-        },
-        {
-          "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "RESOURCE/Properties[Name]" } },
-          "id": "RESOURCE",
-          "name": "RESOURCE",
-          ":@DefaultScreen":
-          {
-            "value": { "__id": "ViewResourceDetail" },
-            ":@ScreenParameterMapping":
-            {
-              "screenParameter": { "__id": "ViewResourceDetail/Properties[RESOURCE]" }
-            }
-          },
-          "methods":
-          [
-            {
-              "id": "RESOURCE/Methods[deleteEntity]",
-              "name": "deleteEntity"
-            },
-            {
-              "id": "RESOURCE/Methods[edit]",
-              "name": "edit"
-            },
-            {
-              "id": "RESOURCE/Methods[view]",
-              "name": "view"
-            }
-          ],
-          "properties":
-          [
-            {
-              "__isKeyProperty": 1,
-              "id": "RESOURCE/Properties[ResourceID]",
-              "name": "ResourceID",
-              "isReadOnly": true,
-              "propertyType": { "__id": ":Int32" },
-              ":@Hidden": { },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "RESOURCE/Properties[Name]",
-              "name": "Name",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 50
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "RESOURCE/Properties[EmailId]",
-              "name": "EmailId",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 50
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "RESOURCE/Properties[CreatedBy]",
-              "name": "CreatedBy",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 50
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "RESOURCE/Properties[CreatedDate]",
-              "name": "CreatedDate",
-              "propertyType": { "__id": ":DateTime?" },
-              ":@DateTimeConstraint":
-              {
-                "kind": "Unspecified",
-                "precision": 3,
-                "preserveSeconds": true
-              },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "RESOURCE/Properties[ModifiedDate]",
-              "name": "ModifiedDate",
-              "propertyType": { "__id": ":DateTime?" },
-              ":@DateTimeConstraint":
-              {
-                "kind": "Unspecified",
-                "precision": 3,
-                "preserveSeconds": true
-              },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "RESOURCE/Properties[ModifiedBy]",
-              "name": "ModifiedBy",
-              "propertyType": { "__id": ":String?" },
-              ":@MaxLength":
-              {
-                "value": 50
-              },
-              ":@AnsiConstraint": { }
-            },
-            {
-              "id": "RESOURCE/Properties[REF_ROLE]",
-              "name": "REF_ROLE",
-              "association": { "__id": "FK_RESOURCE_REF_ROLE" },
-              "elementType": { "__id": "REF_ROLE" },
-              "fromEnd": { "__id": "FK_RESOURCE_REF_ROLE/Ends[RESOURCE]" },
-              "propertyType": { "__id": "REF_ROLE" },
-              "toEnd": { "__id": "FK_RESOURCE_REF_ROLE/Ends[REF_ROLE]" }
-            },
-            {
-              "id": "RESOURCE/Properties[REF_STATUS]",
-              "name": "REF_STATUS",
-              "association": { "__id": "FK_RESOURCE_REF_STATUS" },
-              "elementType": { "__id": "REF_STATUS" },
-              "fromEnd": { "__id": "FK_RESOURCE_REF_STATUS/Ends[RESOURCE]" },
-              "propertyType": { "__id": "REF_STATUS" },
-              "toEnd": { "__id": "FK_RESOURCE_REF_STATUS/Ends[REF_STATUS]" }
-            },
-            {
-              "id": "RESOURCE/Properties[TP_RESOURCE_ALLOCATIONs]",
-              "name": "TP_RESOURCE_ALLOCATIONs",
-              "association": { "__id": "FK_TP_RESOURCE_ALLOCATION_RESOURCE" },
-              "elementType": { "__id": "TP_RESOURCE_ALLOCATION" },
-              "fromEnd": { "__id": "FK_TP_RESOURCE_ALLOCATION_RESOURCE/Ends[RESOURCE]" },
-              "propertyType": { "__id": "TP_RESOURCE_ALLOCATION*" },
-              "toEnd": { "__id": "FK_TP_RESOURCE_ALLOCATION_RESOURCE/Ends[TP_RESOURCE_ALLOCATION]" }
             }
           ]
         },
@@ -8192,6 +8196,102 @@
                                 "value": 400
                               }
                             ]
+                          },
+                          {
+                            "displayName": "RESOURCEs",
+                            "name": "RESOURCEs",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "RESOURCEs",
+                                "name": "RESOURCEs1",
+                                "kind": "Collection",
+                                "view": { "__id": ":TileList" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ViewRole/Properties[RESOURCEs]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "rows",
+                                    "name": "rows",
+                                    "kind": "Details",
+                                    "view": { "__id": ":RowsLayout" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    },
+                                    "childContentItems":
+                                    [
+                                      {
+                                        "displayName": "Name",
+                                        "name": "Name1",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "RESOURCE/Properties[Name]" }
+                                        },
+                                        "propertySources":
+                                        [
+                                          {
+                                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                            "value": "Large"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "displayName": "Email Id",
+                                        "name": "EmailId",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "RESOURCE/Properties[EmailId]" }
+                                        },
+                                        "propertySources":
+                                        [
+                                          {
+                                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                            "value": "Small"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "propertySources":
+                                    [
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                        "value": "FitToContent"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                                    "source":
+                                    {
+                                      "links":
+                                      [
+                                        {
+                                          "member": { "__id": "ViewRole/Properties[RESOURCEs]" }
+                                        },
+                                        {
+                                          "target": { "__id": "CollectionView$RESOURCE/Methods[viewSelected]" }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
                           }
                         ]
                       }
@@ -8230,119 +8330,6 @@
                           {
                             "property": { "__id": ":RootCommand/Properties[Icon]" },
                             "value": "msls-edit"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "displayName": "RESOURCEs",
-                    "name": "RESOURCEs",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "RESOURCEs",
-                        "name": "RESOURCEs1",
-                        "kind": "Collection",
-                        "view": { "__id": ":TileList" },
-                        "dataSource":
-                        {
-                          "member": { "__id": "ViewRole/Properties[RESOURCEs]" }
-                        },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "rows",
-                            "name": "rows",
-                            "kind": "Details",
-                            "view": { "__id": ":RowsLayout" },
-                            "dataSource":
-                            {
-                              "links":
-                              [
-                              ]
-                            },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "Name",
-                                "name": "Name1",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "RESOURCE/Properties[Name]" }
-                                },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                    "value": "Large"
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Email Id",
-                                "name": "EmailId",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "RESOURCE/Properties[EmailId]" }
-                                },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                    "value": "Small"
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Created By",
-                                "name": "CreatedBy1",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "RESOURCE/Properties[CreatedBy]" }
-                                },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                    "value": "Small"
-                                  }
-                                ]
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
-                                "value": "FitToContent"
-                              }
-                            ]
-                          }
-                        ],
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
-                            "source":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "ViewRole/Properties[RESOURCEs]" }
-                                },
-                                {
-                                  "target": { "__id": "CollectionView$RESOURCE/Methods[viewSelected]" }
-                                }
-                              ]
-                            }
                           }
                         ]
                       }
@@ -9341,7 +9328,7 @@
                             "childContentItems":
                             [
                               {
-                                "displayName": "REF ROLE",
+                                "displayName": "Role",
                                 "name": "REF_ROLE",
                                 "kind": "Details",
                                 "view": { "__id": ":DetailsModalPicker" },
@@ -9364,7 +9351,7 @@
                                 ]
                               },
                               {
-                                "displayName": "REF STATUS",
+                                "displayName": "Status",
                                 "name": "REF_STATUS",
                                 "kind": "Details",
                                 "view": { "__id": ":DetailsModalPicker" },
@@ -9459,6 +9446,280 @@
               "elementType": { "__id": "RESOURCE" },
               "propertyType": { "__id": "RESOURCE" },
               ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "displayName": "ResourceDetails",
+          "id": "BrowseResourceDetails",
+          "name": "BrowseResourceDetails",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "ResourceDetails",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Resource Detail List",
+                    "name": "ResourceDetailList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "RESOURCEs",
+                        "name": "RESOURCEs",
+                        "kind": "Collection",
+                        "view": { "__id": ":TileList" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[Name]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Large"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Email Id",
+                                "name": "EmailId",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[EmailId]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Created By",
+                                "name": "CreatedBy",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "RESOURCE/Properties[CreatedBy]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showViewResourceDetail]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showViewResourceDetail]/Parameters[RESOURCE]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$RESOURCE/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Add",
+                        "name": "AddResourceDetail",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditResourceDetail]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]" } },
+                              ":@CreateNewEntity":
+                              {
+                                "targetParameter": { "__id": "!module/Methods[showAddEditResourceDetail]/Parameters[RESOURCE]" }
+                              }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Search",
+                        "name": "SearchResourceDetails",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$RESOURCE/Methods[showSearch]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-search"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "BrowseResourceDetails/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "BrowseResourceDetails/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "BrowseResourceDetails/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "BrowseResourceDetails/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "BrowseResourceDetails/Properties[RESOURCEs]",
+              "name": "RESOURCEs",
+              "pageSize": 45,
+              "elementType": { "__id": "RESOURCE" },
+              "propertyType": { "__id": "CollectionView$RESOURCE" },
+              "query":
+              {
+                "id": "BrowseResourceDetails/Properties[RESOURCEs]/Query",
+                "name": "RESOURCEsQuery",
+                "elementType": { "__id": "RESOURCE" },
+                "returnType": { "__id": "RESOURCE*" },
+                "source":
+                {
+                  "member": { "__id": "FMData/Members[RESOURCEs]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]/Query" }
+              }
             }
           ]
         },
@@ -9861,9 +10122,9 @@
           ]
         },
         {
-          "displayName": "ResourceDetails",
-          "id": "BrowseResourceDetails",
-          "name": "BrowseResourceDetails",
+          "displayName": "Technology",
+          "id": "AddEditTechnology",
+          "name": "AddEditTechnology",
           "launchMode": "Single",
           ":@SaveChangesTo":
           {
@@ -9871,7 +10132,7 @@
           },
           "rootContentItem":
           {
-            "displayName": "ResourceDetails",
+            "displayName": "Technology",
             "name": "RootContentItem",
             "kind": "Screen",
             "view": { "__id": ":Screen" },
@@ -9885,20 +10146,555 @@
                 "childContentItems":
                 [
                   {
-                    "displayName": "Resource Detail List",
-                    "name": "ResourceDetailList",
+                    "displayName": "Details",
+                    "name": "Details",
                     "kind": "Tab",
                     "view": { "__id": ":RowsLayout" },
                     "childContentItems":
                     [
                       {
-                        "displayName": "RESOURCEs",
-                        "name": "RESOURCEs",
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditTechnology/Properties[REF_TECHNOLOGY]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_TECHNOLOGY/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_TECHNOLOGY/Properties[Description]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "right",
+                            "name": "right",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "AddEditTechnology/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "AddEditTechnology/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "AddEditTechnology/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "AddEditTechnology/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "AddEditTechnology/Properties[REF_TECHNOLOGY]",
+              "name": "REF_TECHNOLOGY",
+              "elementType": { "__id": "REF_TECHNOLOGY" },
+              "propertyType": { "__id": "REF_TECHNOLOGY" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "displayName": "Technology",
+          "id": "ViewTechnology",
+          "name": "ViewTechnology",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Technology",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ViewTechnology/Properties[REF_TECHNOLOGY]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_TECHNOLOGY/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_TECHNOLOGY/Properties[Description]" }
+                                }
+                              },
+                              {
+                                "displayName": "Created Date",
+                                "name": "CreatedDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_TECHNOLOGY/Properties[CreatedDate]" }
+                                }
+                              },
+                              {
+                                "displayName": "Created By",
+                                "name": "CreatedBy",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_TECHNOLOGY/Properties[CreatedBy]" }
+                                }
+                              },
+                              {
+                                "displayName": "Modified By",
+                                "name": "ModifiedBy",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_TECHNOLOGY/Properties[ModifiedBy]" }
+                                }
+                              },
+                              {
+                                "displayName": "Modified Date",
+                                "name": "ModifiedDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_TECHNOLOGY/Properties[ModifiedDate]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "right",
+                            "name": "right",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "APPLICATIONs",
+                                "name": "APPLICATIONs1",
+                                "kind": "Collection",
+                                "view": { "__id": ":TileList" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ViewTechnology/Properties[APPLICATIONs]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "rows",
+                                    "name": "rows",
+                                    "kind": "Details",
+                                    "view": { "__id": ":RowsLayout" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    },
+                                    "childContentItems":
+                                    [
+                                      {
+                                        "displayName": "Name",
+                                        "name": "Name1",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "APP/Properties[Name]" }
+                                        },
+                                        "propertySources":
+                                        [
+                                          {
+                                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                            "value": "Large"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "displayName": "Created By",
+                                        "name": "CreatedBy1",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "APP/Properties[CreatedBy]" }
+                                        },
+                                        "propertySources":
+                                        [
+                                          {
+                                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                            "value": "Small"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "displayName": "Created Date",
+                                        "name": "CreatedDate1",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "APP/Properties[CreatedDate]" }
+                                        },
+                                        "propertySources":
+                                        [
+                                          {
+                                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                            "value": "Small"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "propertySources":
+                                    [
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                        "value": "FitToContent"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                                    "source":
+                                    {
+                                      "links":
+                                      [
+                                        {
+                                          "member": { "__id": "ViewTechnology/Properties[APPLICATIONs]" }
+                                        },
+                                        {
+                                          "target": { "__id": "CollectionView$APP/Methods[viewSelected]" }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Edit",
+                        "name": "EditTechnology",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditTechnology]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showAddEditTechnology]/Parameters[REF_TECHNOLOGY]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "ViewTechnology/Properties[REF_TECHNOLOGY]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-edit"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ViewTechnology/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ViewTechnology/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ViewTechnology/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ViewTechnology/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ViewTechnology/Properties[REF_TECHNOLOGY]",
+              "name": "REF_TECHNOLOGY",
+              "elementType": { "__id": "REF_TECHNOLOGY" },
+              "propertyType": { "__id": "REF_TECHNOLOGY" },
+              ":@IsParameter": { }
+            },
+            {
+              "id": "ViewTechnology/Properties[APPLICATIONs]",
+              "name": "APPLICATIONs",
+              "pageSize": 15,
+              "elementType": { "__id": "APP" },
+              "propertyType": { "__id": "CollectionView$APP" },
+              "query":
+              {
+                "id": "ViewTechnology/Properties[APPLICATIONs]/Query",
+                "name": "APPLICATIONsQuery",
+                "elementType": { "__id": "APP" },
+                "returnType": { "__id": "APP*" },
+                "source":
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "ViewTechnology/Properties[REF_TECHNOLOGY]" }
+                    },
+                    {
+                      "member": { "__id": "REF_TECHNOLOGY/Properties[APPLICATIONs]" }
+                    }
+                  ]
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "ViewTechnology/Properties[APPLICATIONs]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "Technologies",
+          "id": "BrowseTechnologies",
+          "name": "BrowseTechnologies",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Technologies",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Technology List",
+                    "name": "TechnologyList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "REF_TECHNOLOGies",
+                        "name": "REF_TECHNOLOGies",
                         "kind": "Collection",
                         "view": { "__id": ":TileList" },
                         "dataSource":
                         {
-                          "member": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]" }
+                          "member": { "__id": "BrowseTechnologies/Properties[REF_TECHNOLOGies]" }
                         },
                         "childContentItems":
                         [
@@ -9922,7 +10718,7 @@
                                 "view": { "__id": ":Text" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "RESOURCE/Properties[Name]" }
+                                  "member": { "__id": "REF_TECHNOLOGY/Properties[Name]" }
                                 },
                                 "propertySources":
                                 [
@@ -9933,13 +10729,13 @@
                                 ]
                               },
                               {
-                                "displayName": "Email Id",
-                                "name": "EmailId",
+                                "displayName": "Description",
+                                "name": "Description",
                                 "kind": "Value",
                                 "view": { "__id": ":Text" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "RESOURCE/Properties[EmailId]" }
+                                  "member": { "__id": "REF_TECHNOLOGY/Properties[Description]" }
                                 },
                                 "propertySources":
                                 [
@@ -9950,13 +10746,13 @@
                                 ]
                               },
                               {
-                                "displayName": "Created By",
-                                "name": "CreatedBy",
+                                "displayName": "Created Date",
+                                "name": "CreatedDate",
                                 "kind": "Value",
                                 "view": { "__id": ":Text" },
                                 "dataSource":
                                 {
-                                  "member": { "__id": "RESOURCE/Properties[CreatedBy]" }
+                                  "member": { "__id": "REF_TECHNOLOGY/Properties[CreatedDate]" }
                                 },
                                 "propertySources":
                                 [
@@ -9982,21 +10778,21 @@
                             "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showViewResourceDetail]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]" } },
+                              "target": { "__id": "!module/Methods[showViewTechnology]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseTechnologies/Properties[REF_TECHNOLOGies]" } },
                               "arguments":
                               [
                                 {
-                                  "parameter": { "__id": "!module/Methods[showViewResourceDetail]/Parameters[RESOURCE]" },
+                                  "parameter": { "__id": "!module/Methods[showViewTechnology]/Parameters[REF_TECHNOLOGY]" },
                                   "value":
                                   {
                                     "links":
                                     [
                                       {
-                                        "member": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]" }
+                                        "member": { "__id": "BrowseTechnologies/Properties[REF_TECHNOLOGies]" }
                                       },
                                       {
-                                        "member": { "__id": "CollectionView$RESOURCE/Properties[selectedItem]" }
+                                        "member": { "__id": "CollectionView$REF_TECHNOLOGY/Properties[selectedItem]" }
                                       }
                                     ]
                                   }
@@ -10011,7 +10807,7 @@
                     [
                       {
                         "displayName": "Add",
-                        "name": "AddResourceDetail",
+                        "name": "AddTechnology",
                         "kind": "Command",
                         "view": { "__id": ":CommandBarButton" },
                         "propertySources":
@@ -10020,11 +10816,11 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "!module/Methods[showAddEditResourceDetail]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]" } },
+                              "target": { "__id": "!module/Methods[showAddEditTechnology]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseTechnologies/Properties[REF_TECHNOLOGies]" } },
                               ":@CreateNewEntity":
                               {
-                                "targetParameter": { "__id": "!module/Methods[showAddEditResourceDetail]/Parameters[RESOURCE]" }
+                                "targetParameter": { "__id": "!module/Methods[showAddEditTechnology]/Parameters[REF_TECHNOLOGY]" }
                               }
                             }
                           },
@@ -10036,7 +10832,7 @@
                       },
                       {
                         "displayName": "Search",
-                        "name": "SearchResourceDetails",
+                        "name": "SearchTechnologies",
                         "kind": "Command",
                         "view": { "__id": ":CommandBarButton" },
                         "propertySources":
@@ -10048,10 +10844,10 @@
                               "links":
                               [
                                 {
-                                  "member": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]" }
+                                  "member": { "__id": "BrowseTechnologies/Properties[REF_TECHNOLOGies]" }
                                 },
                                 {
-                                  "target": { "__id": "CollectionView$RESOURCE/Methods[showSearch]" }
+                                  "target": { "__id": "CollectionView$REF_TECHNOLOGY/Methods[showSearch]" }
                                 }
                               ]
                             }
@@ -10084,24 +10880,24 @@
           "methods":
           [
             {
-              "id": "BrowseResourceDetails/Methods[showTab]",
+              "id": "BrowseTechnologies/Methods[showTab]",
               "name": "showTab",
               "parameters":
               [
                 {
-                  "id": "BrowseResourceDetails/Methods[showTab]/Parameters[tabName]",
+                  "id": "BrowseTechnologies/Methods[showTab]/Parameters[tabName]",
                   "name": "tabName",
                   "parameterType": { "__id": ":String" }
                 }
               ]
             },
             {
-              "id": "BrowseResourceDetails/Methods[showDialog]",
+              "id": "BrowseTechnologies/Methods[showDialog]",
               "name": "showDialog",
               "parameters":
               [
                 {
-                  "id": "BrowseResourceDetails/Methods[showDialog]/Parameters[dialogName]",
+                  "id": "BrowseTechnologies/Methods[showDialog]/Parameters[dialogName]",
                   "name": "dialogName",
                   "parameterType": { "__id": ":String" }
                 }
@@ -10111,25 +10907,25 @@
           "properties":
           [
             {
-              "id": "BrowseResourceDetails/Properties[RESOURCEs]",
-              "name": "RESOURCEs",
+              "id": "BrowseTechnologies/Properties[REF_TECHNOLOGies]",
+              "name": "REF_TECHNOLOGies",
               "pageSize": 45,
-              "elementType": { "__id": "RESOURCE" },
-              "propertyType": { "__id": "CollectionView$RESOURCE" },
+              "elementType": { "__id": "REF_TECHNOLOGY" },
+              "propertyType": { "__id": "CollectionView$REF_TECHNOLOGY" },
               "query":
               {
-                "id": "BrowseResourceDetails/Properties[RESOURCEs]/Query",
-                "name": "RESOURCEsQuery",
-                "elementType": { "__id": "RESOURCE" },
-                "returnType": { "__id": "RESOURCE*" },
+                "id": "BrowseTechnologies/Properties[REF_TECHNOLOGies]/Query",
+                "name": "REF_TECHNOLOGiesQuery",
+                "elementType": { "__id": "REF_TECHNOLOGY" },
+                "returnType": { "__id": "REF_TECHNOLOGY*" },
                 "source":
                 {
-                  "member": { "__id": "FMData/Members[RESOURCEs]" }
+                  "member": { "__id": "FMData/Members[REF_TECHNOLOGies]" }
                 }
               },
               "source":
               {
-                "target": { "__id": "BrowseResourceDetails/Properties[RESOURCEs]/Query" }
+                "target": { "__id": "BrowseTechnologies/Properties[REF_TECHNOLOGies]/Query" }
               }
             }
           ]
@@ -10213,6 +11009,11 @@
           ]
         },
         {
+          "id": "!module/Methods[showBrowseResourceDetails]",
+          "name": "showBrowseResourceDetails",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseResourceDetails" } }
+        },
+        {
           "id": "!module/Methods[showViewResourceDetail]",
           "name": "showViewResourceDetail",
           ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewResourceDetail" } },
@@ -10226,9 +11027,35 @@
           ]
         },
         {
-          "id": "!module/Methods[showBrowseResourceDetails]",
-          "name": "showBrowseResourceDetails",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseResourceDetails" } }
+          "id": "!module/Methods[showAddEditTechnology]",
+          "name": "showAddEditTechnology",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditTechnology" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showAddEditTechnology]/Parameters[REF_TECHNOLOGY]",
+              "name": "REF_TECHNOLOGY",
+              "parameterType": { "__id": "REF_TECHNOLOGY" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showViewTechnology]",
+          "name": "showViewTechnology",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewTechnology" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showViewTechnology]/Parameters[REF_TECHNOLOGY]",
+              "name": "REF_TECHNOLOGY",
+              "parameterType": { "__id": "REF_TECHNOLOGY" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showBrowseTechnologies]",
+          "name": "showBrowseTechnologies",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseTechnologies" } }
         }
       ],
       "navigationItems":
@@ -10247,6 +11074,11 @@
           "id": "!module/NavigationItems[link2]",
           "name": "link2",
           "method": { "__id": "!module/Methods[showBrowseResourceDetails]" }
+        },
+        {
+          "id": "!module/NavigationItems[link3]",
+          "name": "link3",
+          "method": { "__id": "!module/Methods[showBrowseTechnologies]" }
         }
       ]
     }
