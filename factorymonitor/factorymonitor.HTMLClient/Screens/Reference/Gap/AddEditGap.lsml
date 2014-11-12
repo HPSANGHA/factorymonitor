@@ -5,12 +5,12 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="AddEditResourceDetail">
+    Name="AddEditGap">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="FMData" />
       <DisplayName
-        Value="ResourceDetail" />
+        Value="Gap" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -32,7 +32,7 @@
             <ContentItem
               Name="columns"
               Kind="Details"
-              DataType="RESOURCE"
+              DataType="REF_GAP"
               View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
               <ContentItem.Attributes>
                 <DisplayName
@@ -42,7 +42,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="AddEditResourceDetail/Properties[RESOURCE]" />
+                      Member="AddEditGap/Properties[REF_GAP]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -50,14 +50,14 @@
                 Name="left"
                 Kind="Group">
                 <ContentItem
-                  Name="Photo"
+                  Name="GapID"
                   Kind="Value"
-                  DataType=":Binary?">
+                  DataType=":Int16">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="RESOURCE/Properties[Photo]" />
+                          Member="REF_GAP/Properties[GapID]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -65,25 +65,25 @@
                 <ContentItem
                   Name="Name"
                   Kind="Value"
-                  DataType=":String">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="RESOURCE/Properties[Name]" />
+                          Member="REF_GAP/Properties[Name]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="EmailId"
+                  Name="Description"
                   Kind="Value"
-                  DataType=":String">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="RESOURCE/Properties[EmailId]" />
+                          Member="REF_GAP/Properties[Description]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -114,60 +114,6 @@
               <ContentItem
                 Name="right"
                 Kind="Group">
-                <ContentItem
-                  Name="REF_ROLE"
-                  Kind="Details"
-                  DataType="REF_ROLE">
-                  <ContentItem.Attributes>
-                    <DisplayName
-                      Value="Role" />
-                  </ContentItem.Attributes>
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="RESOURCE/Properties[REF_ROLE]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="RowTemplate"
-                    Kind="Details"
-                    DataType="REF_ROLE">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
-                </ContentItem>
-                <ContentItem
-                  Name="REF_STATUS"
-                  Kind="Details"
-                  DataType="REF_STATUS">
-                  <ContentItem.Attributes>
-                    <DisplayName
-                      Value="Status" />
-                  </ContentItem.Attributes>
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="RESOURCE/Properties[REF_STATUS]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem
-                    Name="RowTemplate1"
-                    Kind="Details"
-                    DataType="REF_STATUS">
-                    <ContentItem.DataSource>
-                      <ScreenExpressionTree>
-                        <ChainExpression />
-                      </ScreenExpressionTree>
-                    </ContentItem.DataSource>
-                  </ContentItem>
-                </ContentItem>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MinWidth]">
@@ -248,8 +194,8 @@
     </Screen.Methods>
     <Screen.Properties>
       <ScreenProperty
-        Name="RESOURCE"
-        PropertyType="RESOURCE">
+        Name="REF_GAP"
+        PropertyType="REF_GAP">
         <ScreenProperty.Attributes>
           <IsParameter />
         </ScreenProperty.Attributes>
@@ -258,14 +204,14 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showAddEditResourceDetail">
+      Name="showAddEditGap">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="AddEditResourceDetail" />
+          TargetScreen="AddEditGap" />
       </ApplicationMethod.Attributes>
       <ApplicationMethodParameter
-        Name="RESOURCE"
-        ParameterType="RESOURCE" />
+        Name="REF_GAP"
+        ParameterType="REF_GAP" />
     </ApplicationMethod>
   </Application.Methods>
 </Application>

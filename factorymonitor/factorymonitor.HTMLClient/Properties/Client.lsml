@@ -56,5 +56,8 @@
     <ApplicationNavigationMethodLink
       Name="link6"
       Method="!module/Methods[showBrowseComplexities]" />
+    <ApplicationNavigationMethodLink
+      Name="link7"
+      Method="!module/Methods[showBrowseGaps]" />
   </Application.NavigationItems>
 </Application>

@@ -491,6 +491,75 @@
         $Screen.call(this, dataWorkspace, "ViewResourceDetail", parameters);
     }
 
+    function AddEditGap(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the AddEditGap screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="REF_GAP" type="msls.application.REF_GAP">
+        /// Gets or sets the rEF_GAP for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.AddEditGap.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "AddEditGap", parameters);
+    }
+
+    function ViewGap(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the ViewGap screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="REF_GAP" type="msls.application.REF_GAP">
+        /// Gets or sets the rEF_GAP for this screen.
+        /// </field>
+        /// <field name="TPs" type="msls.VisualCollection" elementType="msls.application.TP">
+        /// Gets the tPs for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.ViewGap.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "ViewGap", parameters);
+    }
+
+    function BrowseGaps(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the BrowseGaps screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="REF_GAPs" type="msls.VisualCollection" elementType="msls.application.REF_GAP">
+        /// Gets the rEF_GAPs for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.BrowseGaps.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "BrowseGaps", parameters);
+    }
+
     msls._addToNamespace("msls.application", {
 
         AddEditApplicationType: $defineScreen(AddEditApplicationType, [
@@ -712,6 +781,38 @@
                 },
                 appendQuery: function () {
                     return this;
+                }
+            }
+        ], [
+        ]),
+
+        AddEditGap: $defineScreen(AddEditGap, [
+            { name: "REF_GAP", kind: "local", type: lightSwitchApplication.REF_GAP }
+        ], [
+        ]),
+
+        ViewGap: $defineScreen(ViewGap, [
+            { name: "REF_GAP", kind: "local", type: lightSwitchApplication.REF_GAP },
+            {
+                name: "TPs", kind: "collection", elementType: lightSwitchApplication.TP,
+                getNavigationProperty: function () {
+                    if (this.owner.REF_GAP) {
+                        return this.owner.REF_GAP.details.properties.TPs;
+                    }
+                    return null;
+                },
+                appendQuery: function () {
+                    return this;
+                }
+            }
+        ], [
+        ]),
+
+        BrowseGaps: $defineScreen(BrowseGaps, [
+            {
+                name: "REF_GAPs", kind: "collection", elementType: lightSwitchApplication.REF_GAP,
+                createQuery: function () {
+                    return this.dataWorkspace.FMData.REF_GAPs;
                 }
             }
         ], [
@@ -967,6 +1068,42 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
             return lightSwitchApplication.showScreen("ViewResourceDetail", parameters, options);
+        }),
+
+        showAddEditGap: $defineShowScreen(function showAddEditGap(REF_GAP, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the AddEditGap screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("AddEditGap", parameters, options);
+        }),
+
+        showViewGap: $defineShowScreen(function showViewGap(REF_GAP, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the ViewGap screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("ViewGap", parameters, options);
+        }),
+
+        showBrowseGaps: $defineShowScreen(function showBrowseGaps(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the BrowseGaps screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("BrowseGaps", parameters, options);
         })
 
     });

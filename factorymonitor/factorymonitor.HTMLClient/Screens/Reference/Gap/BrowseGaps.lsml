@@ -5,12 +5,12 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="BrowseResourceDetails">
+    Name="BrowseGaps">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="FMData" />
       <DisplayName
-        Value="ResourceDetails" />
+        Value="Gaps" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -22,29 +22,29 @@
           Kind="Group"
           View="Microsoft.LightSwitch.MobileWeb:TabPages">
           <ContentItem
-            Name="ResourceDetailList"
+            Name="GapList"
             Kind="Group">
             <ContentItem
-              Name="RESOURCEs"
+              Name="REF_GAPs"
               Kind="Collection"
-              DataType="CollectionView$RESOURCE"
+              DataType="CollectionView$REF_GAP"
               View="Microsoft.LightSwitch.MobileWeb:TileList">
               <ContentItem.Attributes>
                 <DisplayName
-                  Value="RESOURCEs" />
+                  Value="REF_GAPs" />
               </ContentItem.Attributes>
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="BrowseResourceDetails/Properties[RESOURCEs]" />
+                      Member="BrowseGaps/Properties[REF_GAPs]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
               <ContentItem
                 Name="rows"
                 Kind="Details"
-                DataType="RESOURCE"
+                DataType="REF_GAP"
                 View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
                 <ContentItem.Attributes>
                   <DisplayName
@@ -56,27 +56,14 @@
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
                 <ContentItem
-                  Name="Photo"
-                  Kind="Value"
-                  DataType=":Binary?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="RESOURCE/Properties[Photo]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
                   Name="Name"
                   Kind="Value"
-                  DataType=":String">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="RESOURCE/Properties[Name]" />
+                          Member="REF_GAP/Properties[Name]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -94,39 +81,14 @@
                   </ContentItem.PropertySources>
                 </ContentItem>
                 <ContentItem
-                  Name="EmailId"
-                  Kind="Value"
-                  DataType=":String">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="RESOURCE/Properties[EmailId]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem.PropertySources>
-                    <ControlPropertySource
-                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <ConstantExpression
-                            Value="Small"
-                            ResultType=":String" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ControlPropertySource>
-                  </ContentItem.PropertySources>
-                </ContentItem>
-                <ContentItem
-                  Name="CreatedBy"
+                  Name="Description"
                   Kind="Value"
                   DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="RESOURCE/Properties[CreatedBy]" />
+                          Member="REF_GAP/Properties[Description]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -162,16 +124,16 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <CallExpression
-                        Target="!module/Methods[showViewResourceDetail]">
+                        Target="!module/Methods[showViewGap]">
                         <CallExpression.Attributes>
                           <AssociatedCollection
-                            Collection="BrowseResourceDetails/Properties[RESOURCEs]" />
+                            Collection="BrowseGaps/Properties[REF_GAPs]" />
                         </CallExpression.Attributes>
                         <ArgumentExpression
-                          Parameter="RESOURCE">
+                          Parameter="REF_GAP">
                           <ChainExpression>
                             <MemberExpression
-                              Member="BrowseResourceDetails/Properties[RESOURCEs]" />
+                              Member="BrowseGaps/Properties[REF_GAPs]" />
                             <MemberExpression
                               Member="selectedItem" />
                           </ChainExpression>
@@ -184,7 +146,7 @@
             </ContentItem>
             <ContentItem.CommandItems>
               <ContentItem
-                Name="AddResourceDetail"
+                Name="AddGap"
                 Kind="Command">
                 <ContentItem.Attributes>
                   <DisplayName
@@ -196,12 +158,12 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showAddEditResourceDetail]">
+                          Target="!module/Methods[showAddEditGap]">
                           <CallExpression.Attributes>
                             <AssociatedCollection
-                              Collection="BrowseResourceDetails/Properties[RESOURCEs]" />
+                              Collection="BrowseGaps/Properties[REF_GAPs]" />
                             <CreateNewEntity
-                              TargetParameter="!module/Methods[showAddEditResourceDetail]/Parameters[RESOURCE]" />
+                              TargetParameter="!module/Methods[showAddEditGap]/Parameters[REF_GAP]" />
                           </CallExpression.Attributes>
                         </CallExpression>
                       </ChainExpression>
@@ -220,7 +182,7 @@
                 </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem
-                Name="SearchResourceDetails"
+                Name="SearchGaps"
                 Kind="Command">
                 <ContentItem.Attributes>
                   <DisplayName
@@ -232,7 +194,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="BrowseResourceDetails/Properties[RESOURCEs]" />
+                          Member="BrowseGaps/Properties[REF_GAPs]" />
                         <CallExpression
                           Target="showSearch" />
                       </ChainExpression>
@@ -297,20 +259,20 @@
     </Screen.Methods>
     <Screen.Properties>
       <ScreenCollectionProperty
-        Name="RESOURCEs"
+        Name="REF_GAPs"
         PageSize="45"
-        PropertyType="CollectionView$RESOURCE">
+        PropertyType="CollectionView$REF_GAP">
         <ScreenCollectionProperty.Query>
           <ScreenQueryDefinition
-            Name="RESOURCEsQuery"
-            ReturnType="RESOURCE*">
+            Name="REF_GAPsQuery"
+            ReturnType="REF_GAP*">
             <ScreenQueryDefinition.FilterExpression>
               <QueryFilterExpressionTree />
             </ScreenQueryDefinition.FilterExpression>
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
                 <MemberExpression
-                  Member="FMData/Members[RESOURCEs]" />
+                  Member="FMData/Members[REF_GAPs]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -318,7 +280,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="BrowseResourceDetails/Properties[RESOURCEs]/Query" />
+              Target="BrowseGaps/Properties[REF_GAPs]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -326,10 +288,10 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showBrowseResourceDetails">
+      Name="showBrowseGaps">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="BrowseResourceDetails" />
+          TargetScreen="BrowseGaps" />
       </ApplicationMethod.Attributes>
     </ApplicationMethod>
   </Application.Methods>

@@ -92,5 +92,17 @@ namespace LightSwitchApplication
             entity.ModifiedBy = UserName;
             entity.ModifiedDate = DateTime.Now;
         }
+
+        partial void REF_GAPs_Inserting(REF_GAP entity)
+        {
+            entity.CreatedBy = UserName;
+            entity.CreatedDate = DateTime.Now;
+        }
+
+        partial void REF_GAPs_Updating(REF_GAP entity)
+        {
+            entity.ModifiedBy = UserName;
+            entity.ModifiedDate = DateTime.Now;
+        }
     }
 }

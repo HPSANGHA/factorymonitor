@@ -100,7 +100,7 @@
         ToEnd="TP_RESOURCE_ALLOCATION" />
       <EntityProperty
         Name="Photo"
-        PropertyType="Microsoft.LightSwitch.Extensions:Image?">
+        PropertyType=":Binary?">
         <EntityProperty.Attributes>
           <NotSortable />
           <MaxLength />

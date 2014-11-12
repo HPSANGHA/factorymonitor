@@ -4170,7 +4170,7 @@
             {
               "id": "RESOURCE/Properties[Photo]",
               "name": "Photo",
-              "propertyType": { "__id": "Microsoft.LightSwitch.Extensions:Image?" },
+              "propertyType": { "__id": ":Binary?" },
               ":@NotSortable": { },
               ":@MaxLength":
               {
@@ -4397,6 +4397,14 @@
           ":@SummaryProperty": { "property": { "__id": "REF_GAP/Properties[Name]" } },
           "id": "REF_GAP",
           "name": "REF_GAP",
+          ":@DefaultScreen":
+          {
+            "value": { "__id": "ViewGap" },
+            ":@ScreenParameterMapping":
+            {
+              "screenParameter": { "__id": "ViewGap/Properties[REF_GAP]" }
+            }
+          },
           "methods":
           [
             {
@@ -13304,6 +13312,818 @@
               }
             }
           ]
+        },
+        {
+          "displayName": "Gap",
+          "id": "AddEditGap",
+          "name": "AddEditGap",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Gap",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditGap/Properties[REF_GAP]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Gap ID",
+                                "name": "GapID",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_GAP/Properties[GapID]" }
+                                }
+                              },
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_GAP/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":TextBox" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_GAP/Properties[Description]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "right",
+                            "name": "right",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "AddEditGap/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "AddEditGap/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "AddEditGap/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "AddEditGap/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "AddEditGap/Properties[REF_GAP]",
+              "name": "REF_GAP",
+              "elementType": { "__id": "REF_GAP" },
+              "propertyType": { "__id": "REF_GAP" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "displayName": "Gap",
+          "id": "ViewGap",
+          "name": "ViewGap",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Gap",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ViewGap/Properties[REF_GAP]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Gap ID",
+                                "name": "GapID",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_GAP/Properties[GapID]" }
+                                }
+                              },
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_GAP/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_GAP/Properties[Description]" }
+                                }
+                              },
+                              {
+                                "displayName": "Created By",
+                                "name": "CreatedBy",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_GAP/Properties[CreatedBy]" }
+                                }
+                              },
+                              {
+                                "displayName": "Created Date",
+                                "name": "CreatedDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_GAP/Properties[CreatedDate]" }
+                                }
+                              },
+                              {
+                                "displayName": "Modified By",
+                                "name": "ModifiedBy",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_GAP/Properties[ModifiedBy]" }
+                                }
+                              },
+                              {
+                                "displayName": "Modified Date",
+                                "name": "ModifiedDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_GAP/Properties[ModifiedDate]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "right",
+                            "name": "right",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "TPs",
+                                "name": "TPs1",
+                                "kind": "Collection",
+                                "view": { "__id": ":TileList" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ViewGap/Properties[TPs]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "rows",
+                                    "name": "rows",
+                                    "kind": "Details",
+                                    "view": { "__id": ":RowsLayout" },
+                                    "dataSource":
+                                    {
+                                      "links":
+                                      [
+                                      ]
+                                    },
+                                    "childContentItems":
+                                    [
+                                      {
+                                        "displayName": "Name",
+                                        "name": "Name1",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "TP/Properties[Name]" }
+                                        },
+                                        "propertySources":
+                                        [
+                                          {
+                                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                            "value": "Large"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "displayName": "Number",
+                                        "name": "Number",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "TP/Properties[Number]" }
+                                        },
+                                        "propertySources":
+                                        [
+                                          {
+                                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                            "value": "Small"
+                                          }
+                                        ]
+                                      },
+                                      {
+                                        "displayName": "Description",
+                                        "name": "Description1",
+                                        "kind": "Value",
+                                        "view": { "__id": ":Text" },
+                                        "dataSource":
+                                        {
+                                          "member": { "__id": "TP/Properties[Description]" }
+                                        },
+                                        "propertySources":
+                                        [
+                                          {
+                                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                            "value": "Small"
+                                          }
+                                        ]
+                                      }
+                                    ],
+                                    "propertySources":
+                                    [
+                                      {
+                                        "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                        "value": "FitToContent"
+                                      }
+                                    ]
+                                  }
+                                ],
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                                    "source":
+                                    {
+                                      "links":
+                                      [
+                                        {
+                                          "member": { "__id": "ViewGap/Properties[TPs]" }
+                                        },
+                                        {
+                                          "target": { "__id": "CollectionView$TP/Methods[viewSelected]" }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Edit",
+                        "name": "EditGap",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditGap]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showAddEditGap]/Parameters[REF_GAP]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "ViewGap/Properties[REF_GAP]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-edit"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ViewGap/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ViewGap/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ViewGap/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ViewGap/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ViewGap/Properties[REF_GAP]",
+              "name": "REF_GAP",
+              "elementType": { "__id": "REF_GAP" },
+              "propertyType": { "__id": "REF_GAP" },
+              ":@IsParameter": { }
+            },
+            {
+              "id": "ViewGap/Properties[TPs]",
+              "name": "TPs",
+              "pageSize": 15,
+              "elementType": { "__id": "TP" },
+              "propertyType": { "__id": "CollectionView$TP" },
+              "query":
+              {
+                "id": "ViewGap/Properties[TPs]/Query",
+                "name": "TPsQuery",
+                "elementType": { "__id": "TP" },
+                "returnType": { "__id": "TP*" },
+                "source":
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "ViewGap/Properties[REF_GAP]" }
+                    },
+                    {
+                      "member": { "__id": "REF_GAP/Properties[TPs]" }
+                    }
+                  ]
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "ViewGap/Properties[TPs]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "Gaps",
+          "id": "BrowseGaps",
+          "name": "BrowseGaps",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Gaps",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Gap List",
+                    "name": "GapList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "REF_GAPs",
+                        "name": "REF_GAPs",
+                        "kind": "Collection",
+                        "view": { "__id": ":TileList" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseGaps/Properties[REF_GAPs]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_GAP/Properties[Name]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Large"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "REF_GAP/Properties[Description]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showViewGap]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseGaps/Properties[REF_GAPs]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showViewGap]/Parameters[REF_GAP]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "BrowseGaps/Properties[REF_GAPs]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$REF_GAP/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Add",
+                        "name": "AddGap",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditGap]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseGaps/Properties[REF_GAPs]" } },
+                              ":@CreateNewEntity":
+                              {
+                                "targetParameter": { "__id": "!module/Methods[showAddEditGap]/Parameters[REF_GAP]" }
+                              }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Search",
+                        "name": "SearchGaps",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "BrowseGaps/Properties[REF_GAPs]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$REF_GAP/Methods[showSearch]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-search"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "BrowseGaps/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "BrowseGaps/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "BrowseGaps/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "BrowseGaps/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "BrowseGaps/Properties[REF_GAPs]",
+              "name": "REF_GAPs",
+              "pageSize": 45,
+              "elementType": { "__id": "REF_GAP" },
+              "propertyType": { "__id": "CollectionView$REF_GAP" },
+              "query":
+              {
+                "id": "BrowseGaps/Properties[REF_GAPs]/Query",
+                "name": "REF_GAPsQuery",
+                "elementType": { "__id": "REF_GAP" },
+                "returnType": { "__id": "REF_GAP*" },
+                "source":
+                {
+                  "member": { "__id": "FMData/Members[REF_GAPs]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "BrowseGaps/Properties[REF_GAPs]/Query" }
+              }
+            }
+          ]
         }
       ],
       "methods":
@@ -13524,6 +14344,37 @@
               "parameterType": { "__id": "RESOURCE" }
             }
           ]
+        },
+        {
+          "id": "!module/Methods[showAddEditGap]",
+          "name": "showAddEditGap",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditGap" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showAddEditGap]/Parameters[REF_GAP]",
+              "name": "REF_GAP",
+              "parameterType": { "__id": "REF_GAP" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showViewGap]",
+          "name": "showViewGap",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewGap" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showViewGap]/Parameters[REF_GAP]",
+              "name": "REF_GAP",
+              "parameterType": { "__id": "REF_GAP" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showBrowseGaps]",
+          "name": "showBrowseGaps",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseGaps" } }
         }
       ],
       "navigationItems":
@@ -13562,6 +14413,11 @@
           "id": "!module/NavigationItems[link6]",
           "name": "link6",
           "method": { "__id": "!module/Methods[showBrowseComplexities]" }
+        },
+        {
+          "id": "!module/NavigationItems[link7]",
+          "name": "link7",
+          "method": { "__id": "!module/Methods[showBrowseGaps]" }
         }
       ]
     }

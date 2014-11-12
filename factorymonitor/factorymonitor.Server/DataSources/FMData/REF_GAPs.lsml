@@ -245,6 +245,7 @@
         <SsdlProperty
           Name="GapID"
           Nullable="False"
+          StoreGeneratedPattern="Identity"
           Type="smallint"
           Property="REF_GAP/Properties[GapID]" />
         <SsdlProperty

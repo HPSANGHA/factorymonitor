@@ -57,7 +57,7 @@
     <Key>
       <PropertyRef Name="GapID" />
     </Key>
-    <Property Name="GapID" Type="Edm.Int16" Nullable="false" />
+    <Property Name="GapID" Type="Edm.Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="Edm.String" MaxLength="100" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="Description" Type="Edm.String" MaxLength="150" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />

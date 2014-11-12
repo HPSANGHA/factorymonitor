@@ -72,6 +72,9 @@
     <Content Include="Screens\Reference\Complexity\ViewComplexity.lsml.js">
       <DependentUpon>ViewComplexity.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\Reference\Gap\ViewGap.lsml.js">
+      <DependentUpon>ViewGap.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\Reference\Role\ViewRole.lsml.js">
       <DependentUpon>ViewRole.lsml</DependentUpon>
     </Content>
@@ -101,6 +104,10 @@
     <Content Include="Scripts\msls-2.5.0.min.js" />
     <Content Include="Scripts\winjs-1.0.js" />
     <Content Include="Scripts\winjs-1.0.min.js" />
+    <Content Include="UserCode\REF_GAP.lsml.js">
+      <DependentUpon>
+      </DependentUpon>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <ServiceMetadataReference Include="..\factorymonitor.Server\factorymonitor.Server.csproj">
@@ -113,6 +120,7 @@
     </LightSwitchModel>
     <LightSwitchModel Include="Properties\FMData\REF_APPLICATION_TYPEs.lsml" />
     <LightSwitchModel Include="Properties\FMData\REF_COMPLEXITies.lsml" />
+    <LightSwitchModel Include="Properties\FMData\REF_GAPs.lsml" />
     <LightSwitchModel Include="Properties\FMData\REF_ROLEs.lsml" />
     <LightSwitchModel Include="Properties\FMData\REF_STATUS.lsml" />
     <LightSwitchModel Include="Properties\FMData\REF_TECHNOLOGies.lsml" />
@@ -125,6 +133,9 @@
     <LightSwitchModel Include="Screens\Reference\Complexity\AddEditComplexity.lsml" />
     <LightSwitchModel Include="Screens\Reference\Complexity\BrowseComplexities.lsml" />
     <LightSwitchModel Include="Screens\Reference\Complexity\ViewComplexity.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Gap\AddEditGap.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Gap\BrowseGaps.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Gap\ViewGap.lsml" />
     <LightSwitchModel Include="Screens\Reference\Role\AddEditRole.lsml" />
     <LightSwitchModel Include="Screens\Reference\Role\BrowseRoles.lsml" />
     <LightSwitchModel Include="Screens\Reference\Role\ViewRole.lsml" />
