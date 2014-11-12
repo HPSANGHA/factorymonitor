@@ -247,6 +247,30 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public byte[] Photo
+        {
+            get
+            {
+                return global::LightSwitchApplication.RESOURCE.DetailsClass.GetValue(this, global::LightSwitchApplication.RESOURCE.DetailsClass.PropertySetProperties.Photo);
+            }
+            set
+            {
+                global::LightSwitchApplication.RESOURCE.DetailsClass.SetValue(this, global::LightSwitchApplication.RESOURCE.DetailsClass.PropertySetProperties.Photo, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Photo_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Photo_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Photo_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::LightSwitchApplication.REF_ROLE REF_ROLE
         {
             get
@@ -451,6 +475,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RESOURCE, global::LightSwitchApplication.RESOURCE.DetailsClass, byte[]> Photo
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.RESOURCE.DetailsClass.PropertySetProperties.Photo) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RESOURCE, global::LightSwitchApplication.RESOURCE.DetailsClass, byte[]>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.RESOURCE, global::LightSwitchApplication.RESOURCE.DetailsClass, global::LightSwitchApplication.REF_ROLE> REF_ROLE
                 {
                     get
@@ -488,6 +520,7 @@ namespace LightSwitchApplication
                 new global::System.Nullable<global::System.DateTime> CreatedDate { get; set; }
                 new global::System.Nullable<global::System.DateTime> ModifiedDate { get; set; }
                 new string ModifiedBy { get; set; }
+                new byte[] Photo { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation REF_ROLE { get; set; }
                 new global::Microsoft.LightSwitch.Internal.IEntityImplementation REF_STATUS { get; set; }
                 new global::System.Collections.IEnumerable TP_RESOURCE_ALLOCATIONs { get; }
@@ -756,6 +789,43 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RESOURCE, global::LightSwitchApplication.RESOURCE.DetailsClass, byte[]>.Entry
+                    Photo = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RESOURCE, global::LightSwitchApplication.RESOURCE.DetailsClass, byte[]>.Entry(
+                        "Photo",
+                        global::LightSwitchApplication.RESOURCE.DetailsClass.PropertySetProperties._Photo_Stub,
+                        global::LightSwitchApplication.RESOURCE.DetailsClass.PropertySetProperties._Photo_ComputeIsReadOnly,
+                        global::LightSwitchApplication.RESOURCE.DetailsClass.PropertySetProperties._Photo_Validate,
+                        global::LightSwitchApplication.RESOURCE.DetailsClass.PropertySetProperties._Photo_GetImplementationValue,
+                        global::LightSwitchApplication.RESOURCE.DetailsClass.PropertySetProperties._Photo_SetImplementationValue,
+                        global::LightSwitchApplication.RESOURCE.DetailsClass.PropertySetProperties._Photo_OnValueChanged);
+                private static void _Photo_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.RESOURCE.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RESOURCE, global::LightSwitchApplication.RESOURCE.DetailsClass, byte[]>.Data> c, global::LightSwitchApplication.RESOURCE.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Photo, sf);
+                }
+                private static bool _Photo_ComputeIsReadOnly(global::LightSwitchApplication.RESOURCE e)
+                {
+                    bool result = false;
+                    e.Photo_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Photo_Validate(global::LightSwitchApplication.RESOURCE e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Photo_Validate(r);
+                }
+                private static byte[] _Photo_GetImplementationValue(global::LightSwitchApplication.RESOURCE.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Photo;
+                }
+                private static void _Photo_SetImplementationValue(global::LightSwitchApplication.RESOURCE.DetailsClass d, byte[] v)
+                {
+                    d.ImplementationEntity.Photo = v;
+                }
+                private static void _Photo_OnValueChanged(global::LightSwitchApplication.RESOURCE e)
+                {
+                    e.Photo_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.RESOURCE, global::LightSwitchApplication.RESOURCE.DetailsClass, global::LightSwitchApplication.REF_ROLE>.Entry
                     REF_ROLE = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.RESOURCE, global::LightSwitchApplication.RESOURCE.DetailsClass, global::LightSwitchApplication.REF_ROLE>.Entry(
                         "REF_ROLE",
@@ -891,6 +961,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RESOURCE, global::LightSwitchApplication.RESOURCE.DetailsClass, string>.Data _ModifiedBy;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.RESOURCE, global::LightSwitchApplication.RESOURCE.DetailsClass, byte[]>.Data _Photo;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.RESOURCE, global::LightSwitchApplication.RESOURCE.DetailsClass, global::LightSwitchApplication.REF_ROLE>.Data _REF_ROLE;

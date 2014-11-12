@@ -170,6 +170,7 @@
     <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="RoleID" Type="Edm.Int16" ConcurrencyMode="Fixed" />
     <Property Name="StatusID" Type="Edm.Int16" ConcurrencyMode="Fixed" />
+    <Property Name="Photo" Type="Edm.Binary" MaxLength="Max" />
     <NavigationProperty Name="REF_ROLE" Relationship="LightSwitchApplication.FK_RESOURCE_REF_ROLE" ToRole="REF_ROLE" FromRole="RESOURCE" />
     <NavigationProperty Name="REF_STATUS" Relationship="LightSwitchApplication.FK_RESOURCE_REF_STATUS" ToRole="REF_STATUS" FromRole="RESOURCE" />
     <NavigationProperty Name="TP_RESOURCE_ALLOCATIONs" Relationship="LightSwitchApplication.FK_TP_RESOURCE_ALLOCATION_RESOURCE" ToRole="TP_RESOURCE_ALLOCATION" FromRole="RESOURCE" />

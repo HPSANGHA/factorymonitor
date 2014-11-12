@@ -98,6 +98,15 @@
         Association="FK_TP_RESOURCE_ALLOCATION_RESOURCE"
         FromEnd="RESOURCE"
         ToEnd="TP_RESOURCE_ALLOCATION" />
+      <EntityProperty
+        Name="Photo"
+        PropertyType="Microsoft.LightSwitch.Extensions:Image?">
+        <EntityProperty.Attributes>
+          <NotSortable />
+          <MaxLength />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -245,6 +254,11 @@
           Nullable="False"
           Type="varchar"
           Property="RESOURCE/Properties[EmailId]" />
+        <SsdlProperty
+          Name="Photo"
+          Nullable="True"
+          Type="image"
+          Property="RESOURCE/Properties[Photo]" />
         <SsdlProperty
           MaxLength="50"
           Name="CreatedBy"

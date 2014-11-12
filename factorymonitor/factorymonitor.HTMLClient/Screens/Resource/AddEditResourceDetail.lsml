@@ -50,6 +50,19 @@
                 Name="left"
                 Kind="Group">
                 <ContentItem
+                  Name="Photo"
+                  Kind="Value"
+                  DataType="Microsoft.LightSwitch.Extensions:Image?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="RESOURCE/Properties[Photo]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
                   Name="Name"
                   Kind="Value"
                   DataType=":String">
