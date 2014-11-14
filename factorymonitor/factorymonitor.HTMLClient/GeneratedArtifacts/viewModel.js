@@ -782,6 +782,72 @@
         $Screen.call(this, dataWorkspace, "BrowseApps", parameters);
     }
 
+    function AddEditTPApps(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the AddEditTPApps screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="TP_APPLICATION" type="msls.application.TP_APPLICATION">
+        /// Gets or sets the tP_APPLICATION for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.AddEditTPApps.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "AddEditTPApps", parameters);
+    }
+
+    function ViewTPApps(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the ViewTPApps screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="TP_APPLICATION" type="msls.application.TP_APPLICATION">
+        /// Gets or sets the tP_APPLICATION for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.ViewTPApps.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "ViewTPApps", parameters);
+    }
+
+    function BrowseTPAppsSet(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the BrowseTPAppsSet screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="TP_APPLICATIONs" type="msls.VisualCollection" elementType="msls.application.TP_APPLICATION">
+        /// Gets the tP_APPLICATIONs for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.BrowseTPAppsSet.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "BrowseTPAppsSet", parameters);
+    }
+
     msls._addToNamespace("msls.application", {
 
         AddEditApplicationType: $defineScreen(AddEditApplicationType, [
@@ -1196,6 +1262,26 @@
         ], [
         ]),
 
+        AddEditTPApps: $defineScreen(AddEditTPApps, [
+            { name: "TP_APPLICATION", kind: "local", type: lightSwitchApplication.TP_APPLICATION }
+        ], [
+        ]),
+
+        ViewTPApps: $defineScreen(ViewTPApps, [
+            { name: "TP_APPLICATION", kind: "local", type: lightSwitchApplication.TP_APPLICATION }
+        ], [
+        ]),
+
+        BrowseTPAppsSet: $defineScreen(BrowseTPAppsSet, [
+            {
+                name: "TP_APPLICATIONs", kind: "collection", elementType: lightSwitchApplication.TP_APPLICATION,
+                createQuery: function () {
+                    return this.dataWorkspace.FMData.TP_APPLICATIONs.expand("TP").expand("APP");
+                }
+            }
+        ], [
+        ]),
+
         showAddEditApplicationType: $defineShowScreen(function showAddEditApplicationType(REF_APPLICATION_TYPE, options) {
             /// <summary>
             /// Asynchronously navigates forward to the AddEditApplicationType screen.
@@ -1590,6 +1676,42 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 0);
             return lightSwitchApplication.showScreen("BrowseApps", parameters, options);
+        }),
+
+        showAddEditTPApps: $defineShowScreen(function showAddEditTPApps(TP_APPLICATION, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the AddEditTPApps screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("AddEditTPApps", parameters, options);
+        }),
+
+        showViewTPApps: $defineShowScreen(function showViewTPApps(TP_APPLICATION, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the ViewTPApps screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("ViewTPApps", parameters, options);
+        }),
+
+        showBrowseTPAppsSet: $defineShowScreen(function showBrowseTPAppsSet(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the BrowseTPAppsSet screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("BrowseTPAppsSet", parameters, options);
         })
 
     });

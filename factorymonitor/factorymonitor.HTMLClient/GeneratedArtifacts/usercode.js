@@ -10,4 +10,5 @@ document.writeln("<script type=\"text/javascript\" src=\"Screens/Reference/Statu
 document.writeln("<script type=\"text/javascript\" src=\"Screens/Reference/TechnologyStack/ViewTechnologyStack.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/Reference/Technology/ViewTechnology.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/Resource/ViewResourceDetail.lsml.js\"></script>");
+document.writeln("<script type=\"text/javascript\" src=\"Screens/TP/Apps/ViewTPApps.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/TP/ViewTp.lsml.js\"></script>");

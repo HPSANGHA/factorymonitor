@@ -96,6 +96,9 @@
     <Content Include="Screens\Resource\ViewResourceDetail.lsml.js">
       <DependentUpon>ViewResourceDetail.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\TP\Apps\ViewTPApps.lsml.js">
+      <DependentUpon>ViewTPApps.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\TP\ViewTp.lsml.js">
       <DependentUpon>ViewTp.lsml</DependentUpon>
     </Content>
@@ -138,6 +141,7 @@
     <LightSwitchModel Include="Properties\FMData\REF_TECHNOLOGY_STACKs.lsml" />
     <LightSwitchModel Include="Properties\FMData\RESOURCEs.lsml" />
     <LightSwitchModel Include="Properties\FMData\TPs.lsml" />
+    <LightSwitchModel Include="Properties\FMData\TP_APPLICATIONs.lsml" />
     <LightSwitchModel Include="Properties\Proxies.lsml" />
     <LightSwitchModel Include="Screens\Application\AddEditApp.lsml" />
     <LightSwitchModel Include="Screens\Application\BrowseApps.lsml" />
@@ -170,6 +174,9 @@
     <LightSwitchModel Include="Screens\Resource\BrowseResourceDetails.lsml" />
     <LightSwitchModel Include="Screens\Resource\ViewResourceDetail.lsml" />
     <LightSwitchModel Include="Screens\TP\AddEditTp.lsml" />
+    <LightSwitchModel Include="Screens\TP\Apps\AddEditTPApps.lsml" />
+    <LightSwitchModel Include="Screens\TP\Apps\BrowseTPAppsSet.lsml" />
+    <LightSwitchModel Include="Screens\TP\Apps\ViewTPApps.lsml" />
     <LightSwitchModel Include="Screens\TP\BrowseTps.lsml" />
     <LightSwitchModel Include="Screens\TP\ViewTp.lsml" />
   </ItemGroup>
@@ -189,9 +196,6 @@
     <_ClientBuildFile Include="GeneratedArtifacts\resources.js">
       <SubFolder>Scripts\Generated</SubFolder>
     </_ClientBuildFile>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Screens\TP\NewFolder\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.5\MobileClient\Microsoft.LightSwitch.MobileClient.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.5\Microsoft.LightSwitch.Build.Tasks.targets" />

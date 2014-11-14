@@ -6069,4 +6069,367 @@
         REF_TECHNOLOGY_postRender: [$element, function () { return new lightSwitchApplication.BrowseApps().findContentItem("REF_TECHNOLOGY"); }]
     });
 
+    lightSwitchApplication.AddEditTPApps.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.AddEditTPApps
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.AddEditTPApps,
+            data: lightSwitchApplication.AddEditTPApps,
+            value: lightSwitchApplication.AddEditTPApps
+        },
+        columns: {
+            _$class: msls.ContentItem,
+            _$name: "columns",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.AddEditTPApps,
+            data: lightSwitchApplication.AddEditTPApps,
+            value: lightSwitchApplication.TP_APPLICATION
+        },
+        left: {
+            _$class: msls.ContentItem,
+            _$name: "left",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.AddEditTPApps,
+            data: lightSwitchApplication.TP_APPLICATION,
+            value: lightSwitchApplication.TP_APPLICATION
+        },
+        TP: {
+            _$class: msls.ContentItem,
+            _$name: "TP",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTPApps,
+            data: lightSwitchApplication.TP_APPLICATION,
+            value: lightSwitchApplication.TP
+        },
+        RowTemplate1: {
+            _$class: msls.ContentItem,
+            _$name: "RowTemplate1",
+            _$parentName: "TP",
+            screen: lightSwitchApplication.AddEditTPApps,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.TP
+        },
+        APP: {
+            _$class: msls.ContentItem,
+            _$name: "APP",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTPApps,
+            data: lightSwitchApplication.TP_APPLICATION,
+            value: lightSwitchApplication.APP
+        },
+        RowTemplate: {
+            _$class: msls.ContentItem,
+            _$name: "RowTemplate",
+            _$parentName: "APP",
+            screen: lightSwitchApplication.AddEditTPApps,
+            data: lightSwitchApplication.APP,
+            value: lightSwitchApplication.APP
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.AddEditTPApps
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.AddEditTPApps, {
+        /// <field>
+        /// Called when a new AddEditTPApps screen is created.
+        /// <br/>created(msls.application.AddEditTPApps screen)
+        /// </field>
+        created: [lightSwitchApplication.AddEditTPApps],
+        /// <field>
+        /// Called before changes on an active AddEditTPApps screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.AddEditTPApps screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.AddEditTPApps],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.AddEditTPApps().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the columns content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        columns_postRender: [$element, function () { return new lightSwitchApplication.AddEditTPApps().findContentItem("columns"); }],
+        /// <field>
+        /// Called after the left content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        left_postRender: [$element, function () { return new lightSwitchApplication.AddEditTPApps().findContentItem("left"); }],
+        /// <field>
+        /// Called after the TP content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TP_postRender: [$element, function () { return new lightSwitchApplication.AddEditTPApps().findContentItem("TP"); }],
+        /// <field>
+        /// Called after the RowTemplate1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate1_postRender: [$element, function () { return new lightSwitchApplication.AddEditTPApps().findContentItem("RowTemplate1"); }],
+        /// <field>
+        /// Called after the APP content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        APP_postRender: [$element, function () { return new lightSwitchApplication.AddEditTPApps().findContentItem("APP"); }],
+        /// <field>
+        /// Called after the RowTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate_postRender: [$element, function () { return new lightSwitchApplication.AddEditTPApps().findContentItem("RowTemplate"); }]
+    });
+
+    lightSwitchApplication.ViewTPApps.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ViewTPApps
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ViewTPApps,
+            data: lightSwitchApplication.ViewTPApps,
+            value: lightSwitchApplication.ViewTPApps
+        },
+        columns: {
+            _$class: msls.ContentItem,
+            _$name: "columns",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ViewTPApps,
+            data: lightSwitchApplication.ViewTPApps,
+            value: lightSwitchApplication.TP_APPLICATION
+        },
+        left: {
+            _$class: msls.ContentItem,
+            _$name: "left",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.ViewTPApps,
+            data: lightSwitchApplication.TP_APPLICATION,
+            value: lightSwitchApplication.TP_APPLICATION
+        },
+        APP: {
+            _$class: msls.ContentItem,
+            _$name: "APP",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTPApps,
+            data: lightSwitchApplication.TP_APPLICATION,
+            value: lightSwitchApplication.APP
+        },
+        TP: {
+            _$class: msls.ContentItem,
+            _$name: "TP",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTPApps,
+            data: lightSwitchApplication.TP_APPLICATION,
+            value: lightSwitchApplication.TP
+        },
+        CreatedBy: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedBy",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTPApps,
+            data: lightSwitchApplication.TP_APPLICATION,
+            value: String
+        },
+        CreatedDate: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTPApps,
+            data: lightSwitchApplication.TP_APPLICATION,
+            value: Date
+        },
+        ModifiedBy: {
+            _$class: msls.ContentItem,
+            _$name: "ModifiedBy",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTPApps,
+            data: lightSwitchApplication.TP_APPLICATION,
+            value: String
+        },
+        ModifiedDate: {
+            _$class: msls.ContentItem,
+            _$name: "ModifiedDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTPApps,
+            data: lightSwitchApplication.TP_APPLICATION,
+            value: Date
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ViewTPApps
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.ViewTPApps, {
+        /// <field>
+        /// Called when a new ViewTPApps screen is created.
+        /// <br/>created(msls.application.ViewTPApps screen)
+        /// </field>
+        created: [lightSwitchApplication.ViewTPApps],
+        /// <field>
+        /// Called before changes on an active ViewTPApps screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.ViewTPApps screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.ViewTPApps],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.ViewTPApps().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the columns content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        columns_postRender: [$element, function () { return new lightSwitchApplication.ViewTPApps().findContentItem("columns"); }],
+        /// <field>
+        /// Called after the left content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        left_postRender: [$element, function () { return new lightSwitchApplication.ViewTPApps().findContentItem("left"); }],
+        /// <field>
+        /// Called after the APP content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        APP_postRender: [$element, function () { return new lightSwitchApplication.ViewTPApps().findContentItem("APP"); }],
+        /// <field>
+        /// Called after the TP content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TP_postRender: [$element, function () { return new lightSwitchApplication.ViewTPApps().findContentItem("TP"); }],
+        /// <field>
+        /// Called after the CreatedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedBy_postRender: [$element, function () { return new lightSwitchApplication.ViewTPApps().findContentItem("CreatedBy"); }],
+        /// <field>
+        /// Called after the CreatedDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedDate_postRender: [$element, function () { return new lightSwitchApplication.ViewTPApps().findContentItem("CreatedDate"); }],
+        /// <field>
+        /// Called after the ModifiedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ModifiedBy_postRender: [$element, function () { return new lightSwitchApplication.ViewTPApps().findContentItem("ModifiedBy"); }],
+        /// <field>
+        /// Called after the ModifiedDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ModifiedDate_postRender: [$element, function () { return new lightSwitchApplication.ViewTPApps().findContentItem("ModifiedDate"); }]
+    });
+
+    lightSwitchApplication.BrowseTPAppsSet.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.BrowseTPAppsSet
+        },
+        TPAppsList: {
+            _$class: msls.ContentItem,
+            _$name: "TPAppsList",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.BrowseTPAppsSet,
+            data: lightSwitchApplication.BrowseTPAppsSet,
+            value: lightSwitchApplication.BrowseTPAppsSet
+        },
+        TP_APPLICATIONs: {
+            _$class: msls.ContentItem,
+            _$name: "TP_APPLICATIONs",
+            _$parentName: "TPAppsList",
+            screen: lightSwitchApplication.BrowseTPAppsSet,
+            data: lightSwitchApplication.BrowseTPAppsSet,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.BrowseTPAppsSet,
+                _$entry: {
+                    elementType: lightSwitchApplication.TP_APPLICATION
+                }
+            }
+        },
+        rows: {
+            _$class: msls.ContentItem,
+            _$name: "rows",
+            _$parentName: "TP_APPLICATIONs",
+            screen: lightSwitchApplication.BrowseTPAppsSet,
+            data: lightSwitchApplication.TP_APPLICATION,
+            value: lightSwitchApplication.TP_APPLICATION
+        },
+        TP: {
+            _$class: msls.ContentItem,
+            _$name: "TP",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.BrowseTPAppsSet,
+            data: lightSwitchApplication.TP_APPLICATION,
+            value: lightSwitchApplication.TP
+        },
+        APP: {
+            _$class: msls.ContentItem,
+            _$name: "APP",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.BrowseTPAppsSet,
+            data: lightSwitchApplication.TP_APPLICATION,
+            value: lightSwitchApplication.APP
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.BrowseTPAppsSet
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.BrowseTPAppsSet, {
+        /// <field>
+        /// Called when a new BrowseTPAppsSet screen is created.
+        /// <br/>created(msls.application.BrowseTPAppsSet screen)
+        /// </field>
+        created: [lightSwitchApplication.BrowseTPAppsSet],
+        /// <field>
+        /// Called before changes on an active BrowseTPAppsSet screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.BrowseTPAppsSet screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.BrowseTPAppsSet],
+        /// <field>
+        /// Called after the TPAppsList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TPAppsList_postRender: [$element, function () { return new lightSwitchApplication.BrowseTPAppsSet().findContentItem("TPAppsList"); }],
+        /// <field>
+        /// Called after the TP_APPLICATIONs content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TP_APPLICATIONs_postRender: [$element, function () { return new lightSwitchApplication.BrowseTPAppsSet().findContentItem("TP_APPLICATIONs"); }],
+        /// <field>
+        /// Called after the rows content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows_postRender: [$element, function () { return new lightSwitchApplication.BrowseTPAppsSet().findContentItem("rows"); }],
+        /// <field>
+        /// Called after the TP content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TP_postRender: [$element, function () { return new lightSwitchApplication.BrowseTPAppsSet().findContentItem("TP"); }],
+        /// <field>
+        /// Called after the APP content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        APP_postRender: [$element, function () { return new lightSwitchApplication.BrowseTPAppsSet().findContentItem("APP"); }]
+    });
+
 }(msls.application));

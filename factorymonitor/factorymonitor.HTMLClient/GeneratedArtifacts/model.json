@@ -5253,6 +5253,14 @@
           ":@SummaryProperty": { "property": { "__id": "TP_APPLICATION/Properties[CreatedBy]" } },
           "id": "TP_APPLICATION",
           "name": "TP_APPLICATION",
+          ":@DefaultScreen":
+          {
+            "value": { "__id": "ViewTPApps" },
+            ":@ScreenParameterMapping":
+            {
+              "screenParameter": { "__id": "ViewTPApps/Properties[TP_APPLICATION]" }
+            }
+          },
           "methods":
           [
             {
@@ -17887,6 +17895,671 @@
               }
             }
           ]
+        },
+        {
+          "displayName": "TPApps",
+          "id": "AddEditTPApps",
+          "name": "AddEditTPApps",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "TPApps",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "AddEditTPApps/Properties[TP_APPLICATION]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "TP",
+                                "name": "TP",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "TP_APPLICATION/Properties[TP]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "TP",
+                                    "name": "RowTemplate1",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "TP/Properties[Name]" }
+                                    }
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "APP",
+                                "name": "APP",
+                                "kind": "Details",
+                                "view": { "__id": ":DetailsModalPicker" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "TP_APPLICATION/Properties[APP]" }
+                                },
+                                "childContentItems":
+                                [
+                                  {
+                                    "displayName": "APP",
+                                    "name": "RowTemplate",
+                                    "kind": "Value",
+                                    "view": { "__id": ":Text" },
+                                    "dataSource":
+                                    {
+                                      "member": { "__id": "APP/Properties[Name]" }
+                                    }
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "AddEditTPApps/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "AddEditTPApps/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "AddEditTPApps/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "AddEditTPApps/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "AddEditTPApps/Properties[TP_APPLICATION]",
+              "name": "TP_APPLICATION",
+              "elementType": { "__id": "TP_APPLICATION" },
+              "propertyType": { "__id": "TP_APPLICATION" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "displayName": "TPApps",
+          "id": "ViewTPApps",
+          "name": "ViewTPApps",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "TPApps",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ViewTPApps/Properties[TP_APPLICATION]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "APP",
+                                "name": "APP",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "links":
+                                  [
+                                    {
+                                      "member": { "__id": "TP_APPLICATION/Properties[APP]" }
+                                    },
+                                    {
+                                      "member": { "__id": "APP/Properties[Name]" }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "displayName": "TP",
+                                "name": "TP",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "links":
+                                  [
+                                    {
+                                      "member": { "__id": "TP_APPLICATION/Properties[TP]" }
+                                    },
+                                    {
+                                      "member": { "__id": "TP/Properties[Name]" }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "displayName": "Created By",
+                                "name": "CreatedBy",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "TP_APPLICATION/Properties[CreatedBy]" }
+                                }
+                              },
+                              {
+                                "displayName": "Created Date",
+                                "name": "CreatedDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "TP_APPLICATION/Properties[CreatedDate]" }
+                                }
+                              },
+                              {
+                                "displayName": "Modified By",
+                                "name": "ModifiedBy",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "TP_APPLICATION/Properties[ModifiedBy]" }
+                                }
+                              },
+                              {
+                                "displayName": "Modified Date",
+                                "name": "ModifiedDate",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "TP_APPLICATION/Properties[ModifiedDate]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Edit",
+                        "name": "EditTPApps",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditTPApps]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showAddEditTPApps]/Parameters[TP_APPLICATION]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "ViewTPApps/Properties[TP_APPLICATION]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-edit"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ViewTPApps/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ViewTPApps/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ViewTPApps/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ViewTPApps/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ViewTPApps/Properties[TP_APPLICATION]",
+              "name": "TP_APPLICATION",
+              "elementType": { "__id": "TP_APPLICATION" },
+              "propertyType": { "__id": "TP_APPLICATION" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "displayName": "TPAppsSet",
+          "id": "BrowseTPAppsSet",
+          "name": "BrowseTPAppsSet",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[FMData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "TPAppsSet",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "TPApps List",
+                    "name": "TPAppsList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "TP_APPLICATIONs",
+                        "name": "TP_APPLICATIONs",
+                        "kind": "Collection",
+                        "view": { "__id": ":TileList" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "BrowseTPAppsSet/Properties[TP_APPLICATIONs]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "TP",
+                                "name": "TP",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "links":
+                                  [
+                                    {
+                                      "member": { "__id": "TP_APPLICATION/Properties[TP]" }
+                                    },
+                                    {
+                                      "member": { "__id": "TP/Properties[Name]" }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "displayName": "APP",
+                                "name": "APP",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "links":
+                                  [
+                                    {
+                                      "member": { "__id": "TP_APPLICATION/Properties[APP]" }
+                                    },
+                                    {
+                                      "member": { "__id": "APP/Properties[Name]" }
+                                    }
+                                  ]
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showViewTPApps]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseTPAppsSet/Properties[TP_APPLICATIONs]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showViewTPApps]/Parameters[TP_APPLICATION]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "BrowseTPAppsSet/Properties[TP_APPLICATIONs]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$TP_APPLICATION/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Add",
+                        "name": "AddTPApps",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showAddEditTPApps]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "BrowseTPAppsSet/Properties[TP_APPLICATIONs]" } },
+                              ":@CreateNewEntity":
+                              {
+                                "targetParameter": { "__id": "!module/Methods[showAddEditTPApps]/Parameters[TP_APPLICATION]" }
+                              }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Search",
+                        "name": "SearchTPAppsSet",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "BrowseTPAppsSet/Properties[TP_APPLICATIONs]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$TP_APPLICATION/Methods[showSearch]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-search"
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "BrowseTPAppsSet/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "BrowseTPAppsSet/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "BrowseTPAppsSet/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "BrowseTPAppsSet/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "BrowseTPAppsSet/Properties[TP_APPLICATIONs]",
+              "name": "TP_APPLICATIONs",
+              "pageSize": 45,
+              "elementType": { "__id": "TP_APPLICATION" },
+              "propertyType": { "__id": "CollectionView$TP_APPLICATION" },
+              "query":
+              {
+                "id": "BrowseTPAppsSet/Properties[TP_APPLICATIONs]/Query",
+                "name": "TP_APPLICATIONsQuery",
+                "elementType": { "__id": "TP_APPLICATION" },
+                "returnType": { "__id": "TP_APPLICATION*" },
+                "source":
+                {
+                  "member": { "__id": "FMData/Members[TP_APPLICATIONs]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "BrowseTPAppsSet/Properties[TP_APPLICATIONs]/Query" }
+              }
+            }
+          ]
         }
       ],
       "methods":
@@ -18231,6 +18904,37 @@
           "id": "!module/Methods[showBrowseApps]",
           "name": "showBrowseApps",
           ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseApps" } }
+        },
+        {
+          "id": "!module/Methods[showAddEditTPApps]",
+          "name": "showAddEditTPApps",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "AddEditTPApps" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showAddEditTPApps]/Parameters[TP_APPLICATION]",
+              "name": "TP_APPLICATION",
+              "parameterType": { "__id": "TP_APPLICATION" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showViewTPApps]",
+          "name": "showViewTPApps",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ViewTPApps" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showViewTPApps]/Parameters[TP_APPLICATION]",
+              "name": "TP_APPLICATION",
+              "parameterType": { "__id": "TP_APPLICATION" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showBrowseTPAppsSet]",
+          "name": "showBrowseTPAppsSet",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "BrowseTPAppsSet" } }
         }
       ],
       "navigationItems":
@@ -18289,6 +18993,11 @@
           "id": "!module/NavigationItems[link10]",
           "name": "link10",
           "method": { "__id": "!module/Methods[showBrowseApps]" }
+        },
+        {
+          "id": "!module/NavigationItems[link11]",
+          "name": "link11",
+          "method": { "__id": "!module/Methods[showBrowseTPAppsSet]" }
         }
       ]
     }
