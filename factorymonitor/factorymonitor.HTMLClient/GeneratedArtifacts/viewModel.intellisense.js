@@ -4079,4 +4079,1586 @@
         PlannedStartDate_postRender: [$element, function () { return new lightSwitchApplication.ViewResourceDetail().findContentItem("PlannedStartDate"); }]
     });
 
+    lightSwitchApplication.AddEditTp.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.AddEditTp
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.AddEditTp,
+            value: lightSwitchApplication.AddEditTp
+        },
+        columns: {
+            _$class: msls.ContentItem,
+            _$name: "columns",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.AddEditTp,
+            value: lightSwitchApplication.TP
+        },
+        left: {
+            _$class: msls.ContentItem,
+            _$name: "left",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.TP
+        },
+        Number: {
+            _$class: msls.ContentItem,
+            _$name: "Number",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: Number
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        WorkOrderNumber: {
+            _$class: msls.ContentItem,
+            _$name: "WorkOrderNumber",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        WorkOrderStatus: {
+            _$class: msls.ContentItem,
+            _$name: "WorkOrderStatus",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: Number
+        },
+        WorkOrderIssuedOn: {
+            _$class: msls.ContentItem,
+            _$name: "WorkOrderIssuedOn",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        PlannedEffort: {
+            _$class: msls.ContentItem,
+            _$name: "PlannedEffort",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        EstimatedCost: {
+            _$class: msls.ContentItem,
+            _$name: "EstimatedCost",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        IssueDateToHP: {
+            _$class: msls.ContentItem,
+            _$name: "IssueDateToHP",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        EffortDateProvidedByHP: {
+            _$class: msls.ContentItem,
+            _$name: "EffortDateProvidedByHP",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        ApprovedDateByDL: {
+            _$class: msls.ContentItem,
+            _$name: "ApprovedDateByDL",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        PlannedStartDate: {
+            _$class: msls.ContentItem,
+            _$name: "PlannedStartDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        PlannedEndDate: {
+            _$class: msls.ContentItem,
+            _$name: "PlannedEndDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        ActualStartDate: {
+            _$class: msls.ContentItem,
+            _$name: "ActualStartDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        ActualEndDate: {
+            _$class: msls.ContentItem,
+            _$name: "ActualEndDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        right: {
+            _$class: msls.ContentItem,
+            _$name: "right",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.TP
+        },
+        ApplicationSize: {
+            _$class: msls.ContentItem,
+            _$name: "ApplicationSize",
+            _$parentName: "right",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        HasInputDocument: {
+            _$class: msls.ContentItem,
+            _$name: "HasInputDocument",
+            _$parentName: "right",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: Boolean
+        },
+        HasFeasibilityStudy: {
+            _$class: msls.ContentItem,
+            _$name: "HasFeasibilityStudy",
+            _$parentName: "right",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: Boolean
+        },
+        HasUnderstandingDocument: {
+            _$class: msls.ContentItem,
+            _$name: "HasUnderstandingDocument",
+            _$parentName: "right",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: Boolean
+        },
+        HasEstimation: {
+            _$class: msls.ContentItem,
+            _$name: "HasEstimation",
+            _$parentName: "right",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: Boolean
+        },
+        REF_APPLICATION_TYPE: {
+            _$class: msls.ContentItem,
+            _$name: "REF_APPLICATION_TYPE",
+            _$parentName: "right",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.REF_APPLICATION_TYPE
+        },
+        RowTemplate: {
+            _$class: msls.ContentItem,
+            _$name: "RowTemplate",
+            _$parentName: "REF_APPLICATION_TYPE",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.REF_APPLICATION_TYPE,
+            value: lightSwitchApplication.REF_APPLICATION_TYPE
+        },
+        REF_COMPLEXITY: {
+            _$class: msls.ContentItem,
+            _$name: "REF_COMPLEXITY",
+            _$parentName: "right",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.REF_COMPLEXITY
+        },
+        RowTemplate1: {
+            _$class: msls.ContentItem,
+            _$name: "RowTemplate1",
+            _$parentName: "REF_COMPLEXITY",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.REF_COMPLEXITY,
+            value: lightSwitchApplication.REF_COMPLEXITY
+        },
+        REF_COMPLEXITY1: {
+            _$class: msls.ContentItem,
+            _$name: "REF_COMPLEXITY1",
+            _$parentName: "right",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.REF_COMPLEXITY
+        },
+        RowTemplate2: {
+            _$class: msls.ContentItem,
+            _$name: "RowTemplate2",
+            _$parentName: "REF_COMPLEXITY1",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.REF_COMPLEXITY,
+            value: lightSwitchApplication.REF_COMPLEXITY
+        },
+        REF_GAP: {
+            _$class: msls.ContentItem,
+            _$name: "REF_GAP",
+            _$parentName: "right",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.REF_GAP
+        },
+        RowTemplate3: {
+            _$class: msls.ContentItem,
+            _$name: "RowTemplate3",
+            _$parentName: "REF_GAP",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.REF_GAP,
+            value: lightSwitchApplication.REF_GAP
+        },
+        REF_GAP1: {
+            _$class: msls.ContentItem,
+            _$name: "REF_GAP1",
+            _$parentName: "right",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.REF_GAP
+        },
+        RowTemplate4: {
+            _$class: msls.ContentItem,
+            _$name: "RowTemplate4",
+            _$parentName: "REF_GAP1",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.REF_GAP,
+            value: lightSwitchApplication.REF_GAP
+        },
+        REF_TECHNOLOGY_STACK: {
+            _$class: msls.ContentItem,
+            _$name: "REF_TECHNOLOGY_STACK",
+            _$parentName: "right",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.REF_TECHNOLOGY_STACK
+        },
+        RowTemplate5: {
+            _$class: msls.ContentItem,
+            _$name: "RowTemplate5",
+            _$parentName: "REF_TECHNOLOGY_STACK",
+            screen: lightSwitchApplication.AddEditTp,
+            data: lightSwitchApplication.REF_TECHNOLOGY_STACK,
+            value: lightSwitchApplication.REF_TECHNOLOGY_STACK
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.AddEditTp
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.AddEditTp, {
+        /// <field>
+        /// Called when a new AddEditTp screen is created.
+        /// <br/>created(msls.application.AddEditTp screen)
+        /// </field>
+        created: [lightSwitchApplication.AddEditTp],
+        /// <field>
+        /// Called before changes on an active AddEditTp screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.AddEditTp screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.AddEditTp],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the columns content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        columns_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("columns"); }],
+        /// <field>
+        /// Called after the left content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        left_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("left"); }],
+        /// <field>
+        /// Called after the Number content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Number_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("Number"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("Description"); }],
+        /// <field>
+        /// Called after the WorkOrderNumber content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        WorkOrderNumber_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("WorkOrderNumber"); }],
+        /// <field>
+        /// Called after the WorkOrderStatus content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        WorkOrderStatus_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("WorkOrderStatus"); }],
+        /// <field>
+        /// Called after the WorkOrderIssuedOn content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        WorkOrderIssuedOn_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("WorkOrderIssuedOn"); }],
+        /// <field>
+        /// Called after the PlannedEffort content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PlannedEffort_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("PlannedEffort"); }],
+        /// <field>
+        /// Called after the EstimatedCost content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        EstimatedCost_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("EstimatedCost"); }],
+        /// <field>
+        /// Called after the IssueDateToHP content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        IssueDateToHP_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("IssueDateToHP"); }],
+        /// <field>
+        /// Called after the EffortDateProvidedByHP content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        EffortDateProvidedByHP_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("EffortDateProvidedByHP"); }],
+        /// <field>
+        /// Called after the ApprovedDateByDL content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ApprovedDateByDL_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("ApprovedDateByDL"); }],
+        /// <field>
+        /// Called after the PlannedStartDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PlannedStartDate_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("PlannedStartDate"); }],
+        /// <field>
+        /// Called after the PlannedEndDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PlannedEndDate_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("PlannedEndDate"); }],
+        /// <field>
+        /// Called after the ActualStartDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ActualStartDate_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("ActualStartDate"); }],
+        /// <field>
+        /// Called after the ActualEndDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ActualEndDate_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("ActualEndDate"); }],
+        /// <field>
+        /// Called after the right content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        right_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("right"); }],
+        /// <field>
+        /// Called after the ApplicationSize content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ApplicationSize_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("ApplicationSize"); }],
+        /// <field>
+        /// Called after the HasInputDocument content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        HasInputDocument_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("HasInputDocument"); }],
+        /// <field>
+        /// Called after the HasFeasibilityStudy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        HasFeasibilityStudy_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("HasFeasibilityStudy"); }],
+        /// <field>
+        /// Called after the HasUnderstandingDocument content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        HasUnderstandingDocument_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("HasUnderstandingDocument"); }],
+        /// <field>
+        /// Called after the HasEstimation content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        HasEstimation_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("HasEstimation"); }],
+        /// <field>
+        /// Called after the REF_APPLICATION_TYPE content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        REF_APPLICATION_TYPE_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("REF_APPLICATION_TYPE"); }],
+        /// <field>
+        /// Called after the RowTemplate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("RowTemplate"); }],
+        /// <field>
+        /// Called after the REF_COMPLEXITY content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        REF_COMPLEXITY_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("REF_COMPLEXITY"); }],
+        /// <field>
+        /// Called after the RowTemplate1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate1_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("RowTemplate1"); }],
+        /// <field>
+        /// Called after the REF_COMPLEXITY1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        REF_COMPLEXITY1_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("REF_COMPLEXITY1"); }],
+        /// <field>
+        /// Called after the RowTemplate2 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate2_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("RowTemplate2"); }],
+        /// <field>
+        /// Called after the REF_GAP content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        REF_GAP_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("REF_GAP"); }],
+        /// <field>
+        /// Called after the RowTemplate3 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate3_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("RowTemplate3"); }],
+        /// <field>
+        /// Called after the REF_GAP1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        REF_GAP1_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("REF_GAP1"); }],
+        /// <field>
+        /// Called after the RowTemplate4 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate4_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("RowTemplate4"); }],
+        /// <field>
+        /// Called after the REF_TECHNOLOGY_STACK content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        REF_TECHNOLOGY_STACK_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("REF_TECHNOLOGY_STACK"); }],
+        /// <field>
+        /// Called after the RowTemplate5 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        RowTemplate5_postRender: [$element, function () { return new lightSwitchApplication.AddEditTp().findContentItem("RowTemplate5"); }]
+    });
+
+    lightSwitchApplication.ViewTp.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ViewTp
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.ViewTp,
+            value: lightSwitchApplication.ViewTp
+        },
+        columns: {
+            _$class: msls.ContentItem,
+            _$name: "columns",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.ViewTp,
+            value: lightSwitchApplication.TP
+        },
+        left: {
+            _$class: msls.ContentItem,
+            _$name: "left",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.TP
+        },
+        Number: {
+            _$class: msls.ContentItem,
+            _$name: "Number",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: Number
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        WorkOrderNumber: {
+            _$class: msls.ContentItem,
+            _$name: "WorkOrderNumber",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        WorkOrderStatus: {
+            _$class: msls.ContentItem,
+            _$name: "WorkOrderStatus",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: Number
+        },
+        WorkOrderIssuedOn: {
+            _$class: msls.ContentItem,
+            _$name: "WorkOrderIssuedOn",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        PlannedEffort: {
+            _$class: msls.ContentItem,
+            _$name: "PlannedEffort",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        EstimatedCost: {
+            _$class: msls.ContentItem,
+            _$name: "EstimatedCost",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        IssueDateToHP: {
+            _$class: msls.ContentItem,
+            _$name: "IssueDateToHP",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        EffortDateProvidedByHP: {
+            _$class: msls.ContentItem,
+            _$name: "EffortDateProvidedByHP",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        ApprovedDateByDL: {
+            _$class: msls.ContentItem,
+            _$name: "ApprovedDateByDL",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        PlannedStartDate: {
+            _$class: msls.ContentItem,
+            _$name: "PlannedStartDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        PlannedEndDate: {
+            _$class: msls.ContentItem,
+            _$name: "PlannedEndDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        ActualStartDate: {
+            _$class: msls.ContentItem,
+            _$name: "ActualStartDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        ActualEndDate: {
+            _$class: msls.ContentItem,
+            _$name: "ActualEndDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        right: {
+            _$class: msls.ContentItem,
+            _$name: "right",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.TP
+        },
+        ApplicationSize: {
+            _$class: msls.ContentItem,
+            _$name: "ApplicationSize",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        HasInputDocument: {
+            _$class: msls.ContentItem,
+            _$name: "HasInputDocument",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: Boolean
+        },
+        HasFeasibilityStudy: {
+            _$class: msls.ContentItem,
+            _$name: "HasFeasibilityStudy",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: Boolean
+        },
+        HasUnderstandingDocument: {
+            _$class: msls.ContentItem,
+            _$name: "HasUnderstandingDocument",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: Boolean
+        },
+        HasEstimation: {
+            _$class: msls.ContentItem,
+            _$name: "HasEstimation",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: Boolean
+        },
+        CreatedDate: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedDate",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        CreatedBy: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedBy",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        ModifiedDate: {
+            _$class: msls.ContentItem,
+            _$name: "ModifiedDate",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: Date
+        },
+        ModifiedBy: {
+            _$class: msls.ContentItem,
+            _$name: "ModifiedBy",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        REF_APPLICATION_TYPE: {
+            _$class: msls.ContentItem,
+            _$name: "REF_APPLICATION_TYPE",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.REF_APPLICATION_TYPE
+        },
+        REF_COMPLEXITY: {
+            _$class: msls.ContentItem,
+            _$name: "REF_COMPLEXITY",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.REF_COMPLEXITY
+        },
+        REF_COMPLEXITY1: {
+            _$class: msls.ContentItem,
+            _$name: "REF_COMPLEXITY1",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.REF_COMPLEXITY
+        },
+        REF_GAP: {
+            _$class: msls.ContentItem,
+            _$name: "REF_GAP",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.REF_GAP
+        },
+        REF_GAP1: {
+            _$class: msls.ContentItem,
+            _$name: "REF_GAP1",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.REF_GAP
+        },
+        REF_TECHNOLOGY_STACK: {
+            _$class: msls.ContentItem,
+            _$name: "REF_TECHNOLOGY_STACK",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.REF_TECHNOLOGY_STACK
+        },
+        TP_APPLICATIONs: {
+            _$class: msls.ContentItem,
+            _$name: "TP_APPLICATIONs",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.ViewTp,
+            value: lightSwitchApplication.ViewTp
+        },
+        TP_APPLICATIONs1: {
+            _$class: msls.ContentItem,
+            _$name: "TP_APPLICATIONs1",
+            _$parentName: "TP_APPLICATIONs",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.ViewTp,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.ViewTp,
+                _$entry: {
+                    elementType: lightSwitchApplication.TP_APPLICATION
+                }
+            }
+        },
+        rows: {
+            _$class: msls.ContentItem,
+            _$name: "rows",
+            _$parentName: "TP_APPLICATIONs1",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_APPLICATION,
+            value: lightSwitchApplication.TP_APPLICATION
+        },
+        CreatedBy1: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedBy1",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_APPLICATION,
+            value: String
+        },
+        CreatedDate1: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedDate1",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_APPLICATION,
+            value: Date
+        },
+        ModifiedBy1: {
+            _$class: msls.ContentItem,
+            _$name: "ModifiedBy1",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_APPLICATION,
+            value: String
+        },
+        TP_DOCUMENT_LINKs: {
+            _$class: msls.ContentItem,
+            _$name: "TP_DOCUMENT_LINKs",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.ViewTp,
+            value: lightSwitchApplication.ViewTp
+        },
+        TP_DOCUMENT_LINKs1: {
+            _$class: msls.ContentItem,
+            _$name: "TP_DOCUMENT_LINKs1",
+            _$parentName: "TP_DOCUMENT_LINKs",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.ViewTp,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.ViewTp,
+                _$entry: {
+                    elementType: lightSwitchApplication.TP_DOCUMENT_LINK
+                }
+            }
+        },
+        rows1: {
+            _$class: msls.ContentItem,
+            _$name: "rows1",
+            _$parentName: "TP_DOCUMENT_LINKs1",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_DOCUMENT_LINK,
+            value: lightSwitchApplication.TP_DOCUMENT_LINK
+        },
+        Name1: {
+            _$class: msls.ContentItem,
+            _$name: "Name1",
+            _$parentName: "rows1",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_DOCUMENT_LINK,
+            value: String
+        },
+        TpDocumentLinkID: {
+            _$class: msls.ContentItem,
+            _$name: "TpDocumentLinkID",
+            _$parentName: "rows1",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_DOCUMENT_LINK,
+            value: Number
+        },
+        Description1: {
+            _$class: msls.ContentItem,
+            _$name: "Description1",
+            _$parentName: "rows1",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_DOCUMENT_LINK,
+            value: String
+        },
+        TP_PHASEs: {
+            _$class: msls.ContentItem,
+            _$name: "TP_PHASEs",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.ViewTp,
+            value: lightSwitchApplication.ViewTp
+        },
+        TP_PHASEs1: {
+            _$class: msls.ContentItem,
+            _$name: "TP_PHASEs1",
+            _$parentName: "TP_PHASEs",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.ViewTp,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.ViewTp,
+                _$entry: {
+                    elementType: lightSwitchApplication.TP_PHASE
+                }
+            }
+        },
+        rows2: {
+            _$class: msls.ContentItem,
+            _$name: "rows2",
+            _$parentName: "TP_PHASEs1",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_PHASE,
+            value: lightSwitchApplication.TP_PHASE
+        },
+        Duration: {
+            _$class: msls.ContentItem,
+            _$name: "Duration",
+            _$parentName: "rows2",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_PHASE,
+            value: String
+        },
+        TpPhaseID: {
+            _$class: msls.ContentItem,
+            _$name: "TpPhaseID",
+            _$parentName: "rows2",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_PHASE,
+            value: Number
+        },
+        PlannedStartDate1: {
+            _$class: msls.ContentItem,
+            _$name: "PlannedStartDate1",
+            _$parentName: "rows2",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_PHASE,
+            value: Date
+        },
+        TP_RESOURCE_ALLOCATIONs: {
+            _$class: msls.ContentItem,
+            _$name: "TP_RESOURCE_ALLOCATIONs",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.ViewTp,
+            value: lightSwitchApplication.ViewTp
+        },
+        TP_RESOURCE_ALLOCATIONs1: {
+            _$class: msls.ContentItem,
+            _$name: "TP_RESOURCE_ALLOCATIONs1",
+            _$parentName: "TP_RESOURCE_ALLOCATIONs",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.ViewTp,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.ViewTp,
+                _$entry: {
+                    elementType: lightSwitchApplication.TP_RESOURCE_ALLOCATION
+                }
+            }
+        },
+        rows3: {
+            _$class: msls.ContentItem,
+            _$name: "rows3",
+            _$parentName: "TP_RESOURCE_ALLOCATIONs1",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_RESOURCE_ALLOCATION,
+            value: lightSwitchApplication.TP_RESOURCE_ALLOCATION
+        },
+        CreatedBy2: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedBy2",
+            _$parentName: "rows3",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_RESOURCE_ALLOCATION,
+            value: String
+        },
+        Percentage: {
+            _$class: msls.ContentItem,
+            _$name: "Percentage",
+            _$parentName: "rows3",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_RESOURCE_ALLOCATION,
+            value: Number
+        },
+        PlannedStartDate2: {
+            _$class: msls.ContentItem,
+            _$name: "PlannedStartDate2",
+            _$parentName: "rows3",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_RESOURCE_ALLOCATION,
+            value: Date
+        },
+        TP_STAKEHOLDERs: {
+            _$class: msls.ContentItem,
+            _$name: "TP_STAKEHOLDERs",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.ViewTp,
+            value: lightSwitchApplication.ViewTp
+        },
+        TP_STAKEHOLDERs1: {
+            _$class: msls.ContentItem,
+            _$name: "TP_STAKEHOLDERs1",
+            _$parentName: "TP_STAKEHOLDERs",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.ViewTp,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.ViewTp,
+                _$entry: {
+                    elementType: lightSwitchApplication.TP_STAKEHOLDER
+                }
+            }
+        },
+        rows4: {
+            _$class: msls.ContentItem,
+            _$name: "rows4",
+            _$parentName: "TP_STAKEHOLDERs1",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_STAKEHOLDER,
+            value: lightSwitchApplication.TP_STAKEHOLDER
+        },
+        CreatedBy3: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedBy3",
+            _$parentName: "rows4",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_STAKEHOLDER,
+            value: String
+        },
+        TpStakeholderID: {
+            _$class: msls.ContentItem,
+            _$name: "TpStakeholderID",
+            _$parentName: "rows4",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_STAKEHOLDER,
+            value: Number
+        },
+        CreatedDate2: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedDate2",
+            _$parentName: "rows4",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_STAKEHOLDER,
+            value: Date
+        },
+        TP_VENDORs: {
+            _$class: msls.ContentItem,
+            _$name: "TP_VENDORs",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.ViewTp,
+            value: lightSwitchApplication.ViewTp
+        },
+        TP_VENDORs1: {
+            _$class: msls.ContentItem,
+            _$name: "TP_VENDORs1",
+            _$parentName: "TP_VENDORs",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.ViewTp,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.ViewTp,
+                _$entry: {
+                    elementType: lightSwitchApplication.TP_VENDOR
+                }
+            }
+        },
+        rows5: {
+            _$class: msls.ContentItem,
+            _$name: "rows5",
+            _$parentName: "TP_VENDORs1",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_VENDOR,
+            value: lightSwitchApplication.TP_VENDOR
+        },
+        CreatedBy4: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedBy4",
+            _$parentName: "rows5",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_VENDOR,
+            value: String
+        },
+        TpVendorID: {
+            _$class: msls.ContentItem,
+            _$name: "TpVendorID",
+            _$parentName: "rows5",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_VENDOR,
+            value: Number
+        },
+        CreatedDate3: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedDate3",
+            _$parentName: "rows5",
+            screen: lightSwitchApplication.ViewTp,
+            data: lightSwitchApplication.TP_VENDOR,
+            value: Date
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ViewTp
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.ViewTp, {
+        /// <field>
+        /// Called when a new ViewTp screen is created.
+        /// <br/>created(msls.application.ViewTp screen)
+        /// </field>
+        created: [lightSwitchApplication.ViewTp],
+        /// <field>
+        /// Called before changes on an active ViewTp screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.ViewTp screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.ViewTp],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the columns content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        columns_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("columns"); }],
+        /// <field>
+        /// Called after the left content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        left_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("left"); }],
+        /// <field>
+        /// Called after the Number content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Number_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("Number"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("Description"); }],
+        /// <field>
+        /// Called after the WorkOrderNumber content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        WorkOrderNumber_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("WorkOrderNumber"); }],
+        /// <field>
+        /// Called after the WorkOrderStatus content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        WorkOrderStatus_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("WorkOrderStatus"); }],
+        /// <field>
+        /// Called after the WorkOrderIssuedOn content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        WorkOrderIssuedOn_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("WorkOrderIssuedOn"); }],
+        /// <field>
+        /// Called after the PlannedEffort content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PlannedEffort_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("PlannedEffort"); }],
+        /// <field>
+        /// Called after the EstimatedCost content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        EstimatedCost_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("EstimatedCost"); }],
+        /// <field>
+        /// Called after the IssueDateToHP content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        IssueDateToHP_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("IssueDateToHP"); }],
+        /// <field>
+        /// Called after the EffortDateProvidedByHP content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        EffortDateProvidedByHP_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("EffortDateProvidedByHP"); }],
+        /// <field>
+        /// Called after the ApprovedDateByDL content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ApprovedDateByDL_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("ApprovedDateByDL"); }],
+        /// <field>
+        /// Called after the PlannedStartDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PlannedStartDate_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("PlannedStartDate"); }],
+        /// <field>
+        /// Called after the PlannedEndDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PlannedEndDate_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("PlannedEndDate"); }],
+        /// <field>
+        /// Called after the ActualStartDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ActualStartDate_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("ActualStartDate"); }],
+        /// <field>
+        /// Called after the ActualEndDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ActualEndDate_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("ActualEndDate"); }],
+        /// <field>
+        /// Called after the right content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        right_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("right"); }],
+        /// <field>
+        /// Called after the ApplicationSize content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ApplicationSize_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("ApplicationSize"); }],
+        /// <field>
+        /// Called after the HasInputDocument content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        HasInputDocument_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("HasInputDocument"); }],
+        /// <field>
+        /// Called after the HasFeasibilityStudy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        HasFeasibilityStudy_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("HasFeasibilityStudy"); }],
+        /// <field>
+        /// Called after the HasUnderstandingDocument content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        HasUnderstandingDocument_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("HasUnderstandingDocument"); }],
+        /// <field>
+        /// Called after the HasEstimation content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        HasEstimation_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("HasEstimation"); }],
+        /// <field>
+        /// Called after the CreatedDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedDate_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("CreatedDate"); }],
+        /// <field>
+        /// Called after the CreatedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedBy_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("CreatedBy"); }],
+        /// <field>
+        /// Called after the ModifiedDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ModifiedDate_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("ModifiedDate"); }],
+        /// <field>
+        /// Called after the ModifiedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ModifiedBy_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("ModifiedBy"); }],
+        /// <field>
+        /// Called after the REF_APPLICATION_TYPE content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        REF_APPLICATION_TYPE_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("REF_APPLICATION_TYPE"); }],
+        /// <field>
+        /// Called after the REF_COMPLEXITY content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        REF_COMPLEXITY_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("REF_COMPLEXITY"); }],
+        /// <field>
+        /// Called after the REF_COMPLEXITY1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        REF_COMPLEXITY1_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("REF_COMPLEXITY1"); }],
+        /// <field>
+        /// Called after the REF_GAP content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        REF_GAP_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("REF_GAP"); }],
+        /// <field>
+        /// Called after the REF_GAP1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        REF_GAP1_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("REF_GAP1"); }],
+        /// <field>
+        /// Called after the REF_TECHNOLOGY_STACK content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        REF_TECHNOLOGY_STACK_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("REF_TECHNOLOGY_STACK"); }],
+        /// <field>
+        /// Called after the TP_APPLICATIONs content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TP_APPLICATIONs_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("TP_APPLICATIONs"); }],
+        /// <field>
+        /// Called after the TP_APPLICATIONs1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TP_APPLICATIONs1_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("TP_APPLICATIONs1"); }],
+        /// <field>
+        /// Called after the rows content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("rows"); }],
+        /// <field>
+        /// Called after the CreatedBy1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedBy1_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("CreatedBy1"); }],
+        /// <field>
+        /// Called after the CreatedDate1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedDate1_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("CreatedDate1"); }],
+        /// <field>
+        /// Called after the ModifiedBy1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ModifiedBy1_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("ModifiedBy1"); }],
+        /// <field>
+        /// Called after the TP_DOCUMENT_LINKs content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TP_DOCUMENT_LINKs_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("TP_DOCUMENT_LINKs"); }],
+        /// <field>
+        /// Called after the TP_DOCUMENT_LINKs1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TP_DOCUMENT_LINKs1_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("TP_DOCUMENT_LINKs1"); }],
+        /// <field>
+        /// Called after the rows1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows1_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("rows1"); }],
+        /// <field>
+        /// Called after the Name1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name1_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("Name1"); }],
+        /// <field>
+        /// Called after the TpDocumentLinkID content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TpDocumentLinkID_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("TpDocumentLinkID"); }],
+        /// <field>
+        /// Called after the Description1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description1_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("Description1"); }],
+        /// <field>
+        /// Called after the TP_PHASEs content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TP_PHASEs_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("TP_PHASEs"); }],
+        /// <field>
+        /// Called after the TP_PHASEs1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TP_PHASEs1_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("TP_PHASEs1"); }],
+        /// <field>
+        /// Called after the rows2 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows2_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("rows2"); }],
+        /// <field>
+        /// Called after the Duration content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Duration_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("Duration"); }],
+        /// <field>
+        /// Called after the TpPhaseID content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TpPhaseID_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("TpPhaseID"); }],
+        /// <field>
+        /// Called after the PlannedStartDate1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PlannedStartDate1_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("PlannedStartDate1"); }],
+        /// <field>
+        /// Called after the TP_RESOURCE_ALLOCATIONs content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TP_RESOURCE_ALLOCATIONs_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("TP_RESOURCE_ALLOCATIONs"); }],
+        /// <field>
+        /// Called after the TP_RESOURCE_ALLOCATIONs1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TP_RESOURCE_ALLOCATIONs1_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("TP_RESOURCE_ALLOCATIONs1"); }],
+        /// <field>
+        /// Called after the rows3 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows3_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("rows3"); }],
+        /// <field>
+        /// Called after the CreatedBy2 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedBy2_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("CreatedBy2"); }],
+        /// <field>
+        /// Called after the Percentage content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Percentage_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("Percentage"); }],
+        /// <field>
+        /// Called after the PlannedStartDate2 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PlannedStartDate2_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("PlannedStartDate2"); }],
+        /// <field>
+        /// Called after the TP_STAKEHOLDERs content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TP_STAKEHOLDERs_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("TP_STAKEHOLDERs"); }],
+        /// <field>
+        /// Called after the TP_STAKEHOLDERs1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TP_STAKEHOLDERs1_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("TP_STAKEHOLDERs1"); }],
+        /// <field>
+        /// Called after the rows4 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows4_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("rows4"); }],
+        /// <field>
+        /// Called after the CreatedBy3 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedBy3_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("CreatedBy3"); }],
+        /// <field>
+        /// Called after the TpStakeholderID content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TpStakeholderID_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("TpStakeholderID"); }],
+        /// <field>
+        /// Called after the CreatedDate2 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedDate2_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("CreatedDate2"); }],
+        /// <field>
+        /// Called after the TP_VENDORs content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TP_VENDORs_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("TP_VENDORs"); }],
+        /// <field>
+        /// Called after the TP_VENDORs1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TP_VENDORs1_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("TP_VENDORs1"); }],
+        /// <field>
+        /// Called after the rows5 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows5_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("rows5"); }],
+        /// <field>
+        /// Called after the CreatedBy4 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedBy4_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("CreatedBy4"); }],
+        /// <field>
+        /// Called after the TpVendorID content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TpVendorID_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("TpVendorID"); }],
+        /// <field>
+        /// Called after the CreatedDate3 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedDate3_postRender: [$element, function () { return new lightSwitchApplication.ViewTp().findContentItem("CreatedDate3"); }]
+    });
+
+    lightSwitchApplication.BrowseTps.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.BrowseTps
+        },
+        TpList: {
+            _$class: msls.ContentItem,
+            _$name: "TpList",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.BrowseTps,
+            data: lightSwitchApplication.BrowseTps,
+            value: lightSwitchApplication.BrowseTps
+        },
+        TPs: {
+            _$class: msls.ContentItem,
+            _$name: "TPs",
+            _$parentName: "TpList",
+            screen: lightSwitchApplication.BrowseTps,
+            data: lightSwitchApplication.BrowseTps,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.BrowseTps,
+                _$entry: {
+                    elementType: lightSwitchApplication.TP
+                }
+            }
+        },
+        rows: {
+            _$class: msls.ContentItem,
+            _$name: "rows",
+            _$parentName: "TPs",
+            screen: lightSwitchApplication.BrowseTps,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.TP
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.BrowseTps,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        Number: {
+            _$class: msls.ContentItem,
+            _$name: "Number",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.BrowseTps,
+            data: lightSwitchApplication.TP,
+            value: Number
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.BrowseTps,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.BrowseTps
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.BrowseTps, {
+        /// <field>
+        /// Called when a new BrowseTps screen is created.
+        /// <br/>created(msls.application.BrowseTps screen)
+        /// </field>
+        created: [lightSwitchApplication.BrowseTps],
+        /// <field>
+        /// Called before changes on an active BrowseTps screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.BrowseTps screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.BrowseTps],
+        /// <field>
+        /// Called after the TpList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TpList_postRender: [$element, function () { return new lightSwitchApplication.BrowseTps().findContentItem("TpList"); }],
+        /// <field>
+        /// Called after the TPs content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TPs_postRender: [$element, function () { return new lightSwitchApplication.BrowseTps().findContentItem("TPs"); }],
+        /// <field>
+        /// Called after the rows content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows_postRender: [$element, function () { return new lightSwitchApplication.BrowseTps().findContentItem("rows"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.BrowseTps().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Number content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Number_postRender: [$element, function () { return new lightSwitchApplication.BrowseTps().findContentItem("Number"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.BrowseTps().findContentItem("Description"); }]
+    });
+
 }(msls.application));

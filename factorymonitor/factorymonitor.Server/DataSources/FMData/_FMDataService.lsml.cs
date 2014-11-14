@@ -104,5 +104,17 @@ namespace LightSwitchApplication
             entity.ModifiedBy = UserName;
             entity.ModifiedDate = DateTime.Now;
         }
+
+        partial void TPs_Inserting(TP entity)
+        {
+            entity.CreatedBy = UserName;
+            entity.CreatedDate = DateTime.Now;
+        }
+
+        partial void TPs_Updating(TP entity)
+        {
+            entity.ModifiedBy = UserName;
+            entity.ModifiedDate = DateTime.Now;
+        }
     }
 }

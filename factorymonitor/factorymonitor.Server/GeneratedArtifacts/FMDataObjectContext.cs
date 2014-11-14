@@ -3800,8 +3800,7 @@ namespace LightSwitchApplication.Implementation
         /// <param name="hasFeasibilityStudy">Initial value of the HasFeasibilityStudy property.</param>
         /// <param name="hasUnderstandingDocument">Initial value of the HasUnderstandingDocument property.</param>
         /// <param name="hasEstimation">Initial value of the HasEstimation property.</param>
-        /// <param name="createdDate">Initial value of the CreatedDate property.</param>
-        public static TP CreateTP(global::System.Int32 tpID, global::System.Int32 number, global::System.String name, global::System.DateTime plannedStartDate, global::System.Boolean hasInputDocument, global::System.Boolean hasFeasibilityStudy, global::System.Boolean hasUnderstandingDocument, global::System.Boolean hasEstimation, global::System.DateTime createdDate)
+        public static TP CreateTP(global::System.Int32 tpID, global::System.Int32 number, global::System.String name, global::System.DateTime plannedStartDate, global::System.Boolean hasInputDocument, global::System.Boolean hasFeasibilityStudy, global::System.Boolean hasUnderstandingDocument, global::System.Boolean hasEstimation)
         {
             TP tP = new TP();
             tP.TpID = tpID;
@@ -3812,7 +3811,6 @@ namespace LightSwitchApplication.Implementation
             tP.HasFeasibilityStudy = hasFeasibilityStudy;
             tP.HasUnderstandingDocument = hasUnderstandingDocument;
             tP.HasEstimation = hasEstimation;
-            tP.CreatedDate = createdDate;
             return tP;
         }
 
@@ -4330,9 +4328,9 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
         [DataMemberAttribute()]
-        public global::System.DateTime CreatedDate
+        public Nullable<global::System.DateTime> CreatedDate
         {
             get
             {
@@ -4347,8 +4345,8 @@ namespace LightSwitchApplication.Implementation
                 OnCreatedDateChanged();
             }
         }
-        private global::System.DateTime _CreatedDate;
-        partial void OnCreatedDateChanging(global::System.DateTime value);
+        private Nullable<global::System.DateTime> _CreatedDate;
+        partial void OnCreatedDateChanging(Nullable<global::System.DateTime> value);
         partial void OnCreatedDateChanged();
     
         /// <summary>

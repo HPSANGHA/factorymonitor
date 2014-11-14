@@ -297,7 +297,7 @@
     <Property Name="HasFeasibilityStudy" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="HasUnderstandingDocument" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
     <Property Name="HasEstimation" Type="Edm.Boolean" Nullable="false" ConcurrencyMode="Fixed" />
-    <Property Name="CreatedDate" Type="Edm.DateTime" Nullable="false" Precision="3" ConcurrencyMode="Fixed" />
+    <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
     <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />
     <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
     <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" ConcurrencyMode="Fixed" />

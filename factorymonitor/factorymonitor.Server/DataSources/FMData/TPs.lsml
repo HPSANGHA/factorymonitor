@@ -210,9 +210,8 @@
       </EntityProperty>
       <EntityProperty
         Name="CreatedDate"
-        PropertyType=":DateTime">
+        PropertyType=":DateTime?">
         <EntityProperty.Attributes>
-          <Required />
           <DateTimeConstraint
             Precision="3"
             PreserveSeconds="True" />
@@ -667,7 +666,7 @@
           Property="TP/Properties[HasEstimation]" />
         <SsdlProperty
           Name="CreatedDate"
-          Nullable="False"
+          Nullable="True"
           Type="datetime"
           Property="TP/Properties[CreatedDate]" />
         <SsdlProperty

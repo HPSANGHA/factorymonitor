@@ -93,6 +93,9 @@
     <Content Include="Screens\Resource\ViewResourceDetail.lsml.js">
       <DependentUpon>ViewResourceDetail.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\TP\ViewTp.lsml.js">
+      <DependentUpon>ViewTp.lsml</DependentUpon>
+    </Content>
     <Content Include="Scripts\datajs-1.1.1.js" />
     <Content Include="Scripts\datajs-1.1.1.min.js" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
@@ -130,6 +133,7 @@
     <LightSwitchModel Include="Properties\FMData\REF_TECHNOLOGies.lsml" />
     <LightSwitchModel Include="Properties\FMData\REF_TECHNOLOGY_STACKs.lsml" />
     <LightSwitchModel Include="Properties\FMData\RESOURCEs.lsml" />
+    <LightSwitchModel Include="Properties\FMData\TPs.lsml" />
     <LightSwitchModel Include="Properties\Proxies.lsml" />
     <LightSwitchModel Include="Screens\Reference\ApplicationType\AddEditApplicationType.lsml" />
     <LightSwitchModel Include="Screens\Reference\ApplicationType\BrowseApplicationTypes.lsml" />
@@ -158,6 +162,9 @@
     <LightSwitchModel Include="Screens\Resource\AddEditResourceDetail.lsml" />
     <LightSwitchModel Include="Screens\Resource\BrowseResourceDetails.lsml" />
     <LightSwitchModel Include="Screens\Resource\ViewResourceDetail.lsml" />
+    <LightSwitchModel Include="Screens\TP\AddEditTp.lsml" />
+    <LightSwitchModel Include="Screens\TP\BrowseTps.lsml" />
+    <LightSwitchModel Include="Screens\TP\ViewTp.lsml" />
   </ItemGroup>
   <ItemGroup>
     <_ClientBuildFile Include="GeneratedArtifacts\model.json">
@@ -175,6 +182,9 @@
     <_ClientBuildFile Include="GeneratedArtifacts\resources.js">
       <SubFolder>Scripts\Generated</SubFolder>
     </_ClientBuildFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Screens\TP\NewFolder\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.5\MobileClient\Microsoft.LightSwitch.MobileClient.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.5\Microsoft.LightSwitch.Build.Tasks.targets" />

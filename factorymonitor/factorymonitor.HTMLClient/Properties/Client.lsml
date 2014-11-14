@@ -62,5 +62,8 @@
     <ApplicationNavigationMethodLink
       Name="link8"
       Method="!module/Methods[showBrowsePhases]" />
+    <ApplicationNavigationMethodLink
+      Name="link9"
+      Method="!module/Methods[showBrowseTps]" />
   </Application.NavigationItems>
 </Application>

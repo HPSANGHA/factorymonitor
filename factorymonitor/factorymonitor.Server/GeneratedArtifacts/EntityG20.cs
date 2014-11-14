@@ -583,7 +583,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.DateTime CreatedDate
+        public global::System.Nullable<global::System.DateTime> CreatedDate
         {
             get
             {
@@ -1206,11 +1206,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP, global::LightSwitchApplication.TP.DetailsClass, global::System.DateTime> CreatedDate
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP, global::LightSwitchApplication.TP.DetailsClass, global::System.Nullable<global::System.DateTime>> CreatedDate
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.TP.DetailsClass.PropertySetProperties.CreatedDate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP, global::LightSwitchApplication.TP.DetailsClass, global::System.DateTime>;
+                        return base.GetItem(global::LightSwitchApplication.TP.DetailsClass.PropertySetProperties.CreatedDate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP, global::LightSwitchApplication.TP.DetailsClass, global::System.Nullable<global::System.DateTime>>;
                     }
                 }
                 
@@ -1361,7 +1361,7 @@ namespace LightSwitchApplication
                 new bool HasFeasibilityStudy { get; set; }
                 new bool HasUnderstandingDocument { get; set; }
                 new bool HasEstimation { get; set; }
-                new global::System.DateTime CreatedDate { get; set; }
+                new global::System.Nullable<global::System.DateTime> CreatedDate { get; set; }
                 new string CreatedBy { get; set; }
                 new global::System.Nullable<global::System.DateTime> ModifiedDate { get; set; }
                 new string ModifiedBy { get; set; }
@@ -2160,8 +2160,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP, global::LightSwitchApplication.TP.DetailsClass, global::System.DateTime>.Entry
-                    CreatedDate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP, global::LightSwitchApplication.TP.DetailsClass, global::System.DateTime>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP, global::LightSwitchApplication.TP.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
+                    CreatedDate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP, global::LightSwitchApplication.TP.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
                         "CreatedDate",
                         global::LightSwitchApplication.TP.DetailsClass.PropertySetProperties._CreatedDate_Stub,
                         global::LightSwitchApplication.TP.DetailsClass.PropertySetProperties._CreatedDate_ComputeIsReadOnly,
@@ -2169,7 +2169,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.TP.DetailsClass.PropertySetProperties._CreatedDate_GetImplementationValue,
                         global::LightSwitchApplication.TP.DetailsClass.PropertySetProperties._CreatedDate_SetImplementationValue,
                         global::LightSwitchApplication.TP.DetailsClass.PropertySetProperties._CreatedDate_OnValueChanged);
-                private static void _CreatedDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP, global::LightSwitchApplication.TP.DetailsClass, global::System.DateTime>.Data> c, global::LightSwitchApplication.TP.DetailsClass d, object sf)
+                private static void _CreatedDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.TP.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP, global::LightSwitchApplication.TP.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.TP.DetailsClass d, object sf)
                 {
                     c(d, ref d._CreatedDate, sf);
                 }
@@ -2183,11 +2183,11 @@ namespace LightSwitchApplication
                 {
                     e.CreatedDate_Validate(r);
                 }
-                private static global::System.DateTime _CreatedDate_GetImplementationValue(global::LightSwitchApplication.TP.DetailsClass d)
+                private static global::System.Nullable<global::System.DateTime> _CreatedDate_GetImplementationValue(global::LightSwitchApplication.TP.DetailsClass d)
                 {
                     return d.ImplementationEntity.CreatedDate;
                 }
-                private static void _CreatedDate_SetImplementationValue(global::LightSwitchApplication.TP.DetailsClass d, global::System.DateTime v)
+                private static void _CreatedDate_SetImplementationValue(global::LightSwitchApplication.TP.DetailsClass d, global::System.Nullable<global::System.DateTime> v)
                 {
                     d.ImplementationEntity.CreatedDate = global::LightSwitchApplication.TP.DetailsClass.ClearDateTimeKind(v);
                 }
@@ -2775,7 +2775,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP, global::LightSwitchApplication.TP.DetailsClass, bool>.Data _HasEstimation;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP, global::LightSwitchApplication.TP.DetailsClass, global::System.DateTime>.Data _CreatedDate;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP, global::LightSwitchApplication.TP.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _CreatedDate;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.TP, global::LightSwitchApplication.TP.DetailsClass, string>.Data _CreatedBy;
