@@ -66,6 +66,25 @@
         Association="FK_TP_PHASE_TP_PHASE"
         FromEnd="REF_PHASE"
         ToEnd="TP_PHASE" />
+      <EntityProperty
+        Name="ModifiedBy"
+        PropertyType=":String?">
+        <EntityProperty.Attributes>
+          <MaxLength
+            Value="50" />
+          <AnsiConstraint />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedDate"
+        PropertyType=":DateTime?">
+        <EntityProperty.Attributes>
+          <DateTimeConstraint
+            Precision="3"
+            PreserveSeconds="True" />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -198,6 +217,7 @@
         <SsdlProperty
           Name="PhaseID"
           Nullable="False"
+          StoreGeneratedPattern="Identity"
           Type="smallint"
           Property="REF_PHASE/Properties[PhaseID]" />
         <SsdlProperty
@@ -223,6 +243,17 @@
           Nullable="True"
           Type="varchar"
           Property="REF_PHASE/Properties[CreatedBy]" />
+        <SsdlProperty
+          MaxLength="50"
+          Name="ModifiedBy"
+          Nullable="True"
+          Type="varchar"
+          Property="REF_PHASE/Properties[ModifiedBy]" />
+        <SsdlProperty
+          Name="ModifiedDate"
+          Nullable="True"
+          Type="datetime"
+          Property="REF_PHASE/Properties[ModifiedDate]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <AssociationSetMapping

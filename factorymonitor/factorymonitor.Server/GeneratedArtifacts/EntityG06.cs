@@ -203,6 +203,54 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string ModifiedBy
+        {
+            get
+            {
+                return global::LightSwitchApplication.REF_PHASE.DetailsClass.GetValue(this, global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties.ModifiedBy);
+            }
+            set
+            {
+                global::LightSwitchApplication.REF_PHASE.DetailsClass.SetValue(this, global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties.ModifiedBy, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ModifiedBy_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ModifiedBy_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ModifiedBy_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.Nullable<global::System.DateTime> ModifiedDate
+        {
+            get
+            {
+                return global::LightSwitchApplication.REF_PHASE.DetailsClass.GetValue(this, global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties.ModifiedDate);
+            }
+            set
+            {
+                global::LightSwitchApplication.REF_PHASE.DetailsClass.SetValue(this, global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties.ModifiedDate, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ModifiedDate_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ModifiedDate_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ModifiedDate_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.TP_PHASE> TP_PHASEs
         {
             get
@@ -343,6 +391,22 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.REF_PHASE, global::LightSwitchApplication.REF_PHASE.DetailsClass, string> ModifiedBy
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties.ModifiedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.REF_PHASE, global::LightSwitchApplication.REF_PHASE.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.REF_PHASE, global::LightSwitchApplication.REF_PHASE.DetailsClass, global::System.Nullable<global::System.DateTime>> ModifiedDate
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties.ModifiedDate) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.REF_PHASE, global::LightSwitchApplication.REF_PHASE.DetailsClass, global::System.Nullable<global::System.DateTime>>;
+                    }
+                }
+                
                 public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.REF_PHASE, global::LightSwitchApplication.REF_PHASE.DetailsClass, global::LightSwitchApplication.TP_PHASE> TP_PHASEs
                 {
                     get
@@ -362,6 +426,8 @@ namespace LightSwitchApplication
                 new string Description { get; set; }
                 new global::System.Nullable<global::System.DateTime> CreatedDate { get; set; }
                 new string CreatedBy { get; set; }
+                new string ModifiedBy { get; set; }
+                new global::System.Nullable<global::System.DateTime> ModifiedDate { get; set; }
                 new global::System.Collections.IEnumerable TP_PHASEs { get; }
             }
             #pragma warning restore 109
@@ -558,6 +624,80 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.REF_PHASE, global::LightSwitchApplication.REF_PHASE.DetailsClass, string>.Entry
+                    ModifiedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.REF_PHASE, global::LightSwitchApplication.REF_PHASE.DetailsClass, string>.Entry(
+                        "ModifiedBy",
+                        global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties._ModifiedBy_Stub,
+                        global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties._ModifiedBy_ComputeIsReadOnly,
+                        global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties._ModifiedBy_Validate,
+                        global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties._ModifiedBy_GetImplementationValue,
+                        global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties._ModifiedBy_SetImplementationValue,
+                        global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties._ModifiedBy_OnValueChanged);
+                private static void _ModifiedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.REF_PHASE.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.REF_PHASE, global::LightSwitchApplication.REF_PHASE.DetailsClass, string>.Data> c, global::LightSwitchApplication.REF_PHASE.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ModifiedBy, sf);
+                }
+                private static bool _ModifiedBy_ComputeIsReadOnly(global::LightSwitchApplication.REF_PHASE e)
+                {
+                    bool result = false;
+                    e.ModifiedBy_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _ModifiedBy_Validate(global::LightSwitchApplication.REF_PHASE e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.ModifiedBy_Validate(r);
+                }
+                private static string _ModifiedBy_GetImplementationValue(global::LightSwitchApplication.REF_PHASE.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ModifiedBy;
+                }
+                private static void _ModifiedBy_SetImplementationValue(global::LightSwitchApplication.REF_PHASE.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.ModifiedBy = v;
+                }
+                private static void _ModifiedBy_OnValueChanged(global::LightSwitchApplication.REF_PHASE e)
+                {
+                    e.ModifiedBy_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.REF_PHASE, global::LightSwitchApplication.REF_PHASE.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry
+                    ModifiedDate = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.REF_PHASE, global::LightSwitchApplication.REF_PHASE.DetailsClass, global::System.Nullable<global::System.DateTime>>.Entry(
+                        "ModifiedDate",
+                        global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties._ModifiedDate_Stub,
+                        global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties._ModifiedDate_ComputeIsReadOnly,
+                        global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties._ModifiedDate_Validate,
+                        global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties._ModifiedDate_GetImplementationValue,
+                        global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties._ModifiedDate_SetImplementationValue,
+                        global::LightSwitchApplication.REF_PHASE.DetailsClass.PropertySetProperties._ModifiedDate_OnValueChanged);
+                private static void _ModifiedDate_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.REF_PHASE.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.REF_PHASE, global::LightSwitchApplication.REF_PHASE.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data> c, global::LightSwitchApplication.REF_PHASE.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ModifiedDate, sf);
+                }
+                private static bool _ModifiedDate_ComputeIsReadOnly(global::LightSwitchApplication.REF_PHASE e)
+                {
+                    bool result = false;
+                    e.ModifiedDate_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _ModifiedDate_Validate(global::LightSwitchApplication.REF_PHASE e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.ModifiedDate_Validate(r);
+                }
+                private static global::System.Nullable<global::System.DateTime> _ModifiedDate_GetImplementationValue(global::LightSwitchApplication.REF_PHASE.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ModifiedDate;
+                }
+                private static void _ModifiedDate_SetImplementationValue(global::LightSwitchApplication.REF_PHASE.DetailsClass d, global::System.Nullable<global::System.DateTime> v)
+                {
+                    d.ImplementationEntity.ModifiedDate = global::LightSwitchApplication.REF_PHASE.DetailsClass.ClearDateTimeKind(v);
+                }
+                private static void _ModifiedDate_OnValueChanged(global::LightSwitchApplication.REF_PHASE e)
+                {
+                    e.ModifiedDate_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.REF_PHASE, global::LightSwitchApplication.REF_PHASE.DetailsClass, global::LightSwitchApplication.TP_PHASE>.Entry
                     TP_PHASEs = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.REF_PHASE, global::LightSwitchApplication.REF_PHASE.DetailsClass, global::LightSwitchApplication.TP_PHASE>.Entry(
                         "TP_PHASEs",
@@ -593,6 +733,12 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.REF_PHASE, global::LightSwitchApplication.REF_PHASE.DetailsClass, string>.Data _CreatedBy;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.REF_PHASE, global::LightSwitchApplication.REF_PHASE.DetailsClass, string>.Data _ModifiedBy;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.REF_PHASE, global::LightSwitchApplication.REF_PHASE.DetailsClass, global::System.Nullable<global::System.DateTime>>.Data _ModifiedDate;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.REF_PHASE, global::LightSwitchApplication.REF_PHASE.DetailsClass, global::LightSwitchApplication.TP_PHASE>.Data _TP_PHASEs;

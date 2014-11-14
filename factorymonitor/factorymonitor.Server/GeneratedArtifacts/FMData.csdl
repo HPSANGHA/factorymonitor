@@ -71,11 +71,13 @@
     <Key>
       <PropertyRef Name="PhaseID" />
     </Key>
-    <Property Name="PhaseID" Type="Edm.Int16" Nullable="false" />
+    <Property Name="PhaseID" Type="Edm.Int16" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="20" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="Description" Type="Edm.String" MaxLength="150" Unicode="false" ConcurrencyMode="Fixed" />
     <Property Name="CreatedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
     <Property Name="CreatedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedBy" Type="Edm.String" MaxLength="50" Unicode="false" ConcurrencyMode="Fixed" />
+    <Property Name="ModifiedDate" Type="Edm.DateTime" Precision="3" ConcurrencyMode="Fixed" />
     <NavigationProperty Name="TP_PHASEs" Relationship="LightSwitchApplication.FK_TP_PHASE_TP_PHASE" ToRole="TP_PHASE" FromRole="REF_PHASE" />
   </EntityType>
   <EntityType Name="REF_ROLE">

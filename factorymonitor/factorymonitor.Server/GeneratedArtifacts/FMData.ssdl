@@ -169,11 +169,13 @@
     <Key>
       <PropertyRef Name="PhaseID" />
     </Key>
-    <Property Name="PhaseID" Type="smallint" Nullable="false" />
+    <Property Name="PhaseID" Type="smallint" Nullable="false" StoreGeneratedPattern="Identity" />
     <Property Name="Name" Type="varchar" Nullable="false" MaxLength="20" />
     <Property Name="Description" Type="varchar" MaxLength="150" />
     <Property Name="CreatedDate" Type="datetime" />
     <Property Name="CreatedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedBy" Type="varchar" MaxLength="50" />
+    <Property Name="ModifiedDate" Type="datetime" />
   </EntityType>
   <EntityType Name="REF_ROLE">
     <Key>

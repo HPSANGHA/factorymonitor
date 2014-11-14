@@ -3,6 +3,7 @@ document.writeln("<script type=\"text/javascript\" src=\"UserCode/REF_GAP.lsml.j
 document.writeln("<script type=\"text/javascript\" src=\"Screens/Reference/ApplicationType/ViewApplicationType.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/Reference/Complexity/ViewComplexity.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/Reference/Gap/ViewGap.lsml.js\"></script>");
+document.writeln("<script type=\"text/javascript\" src=\"Screens/Reference/Phase/ViewPhase.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/Reference/Role/ViewRole.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/Reference/Status/ViewStatus.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/Reference/TechnologyStack/ViewTechnologyStack.lsml.js\"></script>");

@@ -226,6 +226,12 @@ window.myapp = msls.application;
         /// <field name="TP_PHASEs" type="msls.EntityCollection" elementType="msls.application.TP_PHASE">
         /// Gets the tP_PHASEs for this rEF_PHASE.
         /// </field>
+        /// <field name="ModifiedBy" type="String">
+        /// Gets or sets the modifiedBy for this rEF_PHASE.
+        /// </field>
+        /// <field name="ModifiedDate" type="Date">
+        /// Gets or sets the modifiedDate for this rEF_PHASE.
+        /// </field>
         /// <field name="details" type="msls.application.REF_PHASE.Details">
         /// Gets the details for this rEF_PHASE.
         /// </field>
@@ -1013,7 +1019,9 @@ window.myapp = msls.application;
             { name: "Description", type: String },
             { name: "CreatedDate", type: Date },
             { name: "CreatedBy", type: String },
-            { name: "TP_PHASEs", kind: "collection", elementType: TP_PHASE }
+            { name: "TP_PHASEs", kind: "collection", elementType: TP_PHASE },
+            { name: "ModifiedBy", type: String },
+            { name: "ModifiedDate", type: Date }
         ]),
 
         REF_ROLE: $defineEntity(REF_ROLE, [

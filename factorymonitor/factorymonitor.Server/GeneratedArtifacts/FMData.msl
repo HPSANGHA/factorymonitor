@@ -73,6 +73,8 @@
           <ScalarProperty Name="Description" ColumnName="Description" />
           <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
           <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

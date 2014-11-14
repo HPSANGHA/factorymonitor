@@ -75,6 +75,9 @@
     <Content Include="Screens\Reference\Gap\ViewGap.lsml.js">
       <DependentUpon>ViewGap.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\Reference\Phase\ViewPhase.lsml.js">
+      <DependentUpon>ViewPhase.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\Reference\Role\ViewRole.lsml.js">
       <DependentUpon>ViewRole.lsml</DependentUpon>
     </Content>
@@ -121,6 +124,7 @@
     <LightSwitchModel Include="Properties\FMData\REF_APPLICATION_TYPEs.lsml" />
     <LightSwitchModel Include="Properties\FMData\REF_COMPLEXITies.lsml" />
     <LightSwitchModel Include="Properties\FMData\REF_GAPs.lsml" />
+    <LightSwitchModel Include="Properties\FMData\REF_PHASEs.lsml" />
     <LightSwitchModel Include="Properties\FMData\REF_ROLEs.lsml" />
     <LightSwitchModel Include="Properties\FMData\REF_STATUS.lsml" />
     <LightSwitchModel Include="Properties\FMData\REF_TECHNOLOGies.lsml" />
@@ -136,6 +140,9 @@
     <LightSwitchModel Include="Screens\Reference\Gap\AddEditGap.lsml" />
     <LightSwitchModel Include="Screens\Reference\Gap\BrowseGaps.lsml" />
     <LightSwitchModel Include="Screens\Reference\Gap\ViewGap.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Phase\AddEditPhase.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Phase\BrowsePhases.lsml" />
+    <LightSwitchModel Include="Screens\Reference\Phase\ViewPhase.lsml" />
     <LightSwitchModel Include="Screens\Reference\Role\AddEditRole.lsml" />
     <LightSwitchModel Include="Screens\Reference\Role\BrowseRoles.lsml" />
     <LightSwitchModel Include="Screens\Reference\Role\ViewRole.lsml" />

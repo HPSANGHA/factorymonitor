@@ -5,12 +5,12 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="AddEditGap">
+    Name="AddEditPhase">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="FMData" />
       <DisplayName
-        Value="Gap" />
+        Value="Phase" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
@@ -32,7 +32,7 @@
             <ContentItem
               Name="columns"
               Kind="Details"
-              DataType="REF_GAP"
+              DataType="REF_PHASE"
               View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
               <ContentItem.Attributes>
                 <DisplayName
@@ -42,7 +42,7 @@
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="AddEditGap/Properties[REF_GAP]" />
+                      Member="AddEditPhase/Properties[REF_PHASE]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
@@ -50,14 +50,14 @@
                 Name="left"
                 Kind="Group">
                 <ContentItem
-                  Name="GapID"
+                  Name="PhaseID"
                   Kind="Value"
                   DataType=":Int16">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="REF_GAP/Properties[GapID]" />
+                          Member="REF_PHASE/Properties[PhaseID]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -65,12 +65,12 @@
                 <ContentItem
                   Name="Name"
                   Kind="Value"
-                  DataType=":String?">
+                  DataType=":String">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="REF_GAP/Properties[Name]" />
+                          Member="REF_PHASE/Properties[Name]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -84,37 +84,11 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="REF_GAP/Properties[Description]" />
+                          Member="REF_PHASE/Properties[Description]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                 </ContentItem>
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MinWidth]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="200"
-                          ResultType=":Double" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MaxWidth]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <ConstantExpression
-                          Value="400"
-                          ResultType=":Double" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-              <ContentItem
-                Name="right"
-                Kind="Group">
                 <ContentItem.PropertySources>
                   <ControlPropertySource
                     Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MinWidth]">
@@ -195,8 +169,8 @@
     </Screen.Methods>
     <Screen.Properties>
       <ScreenProperty
-        Name="REF_GAP"
-        PropertyType="REF_GAP">
+        Name="REF_PHASE"
+        PropertyType="REF_PHASE">
         <ScreenProperty.Attributes>
           <IsParameter />
         </ScreenProperty.Attributes>
@@ -205,14 +179,14 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showAddEditGap">
+      Name="showAddEditPhase">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="AddEditGap" />
+          TargetScreen="AddEditPhase" />
       </ApplicationMethod.Attributes>
       <ApplicationMethodParameter
-        Name="REF_GAP"
-        ParameterType="REF_GAP" />
+        Name="REF_PHASE"
+        ParameterType="REF_PHASE" />
     </ApplicationMethod>
   </Application.Methods>
 </Application>

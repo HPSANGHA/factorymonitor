@@ -820,6 +820,926 @@
         Description_postRender: [$element, function () { return new lightSwitchApplication.ViewComplexity().findContentItem("Description"); }]
     });
 
+    lightSwitchApplication.AddEditGap.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.AddEditGap
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.AddEditGap,
+            data: lightSwitchApplication.AddEditGap,
+            value: lightSwitchApplication.AddEditGap
+        },
+        columns: {
+            _$class: msls.ContentItem,
+            _$name: "columns",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.AddEditGap,
+            data: lightSwitchApplication.AddEditGap,
+            value: lightSwitchApplication.REF_GAP
+        },
+        left: {
+            _$class: msls.ContentItem,
+            _$name: "left",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.AddEditGap,
+            data: lightSwitchApplication.REF_GAP,
+            value: lightSwitchApplication.REF_GAP
+        },
+        GapID: {
+            _$class: msls.ContentItem,
+            _$name: "GapID",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditGap,
+            data: lightSwitchApplication.REF_GAP,
+            value: Number
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditGap,
+            data: lightSwitchApplication.REF_GAP,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditGap,
+            data: lightSwitchApplication.REF_GAP,
+            value: String
+        },
+        right: {
+            _$class: msls.ContentItem,
+            _$name: "right",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.AddEditGap,
+            data: lightSwitchApplication.REF_GAP,
+            value: lightSwitchApplication.REF_GAP
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.AddEditGap
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.AddEditGap, {
+        /// <field>
+        /// Called when a new AddEditGap screen is created.
+        /// <br/>created(msls.application.AddEditGap screen)
+        /// </field>
+        created: [lightSwitchApplication.AddEditGap],
+        /// <field>
+        /// Called before changes on an active AddEditGap screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.AddEditGap screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.AddEditGap],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.AddEditGap().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the columns content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        columns_postRender: [$element, function () { return new lightSwitchApplication.AddEditGap().findContentItem("columns"); }],
+        /// <field>
+        /// Called after the left content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        left_postRender: [$element, function () { return new lightSwitchApplication.AddEditGap().findContentItem("left"); }],
+        /// <field>
+        /// Called after the GapID content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        GapID_postRender: [$element, function () { return new lightSwitchApplication.AddEditGap().findContentItem("GapID"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.AddEditGap().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.AddEditGap().findContentItem("Description"); }],
+        /// <field>
+        /// Called after the right content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        right_postRender: [$element, function () { return new lightSwitchApplication.AddEditGap().findContentItem("right"); }]
+    });
+
+    lightSwitchApplication.BrowseGaps.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.BrowseGaps
+        },
+        GapList: {
+            _$class: msls.ContentItem,
+            _$name: "GapList",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.BrowseGaps,
+            data: lightSwitchApplication.BrowseGaps,
+            value: lightSwitchApplication.BrowseGaps
+        },
+        REF_GAPs: {
+            _$class: msls.ContentItem,
+            _$name: "REF_GAPs",
+            _$parentName: "GapList",
+            screen: lightSwitchApplication.BrowseGaps,
+            data: lightSwitchApplication.BrowseGaps,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.BrowseGaps,
+                _$entry: {
+                    elementType: lightSwitchApplication.REF_GAP
+                }
+            }
+        },
+        rows: {
+            _$class: msls.ContentItem,
+            _$name: "rows",
+            _$parentName: "REF_GAPs",
+            screen: lightSwitchApplication.BrowseGaps,
+            data: lightSwitchApplication.REF_GAP,
+            value: lightSwitchApplication.REF_GAP
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.BrowseGaps,
+            data: lightSwitchApplication.REF_GAP,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.BrowseGaps,
+            data: lightSwitchApplication.REF_GAP,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.BrowseGaps
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.BrowseGaps, {
+        /// <field>
+        /// Called when a new BrowseGaps screen is created.
+        /// <br/>created(msls.application.BrowseGaps screen)
+        /// </field>
+        created: [lightSwitchApplication.BrowseGaps],
+        /// <field>
+        /// Called before changes on an active BrowseGaps screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.BrowseGaps screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.BrowseGaps],
+        /// <field>
+        /// Called after the GapList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        GapList_postRender: [$element, function () { return new lightSwitchApplication.BrowseGaps().findContentItem("GapList"); }],
+        /// <field>
+        /// Called after the REF_GAPs content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        REF_GAPs_postRender: [$element, function () { return new lightSwitchApplication.BrowseGaps().findContentItem("REF_GAPs"); }],
+        /// <field>
+        /// Called after the rows content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows_postRender: [$element, function () { return new lightSwitchApplication.BrowseGaps().findContentItem("rows"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.BrowseGaps().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.BrowseGaps().findContentItem("Description"); }]
+    });
+
+    lightSwitchApplication.ViewGap.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ViewGap
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ViewGap,
+            data: lightSwitchApplication.ViewGap,
+            value: lightSwitchApplication.ViewGap
+        },
+        columns: {
+            _$class: msls.ContentItem,
+            _$name: "columns",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ViewGap,
+            data: lightSwitchApplication.ViewGap,
+            value: lightSwitchApplication.REF_GAP
+        },
+        left: {
+            _$class: msls.ContentItem,
+            _$name: "left",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.ViewGap,
+            data: lightSwitchApplication.REF_GAP,
+            value: lightSwitchApplication.REF_GAP
+        },
+        GapID: {
+            _$class: msls.ContentItem,
+            _$name: "GapID",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewGap,
+            data: lightSwitchApplication.REF_GAP,
+            value: Number
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewGap,
+            data: lightSwitchApplication.REF_GAP,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewGap,
+            data: lightSwitchApplication.REF_GAP,
+            value: String
+        },
+        CreatedBy: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedBy",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewGap,
+            data: lightSwitchApplication.REF_GAP,
+            value: String
+        },
+        CreatedDate: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewGap,
+            data: lightSwitchApplication.REF_GAP,
+            value: Date
+        },
+        ModifiedBy: {
+            _$class: msls.ContentItem,
+            _$name: "ModifiedBy",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewGap,
+            data: lightSwitchApplication.REF_GAP,
+            value: String
+        },
+        ModifiedDate: {
+            _$class: msls.ContentItem,
+            _$name: "ModifiedDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewGap,
+            data: lightSwitchApplication.REF_GAP,
+            value: Date
+        },
+        right: {
+            _$class: msls.ContentItem,
+            _$name: "right",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.ViewGap,
+            data: lightSwitchApplication.REF_GAP,
+            value: lightSwitchApplication.REF_GAP
+        },
+        TPs1: {
+            _$class: msls.ContentItem,
+            _$name: "TPs1",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewGap,
+            data: lightSwitchApplication.REF_GAP,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.ViewGap,
+                _$entry: {
+                    elementType: lightSwitchApplication.TP
+                }
+            }
+        },
+        rows: {
+            _$class: msls.ContentItem,
+            _$name: "rows",
+            _$parentName: "TPs1",
+            screen: lightSwitchApplication.ViewGap,
+            data: lightSwitchApplication.TP,
+            value: lightSwitchApplication.TP
+        },
+        Name1: {
+            _$class: msls.ContentItem,
+            _$name: "Name1",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ViewGap,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        Number: {
+            _$class: msls.ContentItem,
+            _$name: "Number",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ViewGap,
+            data: lightSwitchApplication.TP,
+            value: Number
+        },
+        Description1: {
+            _$class: msls.ContentItem,
+            _$name: "Description1",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ViewGap,
+            data: lightSwitchApplication.TP,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ViewGap
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.ViewGap, {
+        /// <field>
+        /// Called when a new ViewGap screen is created.
+        /// <br/>created(msls.application.ViewGap screen)
+        /// </field>
+        created: [lightSwitchApplication.ViewGap],
+        /// <field>
+        /// Called before changes on an active ViewGap screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.ViewGap screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.ViewGap],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the columns content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        columns_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("columns"); }],
+        /// <field>
+        /// Called after the left content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        left_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("left"); }],
+        /// <field>
+        /// Called after the GapID content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        GapID_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("GapID"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("Description"); }],
+        /// <field>
+        /// Called after the CreatedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedBy_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("CreatedBy"); }],
+        /// <field>
+        /// Called after the CreatedDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedDate_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("CreatedDate"); }],
+        /// <field>
+        /// Called after the ModifiedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ModifiedBy_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("ModifiedBy"); }],
+        /// <field>
+        /// Called after the ModifiedDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ModifiedDate_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("ModifiedDate"); }],
+        /// <field>
+        /// Called after the right content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        right_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("right"); }],
+        /// <field>
+        /// Called after the TPs1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TPs1_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("TPs1"); }],
+        /// <field>
+        /// Called after the rows content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("rows"); }],
+        /// <field>
+        /// Called after the Name1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name1_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("Name1"); }],
+        /// <field>
+        /// Called after the Number content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Number_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("Number"); }],
+        /// <field>
+        /// Called after the Description1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description1_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("Description1"); }]
+    });
+
+    lightSwitchApplication.AddEditPhase.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.AddEditPhase
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.AddEditPhase,
+            data: lightSwitchApplication.AddEditPhase,
+            value: lightSwitchApplication.AddEditPhase
+        },
+        columns: {
+            _$class: msls.ContentItem,
+            _$name: "columns",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.AddEditPhase,
+            data: lightSwitchApplication.AddEditPhase,
+            value: lightSwitchApplication.REF_PHASE
+        },
+        left: {
+            _$class: msls.ContentItem,
+            _$name: "left",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.AddEditPhase,
+            data: lightSwitchApplication.REF_PHASE,
+            value: lightSwitchApplication.REF_PHASE
+        },
+        PhaseID: {
+            _$class: msls.ContentItem,
+            _$name: "PhaseID",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditPhase,
+            data: lightSwitchApplication.REF_PHASE,
+            value: Number
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditPhase,
+            data: lightSwitchApplication.REF_PHASE,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "left",
+            screen: lightSwitchApplication.AddEditPhase,
+            data: lightSwitchApplication.REF_PHASE,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.AddEditPhase
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.AddEditPhase, {
+        /// <field>
+        /// Called when a new AddEditPhase screen is created.
+        /// <br/>created(msls.application.AddEditPhase screen)
+        /// </field>
+        created: [lightSwitchApplication.AddEditPhase],
+        /// <field>
+        /// Called before changes on an active AddEditPhase screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.AddEditPhase screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.AddEditPhase],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.AddEditPhase().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the columns content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        columns_postRender: [$element, function () { return new lightSwitchApplication.AddEditPhase().findContentItem("columns"); }],
+        /// <field>
+        /// Called after the left content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        left_postRender: [$element, function () { return new lightSwitchApplication.AddEditPhase().findContentItem("left"); }],
+        /// <field>
+        /// Called after the PhaseID content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PhaseID_postRender: [$element, function () { return new lightSwitchApplication.AddEditPhase().findContentItem("PhaseID"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.AddEditPhase().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.AddEditPhase().findContentItem("Description"); }]
+    });
+
+    lightSwitchApplication.BrowsePhases.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.BrowsePhases
+        },
+        PhaseList: {
+            _$class: msls.ContentItem,
+            _$name: "PhaseList",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.BrowsePhases,
+            data: lightSwitchApplication.BrowsePhases,
+            value: lightSwitchApplication.BrowsePhases
+        },
+        REF_PHASEs: {
+            _$class: msls.ContentItem,
+            _$name: "REF_PHASEs",
+            _$parentName: "PhaseList",
+            screen: lightSwitchApplication.BrowsePhases,
+            data: lightSwitchApplication.BrowsePhases,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.BrowsePhases,
+                _$entry: {
+                    elementType: lightSwitchApplication.REF_PHASE
+                }
+            }
+        },
+        rows: {
+            _$class: msls.ContentItem,
+            _$name: "rows",
+            _$parentName: "REF_PHASEs",
+            screen: lightSwitchApplication.BrowsePhases,
+            data: lightSwitchApplication.REF_PHASE,
+            value: lightSwitchApplication.REF_PHASE
+        },
+        PhaseID: {
+            _$class: msls.ContentItem,
+            _$name: "PhaseID",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.BrowsePhases,
+            data: lightSwitchApplication.REF_PHASE,
+            value: Number
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.BrowsePhases,
+            data: lightSwitchApplication.REF_PHASE,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.BrowsePhases,
+            data: lightSwitchApplication.REF_PHASE,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.BrowsePhases
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.BrowsePhases, {
+        /// <field>
+        /// Called when a new BrowsePhases screen is created.
+        /// <br/>created(msls.application.BrowsePhases screen)
+        /// </field>
+        created: [lightSwitchApplication.BrowsePhases],
+        /// <field>
+        /// Called before changes on an active BrowsePhases screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.BrowsePhases screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.BrowsePhases],
+        /// <field>
+        /// Called after the PhaseList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PhaseList_postRender: [$element, function () { return new lightSwitchApplication.BrowsePhases().findContentItem("PhaseList"); }],
+        /// <field>
+        /// Called after the REF_PHASEs content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        REF_PHASEs_postRender: [$element, function () { return new lightSwitchApplication.BrowsePhases().findContentItem("REF_PHASEs"); }],
+        /// <field>
+        /// Called after the rows content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows_postRender: [$element, function () { return new lightSwitchApplication.BrowsePhases().findContentItem("rows"); }],
+        /// <field>
+        /// Called after the PhaseID content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PhaseID_postRender: [$element, function () { return new lightSwitchApplication.BrowsePhases().findContentItem("PhaseID"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.BrowsePhases().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.BrowsePhases().findContentItem("Description"); }]
+    });
+
+    lightSwitchApplication.ViewPhase.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ViewPhase
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ViewPhase,
+            data: lightSwitchApplication.ViewPhase,
+            value: lightSwitchApplication.ViewPhase
+        },
+        columns: {
+            _$class: msls.ContentItem,
+            _$name: "columns",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ViewPhase,
+            data: lightSwitchApplication.ViewPhase,
+            value: lightSwitchApplication.REF_PHASE
+        },
+        left: {
+            _$class: msls.ContentItem,
+            _$name: "left",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.ViewPhase,
+            data: lightSwitchApplication.REF_PHASE,
+            value: lightSwitchApplication.REF_PHASE
+        },
+        PhaseID: {
+            _$class: msls.ContentItem,
+            _$name: "PhaseID",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewPhase,
+            data: lightSwitchApplication.REF_PHASE,
+            value: Number
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewPhase,
+            data: lightSwitchApplication.REF_PHASE,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewPhase,
+            data: lightSwitchApplication.REF_PHASE,
+            value: String
+        },
+        CreatedDate: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewPhase,
+            data: lightSwitchApplication.REF_PHASE,
+            value: Date
+        },
+        CreatedBy: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedBy",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewPhase,
+            data: lightSwitchApplication.REF_PHASE,
+            value: String
+        },
+        ModifiedBy: {
+            _$class: msls.ContentItem,
+            _$name: "ModifiedBy",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewPhase,
+            data: lightSwitchApplication.REF_PHASE,
+            value: String
+        },
+        ModifiedDate: {
+            _$class: msls.ContentItem,
+            _$name: "ModifiedDate",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ViewPhase,
+            data: lightSwitchApplication.REF_PHASE,
+            value: Date
+        },
+        right: {
+            _$class: msls.ContentItem,
+            _$name: "right",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.ViewPhase,
+            data: lightSwitchApplication.REF_PHASE,
+            value: lightSwitchApplication.REF_PHASE
+        },
+        TP_PHASEs1: {
+            _$class: msls.ContentItem,
+            _$name: "TP_PHASEs1",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ViewPhase,
+            data: lightSwitchApplication.REF_PHASE,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.ViewPhase,
+                _$entry: {
+                    elementType: lightSwitchApplication.TP_PHASE
+                }
+            }
+        },
+        rows: {
+            _$class: msls.ContentItem,
+            _$name: "rows",
+            _$parentName: "TP_PHASEs1",
+            screen: lightSwitchApplication.ViewPhase,
+            data: lightSwitchApplication.TP_PHASE,
+            value: lightSwitchApplication.TP_PHASE
+        },
+        Duration: {
+            _$class: msls.ContentItem,
+            _$name: "Duration",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ViewPhase,
+            data: lightSwitchApplication.TP_PHASE,
+            value: String
+        },
+        TpPhaseID: {
+            _$class: msls.ContentItem,
+            _$name: "TpPhaseID",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ViewPhase,
+            data: lightSwitchApplication.TP_PHASE,
+            value: Number
+        },
+        PlannedStartDate: {
+            _$class: msls.ContentItem,
+            _$name: "PlannedStartDate",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ViewPhase,
+            data: lightSwitchApplication.TP_PHASE,
+            value: Date
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ViewPhase
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.ViewPhase, {
+        /// <field>
+        /// Called when a new ViewPhase screen is created.
+        /// <br/>created(msls.application.ViewPhase screen)
+        /// </field>
+        created: [lightSwitchApplication.ViewPhase],
+        /// <field>
+        /// Called before changes on an active ViewPhase screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.ViewPhase screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.ViewPhase],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.ViewPhase().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the columns content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        columns_postRender: [$element, function () { return new lightSwitchApplication.ViewPhase().findContentItem("columns"); }],
+        /// <field>
+        /// Called after the left content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        left_postRender: [$element, function () { return new lightSwitchApplication.ViewPhase().findContentItem("left"); }],
+        /// <field>
+        /// Called after the PhaseID content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PhaseID_postRender: [$element, function () { return new lightSwitchApplication.ViewPhase().findContentItem("PhaseID"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.ViewPhase().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.ViewPhase().findContentItem("Description"); }],
+        /// <field>
+        /// Called after the CreatedDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedDate_postRender: [$element, function () { return new lightSwitchApplication.ViewPhase().findContentItem("CreatedDate"); }],
+        /// <field>
+        /// Called after the CreatedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedBy_postRender: [$element, function () { return new lightSwitchApplication.ViewPhase().findContentItem("CreatedBy"); }],
+        /// <field>
+        /// Called after the ModifiedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ModifiedBy_postRender: [$element, function () { return new lightSwitchApplication.ViewPhase().findContentItem("ModifiedBy"); }],
+        /// <field>
+        /// Called after the ModifiedDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ModifiedDate_postRender: [$element, function () { return new lightSwitchApplication.ViewPhase().findContentItem("ModifiedDate"); }],
+        /// <field>
+        /// Called after the right content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        right_postRender: [$element, function () { return new lightSwitchApplication.ViewPhase().findContentItem("right"); }],
+        /// <field>
+        /// Called after the TP_PHASEs1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TP_PHASEs1_postRender: [$element, function () { return new lightSwitchApplication.ViewPhase().findContentItem("TP_PHASEs1"); }],
+        /// <field>
+        /// Called after the rows content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows_postRender: [$element, function () { return new lightSwitchApplication.ViewPhase().findContentItem("rows"); }],
+        /// <field>
+        /// Called after the Duration content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Duration_postRender: [$element, function () { return new lightSwitchApplication.ViewPhase().findContentItem("Duration"); }],
+        /// <field>
+        /// Called after the TpPhaseID content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        TpPhaseID_postRender: [$element, function () { return new lightSwitchApplication.ViewPhase().findContentItem("TpPhaseID"); }],
+        /// <field>
+        /// Called after the PlannedStartDate content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        PlannedStartDate_postRender: [$element, function () { return new lightSwitchApplication.ViewPhase().findContentItem("PlannedStartDate"); }]
+    });
+
     lightSwitchApplication.AddEditRole.prototype._$contentItems = {
         Tabs: {
             _$class: msls.ContentItem,
@@ -3157,466 +4077,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         PlannedStartDate_postRender: [$element, function () { return new lightSwitchApplication.ViewResourceDetail().findContentItem("PlannedStartDate"); }]
-    });
-
-    lightSwitchApplication.AddEditGap.prototype._$contentItems = {
-        Tabs: {
-            _$class: msls.ContentItem,
-            _$name: "Tabs",
-            _$parentName: "RootContentItem",
-            screen: lightSwitchApplication.AddEditGap
-        },
-        Details: {
-            _$class: msls.ContentItem,
-            _$name: "Details",
-            _$parentName: "Tabs",
-            screen: lightSwitchApplication.AddEditGap,
-            data: lightSwitchApplication.AddEditGap,
-            value: lightSwitchApplication.AddEditGap
-        },
-        columns: {
-            _$class: msls.ContentItem,
-            _$name: "columns",
-            _$parentName: "Details",
-            screen: lightSwitchApplication.AddEditGap,
-            data: lightSwitchApplication.AddEditGap,
-            value: lightSwitchApplication.REF_GAP
-        },
-        left: {
-            _$class: msls.ContentItem,
-            _$name: "left",
-            _$parentName: "columns",
-            screen: lightSwitchApplication.AddEditGap,
-            data: lightSwitchApplication.REF_GAP,
-            value: lightSwitchApplication.REF_GAP
-        },
-        GapID: {
-            _$class: msls.ContentItem,
-            _$name: "GapID",
-            _$parentName: "left",
-            screen: lightSwitchApplication.AddEditGap,
-            data: lightSwitchApplication.REF_GAP,
-            value: Number
-        },
-        Name: {
-            _$class: msls.ContentItem,
-            _$name: "Name",
-            _$parentName: "left",
-            screen: lightSwitchApplication.AddEditGap,
-            data: lightSwitchApplication.REF_GAP,
-            value: String
-        },
-        Description: {
-            _$class: msls.ContentItem,
-            _$name: "Description",
-            _$parentName: "left",
-            screen: lightSwitchApplication.AddEditGap,
-            data: lightSwitchApplication.REF_GAP,
-            value: String
-        },
-        right: {
-            _$class: msls.ContentItem,
-            _$name: "right",
-            _$parentName: "columns",
-            screen: lightSwitchApplication.AddEditGap,
-            data: lightSwitchApplication.REF_GAP,
-            value: lightSwitchApplication.REF_GAP
-        },
-        Popups: {
-            _$class: msls.ContentItem,
-            _$name: "Popups",
-            _$parentName: "RootContentItem",
-            screen: lightSwitchApplication.AddEditGap
-        }
-    };
-
-    msls._addEntryPoints(lightSwitchApplication.AddEditGap, {
-        /// <field>
-        /// Called when a new AddEditGap screen is created.
-        /// <br/>created(msls.application.AddEditGap screen)
-        /// </field>
-        created: [lightSwitchApplication.AddEditGap],
-        /// <field>
-        /// Called before changes on an active AddEditGap screen are applied.
-        /// <br/>beforeApplyChanges(msls.application.AddEditGap screen)
-        /// </field>
-        beforeApplyChanges: [lightSwitchApplication.AddEditGap],
-        /// <field>
-        /// Called after the Details content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Details_postRender: [$element, function () { return new lightSwitchApplication.AddEditGap().findContentItem("Details"); }],
-        /// <field>
-        /// Called after the columns content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        columns_postRender: [$element, function () { return new lightSwitchApplication.AddEditGap().findContentItem("columns"); }],
-        /// <field>
-        /// Called after the left content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        left_postRender: [$element, function () { return new lightSwitchApplication.AddEditGap().findContentItem("left"); }],
-        /// <field>
-        /// Called after the GapID content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        GapID_postRender: [$element, function () { return new lightSwitchApplication.AddEditGap().findContentItem("GapID"); }],
-        /// <field>
-        /// Called after the Name content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Name_postRender: [$element, function () { return new lightSwitchApplication.AddEditGap().findContentItem("Name"); }],
-        /// <field>
-        /// Called after the Description content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Description_postRender: [$element, function () { return new lightSwitchApplication.AddEditGap().findContentItem("Description"); }],
-        /// <field>
-        /// Called after the right content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        right_postRender: [$element, function () { return new lightSwitchApplication.AddEditGap().findContentItem("right"); }]
-    });
-
-    lightSwitchApplication.ViewGap.prototype._$contentItems = {
-        Tabs: {
-            _$class: msls.ContentItem,
-            _$name: "Tabs",
-            _$parentName: "RootContentItem",
-            screen: lightSwitchApplication.ViewGap
-        },
-        Details: {
-            _$class: msls.ContentItem,
-            _$name: "Details",
-            _$parentName: "Tabs",
-            screen: lightSwitchApplication.ViewGap,
-            data: lightSwitchApplication.ViewGap,
-            value: lightSwitchApplication.ViewGap
-        },
-        columns: {
-            _$class: msls.ContentItem,
-            _$name: "columns",
-            _$parentName: "Details",
-            screen: lightSwitchApplication.ViewGap,
-            data: lightSwitchApplication.ViewGap,
-            value: lightSwitchApplication.REF_GAP
-        },
-        left: {
-            _$class: msls.ContentItem,
-            _$name: "left",
-            _$parentName: "columns",
-            screen: lightSwitchApplication.ViewGap,
-            data: lightSwitchApplication.REF_GAP,
-            value: lightSwitchApplication.REF_GAP
-        },
-        GapID: {
-            _$class: msls.ContentItem,
-            _$name: "GapID",
-            _$parentName: "left",
-            screen: lightSwitchApplication.ViewGap,
-            data: lightSwitchApplication.REF_GAP,
-            value: Number
-        },
-        Name: {
-            _$class: msls.ContentItem,
-            _$name: "Name",
-            _$parentName: "left",
-            screen: lightSwitchApplication.ViewGap,
-            data: lightSwitchApplication.REF_GAP,
-            value: String
-        },
-        Description: {
-            _$class: msls.ContentItem,
-            _$name: "Description",
-            _$parentName: "left",
-            screen: lightSwitchApplication.ViewGap,
-            data: lightSwitchApplication.REF_GAP,
-            value: String
-        },
-        CreatedBy: {
-            _$class: msls.ContentItem,
-            _$name: "CreatedBy",
-            _$parentName: "left",
-            screen: lightSwitchApplication.ViewGap,
-            data: lightSwitchApplication.REF_GAP,
-            value: String
-        },
-        CreatedDate: {
-            _$class: msls.ContentItem,
-            _$name: "CreatedDate",
-            _$parentName: "left",
-            screen: lightSwitchApplication.ViewGap,
-            data: lightSwitchApplication.REF_GAP,
-            value: Date
-        },
-        ModifiedBy: {
-            _$class: msls.ContentItem,
-            _$name: "ModifiedBy",
-            _$parentName: "left",
-            screen: lightSwitchApplication.ViewGap,
-            data: lightSwitchApplication.REF_GAP,
-            value: String
-        },
-        ModifiedDate: {
-            _$class: msls.ContentItem,
-            _$name: "ModifiedDate",
-            _$parentName: "left",
-            screen: lightSwitchApplication.ViewGap,
-            data: lightSwitchApplication.REF_GAP,
-            value: Date
-        },
-        right: {
-            _$class: msls.ContentItem,
-            _$name: "right",
-            _$parentName: "columns",
-            screen: lightSwitchApplication.ViewGap,
-            data: lightSwitchApplication.REF_GAP,
-            value: lightSwitchApplication.REF_GAP
-        },
-        TPs1: {
-            _$class: msls.ContentItem,
-            _$name: "TPs1",
-            _$parentName: "right",
-            screen: lightSwitchApplication.ViewGap,
-            data: lightSwitchApplication.REF_GAP,
-            value: {
-                _$class: msls.VisualCollection,
-                screen: lightSwitchApplication.ViewGap,
-                _$entry: {
-                    elementType: lightSwitchApplication.TP
-                }
-            }
-        },
-        rows: {
-            _$class: msls.ContentItem,
-            _$name: "rows",
-            _$parentName: "TPs1",
-            screen: lightSwitchApplication.ViewGap,
-            data: lightSwitchApplication.TP,
-            value: lightSwitchApplication.TP
-        },
-        Name1: {
-            _$class: msls.ContentItem,
-            _$name: "Name1",
-            _$parentName: "rows",
-            screen: lightSwitchApplication.ViewGap,
-            data: lightSwitchApplication.TP,
-            value: String
-        },
-        Number: {
-            _$class: msls.ContentItem,
-            _$name: "Number",
-            _$parentName: "rows",
-            screen: lightSwitchApplication.ViewGap,
-            data: lightSwitchApplication.TP,
-            value: Number
-        },
-        Description1: {
-            _$class: msls.ContentItem,
-            _$name: "Description1",
-            _$parentName: "rows",
-            screen: lightSwitchApplication.ViewGap,
-            data: lightSwitchApplication.TP,
-            value: String
-        },
-        Popups: {
-            _$class: msls.ContentItem,
-            _$name: "Popups",
-            _$parentName: "RootContentItem",
-            screen: lightSwitchApplication.ViewGap
-        }
-    };
-
-    msls._addEntryPoints(lightSwitchApplication.ViewGap, {
-        /// <field>
-        /// Called when a new ViewGap screen is created.
-        /// <br/>created(msls.application.ViewGap screen)
-        /// </field>
-        created: [lightSwitchApplication.ViewGap],
-        /// <field>
-        /// Called before changes on an active ViewGap screen are applied.
-        /// <br/>beforeApplyChanges(msls.application.ViewGap screen)
-        /// </field>
-        beforeApplyChanges: [lightSwitchApplication.ViewGap],
-        /// <field>
-        /// Called after the Details content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Details_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("Details"); }],
-        /// <field>
-        /// Called after the columns content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        columns_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("columns"); }],
-        /// <field>
-        /// Called after the left content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        left_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("left"); }],
-        /// <field>
-        /// Called after the GapID content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        GapID_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("GapID"); }],
-        /// <field>
-        /// Called after the Name content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Name_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("Name"); }],
-        /// <field>
-        /// Called after the Description content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Description_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("Description"); }],
-        /// <field>
-        /// Called after the CreatedBy content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        CreatedBy_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("CreatedBy"); }],
-        /// <field>
-        /// Called after the CreatedDate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        CreatedDate_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("CreatedDate"); }],
-        /// <field>
-        /// Called after the ModifiedBy content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        ModifiedBy_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("ModifiedBy"); }],
-        /// <field>
-        /// Called after the ModifiedDate content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        ModifiedDate_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("ModifiedDate"); }],
-        /// <field>
-        /// Called after the right content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        right_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("right"); }],
-        /// <field>
-        /// Called after the TPs1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        TPs1_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("TPs1"); }],
-        /// <field>
-        /// Called after the rows content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        rows_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("rows"); }],
-        /// <field>
-        /// Called after the Name1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Name1_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("Name1"); }],
-        /// <field>
-        /// Called after the Number content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Number_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("Number"); }],
-        /// <field>
-        /// Called after the Description1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Description1_postRender: [$element, function () { return new lightSwitchApplication.ViewGap().findContentItem("Description1"); }]
-    });
-
-    lightSwitchApplication.BrowseGaps.prototype._$contentItems = {
-        Tabs: {
-            _$class: msls.ContentItem,
-            _$name: "Tabs",
-            _$parentName: "RootContentItem",
-            screen: lightSwitchApplication.BrowseGaps
-        },
-        GapList: {
-            _$class: msls.ContentItem,
-            _$name: "GapList",
-            _$parentName: "Tabs",
-            screen: lightSwitchApplication.BrowseGaps,
-            data: lightSwitchApplication.BrowseGaps,
-            value: lightSwitchApplication.BrowseGaps
-        },
-        REF_GAPs: {
-            _$class: msls.ContentItem,
-            _$name: "REF_GAPs",
-            _$parentName: "GapList",
-            screen: lightSwitchApplication.BrowseGaps,
-            data: lightSwitchApplication.BrowseGaps,
-            value: {
-                _$class: msls.VisualCollection,
-                screen: lightSwitchApplication.BrowseGaps,
-                _$entry: {
-                    elementType: lightSwitchApplication.REF_GAP
-                }
-            }
-        },
-        rows: {
-            _$class: msls.ContentItem,
-            _$name: "rows",
-            _$parentName: "REF_GAPs",
-            screen: lightSwitchApplication.BrowseGaps,
-            data: lightSwitchApplication.REF_GAP,
-            value: lightSwitchApplication.REF_GAP
-        },
-        Name: {
-            _$class: msls.ContentItem,
-            _$name: "Name",
-            _$parentName: "rows",
-            screen: lightSwitchApplication.BrowseGaps,
-            data: lightSwitchApplication.REF_GAP,
-            value: String
-        },
-        Description: {
-            _$class: msls.ContentItem,
-            _$name: "Description",
-            _$parentName: "rows",
-            screen: lightSwitchApplication.BrowseGaps,
-            data: lightSwitchApplication.REF_GAP,
-            value: String
-        },
-        Popups: {
-            _$class: msls.ContentItem,
-            _$name: "Popups",
-            _$parentName: "RootContentItem",
-            screen: lightSwitchApplication.BrowseGaps
-        }
-    };
-
-    msls._addEntryPoints(lightSwitchApplication.BrowseGaps, {
-        /// <field>
-        /// Called when a new BrowseGaps screen is created.
-        /// <br/>created(msls.application.BrowseGaps screen)
-        /// </field>
-        created: [lightSwitchApplication.BrowseGaps],
-        /// <field>
-        /// Called before changes on an active BrowseGaps screen are applied.
-        /// <br/>beforeApplyChanges(msls.application.BrowseGaps screen)
-        /// </field>
-        beforeApplyChanges: [lightSwitchApplication.BrowseGaps],
-        /// <field>
-        /// Called after the GapList content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        GapList_postRender: [$element, function () { return new lightSwitchApplication.BrowseGaps().findContentItem("GapList"); }],
-        /// <field>
-        /// Called after the REF_GAPs content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        REF_GAPs_postRender: [$element, function () { return new lightSwitchApplication.BrowseGaps().findContentItem("REF_GAPs"); }],
-        /// <field>
-        /// Called after the rows content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        rows_postRender: [$element, function () { return new lightSwitchApplication.BrowseGaps().findContentItem("rows"); }],
-        /// <field>
-        /// Called after the Name content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Name_postRender: [$element, function () { return new lightSwitchApplication.BrowseGaps().findContentItem("Name"); }],
-        /// <field>
-        /// Called after the Description content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Description_postRender: [$element, function () { return new lightSwitchApplication.BrowseGaps().findContentItem("Description"); }]
     });
 
 }(msls.application));
