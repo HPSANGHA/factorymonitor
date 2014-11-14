@@ -65,5 +65,8 @@
     <ApplicationNavigationMethodLink
       Name="link9"
       Method="!module/Methods[showBrowseTps]" />
+    <ApplicationNavigationMethodLink
+      Name="link10"
+      Method="!module/Methods[showBrowseApps]" />
   </Application.NavigationItems>
 </Application>
